@@ -439,7 +439,8 @@
 
                         <div class="form-group">
                             <label for="contact">Контакт для связи</label>
-                            <input type="text" id="contact" name="contact" placeholder="Telegram, телефон или email" required>
+                            <input type="text" id="contact" name="contact" placeholder="Telegram (@username) или телефон (+7...)" required>
+                            <small id="contactError" style="color: #ef4444; display: none; margin-top: 0.5rem; font-size: 0.85rem; display: block;"></small>
                         </div>
 
                         <div class="form-group">
@@ -512,13 +513,80 @@
     </footer>
 
     <script>
+        // Функция валидации контакта
+        function validateContact(value) {
+            const trimmed = value.trim();
+            
+            // Проверка Telegram: @username или username (минимум 5 символов, буквы, цифры, _)
+            const telegramRegex = /^@?[a-zA-Z0-9_]{5,32}$/;
+            
+            // Проверка телефона: +7, 8, или 7 в начале, затем 10 цифр
+            // Допускаются пробелы, скобки, дефисы
+            const phoneRegex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+            
+            // Чистим телефон от всего кроме цифр для дополнительной проверки
+            const phoneDigitsOnly = trimmed.replace(/\D/g, '');
+            const isValidPhone = phoneRegex.test(trimmed) && (phoneDigitsOnly.length === 11 || phoneDigitsOnly.length === 10);
+            
+            // Проверяем, что это не похоже на email (содержит @ в середине, но не в начале как Telegram)
+            const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+            
+            if (isEmail) {
+                return { valid: false, message: 'Пожалуйста, укажите Telegram (@username) или телефон, а не email.' };
+            }
+            
+            if (telegramRegex.test(trimmed)) {
+                return { valid: true, type: 'telegram' };
+            }
+            
+            if (isValidPhone) {
+                return { valid: true, type: 'phone' };
+            }
+            
+            return { 
+                valid: false, 
+                message: 'Укажите корректный телефон (например: +7 909 903-00-00) или Telegram (@username).' 
+            };
+        }
+        
+        // Показать ошибку
+        function showContactError(message) {
+            const errorEl = document.getElementById('contactError');
+            const inputEl = document.getElementById('contact');
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+            inputEl.style.borderColor = '#ef4444';
+        }
+        
+        // Скрыть ошибку
+        function hideContactError() {
+            const errorEl = document.getElementById('contactError');
+            const inputEl = document.getElementById('contact');
+            errorEl.style.display = 'none';
+            inputEl.style.borderColor = '';
+        }
+        
+        // Валидация при вводе
+        document.getElementById('contact').addEventListener('input', function() {
+            hideContactError();
+        });
+        
         // Отправка формы в Telegram
         document.getElementById('telegramForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            hideContactError();
             
             const name = document.getElementById('name').value;
             const contact = document.getElementById('contact').value;
             const message = document.getElementById('message').value;
+            
+            // Валидация контакта
+            const validation = validateContact(contact);
+            if (!validation.valid) {
+                showContactError(validation.message);
+                document.getElementById('contact').focus();
+                return;
+            }
             
             // Формируем текст сообщения
             let text = '📋 Новая заявка с сайта SecureMind\\n\\n';
