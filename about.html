@@ -182,22 +182,9 @@
 
         .page-header {
             padding: 120px 5% 4rem;
-            background: linear-gradient(135deg, rgba(237, 232, 224, 0.85) 0%, rgba(245, 241, 235, 0.9) 100%), url('images/bg-about.jpg');
-            background-size: cover;
-            background-position: center;
+            background: var(--bg-secondary);
             text-align: center;
             position: relative;
-        }
-
-        .page-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to bottom, transparent, var(--bg-primary));
-            pointer-events: none;
         }
 
         .page-header h1 {
@@ -480,7 +467,7 @@
         }
 
         .cta-section::before {
-            content: ';
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
