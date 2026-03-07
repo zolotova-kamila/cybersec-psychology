@@ -308,16 +308,17 @@
         .hero-avatar {
             width: 180px;
             height: 180px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 50%;
             margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-            color: white;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 4px solid var(--bg-card);
+        }
+
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .hero-name {
@@ -788,7 +789,9 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-avatar">KZ</div>
+                <div class="hero-avatar">
+                    <img src="images/psychologist.jpg" alt="Камила Золотова - психолог по кибербезопасности">
+                </div>
                 <div class="hero-name">Камила Золотова</div>
                 <div class="hero-title">Психолог / КПТ / EMDR</div>
                 <div class="hero-stats">

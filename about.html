@@ -240,16 +240,80 @@
         .about-avatar {
             width: 200px;
             height: 200px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 50%;
             margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Gallery for certificates */
+        .gallery-section {
+            background: var(--bg-primary);
+            padding: 5rem 5%;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-            color: white;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .gallery-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .gallery-info .badge {
+            display: inline-block;
+            background: rgba(45, 90, 74, 0.1);
+            color: var(--accent-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-top: 0.5rem;
         }
 
         .about-name {
@@ -489,7 +553,9 @@
     <section class="about-section">
         <div class="about-grid">
             <div class="about-image">
-                <div class="about-avatar">KZ</div>
+                <div class="about-avatar">
+                    <img src="images/psychologist.jpg" alt="Камила Золотова - психолог">
+                </div>
                 <div class="about-name">Камила Золотова</div>
                 <div class="about-title">Психолог / КПТ / EMDR</div>
             </div>
@@ -546,6 +612,70 @@
                     <li>500+ проведенных консультаций</li>
                     <li>Сотрудничество с IT-компаниями</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="section-header">
+            <div class="section-tag">Документы</div>
+            <h2 class="section-title">Дипломы и сертификаты</h2>
+            <p class="section-subtitle">Подтверждение квалификации и профессионального образования</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/diploma1.jpg" alt="Диплом о высшем образовании">
+                <div class="gallery-info">
+                    <h3>Высшее образование</h3>
+                    <p>Тольяттинский государственный университет</p>
+                    <span class="badge">2025</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/diploma2.jpg" alt="Диплом о дополнительном образовании">
+                <div class="gallery-info">
+                    <h3>Практики социально-психологического тренинга</h3>
+                    <p>Московский институт психоанализа</p>
+                    <span class="badge">2026</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cert1.jpg" alt="Сертификат EMDR">
+                <div class="gallery-info">
+                    <h3>EMDR-терапия (ДПДГ)</h3>
+                    <p>Высшая школа практической психологии</p>
+                    <span class="badge">2024</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cert2.jpg" alt="Сертификат членства АКПП">
+                <div class="gallery-info">
+                    <h3>Членство в АКПП</h3>
+                    <p>Ассоциация когнитивно-поведенческой психотерапии</p>
+                    <span class="badge">2024</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cert3.jpg" alt="Сертификат супервизора">
+                <div class="gallery-info">
+                    <h3>Сертификат супервизора</h3>
+                    <p>SP Adriatika</p>
+                    <span class="badge">2025</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cert4.jpg" alt="Сертификат специализации">
+                <div class="gallery-info">
+                    <h3>Психологическое консультирование</h3>
+                    <p>Московский институт психоанализа</p>
+                    <span class="badge">2026</span>
+                </div>
             </div>
         </div>
     </section>
