@@ -406,24 +406,34 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .test-image-section {
-            background: var(--bg-secondary);
-            padding: 2rem 5%;
-            text-align: center;
+        .test-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
         }
 
-        .test-image-container {
-            max-width: 900px;
-            margin: 0 auto;
+        .test-image-col {
+            position: sticky;
+            top: 100px;
+        }
+
+        .test-image-box {
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
         }
 
-        .test-image-container img {
+        .test-image-box img {
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        .test-content-col {
+            min-width: 0;
         }
 
         /* RESULTS */
@@ -676,6 +686,17 @@
                 gap: 1.5rem;
             }
 
+            .test-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .test-image-col {
+                position: static;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
             .question-card {
                 padding: 1.5rem;
             }
@@ -737,18 +758,19 @@
     </section>
 
     <section class="test-section" id="testSection">
-        <div class="test-image-section">
-            <div class="test-image-container">
-                <img src="images/test-hero.jpg" alt="Защита в цифровом мире">
+        <div class="test-wrapper">
+            <div class="test-image-col">
+                <div class="test-image-box">
+                    <img src="images/test-hero.jpg" alt="Защита в цифровом мире">
+                </div>
             </div>
-        </div>
-        
-        <div class="test-container">
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
+            
+            <div class="test-content-col">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
 
-            <form id="cyberTest">
+                <form id="cyberTest">
                 <!-- Вопрос 1 -->
                 <div class="question-card active" data-question="1">
                     <div class="question-number">Вопрос 1 из 10</div>
@@ -911,6 +933,7 @@
 
                 <button type="submit" class="btn-submit" id="submitBtn">Узнать результат</button>
             </form>
+            </div>
         </div>
     </section>
 
