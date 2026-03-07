@@ -54,6 +54,7 @@
             height: 70px;
             box-sizing: border-box;
             display: flex;
+                margin-left: auto;
             justify-content: space-between;
             align-items: center;
             background: rgba(250, 248, 245, 0.95);
@@ -64,6 +65,7 @@
 
         .logo {
             display: flex;
+                margin-left: auto;
             align-items: center;
             gap: 0.875rem;
             font-family: 'Montserrat', sans-serif;
@@ -79,6 +81,7 @@
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); position: relative;
             border-radius: var(--radius-md);
             display: flex;
+                margin-left: auto;
             align-items: center;
             justify-content: center;
             font-family: 'Montserrat', sans-serif;
@@ -89,6 +92,7 @@
 
         .nav-links {
             display: flex;
+                margin-left: auto;
             gap: 2.5rem;
             list-style: none;
         }
@@ -145,13 +149,15 @@
 
         /* Mobile menu toggle */
         .menu-toggle {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(250, 248, 245, 0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 999; display: flex;
+            display: none;
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
-            padding: 5px;
-            background: var(--bg-card); border: 2px solid var(--border); border-radius: var(--radius-sm); z-index: 1001; order: 2;
-            border: none;
+            padding: 8px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            z-index: 1001;
         }
 
         .menu-toggle span {
@@ -250,12 +256,14 @@
 
         .contact-methods {
             display: flex;
+                margin-left: auto;
             flex-direction: column;
             gap: 1.75rem;
         }
 
         .contact-method {
             display: flex;
+                margin-left: auto;
             gap: 1rem;
             align-items: flex-start;
         }
@@ -266,6 +274,7 @@
             background: linear-gradient(135deg, rgba(45, 90, 74, 0.1) 0%, rgba(74, 124, 111, 0.1) 100%);
             border-radius: var(--radius-sm);
             display: flex;
+                margin-left: auto;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
@@ -357,6 +366,7 @@
         #contactError {
             color: #e74c3c;
             position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(250, 248, 245, 0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 999; display: flex;
+                margin-left: auto;
             margin-top: 0.5rem;
             font-size: 0.85rem;
             font-family: 'Montserrat', sans-serif;
@@ -385,6 +395,7 @@
 
         #telegramInstructions {
             position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(250, 248, 245, 0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 999; display: flex;
+                margin-left: auto;
             background: rgba(45, 90, 74, 0.05);
             border: 1px solid var(--accent-primary);
             border-radius: var(--radius-md);
@@ -504,6 +515,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+                margin-left: auto;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
@@ -517,6 +529,7 @@
 
         .footer-links {
             display: flex;
+                margin-left: auto;
             gap: 2rem;
             list-style: none;
         }
@@ -544,7 +557,29 @@
             }
 
             .nav-links {
-                position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(250, 248, 245, 0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 999; display: flex;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(250, 248, 245, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+                display: flex;
+            }
+
+            .nav-links.mobile-open {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+                margin-left: auto;
             }
 
             .page-header h1 {
