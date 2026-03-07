@@ -218,6 +218,26 @@
             z-index: 1;
         }
 
+        .hero-image-section {
+            background: var(--bg-primary);
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image-container {
+            max-width: 400px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .services-section {
             padding: 5rem 5%;
             background: var(--bg-primary);
@@ -482,20 +502,6 @@
             line-height: 1.5;
         }
 
-        .process-image {
-            max-width: 800px;
-            margin: 4rem auto 0;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .process-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
         .cta-section {
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%); position: relative;
             padding: 5rem 5%;
@@ -649,6 +655,12 @@
         <p>Индивидуальный подход для специалистов, команд и руководителей в сфере ИБ</p>
     </header>
 
+    <section class="hero-image-section">
+        <div class="hero-image-container">
+            <img src="images/services-illustration.jpg" alt="Психологическая поддержка в сфере кибербезопасности">
+        </div>
+    </section>
+
     <section class="services-section">
         <div class="section-header">
             <div class="section-tag">Тарифы</div>
@@ -729,7 +741,7 @@
 
     <section class="services-image-section">
         <div class="services-image-container">
-            <img src="images/services-illustration.jpg" alt="Психологическая поддержка в сфере кибербезопасности">
+            <img src="images/process-bookshelf.jpg" alt="Книжная полка психолога">
         </div>
     </section>
 
@@ -763,10 +775,6 @@
                 <h3>Работа</h3>
                 <p>Регулярные сессии для достижения результата</p>
             </div>
-        </div>
-
-        <div class="process-image">
-            <img src="images/process-bookshelf.jpg" alt="Книжная полка психолога">
         </div>
     </section>
 
