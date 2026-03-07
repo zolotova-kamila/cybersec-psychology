@@ -375,7 +375,7 @@
             <li><a href="services.html">Услуги</a></li>
             <li><a href="contact.html" class="active">Контакты</a></li>
         </ul>
-        <a href="contact.html" class="nav-cta">Записаться</a>
+        <a href="mailto:9099030000@mail.ru" class="nav-cta">Записаться</a>
     </nav>
 
     <section class="hero">
@@ -395,7 +395,7 @@
                             <div class="contact-details">
                                 <h3>Telegram</h3>
                                 <p>Быстрый способ связи<br>
-                                <a href="https://t.me/Psychology_research_2026_bot">@Psychology_research_2026_bot</a></p>
+                                <a href="https://t.me/ShchitOtMoshennikov_bot">@ShchitOtMoshennikov_bot</a></p>
                             </div>
                         </div>
 
@@ -412,7 +412,7 @@
                             <div class="contact-icon">📧</div>
                             <div class="contact-details">
                                 <h3>Email</h3>
-                                <p><a href="mailto:contact@securemind.dev">contact@securemind.dev</a></p>
+                                <p><a href="mailto:9099030000@mail.ru">9099030000@mail.ru</a></p>
                             </div>
                         </div>
 
@@ -420,8 +420,8 @@
                             <div class="contact-icon">📍</div>
                             <div class="contact-details">
                                 <h3>Офлайн-консультации</h3>
-                                <p>Москва, м. Отрадное<br>
-                                <span style="color: var(--text-muted); font-size: 0.85rem;">Также работаю онлайн</span></p>
+                                <p>Москва, Алтуфьевское шоссе, 34 а<br>
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">м. Отрадное | Также работаю онлайн</span></p>
                             </div>
                         </div>
                     </div>
@@ -431,7 +431,7 @@
                     <h2>Форма записи</h2>
                     <p>Заполните форму, и я свяжусь с вами в течение 24 часов</p>
                     
-                    <form action="#" method="POST">
+                    <form id="telegramForm">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
                             <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
@@ -447,8 +447,12 @@
                             <textarea id="message" name="message" placeholder="Опишите, что вас беспокоит..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn-submit">Отправить заявку</button>
+                        <button type="submit" class="btn-submit">Отправить заявку в Telegram</button>
                     </form>
+                    
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+                        После нажатия откроется Telegram с готовым сообщением. Просто нажмите отправить.
+                    </p>
                 </div>
             </div>
         </div>
@@ -504,5 +508,52 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        // Отправка формы в Telegram
+        document.getElementById('telegramForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const message = document.getElementById('message').value;
+            
+            // Формируем текст сообщения
+            let text = '📋 Новая заявка с сайта SecureMind\\n\\n';
+            text += '👤 Имя: ' + name + '\\n';
+            text += '📞 Контакт: ' + contact + '\\n';
+            if (message) {
+                text += '💬 Запрос: ' + message + '\\n';
+            }
+            text += '\\n📅 Дата: ' + new Date().toLocaleString('ru-RU');
+            
+            // Кодируем текст для URL
+            const encodedText = encodeURIComponent(text);
+            
+            // Открываем Telegram с готовым сообщением
+            const telegramUrl = 'https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText;
+            
+            // Для десктопа используем другой формат
+            const telegramWebUrl = 'https://web.telegram.org/k/#@ShchitOtMoshennikov_bot';
+            
+            // Пробуем открыть через tg:// схему
+            const tgUrl = 'tg://resolve?domain=ShchitOtMoshennikov_bot&start=' + encodedText;
+            
+            // Проверяем, мобильное ли устройство
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // На мобильных открываем приложение Telegram
+                window.location.href = tgUrl;
+                // Если приложение не открылось, через секунду открываем web-версию
+                setTimeout(function() {
+                    window.open('https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText, '_blank');
+                }, 1000);
+            } else {
+                // На десктопе открываем web-версию Telegram
+                window.open('https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText, '_blank');
+            }
+        });
+    </script>
 </body>
 </html>
