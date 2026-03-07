@@ -185,8 +185,22 @@
 
         .hero {
             padding: 120px 5% 4rem;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            background: linear-gradient(135deg, rgba(245, 241, 235, 0.92) 0%, rgba(237, 232, 224, 0.9) 100%), url('images/bg-test.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--bg-primary));
+            pointer-events: none;
         }
 
         .hero-badge {
@@ -201,6 +215,8 @@
             padding: 0.5rem 1rem;
             border-radius: 50px;
             margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -210,6 +226,8 @@
             color: var(--text-primary);
             margin-bottom: 1.5rem;
             line-height: 1.2;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 span {
@@ -221,6 +239,8 @@
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-stats {
@@ -228,6 +248,8 @@
             justify-content: center;
             gap: 3rem;
             margin-top: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-stat {
