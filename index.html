@@ -493,12 +493,18 @@
             align-items: start;
         }
 
+        .path-images-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: sticky;
+            top: 120px;
+        }
+
         .path-image {
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            position: sticky;
-            top: 120px;
             max-width: 350px;
         }
 
@@ -718,10 +724,16 @@
                 gap: 2rem;
             }
 
-            .path-image {
+            .path-images-col {
                 position: static;
-                max-width: 500px;
-                margin: 0 auto;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .path-image {
+                max-width: 250px;
+                flex: 1;
             }
 
             .path-step {
@@ -877,8 +889,13 @@
             <p class="section-subtitle">Четкая структура работы помогает достигать устойчивых результатов</p>
         </div>
         <div class="path-content-wrapper">
-            <div class="path-image">
-                <img src="images/hero-key.jpg" alt="Ключ к психологической защите">
+            <div class="path-images-col">
+                <div class="path-image">
+                    <img src="images/hero-key.jpg" alt="Ключ к психологической защите">
+                </div>
+                <div class="path-image">
+                    <img src="images/path-stats.jpg" alt="Статистика работы психолога">
+                </div>
             </div>
             <div class="path-container">
                 <div class="path-line"></div>
