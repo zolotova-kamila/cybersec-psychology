@@ -7,30 +7,40 @@
     <meta name="author" content="Камила Золотова">
     <title>Камила Золотова | Психолог по кибербезопасности</title>
     <meta name="description" content="Психологическая помощь для специалистов информационной безопасности, SOC-аналитиков и IT-специалистов. Постинцидентная поддержка, выгорание, тревожность.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #F8FAFC;
-            --bg-secondary: #F1F5F9;
-            --bg-card: #FFFFFF;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-            --text-muted: #94A3B8;
-            --accent-primary: #0D9488;
-            --accent-secondary: #14B8A6;
-            --accent-warm: #F59E0B;
-            --border: #E2E8F0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --bg-primary: #F5F1EB;
+            --bg-secondary: #EDE8E0;
+            --bg-card: #FAF8F5;
+            --bg-dark: #2D3436;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6266;
+            --text-muted: #8B9194;
+            --text-light: #F5F1EB;
+            --accent-primary: #2D5A4A;
+            --accent-secondary: #4A7C6F;
+            --accent-warm: #C9A87C;
+            --accent-terracotta: #B87D5E;
+            --border: #D4CCC2;
+            --border-light: #E8E2DA;
+            --shadow: 0 4px 20px rgba(45, 52, 54, 0.08);
+            --shadow-lg: 0 12px 40px rgba(45, 52, 54, 0.12);
+            --shadow-soft: 0 8px 32px rgba(45, 52, 54, 0.06);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Source Serif Pro', Georgia, serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
         nav {
@@ -38,35 +48,40 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 1rem 5%;
+            padding: 1.25rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-light);
             z-index: 1000;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.875rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-primary);
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
@@ -76,11 +91,24 @@
         }
 
         .nav-links a {
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover,
@@ -88,84 +116,109 @@
             color: var(--accent-primary);
         }
 
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
         .nav-cta {
+            font-family: 'Montserrat', sans-serif;
             background: var(--accent-primary);
             color: white;
-            padding: 0.625rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 500;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .nav-cta:hover {
             background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
         }
 
         .hero {
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, #E0F2FE 100%);
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
+            padding: 10rem 5% 6rem;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero-container {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(ellipse at top right, rgba(45, 90, 74, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 5rem;
             align-items: center;
         }
 
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(13, 148, 136, 0.1);
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: var(--accent-primary);
+            background: rgba(45, 90, 74, 0.1);
             padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
             margin-bottom: 1.5rem;
         }
 
         .hero h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 3rem;
             font-weight: 700;
-            line-height: 1.2;
             margin-bottom: 1.5rem;
             color: var(--text-primary);
+            line-height: 1.2;
         }
 
         .hero h1 span {
             color: var(--accent-primary);
         }
 
-        .hero p {
-            font-size: 1.125rem;
+        .hero-subtitle {
+            font-size: 1.25rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
         }
 
-        .hero-cta {
+        .hero-buttons {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .btn-primary {
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
             background: var(--accent-primary);
             color: white;
             padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
+            border-radius: var(--radius-sm);
             text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .btn-primary:hover {
@@ -175,43 +228,51 @@
         }
 
         .btn-secondary {
-            background: white;
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            background: transparent;
             color: var(--text-primary);
             padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
+            border-radius: var(--radius-sm);
             text-decoration: none;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-            display: inline-block;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
             border-color: var(--accent-primary);
             color: var(--accent-primary);
+            background: rgba(45, 90, 74, 0.05);
         }
 
         .hero-image {
             background: var(--bg-card);
-            border-radius: 24px;
+            border-radius: var(--radius-lg);
             padding: 3rem;
-            box-shadow: var(--shadow-lg);
             text-align: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
         }
 
         .hero-avatar {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 50%;
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
         }
 
         .hero-name {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
@@ -219,8 +280,10 @@
 
         .hero-title {
             color: var(--accent-primary);
-            font-weight: 500;
-            margin-bottom: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
         }
 
         .hero-stats {
@@ -228,7 +291,7 @@
             justify-content: center;
             gap: 2rem;
             padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--border-light);
         }
 
         .stat {
@@ -236,6 +299,7 @@
         }
 
         .stat-value {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent-primary);
@@ -246,201 +310,299 @@
             color: var(--text-muted);
         }
 
-        .pain-points {
-            padding: 5rem 5%;
+        /* NOTEBOOK SECTION */
+        .notebook-section {
+            background: var(--bg-secondary);
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .notebook-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
         }
 
         .section-header {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto 3rem;
+            max-width: 700px;
+            margin: 0 auto 4rem;
         }
 
         .section-tag {
+            font-family: 'Montserrat', sans-serif;
             display: inline-block;
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-warm);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-primary);
             margin-bottom: 1rem;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: var(--text-primary);
         }
 
         .section-subtitle {
+            font-size: 1.15rem;
             color: var(--text-secondary);
+            line-height: 1.7;
         }
 
-        .cards-grid {
+        .notebook-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .card {
+        .notebook-card {
             background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s;
-            box-shadow: var(--shadow);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s ease;
+            position: relative;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
+        .notebook-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            right: 2rem;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-warm), var(--accent-terracotta));
+            border-radius: 0 0 4px 4px;
+        }
+
+        .notebook-card:hover {
+            transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
-            border-color: var(--accent-primary);
         }
 
-        .card-icon {
+        .notebook-icon {
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(45, 90, 74, 0.1) 0%, rgba(74, 124, 111, 0.1) 100%);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
             margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--accent-primary);
         }
 
-        .card h3 {
+        .notebook-card h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
+            color: var(--text-primary);
         }
 
-        .card p {
+        .notebook-card p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
+        /* PATH SECTION */
+        .path-section {
+            background: var(--bg-primary);
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .path-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .path-line {
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            bottom: 80px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-primary), var(--accent-warm));
+            transform: translateX(-50%);
+        }
+
+        .path-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .path-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .path-step:nth-child(even) .path-content {
+            grid-column: 2;
+            text-align: left;
+        }
+
+        .path-step:nth-child(even) .path-number-wrap {
+            grid-column: 1;
+            justify-self: end;
+        }
+
+        .path-step:nth-child(odd) .path-content {
+            text-align: right;
+        }
+
+        .path-number-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .path-number {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .path-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .path-content p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* ABOUT PREVIEW */
         .about-preview {
-            padding: 5rem 5%;
-            background: var(--bg-secondary);
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: 6rem 5%;
         }
 
         .about-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
 
         .about-container p {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             color: var(--text-secondary);
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         .features {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
         }
 
         .feature {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             color: var(--text-secondary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         .feature::before {
-            content: '✓';
-            color: var(--accent-primary);
-            font-weight: bold;
-        }
-
-        .process {
-            padding: 5rem 5%;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 3rem auto 0;
-        }
-
-        .process-step {
-            text-align: center;
-        }
-
-        .step-number {
-            width: 64px;
-            height: 64px;
-            background: var(--bg-card);
-            border: 2px solid var(--accent-primary);
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: var(--accent-primary);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            margin: 0 auto 1rem;
+            display: inline-block;
+            position: relative;
         }
 
-        .process-step h3 {
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem;
+        .feature::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 4px;
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(-45deg) translate(6px, -2px);
         }
 
-        .process-step p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
+        /* CTA SECTION */
         .cta-section {
-            padding: 5rem 5%;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            padding: 5rem 5%;
             text-align: center;
             color: white;
         }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
+        .cta-section .section-title {
+            color: white;
             margin-bottom: 1rem;
         }
 
-        .cta-section p {
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+        .cta-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
         }
 
         .btn-white {
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
             background: white;
             color: var(--accent-primary);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: var(--radius-sm);
             text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .btn-white:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-lg);
         }
 
+        /* FOOTER */
         footer {
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
-            padding: 2rem 5%;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 3rem 5%;
         }
 
         .footer-content {
@@ -450,43 +612,67 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--text-light);
             text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.3s;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
-            color: var(--accent-primary);
+            opacity: 1;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 968px) {
-            .hero-container {
+            .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 3rem;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
-            .hero-cta {
+            .hero-buttons {
                 justify-content: center;
             }
 
-            .cards-grid,
-            .process-grid {
-                grid-template-columns: 1fr;
+            .path-step {
+                grid-template-columns: auto 1fr;
+                gap: 1.5rem;
+            }
+
+            .path-step:nth-child(even) .path-content,
+            .path-step:nth-child(even) .path-number-wrap,
+            .path-step:nth-child(odd) .path-content {
+                grid-column: auto;
+                text-align: left;
+            }
+
+            .path-line {
+                left: 32px;
+            }
+
+            .nav-links {
+                display: none;
             }
 
             .features {
@@ -494,21 +680,26 @@
                 gap: 1rem;
             }
 
-            .nav-links {
-                display: none;
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
             }
-        }
 
-        ::selection {
-            background: rgba(13, 148, 136, 0.2);
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .notebook-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <div class="logo-icon">🛡️</div>
-            <span>SecureMind</span>
+            <div class="logo-icon">KZ</div>
+            <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
             <li><a href="about.html">Обо мне</a></li>
@@ -519,21 +710,20 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">🔒 Конфиденциально и безопасно</div>
-                <h1>Психологическая поддержка для <span>защитников цифрового мира</span></h1>
-                <p>Помогаю специалистам по информационной безопасности справляться с выгоранием, тревожностью и последствиями киберинцидентов. Понимаю специфику вашей работы.</p>
-                <div class="hero-cta">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">Психолог по кибербезопасности</div>
+                <h1>Психологическая <span>опора</span> для тех, кто защищает цифровой мир</h1>
+                <p class="hero-subtitle">Помогаю специалистам по информационной безопасности справляться с выгоранием, тревожностью и последствиями киберинцидентов. Понимаю специфику вашей работы.</p>
+                <div class="hero-buttons">
                     <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="btn-primary">Записаться на консультацию</a>
-                    <a href="about.html" class="btn-secondary">Узнать обо мне</a>
+                    <a href="about.html" class="btn-secondary">Узнать больше</a>
                 </div>
             </div>
-
             <div class="hero-image">
-                <img src="images/hero-photo.jpg" alt="Камила Золотова — психолог по кибербезопасности" class="hero-avatar" style="object-fit: cover; border: 4px solid var(--accent-primary);">
+                <div class="hero-avatar">KZ</div>
                 <div class="hero-name">Камила Золотова</div>
-                <div class="hero-title">Психолог по кибербезопасности</div>
+                <div class="hero-title">Психолог / КПТ / EMDR</div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-value">8+</div>
@@ -543,39 +733,92 @@
                         <div class="stat-value">500+</div>
                         <div class="stat-label">консультаций</div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">часов супервизий</div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pain-points">
+    <section class="notebook-section">
         <div class="section-header">
             <div class="section-tag">С чем помогаю</div>
-            <h2 class="section-title">Профессиональные вызовы ИБ-специалистов</h2>
+            <h2 class="section-title">Профессиональные вызовы</h2>
             <p class="section-subtitle">Работа в сфере информационной безопасности связана с уникальным психологическим давлением. Я понимаю эти вызовы.</p>
         </div>
-
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-icon">🔥</div>
-                <h3>Профессиональное выгорание</h3>
-                <p>Постоянная бдительность, ночные дежурства, стресс от ответственности за безопасность. Восстановление ресурса и мотивации.</p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>После инцидента</h3>
+        <div class="notebook-grid">
+            <div class="notebook-card">
+                <div class="notebook-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>Постинцидентная поддержка</h3>
                 <p>Восстановление после кибератак, утечек данных, вымогательства. Работа с чувством вины, тревогой и беспомощностью.</p>
             </div>
+            <div class="notebook-card">
+                <div class="notebook-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                    </svg>
+                </div>
+                <h3>Профессиональное выгорание</h3>
+                <p>Alert fatigue, хронический стресс, потеря смысла в работе. Возвращаю ресурс и мотивацию.</p>
+            </div>
+            <div class="notebook-card">
+                <div class="notebook-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Тревожные расстройства</h3>
+                <p>Постоянная бдительность, сложности с отдыхом, панические атаки. Восстанавливаю внутреннюю стабильность.</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <div class="card-icon">🧠</div>
-                <h3>Тревожность и стресс</h3>
-                <p>Хронический стресс от «войны с неизвестным противником», навязчивые мысли об уязвимостях, бессонница.</p>
+    <section class="path-section">
+        <div class="section-header">
+            <div class="section-tag">Как работаю</div>
+            <h2 class="section-title">Путь к изменениям</h2>
+            <p class="section-subtitle">Четкая структура работы помогает достигать устойчивых результатов</p>
+        </div>
+        <div class="path-container">
+            <div class="path-line"></div>
+            <div class="path-step">
+                <div class="path-number-wrap">
+                    <div class="path-number">1</div>
+                </div>
+                <div class="path-content">
+                    <h3>Первичная консультация</h3>
+                    <p>Бесплатная 20-минутная встреча для знакомства и понимания вашего запроса. Определяем, комфортно ли нам работать вместе.</p>
+                </div>
+            </div>
+            <div class="path-step">
+                <div class="path-number-wrap">
+                    <div class="path-number">2</div>
+                </div>
+                <div class="path-content">
+                    <h3>Оценка и целеполагание</h3>
+                    <p>На первых сессиях понимаем глубину проблемы и формулируем конкретные цели терапии.</p>
+                </div>
+            </div>
+            <div class="path-step">
+                <div class="path-number-wrap">
+                    <div class="path-number">3</div>
+                </div>
+                <div class="path-content">
+                    <h3>Работа с запросом</h3>
+                    <p>Использую методы КПТ, EMDR и другие подходы. Количество сессий зависит от сложности запроса.</p>
+                </div>
+            </div>
+            <div class="path-step">
+                <div class="path-number-wrap">
+                    <div class="path-number">4</div>
+                </div>
+                <div class="path-content">
+                    <h3>Закрепление результата</h3>
+                    <p>Подводим итоги, обсуждаем инструменты самопомощи на будущее. При необходимости планируем поддерживающие встречи.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -583,65 +826,26 @@
     <section class="about-preview">
         <div class="about-container">
             <div class="section-tag">Обо мне</div>
-            <h2 class="section-title">Почему кибербезопасность?</h2>
-            
             <p>Я — сертифицированный психолог с 8-летним опытом. Раньше я работала с семейными запросами и кризисами, но со временем заметила: IT-специалисты, приходящие на консультации, сталкиваются с уникальными профессиональными травмами, которые не всегда понятны коллегам из других сфер.</p>
-
-            <p>Я изучила специфику работы в SOC, поняла, что такое «-alert fatigue», разобралась в механизмах социальной инженерии. Теперь я создаю безопасное пространство для тех, кто защищает цифровой мир.</p>
-
+            <p>Я изучила специфику работы в SOC, поняла, что такое alert fatigue, разобралась в механизмах социальной инженерии. Теперь я создаю безопасное пространство для тех, кто защищает цифровой мир.</p>
             <div class="features">
-                <span class="feature">КПТ и EMDR</span>
-                <span class="feature">Конфиденциальность</span>
-                <span class="feature">Онлайн-формат</span>
+                <span class="feature">КПТ-терапия</span>
+                <span class="feature">EMDR</span>
+                <span class="feature">Член АКПП</span>
             </div>
-
-            <a href="about.html" class="btn-secondary">Подробнее обо мне →</a>
-        </div>
-    </section>
-
-    <section class="process">
-        <div class="section-header">
-            <div class="section-tag">Как работаю</div>
-            <h2 class="section-title">Путь от запроса к результату</h2>
-            <p class="section-subtitle">Чёткая структура работы помогает достигать устойчивых изменений</p>
-        </div>
-
-        <div class="process-grid">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Знакомство</h3>
-                <p>Бесплатная 20-минутная встреча для понимания запроса</p>
-            </div>
-
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Диагностика</h3>
-                <p>Оценка состояния и постановка целей терапии</p>
-            </div>
-
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Терапия</h3>
-                <p>Регулярные сессии с применением доказательных методов</p>
-            </div>
-
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <h3>Закрепление</h3>
-                <p>Формирование навыков самопомощи и профилактика</p>
-            </div>
+            <a href="about.html" class="btn-secondary">Подробнее обо мне</a>
         </div>
     </section>
 
     <section class="cta-section">
-        <h2>Готовы начать?</h2>
-        <p>Первая консультация бесплатно. Это время, чтобы познакомиться и понять, подходим ли мы друг другу.</p>
+        <div class="section-title">Готовы начать?</div>
+        <p class="section-subtitle">Первая консультация бесплатна. Это время для знакомства и понимания, подхожу ли я вам.</p>
         <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="btn-white">Записаться на консультацию</a>
     </section>
 
     <footer>
         <div class="footer-content">
-            <p>© 2026 Камила Золотова. Все права защищены.</p>
+            <p class="footer-copy">© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
                 <li><a href="privacy.html">Правовая информация</a></li>
                 <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>

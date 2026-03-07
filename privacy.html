@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="copyright" content="© 2026 Камила Золотова">
-    <title>Правовая информация | SecureMind</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="author" content="Камила Золотова">
+    <title>Правовая информация | Камила Золотова</title>
+    <meta name="description" content="Политика конфиденциальности и обработка персональных данных.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #F8FAFC;
-            --bg-secondary: #F1F5F9;
-            --bg-card: #FFFFFF;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-            --text-muted: #94A3B8;
-            --accent-primary: #0D9488;
-            --accent-secondary: #14B8A6;
-            --accent-warm: #F59E0B;
-            --danger: #EF4444;
-            --border: #E2E8F0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --bg-primary: #F5F1EB;
+            --bg-secondary: #EDE8E0;
+            --bg-card: #FAF8F5;
+            --bg-dark: #2D3436;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6266;
+            --text-muted: #8B9194;
+            --text-light: #F5F1EB;
+            --accent-primary: #2D5A4A;
+            --accent-secondary: #4A7C6F;
+            --accent-warm: #C9A87C;
+            --border: #D4CCC2;
+            --border-light: #E8E2DA;
+            --shadow: 0 4px 20px rgba(45, 52, 54, 0.08);
+            --shadow-soft: 0 8px 32px rgba(45, 52, 54, 0.06);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Source Serif Pro', Georgia, serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
         nav {
@@ -36,35 +45,39 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 1rem 5%;
+            padding: 1.25rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-light);
             z-index: 1000;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.875rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-primary);
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
         }
 
         .nav-links {
@@ -74,147 +87,136 @@
         }
 
         .nav-links a {
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
+            position: relative;
         }
 
-        .nav-links a:hover {
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--accent-primary);
         }
 
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
         .nav-cta {
+            font-family: 'Montserrat', sans-serif;
             background: var(--accent-primary);
             color: white;
-            padding: 0.625rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 500;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .nav-cta:hover {
             background: var(--accent-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(45, 52, 54, 0.12);
         }
 
-        .content {
-            padding: 8rem 5% 4rem;
-            max-width: 800px;
+        .page-header {
+            padding: 10rem 5% 4rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        .content-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .content-tag {
-            display: inline-block;
-            background: rgba(239, 68, 68, 0.1);
-            color: var(--danger);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .content h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
         .content-section {
+            padding: 5rem 5%;
+            background: var(--bg-primary);
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
             background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
         }
 
-        .content-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent-primary);
+        .content-container h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
         }
 
-        .content-section h3 {
-            font-size: 1.125rem;
-            margin: 1.5rem 0 0.75rem;
+        .content-container h2:first-child {
+            margin-top: 0;
         }
 
-        .content-section p {
+        .content-container p {
             color: var(--text-secondary);
             margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
-        .warning-box {
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid var(--accent-warm);
-            border-radius: 12px;
+        .content-container ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content-container li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: rgba(45, 90, 74, 0.05);
+            border-left: 4px solid var(--accent-primary);
             padding: 1.5rem;
             margin: 1.5rem 0;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
         }
 
-        .warning-box h4 {
-            color: var(--accent-warm);
-            margin-bottom: 0.75rem;
-        }
-
-        .warning-box ul {
-            margin-left: 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .warning-box li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .legal-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-secondary);
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-
-        .legal-list li::before {
-            content: '•';
-            color: var(--danger);
-            font-weight: bold;
-        }
-
-        .legal-list li:last-child {
-            border-bottom: none;
-        }
-
-        .contact-box {
-            background: rgba(13, 148, 136, 0.1);
-            border: 1px solid var(--accent-primary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-box h4 {
-            color: var(--accent-primary);
-            margin-bottom: 0.75rem;
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text-primary);
         }
 
         footer {
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
-            padding: 2rem 5%;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 3rem 5%;
         }
 
         .footer-content {
@@ -224,33 +226,44 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--text-light);
             text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.3s;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
-            color: var(--accent-primary);
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
+            .content-container {
+                padding: 2rem;
+            }
+
             .nav-links {
                 display: none;
             }
 
-            .content h1 {
-                font-size: 1.75rem;
+            .page-header h1 {
+                font-size: 2rem;
             }
 
             .footer-content {
@@ -258,20 +271,15 @@
                 text-align: center;
             }
         }
-
-        ::selection {
-            background: rgba(13, 148, 136, 0.2);
-        }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <div class="logo-icon">🛡️</div>
-            <span>SecureMind</span>
+            <div class="logo-icon">KZ</div>
+            <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Главная</a></li>
             <li><a href="about.html">Обо мне</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -279,69 +287,81 @@
         <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
     </nav>
 
-    <div class="content">
-        <div class="content-header">
-            <div class="content-tag">⚖️ Правовая информация</div>
-            <h1>Авторские права и защита контента</h1>
-        </div>
+    <header class="page-header">
+        <h1>Правовая информация</h1>
+        <p>Политика конфиденциальности и обработка персональных данных</p>
+    </header>
 
-        <div class="content-section">
-            <h2>© 2026 Камила Золотова. Все права защищены.</h2>
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Политика конфиденциальности</h2>
             
-            <p>Весь контент данного сайта, включая тексты, графические элементы, дизайн, код и структуру, является интеллектуальной собственностью Камиллы Золотовой и защищён законодательством.</p>
-
-            <div class="warning-box">
-                <h4>⚠️ Запрещённые действия</h4>
-                <ul>
-                    <li>Копирование кода, дизайна или контента сайта</li>
-                    <li>Создание производных работ на основе данного сайта</li>
-                    <li>Использование сайта как шаблона</li>
-                    <li>Распространение материалов без разрешения</li>
-                    <li>Коммерческое использование элементов сайта</li>
-                </ul>
+            <p>Настоящая Политика конфиденциальности описывает, как я собираю, использую и защищаю информацию, которую вы предоставляете при использовании моего сайта и услуг.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Важно:</strong> Вся информация, полученная в ходе психологических консультаций, строго конфиденциальна и защищена профессиональной этикой психолога.</p>
             </div>
 
-            <h3>Что защищено авторским правом:</h3>
-            <ul class="legal-list">
-                <li>Уникальный дизайн и визуальная концепция</li>
-                <li>Тексты и информационные материалы</li>
-                <li>HTML/CSS код и структура сайта</li>
-                <li>Графические элементы и иконки</li>
-                <li>Логотип SecureMind</li>
-            </ul>
-
-            <div class="contact-box">
-                <h4>📧 Обращения</h4>
-                <p>По вопросам лицензирования:</p>
-                <p><strong>Email:</strong> 9099030000@mail.ru<br>
-                <strong>Telegram:</strong> @ShchitOtMoshennikov_bot</p>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Конфиденциальность</h2>
+            <h2>Какие данные я собираю</h2>
             
-            <p>Вся информация, полученная в ходе консультаций, строго конфиденциальна и не подлежит разглашению без явного согласия клиента, за исключением случаев, предусмотренных законодательством.</p>
-
-            <h3>Принципы работы:</h3>
-            <ul class="legal-list">
-                <li>Полная конфиденциальность коммуникаций</li>
-                <li>Защищённые каналы связи</li>
-                <li>Нет записей без согласия</li>
-                <li>Соблюдение этики психолога</li>
+            <p>При записи на консультацию я могу собирать следующую информацию:</p>
+            
+            <ul>
+                <li>Имя и контактные данные (телефон, email, Telegram)</li>
+                <li>Краткое описание запроса</li>
+                <li>Информация, предоставленная в ходе консультаций</li>
             </ul>
-        </div>
 
-        <div class="content-section">
-            <h2>Лицензия</h2>
-            <p>Полный текст лицензии: <a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md" style="color: var(--accent-primary);">LICENSE.md</a></p>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Дата обновления: 7 марта 2026 г.</p>
+            <h2>Как я использую данные</h2>
+            
+            <p>Собранная информация используется исключительно для:</p>
+            
+            <ul>
+                <li>Предоставления психологических консультаций</li>
+                <li>Связи с вами по вопросам записи и проведения сессий</li>
+                <li>Улучшения качества предоставляемых услуг</li>
+            </ul>
+
+            <h2>Защита информации</h2>
+            
+            <p>Я принимаю все необходимые меры для защиты ваших данных:</p>
+            
+            <ul>
+                <li>Все консультации проводятся конфиденциально</li>
+                <li>Информация не передается третьим лицам</li>
+                <li>Данные хранятся в защищенном виде</li>
+                <li>Используются современные методы шифрования для онлайн-сессий</li>
+            </ul>
+
+            <h2>Ваши права</h2>
+            
+            <p>Вы имеете право:</p>
+            
+            <ul>
+                <li>Получить информацию о хранящихся о вас данных</li>
+                <li>Потребовать удаление ваших данных</li>
+                <li>Отозвать согласие на обработку данных</li>
+                <li>Обратиться с жалобой в компетентные органы</li>
+            </ul>
+
+            <h2>Контакты</h2>
+            
+            <p>Если у вас есть вопросы о политике конфиденциальности или обработке данных, пожалуйста, свяжитесь со мной:</p>
+            
+            <p>Email: 9099030000@mail.ru<br>
+            Telegram: @ShchitOtMoshennikov_bot</p>
+
+            <h2>Изменения в политике</h2>
+            
+            <p>Я могу обновлять эту политику время от времени. Изменения вступают в силу с момента публикации на сайте.</p>
+            
+            <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.95rem;">Последнее обновление: 7 марта 2026 г.</p>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="footer-content">
-            <p>© 2026 Камила Золотова. Все права защищены.</p>
+            <p class="footer-copy">© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
                 <li><a href="privacy.html">Правовая информация</a></li>
                 <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>

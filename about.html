@@ -7,30 +7,39 @@
     <meta name="author" content="Камила Золотова">
     <title>Обо мне | Камила Золотова — Психолог по кибербезопасности</title>
     <meta name="description" content="Камила Золотова — психолог по кибербезопасности. 8+ лет опыта, КПТ, EMDR, специализация в поддержке IT-специалистов и SOC-аналитиков.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #F8FAFC;
-            --bg-secondary: #F1F5F9;
-            --bg-card: #FFFFFF;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-            --text-muted: #94A3B8;
-            --accent-primary: #0D9488;
-            --accent-secondary: #14B8A6;
-            --accent-warm: #F59E0B;
-            --border: #E2E8F0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --bg-primary: #F5F1EB;
+            --bg-secondary: #EDE8E0;
+            --bg-card: #FAF8F5;
+            --bg-dark: #2D3436;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6266;
+            --text-muted: #8B9194;
+            --text-light: #F5F1EB;
+            --accent-primary: #2D5A4A;
+            --accent-secondary: #4A7C6F;
+            --accent-warm: #C9A87C;
+            --accent-terracotta: #B87D5E;
+            --border: #D4CCC2;
+            --border-light: #E8E2DA;
+            --shadow: 0 4px 20px rgba(45, 52, 54, 0.08);
+            --shadow-lg: 0 12px 40px rgba(45, 52, 54, 0.12);
+            --shadow-soft: 0 8px 32px rgba(45, 52, 54, 0.06);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Source Serif Pro', Georgia, serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
         nav {
@@ -38,35 +47,39 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 1rem 5%;
+            padding: 1.25rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-light);
             z-index: 1000;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.875rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-primary);
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
         }
 
         .nav-links {
@@ -76,11 +89,24 @@
         }
 
         .nav-links a {
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover,
@@ -88,439 +114,239 @@
             color: var(--accent-primary);
         }
 
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
         .nav-cta {
+            font-family: 'Montserrat', sans-serif;
             background: var(--accent-primary);
             color: white;
-            padding: 0.625rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 500;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .nav-cta:hover {
             background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
         }
 
-        .hero {
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        .page-header {
+            padding: 10rem 5% 4rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            text-align: center;
         }
 
-        .hero-container {
-            max-width: 1100px;
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 5rem 5%;
+        }
+
+        .about-section {
+            background: var(--bg-primary);
+        }
+
+        .about-grid {
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 5rem;
             align-items: start;
         }
 
-        .profile-card {
+        .about-image {
             background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
+            border-radius: var(--radius-lg);
+            padding: 3rem;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
             position: sticky;
             top: 100px;
         }
 
-        .profile-photo {
-            width: 180px;
-            height: 180px;
+        .about-avatar {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 4px solid var(--accent-primary);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
         }
 
-        .profile-name {
+        .about-name {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
-        .profile-title {
+        .about-title {
             color: var(--accent-primary);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .profile-location {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
-        .profile-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .hero-tagline {
-            font-size: 1.25rem;
-            color: var(--accent-primary);
-            font-weight: 500;
+        .about-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-        }
-
-        .hero-text {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-
-        .hero-text p {
-            margin-bottom: 1rem;
-        }
-
-        .tabs-section {
-            padding: 2rem 5% 5rem;
-        }
-
-        .tabs-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .tabs-nav {
-            display: flex;
-            gap: 0.5rem;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 2rem;
-        }
-
-        .tab-btn {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            padding: 1rem 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            position: relative;
-            transition: color 0.3s;
-            font-family: inherit;
-        }
-
-        .tab-btn:hover {
             color: var(--text-primary);
         }
 
-        .tab-btn.active {
-            color: var(--accent-primary);
-        }
-
-        .tab-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--accent-primary);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--border);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 2.5rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 0.25rem;
-            width: 12px;
-            height: 12px;
-            background: var(--accent-primary);
-            border-radius: 50%;
-            margin-left: -5px;
-            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2);
-        }
-
-        .timeline-item.highlight::before {
-            background: var(--accent-warm);
-            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2); }
-            50% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.1); }
-        }
-
-        .timeline-date {
-            font-size: 0.875rem;
-            color: var(--accent-primary);
-            font-weight: 500;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-item.highlight .timeline-date {
-            color: var(--accent-warm);
-        }
-
-        .timeline-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-org {
+        .about-content p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .timeline-desc {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+        .credentials-section {
+            background: var(--bg-secondary);
         }
 
-        .timeline-badge {
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
             display: inline-block;
-            background: rgba(13, 148, 136, 0.1);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: var(--accent-primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-top: 0.75rem;
-        }
-
-        .timeline-badge.pending {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-warm);
-        }
-
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .cert-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s;
-            box-shadow: var(--shadow);
-        }
-
-        .cert-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-primary);
-        }
-
-        .cert-preview {
-            height: 160px;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--border) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            position: relative;
-        }
-
-        .cert-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .cert-preview-placeholder {
-            color: var(--text-muted);
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .cert-preview-placeholder .icon {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .cert-preview-placeholder .text {
-            font-size: 0.8rem;
-        }
-
-        .cert-info {
-            padding: 1.25rem;
-        }
-
-        .cert-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .cert-issuer {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .cert-year {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-        }
-
-        .cert-pending {
-            background: rgba(245, 158, 11, 0.05);
-            border: 1px dashed var(--accent-warm);
-        }
-
-        .pending-label {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--accent-warm);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .spec-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .spec-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            display: flex;
-            gap: 1rem;
-            transition: all 0.3s;
-            box-shadow: var(--shadow);
-        }
-
-        .spec-card:hover {
-            border-color: var(--accent-primary);
-        }
-
-        .spec-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .spec-content h3 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .spec-content p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .cta-section {
-            padding: 4rem 5%;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            text-align: center;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
-        .cta-section p {
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .credentials-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .credential-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+        }
+
+        .credential-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+
+        .credential-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credential-card li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .credential-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--accent-warm);
+            border-radius: 50%;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            padding: 5rem 5%;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section .section-title {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
         .btn-white {
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
             background: white;
             color: var(--accent-primary);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: var(--radius-sm);
             text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .btn-white:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-lg);
         }
 
         footer {
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
-            padding: 2rem 5%;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 3rem 5%;
         }
 
         .footer-content {
@@ -530,49 +356,43 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--text-light);
             text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.3s;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
-            color: var(--accent-primary);
+            opacity: 1;
         }
 
         @media (max-width: 968px) {
-            .hero-container {
+            .about-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
 
-            .profile-card {
+            .about-image {
                 position: static;
-                max-width: 400px;
-                margin: 0 auto;
             }
 
-            .spec-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .process-grid {
+            .credentials-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -580,24 +400,24 @@
                 display: none;
             }
 
-            .tabs-nav {
-                overflow-x: auto;
+            .page-header h1 {
+                font-size: 2rem;
             }
-        }
 
-        ::selection {
-            background: rgba(13, 148, 136, 0.2);
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <div class="logo-icon">🛡️</div>
-            <span>SecureMind</span>
+            <div class="logo-icon">KZ</div>
+            <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Главная</a></li>
             <li><a href="about.html" class="active">Обо мне</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -605,271 +425,89 @@
         <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
     </nav>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="profile-card">
-                <img src="images/psychologist.jpg" alt="Камила Золотова — психолог" class="profile-photo">
-                <h2 class="profile-name">Камила Золотова</h2>
-                <p class="profile-title">Психолог по кибербезопасности</p>
-                <p class="profile-location">📍 Москва / Онлайн</p>
-                <div class="profile-stats">
-                    <div class="stat">
-                        <div class="stat-value">8+</div>
-                        <div class="stat-label">лет опыта</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">500+</div>
-                        <div class="stat-label">консультаций</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">часов супервизий</div>
-                    </div>
-                </div>
+    <header class="page-header">
+        <h1>Обо мне</h1>
+        <p>Психолог, который понимает специфику работы в информационной безопасности</p>
+    </header>
+
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="about-avatar">KZ</div>
+                <div class="about-name">Камила Золотова</div>
+                <div class="about-title">Психолог / КПТ / EMDR</div>
             </div>
-
-            <div class="hero-content">
-                <h1>Камила Золотова</h1>
-                <p class="hero-tagline">Мост между психологической поддержкой и пониманием цифровых угроз</p>
-                <div class="hero-text">
-                    <p>Я — сертифицированный психолог с многолетней практикой. Моя работа строится на принципах конфиденциальности, эмпатии и глубокого понимания человеческой психики в условиях стресса.</p>
-                    
-                    <p>С развитием цифрового мира я увидела новую нишу, где психологическая помощь критически необходима — сфера информационной безопасности. IT-специалисты, специалисты по тестированию безопасности, аналитики SOC ежедневно сталкиваются с уникальным психологическим давлением: постоянная бдительность, ответственность за чужую безопасность, эмоциональная нагрузка после инцидентов.</p>
-                    
-                    <p>Я понимаю этот контекст. Не как технический специалист — а как психолог, который изучил специфику работы в кибербезопасности, механизмы социальной инженерии и психологические методы, используемые злоумышленниками.</p>
-
-                    <p>Моя цель — создать безопасное пространство, где специалисты по информационной безопасности могут получить поддержку без страха быть непонятыми.</p>
-                </div>
+            
+            <div class="about-content">
+                <h2>Почему кибербезопасность?</h2>
+                <p>Я — сертифицированный психолог с 8-летним опытом. Раньше я работала с семейными запросами и кризисами, но со временем заметила: IT-специалисты, приходящие на консультации, сталкиваются с уникальными профессиональными травмами, которые не всегда понятны коллегам из других сфер.</p>
+                <p>Я изучила специфику работы в SOC, поняла, что такое alert fatigue, разобралась в механизмах социальной инженерии и последствиях кибератак для команд. Теперь я создаю безопасное пространство для тех, кто защищает цифровой мир.</p>
+                <h2>Мой подход</h2>
+                <p>Я работаю в когнитивно-поведенческой терапии (КПТ) и использую EMDR для работы с травмой. Мой подход — это не просто «поговорить», а структурированная работа с конкретными целями и измеримыми результатами.</p>
+                <p>Я верю, что психологическая помощь должна быть доступна и понятна. Никакой мистики — только проверенные методы, прозрачность и уважение к вашему времени.</p>
             </div>
         </div>
     </section>
 
-    <section class="tabs-section">
-        <div class="tabs-container">
-            <div class="tabs-nav">
-                <button class="tab-btn active" data-tab="education">Образование</button>
-                <button class="tab-btn" data-tab="certificates">Дипломы и сертификаты</button>
-                <button class="tab-btn" data-tab="specialization">Специализация</button>
+    <section class="credentials-section">
+        <div class="section-header">
+            <div class="section-tag">Образование и опыт</div>
+            <h2 class="section-title">Моя квалификация</h2>
+        </div>
+        
+        <div class="credentials-grid">
+            <div class="credential-card">
+                <h3>Образование</h3>
+                <ul>
+                    <li>Тольяттинский государственный университет — Психология (бакалавр, 2025)</li>
+                    <li>НИИДОиПО — Семейная психология (2022)</li>
+                    <li>Высшая школа практической психологии — EMDR-терапия (2024)</li>
+                </ul>
             </div>
-
-            <div class="tab-content active" id="education">
-                <div class="timeline">
-                    <div class="timeline-item highlight">
-                        <div class="timeline-date">2026</div>
-                        <h3 class="timeline-title">Психотерапия и психологическое консультирование</h3>
-                        <p class="timeline-org">Московский институт психоанализа</p>
-                        <p class="timeline-desc">Магистратура. Подготовка психотерапевтов и психологических консультантов.</p>
-                        <span class="timeline-badge pending">🕐 Документ будет добавлен через неделю</span>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2026</div>
-                        <h3 class="timeline-title">Практики социально-психологического тренинга</h3>
-                        <p class="timeline-org">Московский институт психоанализа</p>
-                        <p class="timeline-desc">Удостоверение о дополнительном образовании.</p>
-                        <span class="timeline-badge">✓ Удостоверение</span>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2025</div>
-                        <h3 class="timeline-title">Сертификат супервизора</h3>
-                        <p class="timeline-org">SP Adriatika</p>
-                        <p class="timeline-desc">Certificate of Participation. Подготовка супервизоров в области психологического консультирования.</p>
-                        <span class="timeline-badge">✓ Сертификат</span>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2025</div>
-                        <h3 class="timeline-title">Психология</h3>
-                        <p class="timeline-org">Тольяттинский государственный университет</p>
-                        <p class="timeline-desc">Высшее образование. Квалификация: бакалавр.</p>
-                        <span class="timeline-badge">✓ Бакалавр</span>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024</div>
-                        <h3 class="timeline-title">Членство в АКПП</h3>
-                        <p class="timeline-org">Ассоциация когнитивно-поведенческой психотерапии</p>
-                        <p class="timeline-desc">Сертификат членства в профессиональной ассоциации.</p>
-                        <span class="timeline-badge">✓ Сертификат членства</span>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024</div>
-                        <h3 class="timeline-title">EMDR-терапия (ДПДГ)</h3>
-                        <p class="timeline-org">Высшая школа практической психологии</p>
-                        <p class="timeline-desc">Десенсибилизация и переработка движениями глаз. Метод работы с травмой.</p>
-                        <span class="timeline-badge">✓ Сертификат</span>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022</div>
-                        <h3 class="timeline-title">Семейная психология</h3>
-                        <p class="timeline-org">Национальный исследовательский институт доп. образования (НИИДОиПО), Москва</p>
-                        <p class="timeline-desc">Профессиональная переподготовка. Практическая психологическая помощь в области семейных и детско-родительских отношений.</p>
-                        <span class="timeline-badge">✓ Диплом</span>
-                    </div>
-                </div>
+            
+            <div class="credential-card">
+                <h3>Профессиональная принадлежность</h3>
+                <ul>
+                    <li>Член Ассоциации когнитивно-поведенческой психотерапии (АКПП)</li>
+                    <li>Участник супервизионных групп КПТ</li>
+                    <li>Постоянное повышение квалификации</li>
+                </ul>
             </div>
-
-            <div class="tab-content" id="certificates">
-                <div class="cert-grid">
-                    <a href="images/cert1.jpg" target="_blank" class="cert-card" style="text-decoration: none; color: inherit;">
-                        <div class="cert-preview">
-                            <img src="images/cert1.jpg" alt="Семейная психология" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px 16px 0 0;">
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">Семейная психология</h3>
-                            <p class="cert-issuer">НИИДОиПО, Москва</p>
-                            <p class="cert-year">2022 • Диплом</p>
-                            <p style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Нажмите для просмотра</p>
-                        </div>
-                    </a>
-
-                    <a href="images/cert2.jpg" target="_blank" class="cert-card" style="text-decoration: none; color: inherit;">
-                        <div class="cert-preview">
-                            <img src="images/cert2.jpg" alt="Психология - бакалавр" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px 16px 0 0;">
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">Психология</h3>
-                            <p class="cert-issuer">Тольяттинский государственный университет</p>
-                            <p class="cert-year">2025 • Бакалавр</p>
-                            <p style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Нажмите для просмотра</p>
-                        </div>
-                    </a>
-
-                    <a href="images/cert3.jpg" target="_blank" class="cert-card" style="text-decoration: none; color: inherit;">
-                        <div class="cert-preview">
-                            <img src="images/cert3.jpg" alt="EMDR-терапия (ДПДГ)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px 16px 0 0;">
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">EMDR-терапия (ДПДГ)</h3>
-                            <p class="cert-issuer">Высшая школа практической психологии</p>
-                            <p class="cert-year">2024 • Сертификат</p>
-                            <p style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Нажмите для просмотра</p>
-                        </div>
-                    </a>
-
-                    <a href="images/cert4.jpg" target="_blank" class="cert-card" style="text-decoration: none; color: inherit;">
-                        <div class="cert-preview">
-                            <img src="images/cert4.jpg" alt="Сертификат супервизора" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px 16px 0 0;">
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">Сертификат супервизора</h3>
-                            <p class="cert-issuer">SP Adriatika</p>
-                            <p class="cert-year">2025 • Certificate of Participation</p>
-                            <p style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Нажмите для просмотра</p>
-                        </div>
-                    </a>
-
-                    <a href="images/cert5.jpg" target="_blank" class="cert-card" style="text-decoration: none; color: inherit;">
-                        <div class="cert-preview">
-                            <img src="images/cert5.jpg" alt="Членство в АКПП" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px 16px 0 0;">
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">Членство в АКПП</h3>
-                            <p class="cert-issuer">Ассоциация когнитивно-поведенческой психотерапии</p>
-                            <p class="cert-year">2024 • Сертификат членства</p>
-                            <p style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Нажмите для просмотра</p>
-                        </div>
-                    </a>
-
-                    <a href="images/cert6.jpg" target="_blank" class="cert-card" style="text-decoration: none; color: inherit;">
-                        <div class="cert-preview">
-                            <img src="images/cert6.jpg" alt="Практики тренинга" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px 16px 0 0;">
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">Практики социально-психологического тренинга</h3>
-                            <p class="cert-issuer">Московский институт психоанализа</p>
-                            <p class="cert-year">2026 • Удостоверение</p>
-                            <p style="font-size: 0.75rem; color: var(--accent-primary); margin-top: 0.5rem;">👆 Нажмите для просмотра</p>
-                        </div>
-                    </a>
-
-                    <div class="cert-card cert-pending" style="opacity: 0.8;">
-                        <div class="cert-preview" style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--border) 100%);">
-                            <span class="pending-label">СКОРО</span>
-                            <div style="text-align: center; color: var(--text-muted); padding: 1rem;">
-                                <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎓</div>
-                                <div style="font-size: 0.8rem;">Фото документа<br>будет добавлено</div>
-                            </div>
-                        </div>
-                        <div class="cert-info">
-                            <h3 class="cert-title">Психотерапия и психологическое консультирование</h3>
-                            <p class="cert-issuer">Московский институт психоанализа</p>
-                            <p class="cert-year">2026 • Магистратура</p>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="credential-card">
+                <h3>Специализация</h3>
+                <ul>
+                    <li>Постинцидентная поддержка IT-специалистов</li>
+                    <li>Профессиональное выгорание в ИБ</li>
+                    <li>Тревожные расстройства у технических специалистов</li>
+                </ul>
             </div>
-
-            <div class="tab-content" id="specialization">
-                <div class="spec-grid">
-                    <div class="spec-card">
-                        <div class="spec-icon">⚡</div>
-                        <div class="spec-content">
-                            <h3>Постинцидентная поддержка</h3>
-                            <p>Восстановление после кибератак, утечек данных, вымогательства.</p>
-                        </div>
-                    </div>
-
-                    <div class="spec-card">
-                        <div class="spec-icon">🔥</div>
-                        <div class="spec-content">
-                            <h3>Профессиональное выгорание</h3>
-                            <p>Профилактика и преодоление выгорания у SOC-аналитиков и пентестеров.</p>
-                        </div>
-                    </div>
-
-                    <div class="spec-card">
-                        <div class="spec-icon">🎯</div>
-                        <div class="spec-content">
-                            <h3>Тревожность и стресс</h3>
-                            <p>Управление хроническим стрессом от постоянной бдительности.</p>
-                        </div>
-                    </div>
-
-                    <div class="spec-card">
-                        <div class="spec-icon">👥</div>
-                        <div class="spec-content">
-                            <h3>Работа с командами</h3>
-                            <p>Поддержка команд безопасности после критических инцидентов.</p>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="credential-card">
+                <h3>Опыт работы</h3>
+                <ul>
+                    <li>8+ лет практики психологом</li>
+                    <li>500+ проведенных консультаций</li>
+                    <li>Сотрудничество с IT-компаниями</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
-        <h2>Давайте познакомимся</h2>
-        <p>Первая консультация — бесплатно. Это возможность понять, комфортно ли нам работать вместе.</p>
+        <div class="section-title">Есть вопросы?</div>
+        <p class="section-subtitle">Первая консультация бесплатна. Давайте познакомимся и обсудим ваш запрос.</p>
         <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="btn-white">Записаться на консультацию</a>
     </section>
 
     <footer>
         <div class="footer-content">
-            <p>© 2026 Камила Золотова. Все права защищены.</p>
+            <p class="footer-copy">© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
                 <li><a href="privacy.html">Правовая информация</a></li>
                 <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>
             </ul>
         </div>
     </footer>
-
-    <script>
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.dataset.tab;
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabContents.forEach(c => c.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>

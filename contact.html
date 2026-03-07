@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="copyright" content="© 2026 Камила Золотова">
     <meta name="author" content="Камила Золотова">
-    <title>Контакты | Психолог по кибербезопасности</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Контакты | Камила Золотова — Психолог по кибербезопасности</title>
+    <meta name="description" content="Свяжитесь со мной для записи на консультацию. Telegram, телефон, email — выберите удобный способ связи.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #F8FAFC;
-            --bg-secondary: #F1F5F9;
-            --bg-card: #FFFFFF;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-            --text-muted: #94A3B8;
-            --accent-primary: #0D9488;
-            --accent-secondary: #14B8A6;
-            --accent-warm: #F59E0B;
-            --border: #E2E8F0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --bg-primary: #F5F1EB;
+            --bg-secondary: #EDE8E0;
+            --bg-card: #FAF8F5;
+            --bg-dark: #2D3436;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6266;
+            --text-muted: #8B9194;
+            --text-light: #F5F1EB;
+            --accent-primary: #2D5A4A;
+            --accent-secondary: #4A7C6F;
+            --accent-warm: #C9A87C;
+            --accent-terracotta: #B87D5E;
+            --border: #D4CCC2;
+            --border-light: #E8E2DA;
+            --shadow: 0 4px 20px rgba(45, 52, 54, 0.08);
+            --shadow-lg: 0 12px 40px rgba(45, 52, 54, 0.12);
+            --shadow-soft: 0 8px 32px rgba(45, 52, 54, 0.06);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Source Serif Pro', Georgia, serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
         nav {
@@ -37,35 +47,39 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 1rem 5%;
+            padding: 1.25rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-light);
             z-index: 1000;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.875rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-primary);
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
         }
 
         .nav-links {
@@ -75,11 +89,24 @@
         }
 
         .nav-links a {
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover,
@@ -87,232 +114,310 @@
             color: var(--accent-primary);
         }
 
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
         .nav-cta {
+            font-family: 'Montserrat', sans-serif;
             background: var(--accent-primary);
             color: white;
-            padding: 0.625rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 500;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .nav-cta:hover {
             background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
         }
 
-        .hero {
-            padding: 8rem 5% 3rem;
+        .page-header {
+            padding: 10rem 5% 4rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
             text-align: center;
-            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
             font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
-        .hero p {
-            font-size: 1.125rem;
+        .page-header p {
+            font-size: 1.2rem;
             color: var(--text-secondary);
-        }
-
-        .contact-section {
-            padding: 3rem 5%;
-        }
-
-        .container {
-            max-width: 1000px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
+        .contact-section {
+            padding: 5rem 5%;
+            background: var(--bg-primary);
+        }
+
         .contact-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+            height: fit-content;
         }
 
         .contact-info h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
         }
 
         .contact-methods {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.75rem;
         }
 
         .contact-method {
             display: flex;
-            align-items: flex-start;
             gap: 1rem;
-            padding: 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            transition: all 0.3s;
-        }
-
-        .contact-method:hover {
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow);
+            align-items: flex-start;
         }
 
         .contact-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(45, 90, 74, 0.1) 0%, rgba(74, 124, 111, 0.1) 100%);
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
+            color: var(--accent-primary);
             flex-shrink: 0;
         }
 
         .contact-details h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
             margin-bottom: 0.25rem;
+            color: var(--text-primary);
         }
 
         .contact-details p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         .contact-details a {
             color: var(--accent-primary);
             text-decoration: none;
-            font-weight: 500;
+            transition: color 0.3s;
         }
 
         .contact-details a:hover {
-            text-decoration: underline;
+            color: var(--accent-secondary);
         }
 
         .contact-form {
             background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
         }
 
         .contact-form h2 {
-            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
             margin-bottom: 0.5rem;
+            color: var(--text-primary);
         }
 
         .contact-form > p {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .form-group {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group label {
+            font-family: 'Montserrat', sans-serif;
             display: block;
-            font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            transition: border-color 0.3s;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1rem;
+            color: var(--text-primary);
             background: var(--bg-primary);
+            transition: all 0.3s ease;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-primary);
+            box-shadow: 0 0 0 4px rgba(45, 90, 74, 0.1);
         }
 
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        #contactError {
+            color: #e74c3c;
+            display: none;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn-submit {
+            font-family: 'Montserrat', sans-serif;
             width: 100%;
             background: var(--accent-primary);
             color: white;
-            padding: 1rem;
+            padding: 1rem 2rem;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: var(--radius-sm);
             font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .btn-submit:hover {
             background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
+        }
+
+        #telegramInstructions {
+            display: none;
+            background: rgba(45, 90, 74, 0.05);
+            border: 1px solid var(--accent-primary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        #telegramInstructions p {
+            margin-bottom: 0.75rem;
+        }
+
+        #telegramInstructions p:first-child {
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #telegramInstructions p:last-child {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0;
         }
 
         .faq-section {
-            padding: 4rem 5%;
             background: var(--bg-secondary);
+            padding: 5rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
 
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .faq-item {
             background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
         }
 
         .faq-item h3 {
-            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
             margin-bottom: 0.75rem;
-            color: var(--accent-primary);
+            color: var(--text-primary);
         }
 
         .faq-item p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .section-header h2 {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .section-header p {
-            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         footer {
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
-            padding: 2rem 5%;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 3rem 5%;
         }
 
         .footer-content {
@@ -322,33 +427,38 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-links {
-            display: flex;
             gap: 1.5rem;
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-primary);
         }
 
         .footer-copy {
             color: var(--text-muted);
-            font-size: 0.875rem;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .contact-grid,
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
             .faq-grid {
                 grid-template-columns: 1fr;
             }
@@ -356,21 +466,25 @@
             .nav-links {
                 display: none;
             }
-        }
 
-        ::selection {
-            background: rgba(13, 148, 136, 0.2);
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <div class="logo-icon">🛡️</div>
-            <span>SecureMind</span>
+            <div class="logo-icon">KZ</div>
+            <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Главная</a></li>
             <li><a href="about.html">Обо мне</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="contact.html" class="active">Контакты</a></li>
@@ -378,126 +492,140 @@
         <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
     </nav>
 
-    <section class="hero">
-        <h1>Свяжитесь со мной</h1>
-        <p>Запишитесь на консультацию или задайте вопрос удобным способом</p>
-    </section>
+    <header class="page-header">
+        <h1>Контакты</h1>
+        <p>Выберите удобный способ связи — я отвечу в течение 24 часов</p>
+    </header>
 
     <section class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Контакты</h2>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-details">
-                                <h3>Telegram</h3>
-                                <p>Быстрый способ связи<br>
-                                <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer">@ShchitOtMoshennikov_bot</a></p>
-                            </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Как со мной связаться</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
                         </div>
-
-                        <div class="contact-method">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-details">
-                                <h3>Телефон</h3>
-                                <p>+7 (909) 903-00-00<br>
-                                <span style="color: var(--text-muted); font-size: 0.85rem;">WhatsApp, звонки</span></p>
-                            </div>
+                        <div class="contact-details">
+                            <h3>Telegram</h3>
+                            <p>Быстрый способ связи<br>
+                            <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer">@ShchitOtMoshennikov_bot</a></p>
                         </div>
+                    </div>
 
-                        <div class="contact-method">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-details">
-                                <h3>Email</h3>
-                                <p><span id="protected-email">[загрузка...]</span></p>
-                            </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
                         </div>
+                        <div class="contact-details">
+                            <h3>Телефон</h3>
+                            <p>+7 (909) 903-00-00<br>
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">WhatsApp, звонки</span></p>
+                        </div>
+                    </div>
 
-                        <div class="contact-method">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h3>Офлайн-консультации</h3>
-                                <p><a href="https://www.google.com/maps/search/?api=1&query=Москва,+Алтуфьевское+шоссе,+34+а" target="_blank" rel="noopener noreferrer">Москва, Алтуфьевское шоссе, 34 а</a><br>
-                                <span style="color: var(--text-muted); font-size: 0.85rem;">м. Отрадное | Также работаю онлайн</span></p>
-                            </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><span id="protected-email">[загрузка...]</span></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Офлайн-консультации</h3>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=Москва,+Алтуфьевское+шоссе,+34+а" target="_blank" rel="noopener noreferrer">Москва, Алтуфьевское шоссе, 34 а</a><br>
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">м. Отрадное | Также работаю онлайн</span></p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="contact-form">
-                    <h2>Форма записи</h2>
-                    <p>Заполните форму, и я свяжусь с вами в течение 24 часов</p>
-                    
-                    <form id="telegramForm">
-                        <div class="form-group">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contact">Контакт для связи</label>
-                            <input type="text" id="contact" name="contact" placeholder="Telegram (@username) или телефон (+7...)" required>
-                            <small id="contactError" style="color: #ef4444; display: none; margin-top: 0.5rem; font-size: 0.85rem; display: block;"></small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Кратко о запросе</label>
-                            <textarea id="message" name="message" placeholder="Опишите, что вас беспокоит..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-submit">📱 Отправить заявку в Telegram</button>
-                    </form>
-                    
-                    <div id="telegramInstructions" style="display: none; background: rgba(13, 148, 136, 0.1); border: 1px solid var(--accent-primary); border-radius: 12px; padding: 1.5rem; margin-top: 1rem; text-align: center;">
-                        <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 0.5rem;">✅ Заявка готова!</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Нажмите кнопку ниже, чтобы открыть Telegram и отправить заявку психологу.</p>
-                        <p style="color: var(--text-muted); font-size: 0.8rem;">В Telegram нажмите кнопку <strong>"ЗАПУСТИТЬ"</strong> или <strong>"START"</strong>, чтобы увидеть меню с кнопками.</p>
+            <div class="contact-form">
+                <h2>Форма записи</h2>
+                <p>Заполните форму, и я свяжусь с вами в течение 24 часов</p>
+                
+                <form id="telegramForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="contact">Контакт для связи</label>
+                        <input type="text" id="contact" name="contact" placeholder="Telegram (@username) или телефон (+7...)" required>
+                        <small id="contactError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Кратко о запросе</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Опишите, что вас беспокоит..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                </form>
+                
+                <div id="telegramInstructions">
+                    <p>Заявка готова!</p>
+                    <p>Нажмите кнопку ниже, чтобы открыть Telegram и отправить заявку.</p>
+                    <p>В Telegram нажмите кнопку "ЗАПУСТИТЬ" или "START", чтобы увидеть меню.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Часто задаваемые вопросы</h2>
-                <p>Ответы на популярные вопросы о работе</p>
+        <div class="section-header">
+            <div class="section-tag">FAQ</div>
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Сколько длится сессия?</h3>
+                <p>Индивидуальная сессия длится 50 минут. Первая диагностическая встреча может занять до 60 минут.</p>
             </div>
 
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Сколько длится сессия?</h3>
-                    <p>Индивидуальная сессия длится 50 минут. Первая диагностическая встреча может занять до 60 минут.</p>
-                </div>
+            <div class="faq-item">
+                <h3>Как часто нужно встречаться?</h3>
+                <p>Обычно мы договариваемся о еженедельных встречах. При острых состояниях возможны два раза в неделю.</p>
+            </div>
 
-                <div class="faq-item">
-                    <h3>Как часто нужно встречаться?</h3>
-                    <p>Обычно мы договариваемся о еженедельных встречах. При острых состояниях возможны два раза в неделю.</p>
-                </div>
+            <div class="faq-item">
+                <h3>Вы работаете онлайн?</h3>
+                <p>Да, основной формат — онлайн-консультации. При необходимости возможны встречи в Москве.</p>
+            </div>
 
-                <div class="faq-item">
-                    <h3>Вы работаете онлайн?</h3>
-                    <p>Да, основной формат — онлайн-консультации. При необходимости возможны встречи в Москве.</p>
-                </div>
+            <div class="faq-item">
+                <h3>Это конфиденциально?</h3>
+                <p>Абсолютно. Всё остаётся между нами. Этический кодекс психолога неукоснительно соблюдается.</p>
+            </div>
 
-                <div class="faq-item">
-                    <h3>Это конфиденциально?</h3>
-                    <p>Абсолютно. Всё остаётся между нами. Этический кодекс психолога неукоснительно соблюдается.</p>
-                </div>
+            <div class="faq-item">
+                <h3>Сколько обычно длится терапия?</h3>
+                <p>Зависит от запроса. Краткосрочная работа — от 8 сессий, глубинная терапия — от нескольких месяцев.</p>
+            </div>
 
-                <div class="faq-item">
-                    <h3>Сколько обычно длится терапия?</h3>
-                    <p>Зависит от запроса. Краткосрочная работа — от 8 сессий, глубинная терапия — от нескольких месяцев.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Что если мы не подойдём друг другу?</h3>
-                    <p>Первая консультация бесплатна — именно для того, чтобы понять, комфортно ли нам работать вместе.</p>
-                </div>
+            <div class="faq-item">
+                <h3>Что если мы не подойдём друг другу?</h3>
+                <p>Первая консультация бесплатна — именно для того, чтобы понять, комфортно ли нам работать вместе.</p>
             </div>
         </div>
     </section>
@@ -517,18 +645,15 @@
         function validateContact(value) {
             const trimmed = value.trim();
             
-            // Проверка Telegram: @username или username (минимум 5 символов, буквы, цифры, _)
+            // Проверка Telegram: @username или username
             const telegramRegex = /^@?[a-zA-Z0-9_]{5,32}$/;
             
-            // Проверка телефона: +7, 8, или 7 в начале, затем 10 цифр
-            // Допускаются пробелы, скобки, дефисы
+            // Проверка телефона
             const phoneRegex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
             
-            // Чистим телефон от всего кроме цифр для дополнительной проверки
             const phoneDigitsOnly = trimmed.replace(/\D/g, '');
             const isValidPhone = phoneRegex.test(trimmed) && (phoneDigitsOnly.length === 11 || phoneDigitsOnly.length === 10);
             
-            // Проверяем, что это не похоже на email (содержит @ в середине, но не в начале как Telegram)
             const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
             
             if (isEmail) {
@@ -549,16 +674,14 @@
             };
         }
         
-        // Показать ошибку
         function showContactError(message) {
             const errorEl = document.getElementById('contactError');
             const inputEl = document.getElementById('contact');
             errorEl.textContent = message;
             errorEl.style.display = 'block';
-            inputEl.style.borderColor = '#ef4444';
+            inputEl.style.borderColor = '#e74c3c';
         }
         
-        // Скрыть ошибку
         function hideContactError() {
             const errorEl = document.getElementById('contactError');
             const inputEl = document.getElementById('contact');
@@ -566,12 +689,10 @@
             inputEl.style.borderColor = '';
         }
         
-        // Валидация при вводе
         document.getElementById('contact').addEventListener('input', function() {
             hideContactError();
         });
         
-        // Отправка формы в Telegram
         document.getElementById('telegramForm').addEventListener('submit', function(e) {
             e.preventDefault();
             hideContactError();
@@ -580,7 +701,6 @@
             const contact = document.getElementById('contact').value;
             const message = document.getElementById('message').value;
             
-            // Валидация контакта
             const validation = validateContact(contact);
             if (!validation.valid) {
                 showContactError(validation.message);
@@ -588,53 +708,25 @@
                 return;
             }
             
-            // Формируем текст сообщения
-            let text = '📋 Новая заявка с сайта SecureMind\\n\\n';
-            text += '👤 Имя: ' + name + '\\n';
-            text += '📞 Контакт: ' + contact + '\\n';
+            let text = '📋 Новая заявка с сайта SecureMind\n\n';
+            text += '👤 Имя: ' + name + '\n';
+            text += '📞 Контакт: ' + contact + '\n';
             if (message) {
-                text += '💬 Запрос: ' + message + '\\n';
+                text += '💬 Запрос: ' + message + '\n';
             }
-            text += '\\n📅 Дата: ' + new Date().toLocaleString('ru-RU');
+            text += '\n📅 Дата: ' + new Date().toLocaleString('ru-RU');
             
-            // Кодируем текст для URL
             const encodedText = encodeURIComponent(text);
             
-            // Открываем Telegram с готовым сообщением
-            const telegramUrl = 'https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText;
-            
-            // Для десктопа используем другой формат
-            const telegramWebUrl = 'https://web.telegram.org/k/#@ShchitOtMoshennikov_bot';
-            
-            // Пробуем открыть через tg:// схему
-            const tgUrl = 'tg://resolve?domain=ShchitOtMoshennikov_bot&start=' + encodedText;
-            
-            // Показываем инструкции
             document.getElementById('telegramInstructions').style.display = 'block';
-            
-            // Прокручиваем к инструкциям
             document.getElementById('telegramInstructions').scrollIntoView({ behavior: 'smooth' });
             
-            // Открываем Telegram с задержкой
             setTimeout(function() {
-                // Проверяем, мобильное ли устройство
-                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                
-                if (isMobile) {
-                    // На мобильных открываем приложение Telegram
-                    window.location.href = tgUrl;
-                    // Если приложение не открылось, через 2 секунды открываем web-версию
-                    setTimeout(function() {
-                        window.open('https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText, '_blank');
-                    }, 2000);
-                } else {
-                    // На десктопе открываем web-версию Telegram
-                    window.open('https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText, '_blank');
-                }
+                window.open('https://t.me/ShchitOtMoshennikov_bot?start=' + encodedText, '_blank');
             }, 500);
         });
         
-        // Защищённый email от спам-ботов
+        // Защищенный email
         (function() {
             const parts = ['9099030000', 'mail', 'ru'];
             const email = parts[0] + '@' + parts[1] + '.' + parts[2];
