@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="© 2026 Камилла Золотова">
+    <meta name="author" content="Камилла Золотова">
+    <title>Контакты | Психолог по кибербезопасности</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #F8FAFC;
+            --bg-secondary: #F1F5F9;
+            --bg-card: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --text-muted: #94A3B8;
+            --accent-primary: #0D9488;
+            --accent-secondary: #14B8A6;
+            --accent-warm: #F59E0B;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-primary);
+        }
+
+        .nav-cta {
+            background: var(--accent-primary);
+            color: white;
+            padding: 0.625rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .hero {
+            padding: 8rem 5% 3rem;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-section {
+            padding: 3rem 5%;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .contact-method:hover {
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-details a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .contact-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form > p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+            background: var(--bg-primary);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--accent-primary);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-section {
+            padding: 4rem 5%;
+            background: var(--bg-secondary);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-primary);
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 2rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        ::selection {
+            background: rgba(13, 148, 136, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">🛡️</div>
+            <span>SecureMind</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="contact.html" class="active">Контакты</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Записаться</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Свяжитесь со мной</h1>
+        <p>Запишитесь на консультацию или задайте вопрос удобным способом</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Контакты</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Telegram</h3>
+                                <p>Быстрый способ связи<br>
+                                <a href="https://t.me/Psychology_research_2026_bot">@Psychology_research_2026_bot</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Телефон</h3>
+                                <p>+7 (909) 903-00-00<br>
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">WhatsApp, звонки</span></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@securemind.dev">contact@securemind.dev</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>Офлайн-консультации</h3>
+                                <p>Москва, м. Отрадное<br>
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">Также работаю онлайн</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Форма записи</h2>
+                    <p>Заполните форму, и я свяжусь с вами в течение 24 часов</p>
+                    
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact">Контакт для связи</label>
+                            <input type="text" id="contact" name="contact" placeholder="Telegram, телефон или email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Кратко о запросе</label>
+                            <textarea id="message" name="message" placeholder="Опишите, что вас беспокоит..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на популярные вопросы о работе</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Сколько длится сессия?</h3>
+                    <p>Индивидуальная сессия длится 50 минут. Первая диагностическая встреча может занять до 60 минут.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Как часто нужно встречаться?</h3>
+                    <p>Обычно мы договариваемся о еженедельных встречах. При острых состояниях возможны два раза в неделю.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Вы работаете онлайн?</h3>
+                    <p>Да, основной формат — онлайн-консультации. При необходимости возможны встречи в Москве.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Это конфиденциально?</h3>
+                    <p>Абсолютно. Всё остаётся между нами. Этический кодекс психолога неукоснительно соблюдается.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Сколько обычно длится терапия?</h3>
+                    <p>Зависит от запроса. Краткосрочная работа — от 8 сессий, глубинная терапия — от нескольких месяцев.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Что если мы не подойдём друг другу?</h3>
+                    <p>Первая консультация бесплатна — именно для того, чтобы понять, комфортно ли нам работать вместе.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-copy">© 2026 Камилла Золотова. Все права защищены.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Правовая информация</a></li>
+                <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

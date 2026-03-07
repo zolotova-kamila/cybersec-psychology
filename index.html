@@ -3,66 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Психолог по кибербезопасности | Защита цифрового сознания</title>
+    <meta name="copyright" content="© 2026 Камилла Золотова">
+    <meta name="author" content="Камилла Золотова">
+    <title>Камилла Золотова | Психолог по кибербезопасности</title>
+    <meta name="description" content="Психологическая помощь для специалистов информационной безопасности, SOC-аналитиков и IT-специалистов. Постинцидентная поддержка, выгорание, тревожность.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0e17;
-            --bg-secondary: #111827;
-            --bg-card: #1a2234;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #06b6d4;
-            --accent-glow: rgba(59, 130, 246, 0.3);
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border: #1e293b;
-            --success: #10b981;
-            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-            --gradient-dark: linear-gradient(180deg, #0a0e17 0%, #111827 100%);
+            --bg-primary: #F8FAFC;
+            --bg-secondary: #F1F5F9;
+            --bg-card: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --text-muted: #94A3B8;
+            --accent-primary: #0D9488;
+            --accent-secondary: #14B8A6;
+            --accent-warm: #F59E0B;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Security Grid Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            padding: 1.25rem 5%;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 14, 23, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
@@ -81,7 +61,7 @@
         .logo-icon {
             width: 40px;
             height: 40px;
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -101,81 +81,51 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: color 0.3s;
-            position: relative;
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-primary);
         }
 
         .nav-cta {
-            background: var(--gradient-primary);
+            background: var(--accent-primary);
             color: white;
             padding: 0.625rem 1.5rem;
             border-radius: 8px;
             font-weight: 500;
             text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
         }
 
         .nav-cta:hover {
+            background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+            box-shadow: var(--shadow);
         }
 
-        /* Hero Section */
         .hero {
-            min-height: 100vh;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, #E0F2FE 100%);
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 8rem 5% 4rem;
-            position: relative;
-            overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .hero-content {
-            max-width: 650px;
-            position: relative;
-            z-index: 1;
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(13, 148, 136, 0.1);
             color: var(--accent-primary);
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -184,156 +134,132 @@
             margin-bottom: 1.5rem;
         }
 
-        .hero-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--success);
-            border-radius: 50%;
-            animation: blink 2s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
-            line-height: 1.1;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #fff 0%, var(--accent-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            max-width: 540px;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .stat {
-            text-align: left;
-        }
-
-        .stat-value {
-            font-size: 2rem;
-            font-weight: 700;
             color: var(--text-primary);
         }
 
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--text-muted);
+        .hero h1 span {
+            color: var(--accent-primary);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
         }
 
         .hero-cta {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
         }
 
         .btn-primary {
-            background: var(--gradient-primary);
+            background: var(--accent-primary);
             color: white;
             padding: 1rem 2rem;
             border-radius: 12px;
             font-weight: 600;
             text-decoration: none;
-            border: none;
-            cursor: pointer;
             transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: inline-block;
         }
 
         .btn-primary:hover {
+            background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
-            background: transparent;
+            background: white;
             color: var(--text-primary);
             padding: 1rem 2rem;
             border-radius: 12px;
             font-weight: 600;
             text-decoration: none;
             border: 1px solid var(--border);
-            cursor: pointer;
             transition: all 0.3s;
+            display: inline-block;
         }
 
         .btn-secondary:hover {
-            background: var(--bg-card);
             border-color: var(--accent-primary);
+            color: var(--accent-primary);
         }
 
-        /* Trust Indicators */
-        .trust-bar {
-            background: var(--bg-secondary);
-            padding: 2rem 5%;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+        .hero-image {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
         }
 
-        .trust-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero-avatar {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 5rem;
+        }
+
+        .hero-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title {
+            color: var(--accent-primary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
             gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
         }
 
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+        .stat {
+            text-align: center;
         }
 
-        .trust-icon {
-            width: 24px;
-            height: 24px;
-            color: var(--success);
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
         }
 
-        /* About Section */
-        .about {
-            padding: 6rem 5%;
-            background: var(--gradient-dark);
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .pain-points {
+            padding: 5rem 5%;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
         }
 
         .section-tag {
             display: inline-block;
-            background: rgba(6, 182, 212, 0.1);
-            color: var(--accent-secondary);
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--accent-warm);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.875rem;
@@ -342,42 +268,42 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .section-subtitle {
             color: var(--text-secondary);
-            font-size: 1.125rem;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
-        .about-grid {
+        .cards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .about-card {
+        .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 2rem;
             transition: all 0.3s;
+            box-shadow: var(--shadow);
         }
 
-        .about-card:hover {
+        .card:hover {
             transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
             border-color: var(--accent-primary);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .about-card-icon {
+        .card-icon {
             width: 56px;
             height: 56px;
-            background: rgba(59, 130, 246, 0.1);
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -386,203 +312,135 @@
             margin-bottom: 1.5rem;
         }
 
-        .about-card h3 {
+        .card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
         }
 
-        .about-card p {
+        .card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
-        /* Services Section */
-        .services {
-            padding: 6rem 5%;
-            background: var(--bg-primary);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            display: flex;
-            gap: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: var(--accent-secondary);
-            transform: translateX(8px);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .service-content h3 {
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-content p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Approach Section */
-        .approach {
-            padding: 6rem 5%;
+        .about-preview {
+            padding: 5rem 5%;
             background: var(--bg-secondary);
         }
 
-        .approach-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .approach-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .approach-text p {
+        .about-container p {
+            font-size: 1.25rem;
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
-        .approach-list {
-            list-style: none;
-            margin-top: 2rem;
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
         }
 
-        .approach-list li {
+        .feature {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 0.5rem;
             color: var(--text-secondary);
         }
 
-        .approach-list li::before {
+        .feature::before {
             content: '✓';
-            width: 24px;
-            height: 24px;
-            background: rgba(16, 185, 129, 0.2);
-            color: var(--success);
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        .process {
+            padding: 5rem 5%;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
-            flex-shrink: 0;
-        }
-
-        .approach-visual {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .security-layers {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .layer {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 12px;
-            padding: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .layer-icon {
             font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin: 0 auto 1rem;
         }
 
-        .layer-text {
-            font-weight: 500;
+        .process-step h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
         }
 
-        .layer-sub {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
-        /* CTA Section */
-        .cta {
-            padding: 6rem 5%;
+        .cta-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             text-align: center;
-            background: var(--bg-primary);
-            position: relative;
-            overflow: hidden;
+            color: white;
         }
 
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-            z-index: 0;
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cta h2 {
+        .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .cta p {
-            color: var(--text-secondary);
+        .cta-section p {
+            opacity: 0.9;
             margin-bottom: 2rem;
-            font-size: 1.125rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
+        .btn-white {
+            background: white;
+            color: var(--accent-primary);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
         }
 
-        /* Footer */
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
         footer {
-            background: var(--bg-secondary);
+            background: var(--bg-card);
             border-top: 1px solid var(--border);
-            padding: 3rem 5%;
+            padding: 2rem 5%;
         }
 
         .footer-content {
@@ -592,304 +450,202 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 600;
-            color: var(--text-primary);
+            gap: 1rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
         }
 
         .footer-links a {
-            color: var(--text-muted);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: var(--text-primary);
+            color: var(--accent-primary);
         }
 
-        .footer-copy {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .about-grid {
-                grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-            
-            .approach-content {
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .cards-grid,
+            .process-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
             .nav-links {
                 display: none;
             }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .about-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-cta,
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            .trust-content {
-                flex-direction: column;
-                text-align: center;
-            }
         }
 
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection */
         ::selection {
-            background: rgba(59, 130, 246, 0.3);
-            color: white;
+            background: rgba(13, 148, 136, 0.2);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <div class="logo-icon">🛡️</div>
             <span>SecureMind</span>
         </a>
         <ul class="nav-links">
             <li><a href="about.html">Обо мне</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#approach">Подход</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="contact.html">Контакты</a></li>
         </ul>
-        <a href="#contact" class="nav-cta">Записаться</a>
+        <a href="contact.html" class="nav-cta">Записаться</a>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">🔒 Конфиденциально и безопасно</div>
-            <h1>Психологическая поддержка в цифровую эпоху</h1>
-            <p>Помогаю IT-специалистам, этичным хакерам и всем, кто столкнулся с киберугрозами, восстановить внутреннюю защиту и эмоциональное равновесие.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn-primary">Начать консультацию →</a>
-                <a href="#services" class="btn-secondary">Узнать больше</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-value">500+</div>
-                    <div class="stat-label">Консультаций</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">8+</div>
-                    <div class="stat-label">Лет опыта</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">98%</div>
-                    <div class="stat-label">Рекомендаций</div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🔒 Конфиденциально и безопасно</div>
+                <h1>Психологическая поддержка для <span>защитников цифрового мира</span></h1>
+                <p>Помогаю специалистам по информационной безопасности справляться с выгоранием, тревожностью и последствиями киберинцидентов. Понимаю специфику вашей работы.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary">Записаться на консультацию</a>
+                    <a href="about.html" class="btn-secondary">Узнать обо мне</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Trust Bar -->
-    <div class="trust-bar">
-        <div class="trust-content">
-            <div class="trust-item">
-                <span class="trust-icon">🔐</span>
-                <span>Полная конфиденциальность</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">🎓</span>
-                <span>Дипломированный психолог</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">💻</span>
-                <span>Понимание IT-сферы</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">🌐</span>
-                <span>Онлайн-формат</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Обо мне</div>
-                <h2 class="section-title">Мост между психологией и кибербезопасностью</h2>
-                <p class="section-subtitle">Уникальное сочетание профессиональной подготовки в области психологии и глубокого понимания цифровых технологий.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-card-icon">🧠</div>
-                    <h3>Клиническая психология</h3>
-                    <p>Высшее образование в области клинической психологии, специализация по работе с травмой, тревожными расстройствами и выгоранием.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-card-icon">🔍</div>
-                    <h3>Осведомлённость об угрозах</h3>
-                    <p>Понимание механизмов кибератак, социальной инженерии и психологических методов, используемых злоумышленниками.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-card-icon">🤝</div>
-                    <h3>Этичный подход</h3>
-                    <p>Работа в соответствии с профессиональным кодексом: конфиденциальность, добровольность, уважение к клиенту.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Услуги</div>
-                <h2 class="section-title">Чем могу помочь</h2>
-                <p class="section-subtitle">Специализированная психологическая помощь для профессионалов в сфере информационной безопасности.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <div class="service-content">
-                        <h3>Постинцидентная поддержка</h3>
-                        <p>Помощь в восстановлении после кибератак, утечек данных, вымогательства. Работа с чувством вины, страхом и беспомощностью.</p>
+            <div class="hero-image">
+                <div class="hero-avatar">👩‍⚕️</div>
+                <div class="hero-name">Камилла Золотова</div>
+                <div class="hero-title">Психолог по кибербезопасности</div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">8+</div>
+                        <div class="stat-label">лет опыта</div>
                     </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔥</div>
-                    <div class="service-content">
-                        <h3>Профессиональное выгорание</h3>
-                        <p>Профилактика и преодоление выгорания у SOC-аналитиков, пентестеров и специалистов по ИБ. Восстановление мотивации.</p>
+                    <div class="stat">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">консультаций</div>
                     </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <div class="service-content">
-                        <h3>Тревожность и стресс</h3>
-                        <p>Управление хроническим стрессом, тревожностью, бессонницей, связанными с высокими требованиями профессии.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">👥</div>
-                    <div class="service-content">
-                        <h3>Для команд</h3>
-                        <p>Психологическая поддержка команд безопасности после критических инцидентов. Групповые сессии и тренинги резильентности.</p>
+                    <div class="stat">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">часов супервизий</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Approach Section -->
-    <section class="approach" id="approach">
-        <div class="container">
-            <div class="approach-content">
-                <div class="approach-text">
-                    <div class="section-tag">Подход</div>
-                    <h2>Безопасное пространство для восстановления</h2>
-                    <p>Мой подход основан на принципах когнитивно-поведенческой терапии, EMDR для работы с травмой и методах осознанности. Я понимаю специфику работы в кибербезопасности — постоянную бдительность, ответственность за чужую безопасность, эмоциональную нагрузку от инцидентов.</p>
-                    <p>Каждая сессия — это защищённое пространство, где вы можете говорить о сложном без страха осуждения.</p>
-                    <ul class="approach-list">
-                        <li>Индивидуальный план работы под ваш запрос</li>
-                        <li>Гибкий график с учётом часовых поясов</li>
-                        <li>Защищённые коммуникационные каналы</li>
-                        <li>Прозрачные сроки и ожидаемые результаты</li>
-                    </ul>
-                </div>
-                <div class="approach-visual">
-                    <div class="security-layers">
-                        <div class="layer">
-                            <span class="layer-icon">🛡️</span>
-                            <div>
-                                <div class="layer-text">Конфиденциальность</div>
-                                <div class="layer-sub">Всё остаётся между нами</div>
-                            </div>
-                        </div>
-                        <div class="layer">
-                            <span class="layer-icon">🔐</span>
-                            <div>
-                                <div class="layer-text">Защита данных</div>
-                                <div class="layer-sub">Шифрованные каналы связи</div>
-                            </div>
-                        </div>
-                        <div class="layer">
-                            <span class="layer-icon">💙</span>
-                            <div>
-                                <div class="layer-text">Эмпатия и понимание</div>
-                                <div class="layer-sub">Без оценок и осуждений</div>
-                            </div>
-                        </div>
-                        <div class="layer">
-                            <span class="layer-icon">📈</span>
-                            <div>
-                                <div class="layer-text">Результативность</div>
-                                <div class="layer-sub">Ориентация на изменения</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="pain-points">
+        <div class="section-header">
+            <div class="section-tag">С чем помогаю</div>
+            <h2 class="section-title">Профессиональные вызовы ИБ-специалистов</h2>
+            <p class="section-subtitle">Работа в сфере информационной безопасности связана с уникальным психологическим давлением. Я понимаю эти вызовы.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <h3>Профессиональное выгорание</h3>
+                <p>Постоянная бдительность, ночные дежурства, стресс от ответственности за безопасность. Восстановление ресурса и мотивации.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>После инцидента</h3>
+                <p>Восстановление после кибератак, утечек данных, вымогательства. Работа с чувством вины, тревогой и беспомощностью.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>Тревожность и стресс</h3>
+                <p>Хронический стресс от «войны с неизвестным противником», навязчивые мысли об уязвимостях, бессонница.</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
-        <div class="cta-content">
-            <div class="section-tag">Запись</div>
-            <h2>Начните путь к внутренней защите</h2>
-            <p>Первая консультация — бесплатно. Это возможность познакомиться, обсудить ваш запрос и понять, комфортно ли нам работать вместе.</p>
-            <div class="cta-buttons">
-                <a href="mailto:contact@securemind.dev" class="btn-primary">Записаться на консультацию →</a>
-                <a href="https://t.me/securemind_bot" class="btn-secondary">Написать в Telegram</a>
+    <section class="about-preview">
+        <div class="about-container">
+            <div class="section-tag">Обо мне</div>
+            <h2 class="section-title">Почему кибербезопасность?</h2>
+            
+            <p>Я — сертифицированный психолог с 8-летним опытом. Раньше я работала с семейными запросами и кризисами, но со временем заметила: IT-специалисты, приходящие на консультации, сталкиваются с уникальными профессиональными травмами, которые не всегда понятны коллегам из других сфер.</p>
+
+            <p>Я изучила специфику работы в SOC, поняла, что такое «-alert fatigue», разобралась в механизмах социальной инженерии. Теперь я создаю безопасное пространство для тех, кто защищает цифровой мир.</p>
+
+            <div class="features">
+                <span class="feature">КПТ и EMDR</span>
+                <span class="feature">Конфиденциальность</span>
+                <span class="feature">Онлайн-формат</span>
+            </div>
+
+            <a href="about.html" class="btn-secondary">Подробнее обо мне →</a>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="section-header">
+            <div class="section-tag">Как работаю</div>
+            <h2 class="section-title">Путь от запроса к результату</h2>
+            <p class="section-subtitle">Чёткая структура работы помогает достигать устойчивых изменений</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Знакомство</h3>
+                <p>Бесплатная 20-минутная встреча для понимания запроса</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Диагностика</h3>
+                <p>Оценка состояния и постановка целей терапии</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Терапия</h3>
+                <p>Регулярные сессии с применением доказательных методов</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Закрепление</h3>
+                <p>Формирование навыков самопомощи и профилактика</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="cta-section">
+        <h2>Готовы начать?</h2>
+        <p>Первая консультация бесплатно. Это время, чтобы познакомиться и понять, подходим ли мы друг другу.</p>
+        <a href="contact.html" class="btn-white">Записаться на консультацию</a>
+    </section>
+
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <div class="logo-icon">🛡️</div>
-                <span>SecureMind</span>
-            </div>
+            <p>© 2026 Камилла Золотова. Все права защищены.</p>
             <ul class="footer-links">
-                <li><a href="about.html">Обо мне</a></li>
                 <li><a href="privacy.html">Правовая информация</a></li>
                 <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>
             </ul>
-            <div class="footer-copy">© 2026 Камилла Золотова. Все права защищены.</div>
         </div>
     </footer>
 </body>
