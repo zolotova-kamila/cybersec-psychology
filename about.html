@@ -182,8 +182,22 @@
 
         .page-header {
             padding: 120px 5% 4rem;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            background: linear-gradient(135deg, rgba(237, 232, 224, 0.85) 0%, rgba(245, 241, 235, 0.9) 100%), url('images/bg-about.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
+            position: relative;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--bg-primary));
+            pointer-events: none;
         }
 
         .page-header h1 {
@@ -192,6 +206,8 @@
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         .page-header p {
@@ -199,6 +215,8 @@
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         section {
@@ -246,8 +264,33 @@
 
         /* Gallery for certificates */
         .gallery-section {
-            background: var(--bg-primary);
+            background: linear-gradient(135deg, rgba(245, 241, 235, 0.92) 0%, rgba(237, 232, 224, 0.9) 100%), url('images/bg-books-1.jpg');
+            background-size: cover;
+            background-position: center;
             padding: 5rem 5%;
+            position: relative;
+        }
+
+        .gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--bg-primary), transparent);
+            pointer-events: none;
+        }
+
+        .gallery-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--bg-secondary), transparent);
+            pointer-events: none;
         }
 
         .gallery-grid {
@@ -256,6 +299,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .gallery-item {
@@ -610,7 +655,7 @@
     </section>
 
     <section class="gallery-section">
-        <div class="section-header">
+        <div class="section-header" style="position: relative; z-index: 1;">
             <div class="section-tag">Документы</div>
             <h2 class="section-title">Дипломы и сертификаты</h2>
             <p class="section-subtitle">Подтверждение квалификации и профессионального образования</p>
