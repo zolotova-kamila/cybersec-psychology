@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности и авторские права | SecureMind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: #1a2234;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #06b6d4;
+            --accent-glow: rgba(59, 130, 246, 0.3);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #1e293b;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.25rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.625rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Content */
+        .content {
+            padding: 10rem 5% 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .content-tag {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-primary);
+        }
+
+        .content-section h3 {
+            font-size: 1.125rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .content-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--warning);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box h4 {
+            color: var(--warning);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box ul {
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .warning-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .legal-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .legal-list li::before {
+            content: '•';
+            color: var(--danger);
+            font-weight: bold;
+        }
+
+        .legal-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--accent-primary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-box h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .content h1 {
+                font-size: 1.75rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        ::selection {
+            background: rgba(59, 130, 246, 0.3);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">🛡️</div>
+            <span>SecureMind</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="index.html#services">Услуги</a></li>
+            <li><a href="index.html#contact">Контакты</a></li>
+        </ul>
+        <a href="index.html#contact" class="nav-cta">Записаться</a>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-header">
+            <div class="content-tag">⚖️ Правовая информация</div>
+            <h1>Авторские права и защита контента</h1>
+        </div>
+
+        <div class="content-section">
+            <h2>© 2026 Камилла Золотова. Все права защищены.</h2>
+            
+            <p>Весь контент данного сайта, включая тексты, графические элементы, дизайн, код и структуру, является интеллектуальной собственностью Камиллы Золотовой и защищён законодательством Российской Федерации об авторских правах, а также международными договорами.</p>
+
+            <div class="warning-box">
+                <h4>⚠️ Запрещённые действия</h4>
+                <ul>
+                    <li>Копирование кода, дизайна или контента сайта</li>
+                    <li>Создание производных работ на основе данного сайта</li>
+                    <li>Использование сайта как шаблона для других проектов</li>
+                    <li>Распространение материалов без письменного разрешения</li>
+                    <li>Коммерческое использование любых элементов сайта</li>
+                </ul>
+            </div>
+
+            <h3>Что защищено авторским правом:</h3>
+            <ul class="legal-list">
+                <li>Уникальный дизайн и визуальная концепция сайта</li>
+                <li>Тексты, статьи и информационные материалы</li>
+                <li>HTML/CSS код и структура сайта</li>
+                <li>Графические элементы и иконки</li>
+                <li>Логотип SecureMind и фирменный стиль</li>
+                <li>Компиляция и подборка материалов</li>
+            </ul>
+
+            <h3>Ответственность за нарушение:</h3>
+            <p>Несанкционированное использование материалов сайта влечёт гражданско-правовую, административную (ст. 7.12 КоАП РФ) и уголовную ответственность (ст. 146 УК РФ).</p>
+
+            <div class="contact-box">
+                <h4>📧 Обращения по лицензированию</h4>
+                <p>Если вы хотите использовать материалы сайта или обнаружили нарушение авторских прав, свяжитесь со мной:</p>
+                <p><strong>Email:</strong> contact@securemind.dev<br>
+                <strong>Telegram:</strong> @securemind_bot</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Политика конфиденциальности</h2>
+            
+            <p>Вся информация, полученная в ходе консультаций и коммуникации с клиентами, строго конфиденциальна и не подлежит разглашению третьим лицам без явного согласия клиента, за исключением случаев, предусмотренных законодательством.</p>
+
+            <h3>Принципы работы:</h3>
+            <ul class="legal-list">
+                <li>Полная конфиденциальность всех коммуникаций</li>
+                <li>Защищённые каналы связи для обсуждения чувствительной информации</li>
+                <li>Отсутствие записей без согласия клиента</li>
+                <li>Соблюдение профессиональной этики психолога</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Лицензионный файл</h2>
+            <p>Полный текст лицензии доступен в репозитории сайта:</p>
+            <p><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md" style="color: var(--accent-primary);">LICENSE.md — Полная лицензия</a></p>
+            
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Дата последнего обновления: 7 марта 2026 г.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">🛡️</div>
+                <span>SecureMind</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Авторские права</a></li>
+                <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>
+            </ul>
+            <div class="footer-copy">© 2026 Камилла Золотова. Все права защищены.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -623,6 +623,23 @@
             color: var(--text-primary);
         }
 
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
         .footer-copy {
             color: var(--text-muted);
             font-size: 0.875rem;
@@ -939,6 +956,10 @@
                 <div class="logo-icon">🛡️</div>
                 <span>SecureMind</span>
             </div>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Правовая информация</a></li>
+                <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>
+            </ul>
             <div class="footer-copy">© 2026 Камилла Золотова. Все права защищены.</div>
         </div>
     </footer>
