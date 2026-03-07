@@ -194,26 +194,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .hero-image-section {
-            background: var(--bg-primary);
-            padding: 2rem 5% 0;
-            text-align: center;
-        }
-
-        .hero-image-container {
-            max-width: 900px;
-            margin: 0 auto;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
         .hero {
             padding: 120px 5% 6rem;
             background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
@@ -504,70 +484,57 @@
             position: relative;
         }
 
-        .path-container {
-            max-width: 1000px;
+        .path-content-wrapper {
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .path-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 120px;
+        }
+
+        .path-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .path-container {
             position: relative;
         }
 
         .path-line {
             position: absolute;
-            left: 50%;
-            top: 80px;
-            bottom: 80px;
+            left: 32px;
+            top: 0;
+            bottom: 0;
             width: 2px;
             background: linear-gradient(180deg, var(--accent-primary), var(--accent-warm));
-            transform: translateX(-50%);
         }
 
         .path-step {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 4rem;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 3rem;
             position: relative;
+            padding-left: 0;
         }
 
         .path-step:last-child {
             margin-bottom: 0;
         }
 
-        .path-step:nth-child(even) .path-content {
-            grid-column: 2;
-            text-align: left;
-        }
-
-        .path-step:nth-child(even) .path-number-wrap {
-            grid-column: 1;
-            justify-self: end;
-        }
-
-        .path-step:nth-child(odd) .path-content {
-            text-align: right;
-        }
-
-        .path-number-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .path-number {
-            width: 64px;
-            height: 64px;
-            background: var(--accent-primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 1;
+        .path-content {
+            flex: 1;
         }
 
         .path-content h3 {
@@ -581,6 +548,11 @@
             color: var(--text-secondary);
             font-size: 1.05rem;
             line-height: 1.6;
+        }
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1;
         }
 
         /* ABOUT PREVIEW */
@@ -740,16 +712,19 @@
                 justify-content: center;
             }
 
-            .path-step {
-                grid-template-columns: auto 1fr;
-                gap: 1.5rem;
+            .path-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            .path-step:nth-child(even) .path-content,
-            .path-step:nth-child(even) .path-number-wrap,
-            .path-step:nth-child(odd) .path-content {
-                grid-column: auto;
-                text-align: left;
+            .path-image {
+                position: static;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .path-step {
+                gap: 1.5rem;
             }
 
             .path-line {
@@ -824,12 +799,6 @@
         </button>
         <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
     </nav>
-
-    <section class="hero-image-section">
-        <div class="hero-image-container">
-            <img src="images/hero-key.jpg" alt="Ключ к психологической защите">
-        </div>
-    </section>
 
     <section class="hero">
         <div class="hero-content">
@@ -906,42 +875,47 @@
             <h2 class="section-title">Путь к изменениям</h2>
             <p class="section-subtitle">Четкая структура работы помогает достигать устойчивых результатов</p>
         </div>
-        <div class="path-container">
-            <div class="path-line"></div>
-            <div class="path-step">
-                <div class="path-number-wrap">
-                    <div class="path-number">1</div>
-                </div>
-                <div class="path-content">
-                    <h3>Первичная консультация</h3>
-                    <p>Бесплатная 20-минутная встреча для знакомства и понимания вашего запроса. Определяем, комфортно ли нам работать вместе.</p>
-                </div>
+        <div class="path-content-wrapper">
+            <div class="path-image">
+                <img src="images/hero-key.jpg" alt="Ключ к психологической защите">
             </div>
-            <div class="path-step">
-                <div class="path-number-wrap">
-                    <div class="path-number">2</div>
+            <div class="path-container">
+                <div class="path-line"></div>
+                <div class="path-step">
+                    <div class="path-number-wrap">
+                        <div class="path-number">1</div>
+                    </div>
+                    <div class="path-content">
+                        <h3>Первичная консультация</h3>
+                        <p>Бесплатная 20-минутная встреча для знакомства и понимания вашего запроса. Определяем, комфортно ли нам работать вместе.</p>
+                    </div>
                 </div>
-                <div class="path-content">
-                    <h3>Оценка и целеполагание</h3>
-                    <p>На первых сессиях понимаем глубину проблемы и формулируем конкретные цели терапии.</p>
+                <div class="path-step">
+                    <div class="path-number-wrap">
+                        <div class="path-number">2</div>
+                    </div>
+                    <div class="path-content">
+                        <h3>Оценка и целеполагание</h3>
+                        <p>На первых сессиях понимаем глубину проблемы и формулируем конкретные цели терапии.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="path-step">
-                <div class="path-number-wrap">
-                    <div class="path-number">3</div>
+                <div class="path-step">
+                    <div class="path-number-wrap">
+                        <div class="path-number">3</div>
+                    </div>
+                    <div class="path-content">
+                        <h3>Работа с запросом</h3>
+                        <p>Использую методы КПТ, EMDR и другие подходы. Количество сессий зависит от сложности запроса.</p>
+                    </div>
                 </div>
-                <div class="path-content">
-                    <h3>Работа с запросом</h3>
-                    <p>Использую методы КПТ, EMDR и другие подходы. Количество сессий зависит от сложности запроса.</p>
-                </div>
-            </div>
-            <div class="path-step">
-                <div class="path-number-wrap">
-                    <div class="path-number">4</div>
-                </div>
-                <div class="path-content">
-                    <h3>Закрепление результата</h3>
-                    <p>Подводим итоги, обсуждаем инструменты самопомощи на будущее. При необходимости планируем поддерживающие встречи.</p>
+                <div class="path-step">
+                    <div class="path-number-wrap">
+                        <div class="path-number">4</div>
+                    </div>
+                    <div class="path-content">
+                        <h3>Закрепление результата</h3>
+                        <p>Подводим итоги, обсуждаем инструменты самопомощи на будущее. При необходимости планируем поддерживающие встречи.</p>
+                    </div>
                 </div>
             </div>
         </div>
