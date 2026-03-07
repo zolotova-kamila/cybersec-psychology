@@ -196,9 +196,7 @@
 
         .hero {
             padding: 120px 5% 6rem;
-            background: linear-gradient(135deg, rgba(245, 241, 235, 0.85) 0%, rgba(237, 232, 224, 0.88) 100%), url('images/hero-main.jpg');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -369,9 +367,7 @@
 
         /* NOTEBOOK SECTION */
         .notebook-section {
-            background: linear-gradient(135deg, rgba(237, 232, 224, 0.92) 0%, rgba(245, 241, 235, 0.9) 100%), url('images/challenges.jpg');
-            background-size: cover;
-            background-position: center;
+            background: var(--bg-secondary);
             padding: 6rem 5%;
             position: relative;
         }
@@ -382,20 +378,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 100px;
-            background: linear-gradient(to bottom, var(--bg-primary), transparent);
-            pointer-events: none;
-        }
-
-        .notebook-section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to top, var(--bg-primary), transparent);
-            pointer-events: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
         }
 
         .section-header {
@@ -638,24 +622,10 @@
 
         /* CTA SECTION */
         .cta-section {
-            background: linear-gradient(135deg, rgba(45, 90, 74, 0.92) 0%, rgba(74, 124, 111, 0.9) 100%), url('images/cta-shield.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 6rem 5%;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            padding: 5rem 5%;
             text-align: center;
             color: white;
-            position: relative;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background: linear-gradient(to bottom, var(--bg-primary), transparent);
-            pointer-events: none;
         }
 
         .cta-section .section-title {
