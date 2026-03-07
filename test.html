@@ -386,8 +386,8 @@
 
         /* RESULTS */
         .results-section {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(250, 248, 245, 0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateX(100%); transition: transform 0.3s ease; z-index: 999; display: flex;
-            padding: 4rem 5%;
+            display: none;
+            padding: 120px 5% 4rem;
             background: var(--bg-secondary);
         }
 
@@ -995,6 +995,8 @@
             // Показываем результаты
             testSection.style.display = 'none';
             resultsSection.style.display = 'block';
+            resultsSection.style.transform = 'translateX(0)';
+            resultsSection.style.position = 'relative';
             resultsSection.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
