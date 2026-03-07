@@ -412,7 +412,7 @@
                             <div class="contact-icon">📧</div>
                             <div class="contact-details">
                                 <h3>Email</h3>
-                                <p><a href="https://t.me/ShchitOtMoshennikov_bot">9099030000@mail.ru</a></p>
+                                <p><span id="protected-email">[загрузка...]</span></p>
                             </div>
                         </div>
 
@@ -633,6 +633,20 @@
                 }
             }, 500);
         });
+        
+        // Защищённый email от спам-ботов
+        (function() {
+            const parts = ['9099030000', 'mail', 'ru'];
+            const email = parts[0] + '@' + parts[1] + '.' + parts[2];
+            const link = document.createElement('a');
+            link.href = 'mailto:' + email;
+            link.textContent = email;
+            const container = document.getElementById('protected-email');
+            if (container) {
+                container.innerHTML = '';
+                container.appendChild(link);
+            }
+        })();
     </script>
 </body>
 </html>
