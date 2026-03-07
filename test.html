@@ -406,6 +406,39 @@
             box-shadow: var(--shadow-lg);
         }
 
+        .test-image-section {
+            background: var(--bg-secondary);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .test-image-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .test-image-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(245, 241, 235, 0.3);
+            pointer-events: none;
+        }
+
+        .test-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: brightness(1.15) contrast(0.9);
+        }
+
         /* RESULTS */
         .results-section {
             display: none;
@@ -914,6 +947,12 @@
                 <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="btn-primary">Получить полный чек-лист в Telegram</a>
                 <a href="test.html" class="btn-secondary">Пройти тест снова</a>
             </div>
+        </div>
+    </section>
+
+    <section class="test-image-section">
+        <div class="test-image-container">
+            <img src="images/test-hero.jpg" alt="Защита в цифровом мире">
         </div>
     </section>
 
