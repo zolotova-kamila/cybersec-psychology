@@ -76,7 +76,7 @@
         .logo-icon {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            background: linear-gradient(135deg, rgba(45, 90, 74, 0.92) 0%, rgba(74, 124, 111, 0.9) 100%), url('images/cta-shield.jpg'); background-size: cover; background-position: center; position: relative;
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
@@ -486,9 +486,25 @@
         }
 
         .cta-section {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            background: linear-gradient(135deg, rgba(45, 90, 74, 0.92) 0%, rgba(74, 124, 111, 0.9) 100%), url('images/cta-shield.jpg'); background-size: cover; background-position: center; position: relative;
             padding: 5rem 5%;
             text-align: center;
+        }
+
+        .cta-section::before {
+            content: ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--bg-primary), transparent);
+            pointer-events: none;
+        }
+
+        .cta-section .section-title {
+            position: relative;
+            z-index: 1;
             color: white;
         }
 
