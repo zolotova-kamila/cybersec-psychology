@@ -411,9 +411,29 @@
             margin-bottom: 0;
         }
 
+        .btn-telegram {
+            display: inline-block;
+            background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            margin-top: 0.5rem;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
         .contact-image-section {
-            background: var(--bg-primary);
-            padding: 3rem 5%;
+            background: var(--bg-secondary);
+            padding: 5rem 5%;
             text-align: center;
         }
 
@@ -432,7 +452,7 @@
         }
 
         .faq-section {
-            background: var(--bg-secondary);
+            background: var(--bg-primary);
             padding: 5rem 5%;
         }
 
@@ -621,8 +641,8 @@
                         </div>
                         <div class="contact-details">
                             <h3>Telegram</h3>
-                            <p>Быстрый способ связи<br>
-                            <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer">@ShchitOtMoshennikov_bot</a></p>
+                            <p>Быстрый способ связи</p>
+                            <a href="https://t.me/ShchitOtMoshennikov_bot" target="_blank" rel="noopener noreferrer" class="btn-telegram">Написать в Telegram</a>
                         </div>
                     </div>
 
