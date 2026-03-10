@@ -429,16 +429,18 @@
         }
 
         <.contact-image-container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
         }
 
         .contact-image-container img {
-            width: 100%;
+            width: calc(50% - 1rem);
             height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
             display: block;
         }
 
@@ -715,7 +717,8 @@
 
     <section class="contact-image-section">
         <div class="contact-image-container">
-            <img src="images/contact-workspace.jpg" alt="Рабочее место для онлайн-консультаций">
+            <img src="images/contact-1.jpg" alt="Контакт 1">
+            <img src="images/contact-2.jpg" alt="Контакт 2">
         </div>
     </section>
 
