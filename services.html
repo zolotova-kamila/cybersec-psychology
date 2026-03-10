@@ -640,6 +640,15 @@
                 display: none;
             }
 
+            .services-image-section > div {
+                grid-template-columns: 1fr !important;
+            }
+
+            .services-image-section > div > div:first-child {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -789,8 +798,18 @@
     </section>
 
     <section class="services-image-section">
-        <div class="services-image-container">
-            <img src="images/service-44.jpg" alt="Книжная полка психолога">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: start;">
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="services-image-container" style="margin: 0;">
+                    <img src="images/services-side.png" alt="Психологическая поддержка 1">
+                </div>
+                <div class="services-image-container" style="margin: 0;">
+                    <img src="images/service-44.jpg" alt="Психологическая поддержка 2">
+                </div>
+            </div>
+            <div>
+                <!-- Пустая колонка для баланса или можно добавить текст -->
+            </div>
         </div>
     </section>
 
