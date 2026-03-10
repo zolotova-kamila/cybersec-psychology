@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /documents/
+Disallow: /*.docx$
+Disallow: /*.pdf$
+
+Sitemap: https://pozitiv-psychology.ru/sitemap.xml
