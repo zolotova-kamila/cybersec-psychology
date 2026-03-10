@@ -10,56 +10,21 @@
     <meta name="author" content="Камила Золотова">
     <title>Материалы | Камила Золотова — Психолог КПТ</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <meta name="description" content="Бесплатные материалы от психолога КПТ: презентации, чек-листы по кибербезопасности и финансовой грамотности. Скачать PDF.">
+    <meta name="description" content="Бесплатные материалы от психолога КПТ: статьи, презентации, чек-листы по кибербезопасности и финансовой психологии.">
     <meta property="og:title" content="Материалы | Камила Золотова — Психолог КПТ">
-    <meta property="og:description" content="Бесплатные материалы от психолога КПТ. Презентации, чек-листы для скачивания.">
+    <meta property="og:description" content="Бесплатные материалы от психолога КПТ. Статьи, презентации, чек-листы.">
     <meta property="og:url" content="https://pozitiv-psychology.ru/resources.html">
     <meta property="og:image" content="images/7.jpg">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://pozitiv-psychology.ru/images/og-preview.png">
     <link rel="canonical" href="https://pozitiv-psychology.ru/resources.html">
-    \n    u003c!-- Preconnect to Google Fonts --u003e
-    u003clink rel="preconnect" href="https://fonts.googleapis.com"u003e
-    u003clink rel="preconnect" href="https://fonts.gstatic.com" crossoriginu003e
     
-$METRIKA_CODE
-$GA4_CODE
-$VK_PIXEL
-    <!-- Schema.org markup for Resources Page -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Материалы | Камила Золотова",
-      "description": "Презентации, чек-листы и статьи по психологии кибербезопасности",
-      "url": "https://pozitiv-psychology.ru/resources.html",
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "DigitalDocument",
-            "name": "Информационное соглашение",
-            "description": "Соглашение о порядке обработки персональных данных"
-          },
-          {
-            "@type": "DigitalDocument",
-            "name": "Правила проведения консультаций",
-            "description": "Правила и условия психологических консультаций"
-          },
-          {
-            "@type": "DigitalDocument",
-            "name": "Договор на оказание услуг",
-            "description": "Договор на оказание психологических услуг"
-          }
-        ]
-      }
-    }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swapfamily=Source+Serif+Pro:wght@400;600family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swapdisplay=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #F5F1EB;
@@ -136,13 +101,6 @@ $VK_PIXEL
             color: white;
         }
 
-        .logo-icon-img {
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-md);
-            object-fit: cover;
-        }
-
         .nav-links {
             display: flex;
             gap: 2.5rem;
@@ -156,199 +114,144 @@ $VK_PIXEL
             font-size: 0.9rem;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover, .nav-links a.active {
             color: var(--accent-primary);
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
         }
 
         .nav-cta {
             font-family: 'Montserrat', sans-serif;
             background: var(--accent-primary);
             color: white;
-            padding: 0.75rem 1.75rem;
+            padding: 0.75rem 1.5rem;
             border-radius: var(--radius-sm);
-            font-weight: 600;
-            font-size: 0.9rem;
             text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow);
         }
 
         .nav-cta:hover {
             background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
         }
 
-        /* Mobile menu toggle */
         .menu-toggle {
             display: none;
-            flex-direction: column;
-            gap: 5px;
+            background: none;
+            border: none;
             cursor: pointer;
             padding: 8px;
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: var(--radius-sm);
             z-index: 1003;
         }
 
         .menu-toggle span {
             display: block;
             width: 24px;
-            height: 3px;
-            background: var(--accent-primary);
+            height: 2px;
+            background: var(--text-primary);
+            margin: 6px 0;
             transition: all 0.3s ease;
-            border-radius: 3px;
-        }
-
-        .menu-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-
-        .nav-links.mobile-open {
-            transform: translateX(0);
         }
 
         .page-header {
-            padding: 120px 5% 4rem;
-            background: var(--bg-secondary);
+            padding: 140px 5% 80px;
             text-align: center;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
         }
 
         .page-header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 700;
-            color: var(--text-primary);
             margin-bottom: 1rem;
+            color: var(--text-primary);
         }
 
         .page-header-tagline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--accent-primary);
-            max-width: 700px;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
             margin: 0 auto;
+        }
+
+        .resources-section {
+            padding: 60px 5%;
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 3rem;
+            margin-bottom: 3rem;
         }
 
         .section-tag {
             font-family: 'Montserrat', sans-serif;
-            display: inline-block;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 0.1em;
             color: var(--accent-primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.25rem;
             font-weight: 700;
-            margin-bottom: 1rem;
             color: var(--text-primary);
+            margin-bottom: 1rem;
         }
 
         .section-subtitle {
-            color: var(--text-secondary);
             font-size: 1.1rem;
-        }
-
-        /* Resources Section */
-        .resources-section {
-            background: var(--bg-secondary);
-            padding: 5rem 5%;
-        }
-
-        .resources-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .resources-tab {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--bg-card);
             color: var(--text-secondary);
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border-light);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .resources-tab:hover,
-        .resources-tab.active {
-            background: var(--accent-primary);
-            color: white;
-            border-color: var(--accent-primary);
+        .category-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent-primary);
         }
 
         .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
         }
 
-        .resource-item {
+        .resource-card {
             background: var(--bg-card);
             border-radius: var(--radius-md);
             overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
 
-        .resource-item:hover {
+        .resource-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
 
+        .resource-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: var(--bg-secondary);
+        }
+
         .resource-preview {
+            width: 100%;
             height: 180px;
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             display: flex;
@@ -358,52 +261,29 @@ $VK_PIXEL
         }
 
         .resource-preview.presentation {
-            background: linear-gradient(135deg, #2D5A4A 0%, #3D7A6A 100%);
+            background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
         }
 
         .resource-preview.documents {
-            background: linear-gradient(135deg, #4A7C6F 0%, #2D5A4A 100%);
-            overflow: hidden;
-        }
-
-        .resource-preview.documents img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .resource-preview.article {
-            background: linear-gradient(135deg, #5A4A6A 0%, #7A6A8A 100%);
-        }
-
-        .resource-icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .resource-icon svg {
-            width: 32px;
-            height: 32px;
-            stroke: white;
+            background: linear-gradient(135deg, #2C3E50 0%, #4A6274 100%);
         }
 
         .resource-type-badge {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.9);
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.95);
             color: var(--text-primary);
-            padding: 0.35rem 0.75rem;
-            border-radius: 50px;
+            padding: 4px 12px;
+            border-radius: 20px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            text-transform: uppercase;
+        }
+
+        .resource-icon {
+            color: white;
+            opacity: 0.9;
         }
 
         .resource-info {
@@ -416,8 +296,9 @@ $VK_PIXEL
         .resource-info h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
-            margin-bottom: 0.75rem;
+            font-weight: 600;
             color: var(--text-primary);
+            margin-bottom: 0.75rem;
             line-height: 1.4;
         }
 
@@ -425,20 +306,18 @@ $VK_PIXEL
             font-size: 0.95rem;
             color: var(--text-secondary);
             margin-bottom: 1rem;
-            line-height: 1.6;
             flex-grow: 1;
         }
 
         .resource-meta {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
+            gap: 1rem;
             font-size: 0.85rem;
             color: var(--text-muted);
+            margin-bottom: 1rem;
         }
 
-        .btn-download {
+        .btn-view {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -449,80 +328,39 @@ $VK_PIXEL
             border-radius: var(--radius-sm);
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
             font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-            width: 100%;
+            border: none;
+            cursor: pointer;
         }
 
-        .btn-download:hover {
+        .btn-view:hover {
             background: var(--accent-secondary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            padding: 5rem 5%;
-            text-align: center;
-        }
-
-        .cta-section .section-title {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section .section-subtitle {
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .btn-white {
-            font-family: 'Montserrat', sans-serif;
-            display: inline-block;
-            background: white;
-            color: var(--accent-primary);
-            padding: 1rem 2.5rem;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-white:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Footer */
         footer {
             background: var(--bg-dark);
             color: var(--text-light);
             padding: 3rem 5%;
+            text-align: center;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
         }
 
         .footer-copy {
-            color: var(--text-muted);
             font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
         }
 
         .footer-links {
             display: flex;
+            justify-content: center;
             gap: 2rem;
             list-style: none;
         }
@@ -530,64 +368,42 @@ $VK_PIXEL
         .footer-links a {
             color: var(--text-light);
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
         .footer-links a:hover {
             opacity: 1;
         }
 
-        /* Responsive */
-        @media (max-width: 968px) {
-            .resources-tabs {
-                gap: 0.5rem;
-            }
-
-            .resources-tab {
-                padding: 0.6rem 1rem;
-                font-size: 0.85rem;
-            }
-
-            .resources-grid {
-                grid-template-columns: 1fr;
-            }
-
+        @media (max-width: 768px) {
             .nav-links {
+                display: none;
                 position: fixed;
-                top: 0;
+                top: 70px;
                 left: 0;
                 right: 0;
-                bottom: 0;
-                background: rgba(250, 248, 245, 0.98);
+                background: var(--bg-card);
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-                z-index: 1002;
-                display: flex;
+                padding: 1rem;
+                box-shadow: var(--shadow);
             }
 
             .nav-links.mobile-open {
-                transform: translateX(0);
+                display: flex;
             }
 
             .menu-toggle {
-                display: flex;
-                margin-left: auto;
+                display: block;
             }
 
             .page-header h1 {
                 font-size: 2rem;
             }
 
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
+            .resources-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -595,10 +411,10 @@ $VK_PIXEL
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <img loading="lazy" src="images/7.jpg" alt="KZ" class="logo-icon-img">
-            <span>Камила Золотова</span>
+            <div class="logo-icon">КЗ</div>
+            Камила Золотова
         </a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="about.html">Обо мне</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="test.html">Тест</a></li>
@@ -610,35 +426,47 @@ $VK_PIXEL
             <span></span>
             <span></span>
         </button>
-        <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
+        <a href="contact.html" class="nav-cta">Записаться</a>
     </nav>
 
     <header class="page-header">
         <h1>Материалы</h1>
-        <p class="page-header-tagline">Презентации, чек-листы и статьи по психологии кибербезопасности</p>
+        <p class="page-header-tagline">Статьи, презентации и полезные материалы по психологии кибербезопасности</p>
     </header>
 
     <section class="resources-section">
+        <!-- Статьи -->
         <div class="section-header">
-            <div class="section-tag">Библиотека</div>
-            <h2 class="section-title">Полезные материалы</h2>
-            <p class="section-subtitle">Скачивайте и используйте для личного развития и профессионального роста</p>
-        </div>
-
-        <div class="resources-tabs">
-            <button class="resources-tab active" data-filter="all">Все материалы</button>
-            <button class="resources-tab" data-filter="presentation">Презентации</button>
-            <button class="resources-tab" data-filter="documents">Документы</button>
-            <button class="resources-tab" data-filter="article">Статьи</button>
+            <div class="section-tag">Блог</div>
+            <h2 class="section-title">Статьи</h2>
         </div>
 
         <div class="resources-grid">
-            <!-- Презентации -->
-            <div class="resource-item" data-type="presentation">
-                <div class="resource-preview presentation">
-                    <span class="resource-type-badge">PDF</span>
+            <div class="resource-card">
+                <img src="images/article-moshenniki.jpg" alt="Почему умные люди попадаются на мошенников" class="resource-image" loading="lazy">
+                <div class="resource-info">
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: var(--accent-primary); color: white;">Статья</span>
+                    <h3>Почему умные люди попадаются на мошенников</h3>
+                    <p>Психология манипуляций: как мошенники обманывают даже самых разумных людей и как защитить себя</p>
+                    <div class="resource-meta">
+                        <span>7 мин. чтения</span>
+                        <span>11 марта 2026</span>
+                    </div>
+                    <a href="article-pochemu-umnye-lyudi-popadayutsya-na-moshennikov.html" class="btn-view">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                        Читать статью
+                    </a>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-preview">
+                    <span class="resource-type-badge">Скоро</span>
                     <div class="resource-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                             <polyline points="14 2 14 8 20 8"/>
                             <line x1="16" y1="13" x2="8" y2="13"/>
@@ -648,236 +476,208 @@ $VK_PIXEL
                     </div>
                 </div>
                 <div class="resource-info">
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: var(--text-muted); color: white;">Статья</span>
+                    <h3>Alert Fatigue: когда бдительность превращается в угрозу</h3>
+                    <p>Как хроническая перегрузка сигналами безопасности влияет на эффективность SOC-аналитиков</p>
+                    <div class="resource-meta">
+                        <span>~8 мин. чтения</span>
+                        <span>12 марта 2026</span>
+                    </div>
+                    <button class="btn-view" disabled style="background: var(--text-muted); cursor: not-allowed;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Скоро
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Презентации -->
+        <div class="section-header" style="margin-top: 4rem;">
+            <div class="section-tag">Обучение</div>
+            <h2 class="section-title">Презентации</h2>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-preview presentation">
+                    <span class="resource-type-badge">PDF</span>
+                    <div class="resource-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="resource-info">
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #8B4513; color: white;">Презентация</span>
                     <h3>Психология кибербезопасности: основы профессии</h3>
-                    <p>Обзорная презентация о том, как психология помогает специалистам ИБ справляться со стрессом и выгоранием</p>
+                    <p>Обзорная презентация о том, как психология помогает специалистам ИБ справляться со стрессом</p>
                     <div class="resource-meta">
-                        <span>PDF, 24 стр.</span>
-                        <span>Март 2026</span>
+                        <span>24 слайда</span>
+                        <span>PDF</span>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Материал будет доступен soon'); return false;">
+                    <a href="documents/presentation-psy-cyber.pdf" target="_blank" class="btn-view">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
                         </svg>
-                        Скачать
+                        Смотреть онлайн
                     </a>
                 </div>
             </div>
 
-            <div class="resource-item" data-type="presentation">
+            <div class="resource-card">
                 <div class="resource-preview presentation">
                     <span class="resource-type-badge">PDF</span>
                     <div class="resource-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10 9 9 9 8 9"/>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
                     </div>
                 </div>
                 <div class="resource-info">
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #8B4513; color: white;">Презентация</span>
                     <h3>Alert Fatigue: как не потерять бдительность</h3>
-                    <p>Презентация для команд SOC о профилактике эмоционального выгорания при работе с сигналами безопасности</p>
+                    <p>Презентация для команд SOC о профилактике эмоционального выгорания</p>
                     <div class="resource-meta">
-                        <span>PDF, 18 стр.</span>
-                        <span>Март 2026</span>
+                        <span>18 слайдов</span>
+                        <span>PDF</span>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Материал будет доступен soon'); return false;">
+                    <a href="documents/presentation-alert-fatigue.pdf" target="_blank" class="btn-view">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
                         </svg>
-                        Скачать
+                        Смотреть онлайн
                     </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Документы -->
-            <div class="resource-item" data-type="documents">
+        <!-- Документы -->
+        <div class="section-header" style="margin-top: 4rem;">
+            <div class="section-tag">Юридические</div>
+            <h2 class="section-title">Документы</h2>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
                 <div class="resource-preview documents">
                     <span class="resource-type-badge">DOCX</span>
-                    <img loading="lazy" src="images/preview-soglashenie.jpg" alt="Информационное соглашение" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                    <div class="resource-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="resource-info">
-                    <h3>Информационное соглашение на использование данных</h3>
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2C3E50; color: white;">Документ</span>
+                    <h3>Информационное соглашение</h3>
                     <p>Соглашение о порядке обработки и защиты персональных данных клиентов</p>
                     <div class="resource-meta">
                         <span>DOCX</span>
-                        <span>Март 2026</span>
+                        <span>Обновлён: март 2026</span>
                     </div>
-                    <a href="documents/soglashenie.docx" class="btn-download" download>
+                    <a href="documents/soglashenie.docx" target="_blank" class="btn-view">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
                         </svg>
-                        Скачать
+                        Просмотреть
                     </a>
                 </div>
             </div>
 
-            <div class="resource-item" data-type="documents">
+            <div class="resource-card">
                 <div class="resource-preview documents">
                     <span class="resource-type-badge">DOCX</span>
-                    <img loading="lazy" src="images/preview-pravila.jpg" alt="Правила проведения консультаций" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                    <div class="resource-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="resource-info">
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2C3E50; color: white;">Документ</span>
                     <h3>Правила проведения консультаций</h3>
                     <p>Правила и условия проведения психологических консультаций</p>
                     <div class="resource-meta">
                         <span>DOCX</span>
-                        <span>Март 2026</span>
+                        <span>Обновлён: март 2026</span>
                     </div>
-                    <a href="documents/pravila.docx" class="btn-download" download>
+                    <a href="documents/pravila.docx" target="_blank" class="btn-view">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
                         </svg>
-                        Скачать
+                        Просмотреть
                     </a>
                 </div>
             </div>
 
-            <div class="resource-item" data-type="documents">
+            <div class="resource-card">
                 <div class="resource-preview documents">
                     <span class="resource-type-badge">DOCX</span>
-                    <img loading="lazy" src="images/preview-dogovor.jpg" alt="Договор" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+                    <div class="resource-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="resource-info">
-                    <h3>Договор на оказание услуг психолога</h3>
+                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2C3E50; color: white;">Документ</span>
+                    <h3>Договор на оказание услуг</h3>
                     <p>Договор на оказание психологических услуг между специалистом и клиентом</p>
                     <div class="resource-meta">
                         <span>DOCX</span>
-                        <span>Март 2026</span>
+                        <span>Обновлён: март 2026</span>
                     </div>
-                    <a href="documents/dogovor.docx" class="btn-download" download>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7 10 12 15 17 10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-                        </svg>
-                        Скачать
-                    </a>
-                </div>
-            </div>
-
-            <!-- Статьи -->
-            <div class="resource-item" data-type="article">
-                <div class="resource-preview article">
-                    <span class="resource-type-badge">Читать</span>
-                    <div class="resource-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="resource-info">
-                    <h3>Почему ИБ-специалисты горят быстрее других</h3>
-                    <p>Анализ специфических факторов выгорания в сфере информационной безопасности и способы с ними справиться</p>
-                    <div class="resource-meta">
-                        <span>8 мин. чтения</span>
-                        <span>Март 2026</span>
-                    </div>
-                    <a href="#" class="btn-download" onclick="alert('Статья будет опубликована soon'); return false;">
+                    <a href="documents/dogovor.docx" target="_blank" class="btn-view">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
-                        Читать
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-item" data-type="article">
-                <div class="resource-preview article">
-                    <span class="resource-type-badge">Читать</span>
-                    <div class="resource-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="resource-info">
-                    <h3>КПТ для киберзащитников: практическое руководство</h3>
-                    <p>Как использовать когнитивно-поведенческую терапию для управления тревогой при инцидентах безопасности</p>
-                    <div class="resource-meta">
-                        <span>12 мин. чтения</span>
-                        <span>Март 2026</span>
-                    </div>
-                    <a href="#" class="btn-download" onclick="alert('Статья будет опубликована soon'); return false;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Читать
+                        Просмотреть
                     </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="section-title">Не нашли нужный материал?</div>
-        <p class="section-subtitle">Напишите мне — я подготовлю материал по вашему запросу или отвечу на вопросы</p>
-        <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="btn-white">Задать вопрос</a>
     </section>
 
     <footer>
         <div class="footer-content">
             <p class="footer-copy">© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
+                <li><a href="https://t.me/soc_psychology_kz" target="_blank">Telegram-канал «SOC Психология»</a></li>
                 <li><a href="privacy.html">Правовая информация</a></li>
-                <li><a href="https://github.com/zolotova-kamila/cybersec-psychology/blob/main/LICENSE.md">Лицензия</a></li>
             </ul>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.querySelector('.nav-links');
-        
+        const navLinks = document.getElementById('navLinks');
+
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
             navLinks.classList.toggle('mobile-open');
-        });
-        
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('mobile-open');
-            });
-        });
-
-        // Resources tabs filter
-        const tabs = document.querySelectorAll('.resources-tab');
-        const items = document.querySelectorAll('.resource-item');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-
-                const filter = tab.dataset.filter;
-
-                items.forEach(item => {
-                    if (filter === 'all' || item.dataset.type === filter) {
-                        item.style.display = 'flex';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
         });
     </script>
     <script src="js/metrika-goals.js"></script>
