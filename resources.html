@@ -305,7 +305,7 @@
             background: linear-gradient(135deg, #2D5A4A 0%, #3D7A6A 100%);
         }
 
-        .resource-preview.checklist {
+        .resource-preview.documents {
             background: linear-gradient(135deg, #C9A87C 0%, #D9B88C 100%);
         }
 
@@ -565,7 +565,7 @@
         <div class="resources-tabs">
             <button class="resources-tab active" data-filter="all">Все материалы</button>
             <button class="resources-tab" data-filter="presentation">Презентации</button>
-            <button class="resources-tab" data-filter="checklist">Чек-листы</button>
+            <button class="resources-tab" data-filter="documents">Документы</button>
             <button class="resources-tab" data-filter="article">Статьи</button>
         </div>
 
@@ -633,25 +633,28 @@
                 </div>
             </div>
 
-            <!-- Чек-листы -->
-            <div class="resource-item" data-type="checklist">
-                <div class="resource-preview checklist">
-                    <span class="resource-type-badge">PDF</span>
+            <!-- Документы -->
+            <div class="resource-item" data-type="documents">
+                <div class="resource-preview documents">
+                    <span class="resource-type-badge">DOCX</span>
                     <div class="resource-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 11l3 3L22 4"/>
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
                         </svg>
                     </div>
                 </div>
                 <div class="resource-info">
-                    <h3>Чек-лист: Проверка подлинности звонка</h3>
-                    <p>7 шагов, которые помогут определить мошеннический звонок от лица банка или госорганов</p>
+                    <h3>Информационное соглашение на использование данных</h3>
+                    <p>Соглашение о порядке обработки и защиты персональных данных клиентов</p>
                     <div class="resource-meta">
-                        <span>PDF, 2 стр.</span>
+                        <span>DOCX</span>
                         <span>Март 2026</span>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Материал будет доступен soon'); return false;">
+                    <a href="documents/soglashenie.docx" class="btn-download" download>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                             <polyline points="7 10 12 15 17 10"/>
@@ -662,24 +665,58 @@
                 </div>
             </div>
 
-            <div class="resource-item" data-type="checklist">
-                <div class="resource-preview checklist">
-                    <span class="resource-type-badge">PDF</span>
+            <div class="resource-item" data-type="documents">
+                <div class="resource-preview documents">
+                    <span class="resource-type-badge">DOCX</span>
                     <div class="resource-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 11l3 3L22 4"/>
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
                         </svg>
                     </div>
                 </div>
                 <div class="resource-info">
-                    <h3>Самодиагностика: Уровень цифрового стресса</h3>
-                    <p>Чек-лист для самооценки эмоционального состояния при работе с информационной безопасностью</p>
+                    <h3>Правила проведения консультаций</h3>
+                    <p>Правила и условия проведения психологических консультаций</p>
                     <div class="resource-meta">
-                        <span>PDF, 3 стр.</span>
+                        <span>DOCX</span>
                         <span>Март 2026</span>
                     </div>
-                    <a href="#" class="btn-download" onclick="alert('Материал будет доступен soon'); return false;">
+                    <a href="documents/pravila.docx" class="btn-download" download>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Скачать
+                    </a>
+                </div>
+            </div>
+
+            <div class="resource-item" data-type="documents">
+                <div class="resource-preview documents">
+                    <span class="resource-type-badge">DOCX</span>
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="resource-info">
+                    <h3>Договор на оказание услуг психолога</h3>
+                    <p>Договор на оказание психологических услуг между специалистом и клиентом</p>
+                    <div class="resource-meta">
+                        <span>DOCX</span>
+                        <span>Март 2026</span>
+                    </div>
+                    <a href="documents/dogovor.docx" class="btn-download" download>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                             <polyline points="7 10 12 15 17 10"/>
