@@ -593,6 +593,41 @@
                 text-align: center;
             }
         }
+
+        /* Contact Gallery Section */
+        .contact-gallery-section {
+            padding: 0 5% 3rem;
+            background: var(--bg-primary);
+        }
+
+        .contact-gallery {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-gallery-item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 4/3;
+        }
+
+        .contact-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contact-gallery {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -711,6 +746,17 @@
                     <p>Нажмите кнопку ниже, чтобы открыть Telegram и отправить заявку.</p>
                     <p>В Telegram нажмите кнопку "ЗАПУСТИТЬ" или "START", чтобы увидеть меню.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-gallery-section">
+        <div class="contact-gallery">
+            <div class="contact-gallery-item">
+                <img src="images/32.jpg" alt="Психологическая консультация">
+            </div>
+            <div class="contact-gallery-item">
+                <img src="images/55.jpg" alt="Рабочее пространство">
             </div>
         </div>
     </section>
