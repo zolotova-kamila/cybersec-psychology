@@ -47,8 +47,8 @@
 </IfModule>
 FileETag None
 
-# 301 Redirects for removed pages
-Redirect 301 /psihoterapiya/zagadka-mozga-razgadyvaya-zavisimost-ot-alkogolya.html /resources.html
-Redirect 301 /semejnye-otnosheniya/prichiny-samoubijstva-u-podrostkov-mery-predotvrashheniya.html /resources.html
-Redirect 301 /konsultirovanie/shvatka-s-sobstvennym-ya-ponimanie-vnutrilichnostnogo-konflikta.html /resources.html
-Redirect 301 /obshhaya-psixologiya/prichiny-trevogi-kak-trevozhnost-vliyaet-na-telo.html /resources.html
+# 301 Redirects for removed pages (old site structure)
+Redirect 301 /psihoterapiya/ https://pozitiv-psychology.ru/
+Redirect 301 /semejnye-otnosheniya/ https://pozitiv-psychology.ru/
+Redirect 301 /konsultirovanie/ https://pozitiv-psychology.ru/
+Redirect 301 /obshhaya-psixologiya/ https://pozitiv-psychology.ru/
