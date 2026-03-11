@@ -7,16 +7,12 @@ Works 24/7 on server
 """
 
 import logging
-import json
-import os
-from datetime import datetime
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application,
     CommandHandler,
     CallbackQueryHandler,
     ContextTypes,
-    ConversationHandler
 )
 
 # Enable logging
@@ -33,140 +29,133 @@ logger = logging.getLogger(__name__)
 # Bot token
 BOT_TOKEN = "8467045900:AAH_GiX9XROEnReldI8-htApe2-7B8NzpcA"
 
-# States for ConversationHandler
-QUESTION_1, QUESTION_2, QUESTION_3, QUESTION_4, QUESTION_5, RESULT = range(6)
+# Store user data
+user_data = {}
 
-# Store user scores
-user_scores = {}
-
-# Questions and answers
+# Questions
 QUESTIONS = [
     {
         "text": "❓ Вопрос 1 из 5\n\nКак вы обычно чувствуете себя утром, просыпаясь на работу?",
         "options": [
-            ("🌅 С бодростью и энтузиазмом", 1),
-            ("😴 Утро — это тяжело, но потом входишь в ритм", 2),
-            ("😰 С тревогой и желанием закрыть глаза", 3),
-            ("💤 Хочется спать ещё, сколько бы ни спал", 4)
+            ("🌅 С бодростью", 1),
+            ("😴 Утро тяжело, но потом норм", 2),
+            ("😰 С тревогой", 3),
+            ("💤 Хочется спать ещё", 4)
         ]
     },
     {
-        "text": "❓ Вопрос 2 из 5\n\nЧто происходит с вашей энергией в течение дня?",
+        "text": "❓ Вопрос 2 из 5\n\nЧто происходит с энергией в течение дня?",
         "options": [
-            ("⚡ Энергии хватает до вечера", 1),
-            ("📉 К обеду уже чувствуешь усталость", 2),
-            ("🔋 Утром есть силы, к вечеру — полное истощение", 3),
-            ("🪫 Чувствую себя разбитым всё время", 4)
+            ("⚡ Хватает до вечера", 1),
+            ("📉 К обеду усталость", 2),
+            ("🔋 Утром есть силы, к вечеру нет", 3),
+            ("🪫 Разбит всё время", 4)
         ]
     },
     {
-        "text": "❓ Вопрос 3 из 5\n\nКак часто вы думаете о работе вне рабочего времени?",
+        "text": "❓ Вопрос 3 из 5\n\nКак часто думаете о работе вне рабочего времени?",
         "options": [
-            ("🌟 Редко — умею отключаться", 1),
+            ("🌟 Редко — отключаюсь", 1),
             ("📱 Иногда проверяю сообщения", 2),
-            ("🔄 Часто кручу задачи в голове", 3),
+            ("🔄 Часто кручу задачи", 3),
             ("😵 Постоянно, даже ночью", 4)
         ]
     },
     {
-        "text": "❓ Вопрос 4 из 5\n\nЕсть ли у вас физические симптомы: головные боли, боли в шее/спине, нарушения сна?",
+        "text": "❓ Вопрос 4 из 5\n\nЕсть физические симптомы: головные боли, боли в спине, нарушения сна?",
         "options": [
-            ("✅ Нет, чувствую себя хорошо", 1),
-            ("⚠️ Иногда, но не критично", 2),
-            ("🤕 Да, бывает регулярно", 3),
-            ("😷 Постоянно, мешают жить", 4)
+            ("✅ Нет, всё хорошо", 1),
+            ("⚠️ Иногда", 2),
+            ("🤕 Да, регулярно", 3),
+            ("😷 Постоянно", 4)
         ]
     },
     {
-        "text": "❓ Вопрос 5 из 5\n\nЧто вы чувствуете, думая о своей работе?",
+        "text": "❓ Вопрос 5 из 5\n\nЧто чувствуете, думая о работе?",
         "options": [
-            ("❤️ Удовлетворение и интерес", 1),
-            ("😐 Это работа, нейтрально", 2),
-            ("😤 Раздражение и усталость", 3),
-            ("🚫 Хочу всё бросить", 4)
+            ("❤️ Удовлетворение", 1),
+            ("😐 Нейтрально", 2),
+            ("😤 Раздражение", 3),
+            ("🚫 Хочу бросить", 4)
         ]
     }
 ]
 
-# Results based on score
 def get_result(score):
+    """Get result based on score"""
     if score <= 8:
         return {
             "emoji": "🟢",
             "title": "Хорошие новости!",
             "text": """Ваше состояние стабильное. Вы умеете восстанавливаться и держать баланс.
 
-💡 Рекомендация: Продолжайте практики, которые работают. Профилактика — лучшее лечение.
+💡 Рекомендация: Продолжайте практики, которые работают.
 
-📚 Полезные материалы: https://pozitiv-psychology.ru/resources.html
+📚 Материалы: https://pozitiv-psychology.ru/resources.html
 
-Если всё же есть вопросы — я рядом. Запишитесь на консультацию: @Kamila_Zolotova""",
-            "color": "green"
+Записаться на консультацию: @Kamila_Zolotova"""
         }
     elif score <= 13:
         return {
             "emoji": "🟡",
             "title": "Внимание — сигнал тревоги.",
-            "text": """Ваш организм подает признаки перегрузки. Это поправимо, если действовать сейчас.
+            "text": """Организм подает признаки перегрузки. Это поправимо, если действовать сейчас.
 
 💡 Рекомендации:
-• Введите чёткие границы между работой и отдыхом
-• Практикуйте дыхательные упражнения
-• Не игнорируйте физические симптомы
+• Введите границы между работой и отдыхом
+• Практикуйте дыхание
+• Не игнорируйте симптомы
 
-🆘 Я помогаю людям вернуться к нормальному состоянию до того, как наступит серьёзное выгорание.
+🆘 Я помогаю вернуться к норме до серьёзного выгорания.
 
-Запишитесь на консультацию: @Kamila_Zolotova""",
-            "color": "yellow"
+Записаться: @Kamila_Zolotova"""
         }
     else:
         return {
             "emoji": "🔴",
             "title": "Важно действовать.",
-            "text": """То, что вы описываете — признаки эмоционального выгорания. Это не ваша вина и не слабость. Это следствие длительной перегрузки.
+            "text": """Признаки эмоционального выгорания. Это не ваша вина — следствие перегрузки.
 
-⚠️ Пожалуйста, не откладывайте:
-• Обратитесь за помощью — вы не одни
-• Дайте себе отдых (настоящий, а не "посплю подольше")
+⚠️ Не откладывайте:
+• Обратитесь за помощью
+• Дайте себе отдых
 • Поговорите со специалистом
 
-🆘 Я работаю с людьми в таком состоянии каждый день. Знаю, как вытащить из этого состояния.
+🆘 Я работаю с такими состояниями каждый день.
 
-Запишитесь на консультацию прямо сейчас: @Kamila_Zolotova""",
-            "color": "red"
+Запишитесь сейчас: @Kamila_Zolotova"""
         }
 
-# Command handlers
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Send welcome message when user sends /start"""
+    """Send welcome message"""
     keyboard = [
-        [InlineKeyboardButton("📝 Пройти тест", callback_data='start_quiz')],
+        [InlineKeyboardButton("📝 Пройти тест", callback_data='quiz_start')],
         [InlineKeyboardButton("📚 Полезные статьи", callback_data='articles')],
-        [InlineKeyboardButton("💬 Записаться на консультацию", callback_data='consultation')]
+        [InlineKeyboardButton("💬 Записаться", callback_data='consultation')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     await update.message.reply_text(
-        """👋 Здравствуйте! Я помогаю Камиле Золотовой — психологу КПТ с 8-летним опытом.
+        """👋 Здравствуйте! Я помогаю Камиле Золотовой — психологу КПТ.
 
-За 3 минуты этот тест поможет понять, в каком состоянии ваша нервная система сейчас.
+За 3 минуты тест поможет понять состояние вашей нервной системы.
 
-⚠️ Это не медицинская диагностика, а способ прислушаться к себе.
+⚠️ Это не диагностика, а способ прислушаться к себе.
 
-Чем могу помочь? 👇""",
+Чем помочь? 👇""",
         reply_markup=reply_markup
     )
 
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handle button presses"""
+    """Handle all button presses"""
     query = update.callback_query
     await query.answer()
     
-    if query.data == 'start_quiz':
-        user_scores[query.from_user.id] = 0
-        return await ask_question(update, context, 0)
+    data = query.data
+    user_id = query.from_user.id
     
-    elif query.data == 'articles':
+    # Handle main menu buttons
+    if data == 'articles':
         await query.edit_message_text(
             """📚 Полезные материалы:
 
@@ -174,84 +163,90 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 • Почему умные люди попадаются на мошенников  
 • Как справляться с тревожностью
 
-Читать: https://pozitiv-psychology.ru/resources.html""",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("📝 Пройти тест", callback_data='start_quiz')],
-                [InlineKeyboardButton("💬 Записаться", callback_data='consultation')]
-            ])
+https://pozitiv-psychology.ru/resources.html
+
+Назад: /start"""
         )
+        return
     
-    elif query.data == 'consultation':
+    if data == 'consultation':
         await query.edit_message_text(
             """💬 Запись на консультацию
 
 Камила работает с:
-• Профессиональным выгоранием
-• Тревожностью и стрессом
+• Выгоранием
+• Тревожностью
 • Последствиями мошенничества
-• Кризисными ситуациями
 
-🕐 Длительность: 50 минут
-💻 Формат: онлайн (Telegram/Zoom)
+👉 @Kamila_Zolotova
 
-👉 @Kamila_Zolotova"""
+Назад: /start"""
         )
+        return
+    
+    # Handle quiz start
+    if data == 'quiz_start':
+        user_data[user_id] = {'score': 0, 'question': 0}
+        await ask_question(query, 0)
+        return
+    
+    # Handle quiz answers
+    if data.startswith('answer_'):
+        parts = data.split('_')
+        q_num = int(parts[1])
+        score = int(parts[2])
+        
+        # Add score
+        if user_id in user_data:
+            user_data[user_id]['score'] += score
+            user_data[user_id]['question'] = q_num + 1
+        
+        # Next question or result
+        next_q = q_num + 1
+        if next_q < len(QUESTIONS):
+            await ask_question(query, next_q)
+        else:
+            await show_result(query, user_id)
+        return
+    
+    # Handle restart
+    if data == 'quiz_restart':
+        user_data[user_id] = {'score': 0, 'question': 0}
+        await ask_question(query, 0)
+        return
 
-async def ask_question(update: Update, context: ContextTypes.DEFAULT_TYPE, question_num: int):
-    """Ask a question from the quiz"""
-    query = update.callback_query
-    question = QUESTIONS[question_num]
+async def ask_question(query, q_num):
+    """Ask a question"""
+    question = QUESTIONS[q_num]
     
     keyboard = []
     for option_text, score in question["options"]:
-        keyboard.append([InlineKeyboardButton(option_text, callback_data=f'q{question_num}_{score}')])
+        callback = f'answer_{q_num}_{score}'
+        keyboard.append([InlineKeyboardButton(option_text, callback_data=callback)])
     
     reply_markup = InlineKeyboardMarkup(keyboard)
     
-    if question_num == 0:
-        await query.edit_message_text(question["text"], reply_markup=reply_markup)
-    else:
-        await query.edit_message_text(question["text"], reply_markup=reply_markup)
-    
-    return question_num + 1
+    try:
+        await query.edit_message_text(
+            question["text"],
+            reply_markup=reply_markup
+        )
+    except Exception as e:
+        logger.error(f"Error in ask_question: {e}")
+        await query.message.reply_text(
+            question["text"],
+            reply_markup=reply_markup
+        )
 
-async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handle answer to a question"""
-    query = update.callback_query
-    await query.answer()
-    
-    user_id = query.from_user.id
-    data = query.data
-    
-    # Extract question number and score
-    parts = data.split('_')
-    question_num = int(parts[0][1])  # q0_2 -> 0
-    score = int(parts[1])
-    
-    # Add score
-    if user_id not in user_scores:
-        user_scores[user_id] = 0
-    user_scores[user_id] += score
-    
-    # Next question or result
-    next_question = question_num + 1
-    if next_question < len(QUESTIONS):
-        return await ask_question(update, context, next_question)
-    else:
-        return await show_result(update, context)
-
-async def show_result(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def show_result(query, user_id):
     """Show quiz result"""
-    query = update.callback_query
-    user_id = query.from_user.id
-    total_score = user_scores.get(user_id, 10)
-    
-    result = get_result(total_score)
+    score = user_data.get(user_id, {}).get('score', 10)
+    result = get_result(score)
     
     keyboard = [
-        [InlineKeyboardButton("💬 Записаться на консультацию", url="https://t.me/Kamila_Zolotova")],
-        [InlineKeyboardButton("📝 Пройти тест снова", callback_data='start_quiz')],
-        [InlineKeyboardButton("📚 Полезные статьи", callback_data='articles')]
+        [InlineKeyboardButton("💬 Записаться", url="https://t.me/Kamila_Zolotova")],
+        [InlineKeyboardButton("📝 Пройти снова", callback_data='quiz_restart')],
+        [InlineKeyboardButton("📚 Статьи", callback_data='articles')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
@@ -259,52 +254,35 @@ async def show_result(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 {result['text']}"""
     
-    await query.edit_message_text(message, reply_markup=reply_markup)
-    
-    # Log result
-    logger.info(f"User {user_id} completed quiz with score {total_score}")
+    try:
+        await query.edit_message_text(message, reply_markup=reply_markup)
+    except Exception as e:
+        logger.error(f"Error in show_result: {e}")
+        await query.message.reply_text(message, reply_markup=reply_markup)
     
     # Clean up
-    if user_id in user_scores:
-        del user_scores[user_id]
+    if user_id in user_data:
+        del user_data[user_id]
     
-    return ConversationHandler.END
-
-async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Cancel the quiz"""
-    await update.message.reply_text("Тест отменён. Напишите /start чтобы начать заново.")
-    return ConversationHandler.END
+    logger.info(f"User {user_id} completed quiz with score {score}")
 
 async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Log errors"""
     logger.error(f"Update {update} caused error {context.error}")
+    if update and update.effective_message:
+        await update.effective_message.reply_text(
+            "Произошла ошибка. Напишите /start чтобы начать заново."
+        )
 
-# Main function
 def main():
     """Start the bot"""
-    # Create application
     application = Application.builder().token(BOT_TOKEN).build()
-    
-    # Add conversation handler for quiz
-    quiz_handler = ConversationHandler(
-        entry_points=[CallbackQueryHandler(ask_question, pattern='^start_quiz$')],
-        states={
-            QUESTION_1: [CallbackQueryHandler(handle_answer, pattern='^q0_')],
-            QUESTION_2: [CallbackQueryHandler(handle_answer, pattern='^q1_')],
-            QUESTION_3: [CallbackQueryHandler(handle_answer, pattern='^q2_')],
-            QUESTION_4: [CallbackQueryHandler(handle_answer, pattern='^q3_')],
-            QUESTION_5: [CallbackQueryHandler(handle_answer, pattern='^q4_')],
-        },
-        fallbacks=[CommandHandler('cancel', cancel)],
-    )
     
     # Add handlers
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CallbackQueryHandler(button_handler, pattern='^(articles|consultation)$'))
-    application.add_handler(quiz_handler)
+    application.add_handler(CallbackQueryHandler(button_handler))
     application.add_error_handler(error_handler)
     
-    # Start the bot
     logger.info("Bot started!")
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
