@@ -1,0 +1,7 @@
+# Placeholder for article image
+# Нужно сгенерировать картинку для статьи "Как восстановить доверие к себе после мошенничества"
+# Размер: 1200x400px (широкая для шапки статьи)
+# Размер превью: 800x600px
+
+Промт для генерации:
+A photorealistic image of a person sitting by a window with soft morning light, looking hopeful and peaceful. Warm earth tones, cream and beige colors with green accents. The person is holding a cup of tea, symbolizing recovery and comfort after difficult times. Professional photography style, shallow depth of field, cozy home interior with plants. Mood: healing, hope, new beginning.
