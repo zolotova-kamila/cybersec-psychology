@@ -32,6 +32,23 @@ BOT_TOKEN = "8467045900:AAH_GiX9XROEnReldI8-htApe2-7B8NzpcA"
 # Store user data
 user_data = {}
 
+# Main menu keyboard
+def get_main_menu():
+    """Return main menu keyboard"""
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("📝 Пройти тест", callback_data='quiz_start')],
+        [InlineKeyboardButton("📚 Полезные статьи", callback_data='articles')],
+        [InlineKeyboardButton("💬 Записаться на консультацию", callback_data='consultation')]
+    ])
+
+def get_back_menu():
+    """Return menu with back button"""
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("🏠 Главное меню", callback_data='main_menu')],
+        [InlineKeyboardButton("📝 Пройти тест", callback_data='quiz_start')],
+        [InlineKeyboardButton("💬 Записаться", callback_data='consultation')]
+    ])
+
 # Questions
 QUESTIONS = [
     {
@@ -91,9 +108,7 @@ def get_result(score):
 
 💡 Рекомендация: Продолжайте практики, которые работают.
 
-📚 Материалы: https://pozitiv-psychology.ru/resources.html
-
-Записаться на консультацию: @Kamila_Zolotova"""
+📚 Материалы: https://pozitiv-psychology.ru/resources.html"""
         }
     elif score <= 13:
         return {
@@ -106,9 +121,7 @@ def get_result(score):
 • Практикуйте дыхание
 • Не игнорируйте симптомы
 
-🆘 Я помогаю вернуться к норме до серьёзного выгорания.
-
-Записаться: @Kamila_Zolotova"""
+🆘 Я помогаю вернуться к норме."""
         }
     else:
         return {
@@ -121,20 +134,11 @@ def get_result(score):
 • Дайте себе отдых
 • Поговорите со специалистом
 
-🆘 Я работаю с такими состояниями каждый день.
-
-Запишитесь сейчас: @Kamila_Zolotova"""
+🆘 Я работаю с такими состояниями каждый день."""
         }
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send welcome message"""
-    keyboard = [
-        [InlineKeyboardButton("📝 Пройти тест", callback_data='quiz_start')],
-        [InlineKeyboardButton("📚 Полезные статьи", callback_data='articles')],
-        [InlineKeyboardButton("💬 Записаться", callback_data='consultation')]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
     await update.message.reply_text(
         """👋 Здравствуйте! Я помогаю Камиле Золотовой — психологу КПТ.
 
@@ -143,7 +147,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 ⚠️ Это не диагностика, а способ прислушаться к себе.
 
 Чем помочь? 👇""",
-        reply_markup=reply_markup
+        reply_markup=get_main_menu()
     )
 
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -154,7 +158,17 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     data = query.data
     user_id = query.from_user.id
     
-    # Handle main menu buttons
+    # Handle main menu button
+    if data == 'main_menu':
+        await query.edit_message_text(
+            """👋 Главное меню
+
+Чем помочь? 👇""",
+            reply_markup=get_main_menu()
+        )
+        return
+    
+    # Handle articles
     if data == 'articles':
         await query.edit_message_text(
             """📚 Полезные материалы:
@@ -165,10 +179,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 https://pozitiv-psychology.ru/resources.html
 
-Назад: /start"""
+Что дальше? 👇""",
+            reply_markup=get_back_menu()
         )
         return
     
+    # Handle consultation
     if data == 'consultation':
         await query.edit_message_text(
             """💬 Запись на консультацию
@@ -178,9 +194,10 @@ https://pozitiv-psychology.ru/resources.html
 • Тревожностью
 • Последствиями мошенничества
 
-👉 @Kamila_Zolotova
+👉 Напишите: @Kamila_Zolotova
 
-Назад: /start"""
+Что дальше? 👇""",
+            reply_markup=get_back_menu()
         )
         return
     
@@ -224,6 +241,9 @@ async def ask_question(query, q_num):
         callback = f'answer_{q_num}_{score}'
         keyboard.append([InlineKeyboardButton(option_text, callback_data=callback)])
     
+    # Add cancel button
+    keyboard.append([InlineKeyboardButton("🏠 Отменить", callback_data='main_menu')])
+    
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     try:
@@ -244,15 +264,18 @@ async def show_result(query, user_id):
     result = get_result(score)
     
     keyboard = [
-        [InlineKeyboardButton("💬 Записаться", url="https://t.me/Kamila_Zolotova")],
+        [InlineKeyboardButton("💬 Записаться на консультацию", url="https://t.me/Kamila_Zolotova")],
         [InlineKeyboardButton("📝 Пройти снова", callback_data='quiz_restart')],
-        [InlineKeyboardButton("📚 Статьи", callback_data='articles')]
+        [InlineKeyboardButton("📚 Статьи", callback_data='articles')],
+        [InlineKeyboardButton("🏠 Главное меню", callback_data='main_menu')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     message = f"""{result['emoji']} {result['title']}
 
-{result['text']}"""
+{result['text']}
+
+Есть вопросы? Запишитесь на консультацию или вернитесь в меню. 👇"""
     
     try:
         await query.edit_message_text(message, reply_markup=reply_markup)
@@ -271,7 +294,8 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.error(f"Update {update} caused error {context.error}")
     if update and update.effective_message:
         await update.effective_message.reply_text(
-            "Произошла ошибка. Напишите /start чтобы начать заново."
+            "Произошла ошибка. Нажмите /start или напишите боту.",
+            reply_markup=get_main_menu()
         )
 
 def main():
