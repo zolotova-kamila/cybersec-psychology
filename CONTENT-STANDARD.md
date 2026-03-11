@@ -34,9 +34,19 @@
 ```
 
 ### Внутри статьи:
-- [ ] **Шапка (hero image):** `max-width: 800px; height: 400px`
-- [ ] **Внутренние картинки:** `height: 400px; width: 100%`
-- [ ] **Контейнер:** `max-width: 800px`
+- [ ] **Шапка (hero image):** ВНУТРИ `.article-content`, `height: 400px`
+- [ ] **Контейнер:** `max-width: 800px; margin: 0 auto`
+- [ ] **Картинка и текст:** одинаковая ширина 800px
+
+### Структура HTML статьи:
+```html
+<article class="article-content" style="max-width: 800px; margin: 0 auto;">
+    <img src="images/article-NAME.jpg" alt="..." class="article-image" 
+         style="width: 100%; height: 400px; object-fit: cover; margin-bottom: 2rem;">
+    <h2>Заголовок</h2>
+    <p>Текст...</p>
+</article>
+```
 
 ---
 
