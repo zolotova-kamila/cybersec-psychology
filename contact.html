@@ -229,10 +229,11 @@ $VK_PIXEL
         .nav-links.mobile-open {
             transform: translateX(0);
         }
-        }
 
+        /* Page Header - Fixed for visibility */
         .page-header {
-            padding: 240px 5% 4rem;
+            padding: 300px 5% 4rem;
+            padding-top: 300px !important;
             margin-top: 0;
             background: linear-gradient(135deg, rgba(237, 232, 224, 0.9) 0%, rgba(245, 241, 235, 0.92) 100%), url('images/bg-contact.jpg');
             background-size: cover;
@@ -253,16 +254,7 @@ $VK_PIXEL
             text-align: center;
             margin-top: 0;
             padding-top: 0;
-        }
-
-        .page-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
+            display: block;
         }
 
         .page-header p {
@@ -689,6 +681,38 @@ $VK_PIXEL
             .contact-gallery {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+        }
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 180px 5% 3rem !important;
+                padding-top: 180px !important;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+                margin-top: 20px;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(250, 248, 245, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 1002;
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: flex;
             }
         }
     </style>
