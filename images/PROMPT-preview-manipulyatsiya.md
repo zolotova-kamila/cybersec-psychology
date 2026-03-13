@@ -23,18 +23,25 @@ Style: Modern, trustworthy, professional psychology-meets-security design. Suita
 Mood: Alert but calm, educational, protective.
 ```
 
-### Альтернативный промт (если нужна квадратная картинка):
+### Альтернативный промт (фотореалистичный с человеком):
 ```
-Square presentation thumbnail 800x800px for "5 signs of fraud" slideshow.
+Photorealistic presentation preview image 800x600px for fraud prevention course.
 
-Center: Large stylized number "5" with shield protection symbol integrated.
-Background: Subtle cream to light sage gradient.
-Accents: Minimalist warning icons around the 5 (clock, secret symbol, fear sign, helping hand, money chart).
+Scene: Professional woman psychologist in her 50s, warm trustworthy appearance, sitting at modern desk with laptop. On screen — subtle security shield icon with digital patterns. Woman gestures "stop" hand sign, protective expression.
 
-Style: Flat design, modern corporate, psychology and cybersecurity theme.
-Colors: #F5F1EB cream, #2D5A4A sage green, #B87D5E terracotta.
+Visual elements:
+- Real person, not illustration — creates trust
+- Laptop with abstract cybersecurity interface (subtle green code patterns)
+- Warm sand/beige color palette (#E8DCC4, #D4C4A8) instead of blue
+- Soft natural window lighting from left
+- Bookshelf with psychology books in background (soft focus)
+- Subtle security elements: small shield figurine on desk, warm-toned neural network art on wall
 
-Clean, professional, no text, suitable for website resource card.
+Colors: Warm sand #E8DCC4, beige #D4C4A8, soft sage #8FA68E accents, cream white. NO blue tones. Warm, calming, trustworthy atmosphere.
+
+Style: Professional photography, shallow depth of field, portrait orientation suitable for 4:3 card. Real human connection, expertise without cold technology feel.
+
+Mood: Protective, experienced, warm guidance. Like a caring professional ready to help.
 ```
 
 ---
