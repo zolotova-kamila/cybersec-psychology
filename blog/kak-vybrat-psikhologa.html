@@ -8,11 +8,460 @@
     <meta name="author" content="Камила Золотова">
     <title>Как выбрать психолога: полное руководство | Блог</title>
     <link rel="canonical" href="https://pozitiv-psychology.ru/blog/kak-vybrat-psikhologa.html">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #F5F1EB;
+            --bg-secondary: #EDE8E0;
+            --bg-card: #FAF8F5;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6266;
+            --text-muted: #8B9194;
+            --accent-primary: #2D5A4A;
+            --accent-secondary: #4A7C6F;
+            --accent-warm: #C9A87C;
+            --border: #D4CCC2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .article-header {
+            padding: 4rem 5% 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .article-category {
+            background: var(--accent-primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 5% 4rem;
+        }
+        
+        .article-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .article-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .article-content strong {
+            color: var(--accent-primary);
+        }
+        
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+        }
+        
+        .cta-box {
+            background: var(--accent-primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: var(--accent-primary);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-2px);
+        }
+        
+        .author-box {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            border: 1px solid var(--border);
+        }
+        
+        .author-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-info p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        footer {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--bg-primary);
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .article-title {
+                font-size: 1.75rem;
+            }
+            
+            .article-content {
+                font-size: 16px;
+            }
+            
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Как выбрать психолога: полное руководство",
+      "description": "7 ключевых вопросов, на которые стоит обратить внимание при выборе психолога.",
+      "image": "https://pozitiv-psychology.ru/images/og-preview.png",
+      "author": {
+        "@type": "Person",
+        "name": "Камила Золотова",
+        "url": "https://pozitiv-psychology.ru/about.html"
+      },
+      "datePublished": "2026-03-14",
+      "dateModified": "2026-03-14"
+    }
+    </script>
 </head>
 <body>
-    <article>
-        <h1>Как выбрать психолога: полное руководство</h1>
-        <p>Статья в разработке...</p>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img src="../images/7.jpg" alt="Камила Золотова">
+            <span>Камила Золотова</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../about.html">Обо мне</a></li>
+            <li><a href="../services.html">Услуги</a></li>
+            <li><a href="../test.html">Тест</a></li>
+            <li><a href="../resources.html">Материалы</a></li>
+        </ul>
+    </nav>
+    
+    <header class="article-header">
+        <div class="article-meta">
+            <span class="article-category">Полезное</span>
+            <span>14 марта 2026</span>
+            <span>7 минут чтения</span>
+        </div>
+        <h1 class="article-title">Как выбрать психолога: полное руководство</h1>
+        <p class="article-subtitle">7 ключевых вопросов, которые помогут найти своего специалиста и не пожалеть о выборе</p>
+    </header>
+    
+    <article class="article-content">
+        <p>Сделать первый шаг к психологу — уже половина успеха. Но как не ошибиться с выбором специалиста? За 8 лет практики я видела, как подходящий психолог меняет жизнь клиентов, а неудачный опыт отбивает желание обращаться за помощью вообще.</p>
+        
+        <p>В этой статье — практический чек-лист, который поможет вам найти <strong>своего</strong> психолога. Без воды, только то, что действительно важно.</p>
+        
+        <h2>1. Какое у психолога образование?</h2>
+        
+        <p>Это первое и главное. В России любой человек может назвать себя психологом — к сожалению, профессия не лицензируется. Поэтому смотрите:</p>
+        
+        <ul>
+            <li><strong>Высшее психологическое образование</strong> (бакалавриат/магистратура)</li>
+            <li><strong>Дополнительное обучение</strong> — курсы повышения квалификации</li>
+            <li><strong>Супервизии</strong> — регулярная работа с более опытным коллегой</li>
+            <li><strong>Членство в профессиональных ассоциациях</strong> (АКПП, ЕАП)</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <p>⚠️ Будьте осторожны с "коучами" и "наставниками по личностному росту", прошедшими только краткосрочные курсы. Это не психологи.</p>
+        </div>
+        
+        <h2>2. Какой метод работы использует специалист?</h2>
+        
+        <p>Разные методы подходят для разных запросов:</p>
+        
+        <ul>
+            <li><strong>КПТ</strong> — тревожность, депрессия, выгорание. Структурированная, короткосрочная.</li>
+            <li><strong>Психоанализ</strong> — долгосрочная работа с характером, детскими травмами.</li>
+            <li><strong>EMDR</strong> — посттравматический стресс.</li>
+            <li><strong>Гештальт-терапия</strong> — работа с эмоциями.</li>
+        </ul>
+        
+        <h2>3. Есть ли специализация?</h2>
+        
+        <p>Универсальных психологов не бывает. Хороший специалист честно скажет, с чем работает:</p>
+        
+        <ul>
+            <li>Семейные отношения — семейный психолог</li>
+            <li>Детские проблемы — детский психолог</li>
+            <li>Травма, ПТСР — травматерапевт</li>
+            <li>IT-сфера, выгорание — психолог для IT</li>
+        </ul>
+        
+        <h2>4. Как проходит первая встреча?</h2>
+        
+        <p>Первая сессия — диагностическая. Психолог должен:</p>
+        
+        <ul>
+            <li>Уточнить ваш запрос и ожидания</li>
+            <li>Рассказать, как работает</li>
+            <li>Оценить, подходит ли вам его метод</li>
+            <li>Назвать примерные сроки</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <p>💡 Обращайте внимание на ощущения. После первой встречи должно быть чувство безопасности, что вас услышали.</p>
+        </div>
+        
+        <h2>5. Сколько стоит и сколько длится работа?</h2>
+        
+        <p>Честный психолог скажет:</p>
+        
+        <ul>
+            <li>Стоимость сессии (в среднем 5000-10000₽)</li>
+            <li>Предположительное количество встреч</li>
+            <li>Формат — онлайн или офлайн</li>
+            <li>Правила отмены и переноса</li>
+        </ul>
+        
+        <h2>6. Есть ли отзывы?</h2>
+        
+        <p>Ищите отзывы на независимых платформах — Яндекс.Карты, Google, B17.ru, ПроДокторов. Обращайте внимание на:</p>
+        
+        <ul>
+            <li>Конкретику (а не общие фразы "всё супер")</li>
+            <li>Ответы психолога на отзывы</li>
+            <li>Разные источники (не только на сайте специалиста)</li>
+        </ul>
+        
+        <h2>7. Подходит ли вам лично?</h2>
+        
+        <p>Самый важный пункт. Даже при идеальном образовании и опыте может не «кликнуть». И это нормально.</p>
+        
+        <p><strong>Вы точно нашли своего психолога, если:</strong></p>
+        
+        <ul>
+            <li>Вам комфортно говорить о сложном</li>
+            <li>Вы чувствуете принятие без оценки</li>
+            <li>Психолог задаёт вопросы, а не даёт советы</li>
+            <li>Вы видите изменения через 3-5 сессий</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <p>🎯 Если после 3-4 встреч не чувствуете прогресса — обсудите это с психологом. Или найдите другого. Это не предательство, это забота о себе.</p>
+        </div>
+        
+        <h2>Где искать психолога?</h2>
+        
+        <ul>
+            <li><strong>Яндекс.Карты / Google Maps</strong> — отзывы и рейтинги</li>
+            <li><strong>B17.ru, psy.ru</strong> — профессиональные каталоги</li>
+            <li><strong>Рекомендации</strong> — от знакомых, коллег</li>
+            <li><strong>Ассоциации</strong> — АКПП, ЕКПП</li>
+        </ul>
+        
+        <div class="cta-box">
+            <h3>Хотите узнать, подхожу ли я вам?</h3>
+            <p>Запишитесь на бесплатную 15-минутную консультацию — обсудим ваш запрос и выберем формат работы</p>
+            <a href="https://t.me/Kamila_Zolotova" class="btn-cta">Записаться в Telegram</a>
+        </div>
+        
+        <div class="author-box">
+            <img src="../images/7.jpg" alt="Камила Золотова">
+            <div class="author-info">
+                <h4>Камила Золотова</h4>
+                <p>Практикующий психолог, специалист КПТ. 8+ лет опыта, 500+ проведённых консультаций. Работаю с тревожностью, выгоранием, посттравматическим стрессом.</p>
+            </div>
+        </div>
     </article>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Камила Золотова. Все права защищены.</p>
+            <ul class="footer-links">
+                <li><a href="../privacy.html">Правовая информация</a></li>
+                <li><a href="https://t.me/Psy_Zolotova_Kamila">Telegram-канал</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
