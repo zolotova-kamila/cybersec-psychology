@@ -2,692 +2,256 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="copyright" content="© 2026 Камила Золотова">
-    <meta name="author" content="Камила Золотова">
+    <meta name="description" content="Материалы: статьи, презентации, документы. Полезные ресурсы от психолога Камилы Золотовой.">
     <title>Материалы | Камила Золотова — Психолог КПТ</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <meta name="description" content="Бесплатные материалы от психолога КПТ: статьи, презентации, чек-листы по кибербезопасности и финансовой психологии.">
-    <meta property="og:title" content="Материалы | Камила Золотова — Психолог КПТ">
-    <meta property="og:description" content="Бесплатные материалы от психолога КПТ. Статьи, презентации, чек-листы.">
-    <meta property="og:url" content="https://pozitiv-psychology.ru/resources.html">
-    <meta property="og:image" content="https://pozitiv-psychology.ru/images/og-preview-new.png">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ru_RU">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://pozitiv-psychology.ru/images/og-preview.png">
     <link rel="canonical" href="https://pozitiv-psychology.ru/resources.html">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --bg-primary: #F5F1EB;
             --bg-secondary: #EDE8E0;
             --bg-card: #FAF8F5;
-            --bg-dark: #2D3436;
             --text-primary: #2D3436;
             --text-secondary: #5A6266;
             --text-muted: #8B9194;
-            --text-light: #F5F1EB;
             --accent-primary: #2D5A4A;
             --accent-secondary: #4A7C6F;
             --accent-warm: #C9A87C;
-            --accent-terracotta: #B87D5E;
             --border: #D4CCC2;
-            --border-light: #E8E2DA;
-            --shadow: 0 4px 20px rgba(45, 52, 54, 0.08);
-            --shadow-lg: 0 12px 40px rgba(45, 52, 54, 0.12);
-            --shadow-soft: 0 8px 32px rgba(45, 52, 54, 0.06);
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
         }
-
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        
         body {
             font-family: 'Source Serif Pro', Georgia, serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 17px;
+            line-height: 1.6;
         }
-
+        
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem 5%;
-            height: 70px;
-            box-sizing: border-box;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(250, 248, 245, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-light);
-            z-index: 1000;
+            padding: 1rem 5%;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.875rem;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.15rem;
-            color: var(--text-primary);
-            text-decoration: none;
         }
-
-        .logo-icon {
-            width: 44px;
-            height: 44px;
+        
+        .logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-family: 'Montserrat', sans-serif; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-primary); }
+        
+        .page-header {
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            border-radius: var(--radius-md);
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .page-header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        .categories-section { padding: 3rem 5%; max-width: 1200px; margin: 0 auto; }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .category-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: white;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-primary);
-        }
-
-        .nav-cta {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--accent-primary);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .nav-cta:hover {
-            background: var(--accent-secondary);
-            transform: translateY(-2px);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            z-index: 1003;
-        }
-
-        .menu-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            margin: 6px 0;
-            transition: all 0.3s ease;
-        }
-
-        .page-header {
-            padding: 140px 5% 80px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-        }
-
-        .page-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .page-header-tagline {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .resources-section {
-            padding: 60px 5%;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-tag {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-primary);
-            margin-bottom: 0.75rem;
-        }
-
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .category-title {
+        
+        .category-card.articles .category-icon { background: linear-gradient(135deg, #2D5A4A 0%, #4A7C6F 100%); color: white; }
+        .category-card.presentations .category-icon { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; }
+        .category-card.documents .category-icon { background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); color: white; }
+        
+        .category-card h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 3rem 0 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--accent-primary);
+            margin-bottom: 0.75rem;
         }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        
+        .category-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
-
-        .resource-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .resource-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .resource-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        
+        .category-count {
+            display: inline-block;
             background: var(--bg-secondary);
-        }
-
-        .resource-preview {
-            width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .resource-preview.presentation {
-            background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
-        }
-
-        .resource-preview.documents {
-            background: linear-gradient(135deg, #2C3E50 0%, #4A6274 100%);
-        }
-
-        .resource-type-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--text-primary);
-            padding: 4px 12px;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .resource-icon {
-            color: white;
-            opacity: 0.9;
-        }
-
-        .resource-info {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .resource-info h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .resource-info p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            flex-grow: 1;
-        }
-
-        .resource-meta {
-            display: flex;
-            gap: 1rem;
             font-size: 0.85rem;
             color: var(--text-muted);
             margin-bottom: 1rem;
         }
-
-        .btn-view {
+        
+        .btn-category {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 0.5rem;
             background: var(--accent-primary);
             color: white;
-            padding: 0.75rem 1.25rem;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
         }
-
-        .btn-view:hover {
+        
+        .category-card:hover .btn-category {
             background: var(--accent-secondary);
-            transform: translateY(-2px);
         }
-
+        
         footer {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            padding: 3rem 5%;
-            text-align: center;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 2rem 5%;
+            margin-top: 4rem;
         }
-
+        
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .footer-copy {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
+        
+        .footer-links { display: flex; gap: 2rem; list-style: none; }
+        .footer-links a { color: var(--bg-primary); text-decoration: none; opacity: 0.8; font-family: 'Montserrat', sans-serif; }
+        .footer-links a:hover { opacity: 1; }
+        
+        @media (max-width: 968px) {
+            .categories-grid { grid-template-columns: 1fr; }
         }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: var(--bg-card);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: var(--shadow);
-            }
-
-            .nav-links.mobile-open {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .page-header h1 {
-                font-size: 2rem;
-            }
-
-            .resources-grid {
-                grid-template-columns: 1fr;
-            }
+        
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.75rem; }
+            .nav-links { display: none; }
+            .footer-content { flex-direction: column; text-align: center; gap: 1rem; }
         }
     </style>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(95862074, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
-    </script>
-    <noscript><div><img loading="lazy" src="https://mc.yandex.ru/watch/95862074" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
 </head>
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <div class="logo-icon">КЗ</div>
-            Камила Золотова
+            <img src="images/7.jpg" alt="Камила Золотова">
+            <span>Камила Золотова</span>
         </a>
-        <ul class="nav-links" id="navLinks">
+        <ul class="nav-links">
             <li><a href="about.html">Обо мне</a></li>
             <li><a href="services.html">Услуги</a></li>
             <li><a href="test.html">Тест</a></li>
             <li><a href="resources.html" class="active">Материалы</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="articles/">Статьи</a></li>
         </ul>
-        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <a href="contact.html" class="nav-cta">Записаться</a>
     </nav>
-
+    
     <header class="page-header">
         <h1>Материалы</h1>
-        <p class="page-header-tagline">Статьи, презентации и полезные материалы по психологии кибербезопасности</p>
+        <p>Статьи, презентации и документы для изучения и скачивания</p>
     </header>
-
-    <section class="resources-section">
-        <!-- Статьи -->
-        <div class="section-header">
-            <div class="section-tag">Блог</div>
-            <h2 class="section-title">Статьи</h2>
-        </div>
-
-        <div class="resources-grid">
-            <div class="resource-card">
-                <img src="images/article-alert-fatigue.jpg" alt="Когда работа с тревогой превращается в выгорание" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: var(--accent-primary); color: white;">Статья</span>
-                    <h3>Когда работа с тревогой превращается в выгорание</h3>
-                    <p>Как психолог КПТ помогает SOC-аналитикам справиться с профессиональным выгоранием</p>
-                    <div class="resource-meta">
-                        <span>6 мин. чтения</span>
-                        <span>11 марта 2026</span>
-                    </div>
-                    <a href="article-alert-fatigue.html" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Читать статью
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <img src="images/article-moshenniki.jpg" alt="Почему умные люди попадаются на мошенников" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: var(--accent-primary); color: white;">Статья</span>
-                    <h3>Почему умные люди попадаются на мошенников</h3>
-                    <p>Психология манипуляций: как мошенники обманывают даже самых разумных людей и как защитить себя</p>
-                    <div class="resource-meta">
-                        <span>7 мин. чтения</span>
-                        <span>11 марта 2026</span>
-                    </div>
-                    <a href="article-pochemu-umnye-lyudi-popadayutsya-na-moshennikov.html" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Читать статью
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <img src="images/article-vosstanovlenie.jpg" alt="Как восстановить доверие к себе после мошенничества" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: var(--accent-primary); color: white;">Статья</span>
-                    <h3>Как восстановить доверие к себе после мошенничества</h3>
-                    <p>Пошаговое руководство по психологическому восстановлению после финансового обмана</p>
-                    <div class="resource-meta">
-                        <span>12 марта 2026</span>
-                        <span>8 минут чтения</span>
-                    </div>
-                    <a href="article-vosstanovlenie-posle-moshennichestva.html" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Читать статью
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Презентации -->
-        <div class="section-header" style="margin-top: 4rem;">
-            <div class="section-tag">Обучение</div>
-            <h2 class="section-title">Презентации</h2>
-        </div>
-
-        <div class="resources-grid">
-            <div class="resource-card">
-                <img src="images/preview-test-zertva.jpg" alt="Узнайте, как мошенники находят в вас слабое место" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #8B4513; color: white;">Презентация</span>
-                    <h3>Узнайте, как мошенники находят в вас слабое место</h3>
-                    <p>Интерактивная презентация-тест для самодиагностики уязвимости к мошенничеству</p>
-                    <div class="resource-meta">
-                        <span>PDF</span>
-                        <span>Обновлён: март 2026</span>
-                    </div>
-                    <a href="documents/test-tip-zhertvy-moshennikov.pdf" target="_blank" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Смотреть онлайн
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <img src="images/preview-manipulyatsiya.jpg" alt="Как распознать манипуляцию за 5 секунд" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #8B4513; color: white;">Презентация</span>
-                    <h3>Как распознать манипуляцию за 5 секунд</h3>
-                    <p>5 признаков мошенника, которые выдают обман до потери денег</p>
-                    <div class="resource-meta">
-                        <span>PDF</span>
-                        <span>15 слайдов</span>
-                    </div>
-                    <a href="documents/kak-raspoznat-manipulyatsiyu.pdf" target="_blank" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Смотреть онлайн
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Статьи блога -->
-        <div class="section-header" style="margin-top: 4rem;">
-            <div class="section-tag">Блог</div>
-            <h2 class="section-title">Полезные статьи</h2>
-        </div>
-
-        <div class="resources-grid">
-            <div class="resource-card">
-                <div class="resource-preview article" style="background: linear-gradient(135deg, #2D5A4A 0%, #4A7C6F 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <span class="resource-type-badge" style="background: white; color: #2D5A4A; font-size: 0.9rem;">Статья</span>
-                </div>
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2D5A4A; color: white;">Блог</span>
-                    <h3>Как выбрать психолога: полное руководство</h3>
-                    <p>7 ключевых вопросов, которые помогут найти своего специалиста и не пожалеть о выборе</p>
-                    <div class="resource-meta">
-                        <span>7 мин чтения</span>
-                        <span>14 марта 2026</span>
-                    </div>
-                    <a href="blog/kak-vybrat-psikhologa.html" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Читать статью
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Документы -->
-        <div class="section-header" style="margin-top: 4rem;">
-            <div class="section-tag">Юридические</div>
-            <h2 class="section-title">Документы</h2>
-        </div>
-
-        <div class="resources-grid">
-            <div class="resource-card">
-                <img src="images/preview-soglashenie.jpg" alt="Информационное соглашение" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2C3E50; color: white;">Документ</span>
-                    <h3>Информационное соглашение</h3>
-                    <p>Соглашение о порядке обработки и защиты персональных данных клиентов</p>
-                    <div class="resource-meta">
-                        <span>DOCX</span>
-                        <span>Обновлён: март 2026</span>
-                    </div>
-                    <a href="documents/soglashenie.docx" target="_blank" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Просмотреть
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <img src="images/preview-pravila.jpg" alt="Правила проведения консультаций" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2C3E50; color: white;">Документ</span>
-                    <h3>Правила проведения консультаций</h3>
-                    <p>Правила и условия проведения психологических консультаций</p>
-                    <div class="resource-meta">
-                        <span>DOCX</span>
-                        <span>Обновлён: март 2026</span>
-                    </div>
-                    <a href="documents/pravila.docx" target="_blank" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Просмотреть
-                    </a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <img src="images/preview-dogovor.jpg" alt="Договор на оказание услуг" class="resource-image" loading="lazy" style="height: 200px; object-fit: cover;">
-                <div class="resource-info">
-                    <span class="resource-type-badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; background: #2C3E50; color: white;">Документ</span>
-                    <h3>Договор на оказание услуг</h3>
-                    <p>Договор на оказание психологических услуг между специалистом и клиентом</p>
-                    <div class="resource-meta">
-                        <span>DOCX</span>
-                        <span>Обновлён: март 2026</span>
-                    </div>
-                    <a href="documents/dogovor.docx" target="_blank" class="btn-view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                        Просмотреть
-                    </a>
-                </div>
-            </div>
+    
+    <section class="categories-section">
+        <div class="categories-grid">
+            <a href="articles/" class="category-card articles">
+                <div class="category-icon">📄</div>
+                <h2>Статьи</h2>
+                <p>Полезные материалы о психологии, выборе специалиста и психологическом здоровье</p>
+                <span class="category-count">1 статья</span>
+                <span class="btn-category">
+                    Смотреть все
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
+            
+            <a href="presentations/" class="category-card presentations">
+                <div class="category-icon">🎬</div>
+                <h2>Презентации</h2>
+                <p>Готовые презентации о психологии кибербезопасности, мошенничестве и выгорании</p>
+                <span class="category-count">2 презентации</span>
+                <span class="btn-category">
+                    Смотреть все
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
+            
+            <a href="documents/" class="category-card documents">
+                <div class="category-icon">📋</div>
+                <h2>Документы</h2>
+                <p>Юридические документы: договоры, соглашения и правила проведения консультаций</p>
+                <span class="category-count">3 документа</span>
+                <span class="btn-category">
+                    Смотреть все
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
         </div>
     </section>
-
+    
     <footer>
         <div class="footer-content">
-            <p class="footer-copy">© 2026 Камила Золотова. Все права защищены.</p>
+            <p>© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
-                <li><a href="https://t.me/Psy_Zolotova_Kamila" target="_blank">Telegram-канал «Психология безопасности»</a></li>
                 <li><a href="privacy.html">Правовая информация</a></li>
-                <li><a href="https://www.b17.ru/zolotova_psychologist/?prt=764511" target="_blank" rel="noopener noreferrer"><img src="https://www.b17.ru/img/logo_2022/512_white.png" alt="Психолог на B17.ru" style="width: 64px; height: 64px; border-radius: 4px; vertical-align: middle;"></a>
+                <li><a href="https://www.b17.ru/zolotova_psychologist/?prt=764511" target="_blank">B17.ru</a></li>
             </ul>
         </div>
     </footer>
-
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-open');
-        });
-    </script>
-    <script src="js/metrika-goals.js"></script>
-    <script src="js/cookie-consent.js"></script>
 </body>
 </html>
