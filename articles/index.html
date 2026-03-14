@@ -32,7 +32,6 @@
             line-height: 1.6;
         }
         
-        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
@@ -55,32 +54,12 @@
             font-weight: 600;
         }
         
-        .logo img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+        .logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
         
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-family: 'Montserrat', sans-serif; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-primary); }
         
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-primary);
-        }
-        
-        /* Header */
         .page-header {
             background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             color: white;
@@ -88,47 +67,20 @@
             text-align: center;
         }
         
-        .page-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        .page-header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         
-        .page-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Breadcrumb */
         .breadcrumb {
             padding: 1rem 5%;
             background: var(--bg-secondary);
             font-family: 'Montserrat', sans-serif;
             font-size: 0.85rem;
         }
+        .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--accent-primary); }
+        .breadcrumb span { color: var(--text-muted); margin: 0 0.5rem; }
         
-        .breadcrumb a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            color: var(--accent-primary);
-        }
-        
-        .breadcrumb span {
-            color: var(--text-muted);
-            margin: 0 0.5rem;
-        }
-        
-        /* Articles Grid */
-        .articles-section {
-            padding: 3rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .articles-section { padding: 3rem 5%; max-width: 1200px; margin: 0 auto; }
         
         .articles-grid {
             display: grid;
@@ -151,27 +103,26 @@
         
         .article-image {
             height: 180px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
         
         .article-image::after {
-            content: "Статья";
-            background: white;
-            color: var(--accent-primary);
-            padding: 0.5rem 1rem;
+            content: attr(data-category);
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            background: var(--accent-primary);
+            color: white;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
         }
         
-        .article-content {
-            padding: 1.5rem;
-        }
+        .article-content { padding: 1.5rem; }
         
         .article-meta {
             display: flex;
@@ -180,14 +131,6 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             color: var(--text-muted);
-        }
-        
-        .article-category {
-            background: var(--accent-primary);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
         }
         
         .article-card h3 {
@@ -202,9 +145,7 @@
             text-decoration: none;
         }
         
-        .article-card h3 a:hover {
-            color: var(--accent-primary);
-        }
+        .article-card h3 a:hover { color: var(--accent-primary); }
         
         .article-card p {
             color: var(--text-secondary);
@@ -238,11 +179,8 @@
             font-weight: 500;
         }
         
-        .btn-read:hover {
-            text-decoration: underline;
-        }
+        .btn-read:hover { text-decoration: underline; }
         
-        /* Pagination */
         .pagination {
             display: flex;
             justify-content: center;
@@ -252,22 +190,11 @@
             border-top: 1px solid var(--border);
         }
         
-        .pagination a, .pagination span {
+        .pagination span {
             padding: 0.75rem 1rem;
             border-radius: 8px;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
-            text-decoration: none;
-        }
-        
-        .pagination a {
-            color: var(--text-secondary);
-            background: var(--bg-card);
-        }
-        
-        .pagination a:hover {
-            background: var(--accent-primary);
-            color: white;
         }
         
         .pagination .current {
@@ -275,7 +202,6 @@
             color: white;
         }
         
-        /* Footer */
         footer {
             background: var(--text-primary);
             color: var(--bg-primary);
@@ -289,47 +215,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
         }
         
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        .footer-links { display: flex; gap: 2rem; list-style: none; }
+        .footer-links a { color: var(--bg-primary); text-decoration: none; opacity: 0.8; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
+        .footer-links a:hover { opacity: 1; }
         
-        .footer-links a {
-            color: var(--bg-primary);
-            text-decoration: none;
-            opacity: 0.8;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-        }
-        
-        /* Mobile */
-        @media (max-width: 968px) {
-            .articles-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .articles-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .page-header h1 {
-                font-size: 1.75rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
+        @media (max-width: 968px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { 
+            .articles-grid { grid-template-columns: 1fr; } 
+            .page-header h1 { font-size: 1.75rem; } 
+            .nav-links { display: none; }
+            .footer-content { flex-direction: column; text-align: center; gap: 1rem; }
         }
     </style>
 </head>
@@ -350,7 +247,7 @@
     
     <header class="page-header">
         <h1>Статьи</h1>
-        <p>Полезные материалы о психологии, выборе специалиста и психологическом здоровье</p>
+        <p>Полезные материалы о психологии, кибербезопасности и психологическом здоровье</p>
     </header>
     
     <nav class="breadcrumb">
@@ -363,11 +260,72 @@
     
     <section class="articles-section">
         <div class="articles-grid">
+            <!-- Статья 1 -->
             <article class="article-card">
-                <div class="article-image"></div>
+                <div class="article-image" style="background-image: url('../images/alert-fatigue-hero.jpg'); background: linear-gradient(135deg, #2D5A4A 0%, #4A7C6F 100%);" data-category="Выгорание"></div>
                 <div class="article-content">
                     <div class="article-meta">
-                        <span class="article-category">Полезное</span>
+                        <span>Выгорание</span>
+                        <span>10 марта 2026</span>
+                    </div>
+                    <h3><a href="trevozhnoye-utomleniye.html">Когда работа с тревогами превращается в выгорание</a></h3>
+                    <p>Как распознать тревожное утомление и что с ним делать, чтобы не дойти до полного выгорания</p>
+                    <div class="article-footer">
+                        <span class="read-time">12 мин чтения</span>
+                        <a href="trevozhnoye-utomleniye.html" class="btn-read">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Статья 2 -->
+            <article class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);" data-category="Безопасность"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span>Кибербезопасность</span>
+                        <span>8 марта 2026</span>
+                    </div>
+                    <h3><a href="pochemu-umnye-lyudi-popadayutsya.html">Почему умные люди попадаются на мошенников</a></h3>
+                    <p>Разбираем психологические механизмы, которые заставляют образованных людей терять деньги</p>
+                    <div class="article-footer">
+                        <span class="read-time">10 мин чтения</span>
+                        <a href="pochemu-umnye-lyudi-popadayutsya.html" class="btn-read">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Статья 3 -->
+            <article class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #6B4E71 0%, #9B6B9E 100%);" data-category="Восстановление"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span>Травма</span>
+                        <span>9 марта 2026</span>
+                    </div>
+                    <h3><a href="vosstanovlenie-posle-moshennichestva.html">Как восстановить доверие к себе после мошенничества</a></h3>
+                    <p>Пошаговый план восстановления после финансового и психологического шока</p>
+                    <div class="article-footer">
+                        <span class="read-time">8 мин чтения</span>
+                        <a href="vosstanovlenie-posle-moshennichestva.html" class="btn-read">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Статья 4 -->
+            <article class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #2D5A4A 0%, #4A7C6F 100%);" data-category="Полезное"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span>Гид</span>
                         <span>14 марта 2026</span>
                     </div>
                     <h3><a href="../blog/kak-vybrat-psikhologa.html">Как выбрать психолога: полное руководство</a></h3>
@@ -376,41 +334,8 @@
                         <span class="read-time">7 мин чтения</span>
                         <a href="../blog/kak-vybrat-psikhologa.html" class="btn-read">
                             Читать
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Заглушки для будущих статей -->
-            <article class="article-card" style="opacity: 0.5;">
-                <div class="article-image" style="background: var(--bg-secondary);"></div>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span class="article-category">Скоро</span>
-                        <span>—</span>
-                    </div>
-                    <h3>Что такое КПТ: просто о сложном</h3>
-                    <p>Разбираем когнитивно-поведенческую терапию простыми словами</p>
-                    <div class="article-footer">
-                        <span class="read-time">В работе</span>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="article-card" style="opacity: 0.5;">
-                <div class="article-image" style="background: var(--bg-secondary);"></div>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span class="article-category">Скоро</span>
-                        <span>—</span>
-                    </div>
-                    <h3>Выгорание в IT: 5 ранних сигналов</h3>
-                    <p>Как распознать профессиональное выгорание до критической стадии</p>
-                    <div class="article-footer">
-                        <span class="read-time">В работе</span>
                     </div>
                 </div>
             </article>
