@@ -135,6 +135,56 @@ $VK_PIXEL
     }
     </script>
     
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько стоит консультация психолога?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стоимость индивидуальной консультации — от 7000₽ за 50 минут. Корпоративные пакеты для IT-команд рассчитываются индивидуально (от 25 000₽). Первая диагностическая сессия позволяет понять, подходим ли мы друг другу, и выбрать оптимальный формат работы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как проходит онлайн-консультация?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Онлайн-консультация проходит через Zoom или Telegram. Вам нужно только стабильное интернет-соединение и тихое место. Формат ничем не уступает очной встрече: мы видим и слышим друг друга, работаем с вашим запросом эффективно. Многие клиенты отмечают, что онлайн даже удобнее — не нужно тратить время на дорогу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое КПТ и почему это эффективно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "КПТ (когнитивно-поведенческая терапия) — метод с доказанной эффективностью, особенно при тревожности, выгорании и посттравматическом стрессе. Мы работаем с мыслями, эмоциями и поведением здесь и сейчас, а не копаемся в прошлом. Обычно первые результаты видны уже через 3–5 сессий. Это практичный подход для занятых людей."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как записаться на приём?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Записаться можно через Telegram @Kamila_Zolotova или по телефону +7 909 903-00-00. Обычно я отвечаю в течение нескольких часов. На первую встречу мы выбираем удобное время, обсуждаем ваш запрос и формат работы. Никакой бюрократии — только договор и ваше желание изменить ситуацию."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работаете ли вы с корпоративными клиентами?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, это одно из моих ключевых направлений. Я работаю с IT-командами, помогаю справляться с профессиональным выгоранием, тревожностью и последствиями критических инцидентов. Предлагаю корпоративные пакеты: диагностика команды, групповые сессии, индивидуальная поддержка сотрудников."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swapfamily=Source+Serif+Pro:wght@400;600family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swapdisplay=swap" rel="stylesheet">
     <style>
         :root {
@@ -806,6 +856,91 @@ $VK_PIXEL
                 text-align: center;
             }
         }
+        /* FAQ Section Styles */
+        .faq-section {
+            padding: 5rem 5%;
+            background: var(--bg-secondary);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: var(--bg-primary);
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 1.5rem;
+        }
+        
+        .faq-answer p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .faq-answer a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+        
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-question {
+                padding: 1.25rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 1.5rem 1.25rem;
+            }
+        }
     </style>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -970,6 +1105,67 @@ $VK_PIXEL
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-header">
+            <div class="section-tag">FAQ</div>
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <p class="section-subtitle">Отвечаю на популярные вопросы о работе психолога</p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Сколько стоит консультация психолога?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Стоимость индивидуальной консультации — от 7000₽ за 50 минут. Корпоративные пакеты для IT-команд рассчитываются индивидуально (от 25 000₽). Первая диагностическая сессия позволяет понять, подходим ли мы друг другу, и выбрать оптимальный формат работы.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Как проходит онлайн-консультация?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Онлайн-консультация проходит через Zoom или Telegram. Вам нужно только стабильное интернет-соединение и тихое место. Формат ничем не уступает очной встрече: мы видим и слышим друг друга, работаем с вашим запросом эффективно. Многие клиенты отмечают, что онлайн даже удобнее — не нужно тратить время на дорогу.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Что такое КПТ и почему это эффективно?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>КПТ (когнитивно-поведенческая терапия) — метод с доказанной эффективностью, особенно при тревожности, выгорании и посттравматическом стрессе. Мы работаем с мыслями, эмоциями и поведением здесь и сейчас, а не копаемся в прошлом. Обычно первые результаты видны уже через 3–5 сессий. Это практичный подход для занятых людей.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Как записаться на приём?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Записаться можно через Telegram @Kamila_Zolotova или по телефону +7 909 903-00-00. Обычно я отвечаю в течение нескольких часов. На первую встречу мы выбираем удобное время, обсуждаем ваш запрос и формат работы. Никакой бюрократии — только договор и ваше желание изменить ситуацию.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Работаете ли вы с корпоративными клиентами?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Да, это одно из моих ключевых направлений. Я работаю с IT-командами, помогаю справляться с профессиональным выгоранием, тревожностью и последствиями критических инцидентов. Предлагаю корпоративные пакеты: диагностика команды, групповые сессии, индивидуальная поддержка сотрудников. Подробности — в разделе <a href="#corporate">«Работа с командами»</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section">
         <div class="section-title">Остались вопросы?</div>
         <p class="section-subtitle">Напишите мне — обсудим вашу ситуацию и подберем оптимальный формат работы</p>
@@ -1006,5 +1202,26 @@ $VK_PIXEL
     </script>
     <script src="js/metrika-goals.js"></script>
     <script src="js/cookie-consent.js"></script>
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
