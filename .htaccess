@@ -52,3 +52,8 @@ Redirect 301 /psihoterapiya/ https://pozitiv-psychology.ru/
 Redirect 301 /semejnye-otnosheniya/ https://pozitiv-psychology.ru/
 Redirect 301 /konsultirovanie/ https://pozitiv-psychology.ru/
 Redirect 301 /obshhaya-psixologiya/ https://pozitiv-psychology.ru/
+
+# 301 Redirects for moved articles (old → new URLs)
+Redirect 301 /article-alert-fatigue.html https://pozitiv-psychology.ru/articles/trevozhnoye-utomleniye.html
+Redirect 301 /article-pochemu-umnye-lyudi-popadayutsya-na-moshennikov.html https://pozitiv-psychology.ru/articles/pochemu-umnye-lyudi-popadayutsya.html
+Redirect 301 /article-vosstanovlenie-posle-moshennichestva.html https://pozitiv-psychology.ru/articles/vosstanovlenie-posle-moshennichestva.html
