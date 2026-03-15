@@ -28,6 +28,24 @@
 $METRIKA_CODE
 $GA4_CODE
 $VK_PIXEL
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+       ym(95862074, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95862074" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
     <!-- Schema.org markup for Contact Page -->
     <script type="application/ld+json">
     {
@@ -370,7 +388,8 @@ $VK_PIXEL
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 1rem 1.25rem;
             border: 2px solid var(--border);
@@ -382,8 +401,18 @@ $VK_PIXEL
             transition: all 0.3s ease;
         }
 
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235A6266' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--accent-primary);
             box-shadow: 0 0 0 4px rgba(45, 90, 74, 0.1);
@@ -847,6 +876,19 @@ $VK_PIXEL
                     </div>
 
                     <div class="form-group">
+                        <label for="source">Откуда узнали обо мне</label>
+                        <select id="source" name="source" required>
+                            <option value="">Выберите источник</option>
+                            <option value="Сайт">Сайт / Поиск</option>
+                            <option value="VK">VK / Дзен</option>
+                            <option value="Telegram">Telegram-канал</option>
+                            <option value="B17.ru">B17.ru</option>
+                            <option value="Знакомые">Рекомендация знакомых</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="message">Кратко о запросе</label>
                         <textarea id="message" name="message" rows="4" placeholder="Опишите, что вас беспокоит..."></textarea>
                     </div>
@@ -1049,6 +1091,7 @@ $VK_PIXEL
             
             const name = document.getElementById('name').value;
             const contact = document.getElementById('contact').value;
+            const source = document.getElementById('source').value;
             const message = document.getElementById('message').value;
             
             const validation = validateContact(contact);
@@ -1058,9 +1101,35 @@ $VK_PIXEL
                 return;
             }
             
+            // Данные для Google Sheets
+            const formData = {
+                name: name,
+                contact: contact,
+                source: source || 'Сайт',
+                note: message,
+                action: 'Заявка с сайта',
+                booked: 'В процессе'
+            };
+            
+            // Отправка в Google Sheets (замени YOUR_WEBHOOK_URL на реальный URL из Apps Script)
+            const GOOGLE_SHEETS_WEBHOOK = 'YOUR_WEBHOOK_URL';
+            
+            if (GOOGLE_SHEETS_WEBHOOK !== 'YOUR_WEBHOOK_URL') {
+                fetch(GOOGLE_SHEETS_WEBHOOK, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => console.log('Сохранено в таблицу:', data))
+                .catch(error => console.error('Ошибка сохранения:', error));
+            }
+            
+            // Telegram fallback
             let text = '📋 Новая заявка с сайта SecureMind\n\n';
             text += '👤 Имя: ' + name + '\n';
             text += '📞 Контакт: ' + contact + '\n';
+            text += '📍 Источник: ' + (source || 'Сайт') + '\n';
             if (message) {
                 text += '💬 Запрос: ' + message + '\n';
             }
