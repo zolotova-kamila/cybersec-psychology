@@ -1111,10 +1111,10 @@ $VK_PIXEL
                 booked: 'В процессе'
             };
             
-            // Отправка в Google Sheets (замени YOUR_WEBHOOK_URL на реальный URL из Apps Script)
-            const GOOGLE_SHEETS_WEBHOOK = 'YOUR_WEBHOOK_URL';
+            // Отправка в Google Sheets
+            const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyGIPdNv41J0pZMvmmvVhUXYZ1xNSy0xPRYmBPzYvkiLGHWHnVhoVMSnuGjZkAPOntKAg/exec';
             
-            if (GOOGLE_SHEETS_WEBHOOK !== 'YOUR_WEBHOOK_URL') {
+            if (GOOGLE_SHEETS_WEBHOOK) {
                 fetch(GOOGLE_SHEETS_WEBHOOK, {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
