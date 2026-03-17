@@ -15,7 +15,7 @@ telegram-bot/
 telegram-channel/
 competitors-analysis/
 content-plan/
-presentations/
+# presentations/ — убрано, теперь используется на сайте
 docs/
 
 # OS files
