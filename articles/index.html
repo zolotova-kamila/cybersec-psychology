@@ -82,6 +82,17 @@
         
         .articles-section { padding: 3rem 5%; max-width: 1200px; margin: 0 auto; }
         
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            padding-left: 0.5rem;
+        }
+        
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -99,6 +110,28 @@
         .article-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        
+        .article-card.pinned {
+            border: 2px solid var(--accent-warm);
+            position: relative;
+        }
+        
+        .article-card.pinned::before {
+            content: '📌';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 36px;
+            height: 36px;
+            background: var(--accent-warm);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         
         .article-image {
@@ -258,8 +291,36 @@
     </nav>
     
     <section class="articles-section">
+        <!-- Закрепленные статьи -->
+        <div class="section-label">📌 Закреплено</div>
+        
         <div class="articles-grid">
-            <!-- Статья 1 -->
+            <!-- Статья 1: Закрепленная — Как выбрать психолога -->
+            <article class="article-card pinned">
+                <div class="article-image" style="background-image: url('../images/article-vybor-psikhologa.png'); background-size: cover; background-position: center;" data-category="Гид"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span>Гид</span>
+                        <span>14 марта 2026</span>
+                    </div>
+                    <h3><a href="../blog/kak-vybrat-psikhologa.html">Как выбрать психолога: полное руководство</a></h3>
+                    <p>7 ключевых вопросов, которые помогут найти своего специалиста и не пожалеть о выборе</p>
+                    <div class="article-footer">
+                        <span class="read-time">7 мин чтения</span>
+                        <a href="../blog/kak-vybrat-psikhologa.html" class="btn-read">
+                            Читать
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <!-- Все статьи -->
+        <div class="section-label" style="margin-top: 3rem;">Все статьи</div>
+        
+        <div class="articles-grid">
+            <!-- Статья 2 -->
             <article class="article-card">
                 <div class="article-image" style="background-image: url('../images/article-alert-fatigue.jpg'); background-size: cover; background-position: center;" data-category="Выгорание"></div>
                 <div class="article-content">
@@ -279,7 +340,7 @@
                 </div>
             </article>
             
-            <!-- Статья 2 -->
+            <!-- Статья 3 -->
             <article class="article-card">
                 <div class="article-image" style="background-image: url('../images/article-moshenniki.jpg'); background-size: cover; background-position: center;" data-category="Психология"></div>
                 <div class="article-content">
@@ -299,7 +360,7 @@
                 </div>
             </article>
             
-            <!-- Статья 3 -->
+            <!-- Статья 4 -->
             <article class="article-card">
                 <div class="article-image" style="background-image: url('../images/article-vosstanovlenie.jpg'); background-size: cover; background-position: center;" data-category="Восстановление"></div>
                 <div class="article-content">
@@ -312,26 +373,6 @@
                     <div class="article-footer">
                         <span class="read-time">8 мин чтения</span>
                         <a href="vosstanovlenie-posle-moshennichestva.html" class="btn-read">
-                            Читать
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Статья 4 -->
-            <article class="article-card">
-                <div class="article-image" style="background-image: url('../images/article-vybor-psikhologa.png'); background-size: cover; background-position: center;" data-category="Полезное"></div>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span>Гид</span>
-                        <span>14 марта 2026</span>
-                    </div>
-                    <h3><a href="../blog/kak-vybrat-psikhologa.html">Как выбрать психолога: полное руководство</a></h3>
-                    <p>7 ключевых вопросов, которые помогут найти своего специалиста и не пожалеть о выборе</p>
-                    <div class="article-footer">
-                        <span class="read-time">7 мин чтения</span>
-                        <a href="../blog/kak-vybrat-psikhologa.html" class="btn-read">
                             Читать
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
