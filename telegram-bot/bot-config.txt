@@ -1,9 +1,0 @@
-BOT_TOKEN=8467045900:AAH_GiX9XROEnReldI8-htApe2-7B8NzpcA
-BOT_USERNAME=@ShchitOtMoshennikov_bot
-BOT_NAME=Щит от мошенников
-
-# Данные для настройки в ManyChat:
-# 1. Перейти на https://manychat.com
-# 2. Settings → Channels → Telegram → Connect Existing Bot
-# 3. Вставить токен выше
-# 4. Готово!

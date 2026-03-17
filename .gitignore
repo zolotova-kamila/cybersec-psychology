@@ -1,0 +1,38 @@
+# Documentation and metadata files
+*.md
+AUDIT-REPORT.md
+B17-COURSE-DESCRIPTION.md
+CONTENT-STANDARD.md
+CORPORATE-PACKAGE.md
+LICENSE.md
+LOGO_STYLE.md
+SEO-AUDIT-REPORT.md
+STRUCTURE.md
+README.md
+
+# Directories not part of website
+telegram-bot/
+telegram-channel/
+competitors-analysis/
+content-plan/
+presentations/
+docs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
