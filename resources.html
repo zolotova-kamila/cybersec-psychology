@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Материалы: статьи, презентации, документы. Полезные ресурсы от психолога Камилы Золотовой.">
+    <meta name="description" content="Материалы: статьи, чек-листы, документы. Полезные ресурсы от психолога Камилы Золотовой.">
     <title>Материалы | Камила Золотова — Психолог КПТ</title>
     <link rel="canonical" href="https://pozitiv-psychology.ru/resources.html">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -13,9 +13,11 @@
             --bg-primary: #F5F1EB;
             --bg-secondary: #EDE8E0;
             --bg-card: #FAF8F5;
+            --bg-dark: #2D3436;
             --text-primary: #2D3436;
             --text-secondary: #5A6266;
             --text-muted: #8B9194;
+            --text-light: #F5F1EB;
             --accent-primary: #2D5A4A;
             --accent-secondary: #4A7C6F;
             --accent-warm: #C9A87C;
@@ -108,7 +110,7 @@
         }
         
         .category-card.articles .category-icon { background: linear-gradient(135deg, #2D5A4A 0%, #4A7C6F 100%); color: white; }
-        .category-card.presentations .category-icon { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; }
+        .category-card.checklist .category-icon { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; }
         .category-card.documents .category-icon { background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); color: white; }
         
         .category-card h2 {
@@ -152,9 +154,9 @@
         }
         
         footer {
-            background: var(--text-primary);
-            color: var(--bg-primary);
-            padding: 2rem 5%;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 3rem 5%;
             margin-top: 4rem;
         }
         
@@ -167,17 +169,12 @@
         }
         
         .footer-links { display: flex; gap: 2rem; list-style: none; }
-        .footer-links a { color: var(--bg-primary); text-decoration: none; opacity: 0.8; font-family: 'Montserrat', sans-serif; }
+        .footer-links a { color: var(--text-light); text-decoration: none; opacity: 0.8; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
         .footer-links a:hover { opacity: 1; }
         
         @media (max-width: 968px) {
             .categories-grid { grid-template-columns: 1fr; }
-        }
-        
-        @media (max-width: 600px) {
-            .page-header h1 { font-size: 1.75rem; }
-            .nav-links { display: none; }
-            .footer-content { flex-direction: column; text-align: center; gap: 1rem; }
+            .footer-content { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -192,13 +189,13 @@
             <li><a href="services.html">Услуги</a></li>
             <li><a href="articles/test.html">Тест</a></li>
             <li><a href="resources.html" class="active">Материалы</a></li>
-            <li><a href="articles/">Статьи</a></li>
+            <li><a href="contact.html">Контакты</a></li>
         </ul>
     </nav>
     
     <header class="page-header">
         <h1>Материалы</h1>
-        <p>Статьи, презентации и документы для изучения и скачивания</p>
+        <p>Статьи, чек-листы и документы для изучения и скачивания</p>
     </header>
     
     <section class="categories-section">
@@ -206,27 +203,17 @@
             <a href="articles/" class="category-card articles">
                 <div class="category-icon">📄</div>
                 <h2>Статьи</h2>
-                <p>Полезные материалы о психологии, выборе специалиста и психологическом здоровье</p>
+                <p>Полезные материалы о психологии, тревоге, самопознании и финансовой психологии</p>
                 <span class="category-count">4 статьи</span>
-                <span class="btn-category">
-                    Смотреть все
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </span>
+                <span class="btn-category">Смотреть все →</span>
             </a>
             
-            <a href="presentations/" class="category-card presentations">
-                <div class="category-icon">🎬</div>
-                <h2>Презентации</h2>
-                <p>Готовые презентации о психологии кибербезопасности, мошенничестве и выгорании</p>
-                <span class="category-count">2 презентации</span>
-                <span class="btn-category">
-                    Смотреть все
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </span>
+            <a href="resources/checklist.html" class="category-card checklist">
+                <div class="category-icon">✓</div>
+                <h2>Чек-листы</h2>
+                <p>Практические материалы для самостоятельной работы: тревожность, денежные сценарии, самопознание</p>
+                <span class="category-count">2 чек-листа</span>
+                <span class="btn-category">Смотреть все →</span>
             </a>
             
             <a href="documents/" class="category-card documents">
@@ -234,12 +221,7 @@
                 <h2>Документы</h2>
                 <p>Юридические документы: договоры, соглашения и правила проведения консультаций</p>
                 <span class="category-count">3 документа</span>
-                <span class="btn-category">
-                    Смотреть все
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </span>
+                <span class="btn-category">Смотреть все →</span>
             </a>
         </div>
     </section>
@@ -249,7 +231,6 @@
             <p>© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
                 <li><a href="privacy.html">Правовая информация</a></li>
-                <li><a href="https://www.b17.ru/zolotova_psychologist/?prt=764511" target="_blank">B17.ru</a></li>
             </ul>
         </div>
     </footer>
