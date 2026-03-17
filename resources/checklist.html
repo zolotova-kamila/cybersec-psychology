@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Материалы: статьи, чек-листы, документы. Полезные ресурсы от психолога Камилы Золотовой.">
-    <title>Материалы | Камила Золотова — Психолог КПТ</title>
-    <link rel="canonical" href="https://pozitiv-psychology.ru/resources.html">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description" content="Чек-листы для самостоятельной работы: тревожность, денежные сценарии, самопознание. Полезные материалы от психолога Камилы Золотовой.">
+    <title>Чек-листы | Камила Золотова — Психолог КПТ</title>
+    <link rel="canonical" href="https://pozitiv-psychology.ru/resources/checklist.html">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -22,6 +22,7 @@
             --accent-secondary: #4A7C6F;
             --accent-warm: #C9A87C;
             --border: #D4CCC2;
+            --border-light: #E8E2DA;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,74 +72,80 @@
         .page-header h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 1rem; }
         .page-header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         
-        .categories-section { padding: 3rem 5%; max-width: 1200px; margin: 0 auto; }
+        .breadcrumb {
+            padding: 1rem 5%;
+            background: var(--bg-secondary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+        }
+        .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--accent-primary); }
+        .breadcrumb span { color: var(--text-muted); margin: 0 0.5rem; }
         
-        .categories-grid {
+        .checklists-section { padding: 3rem 5%; max-width: 1200px; margin: 0 auto; }
+        
+        .checklists-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
         
-        .category-card {
+        .checklist-card {
             background: var(--bg-card);
             border-radius: 20px;
             padding: 2.5rem;
-            text-align: center;
             box-shadow: 0 4px 16px rgba(0,0,0,0.06);
             transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
             color: var(--text-primary);
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
         
-        .category-card:hover {
+        .checklist-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 32px rgba(0,0,0,0.1);
         }
         
-        .category-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        .checklist-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.75rem;
             margin-bottom: 1.5rem;
         }
         
-        .category-card.articles .category-icon { background: linear-gradient(135deg, #2D5A4A 0%, #4A7C6F 100%); color: white; }
-        .category-card.checklist .category-icon { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: white; }
-        .category-card.documents .category-icon { background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); color: white; }
+        .checklist-card.anxiety .checklist-icon { background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%); color: white; }
+        .checklist-card.money .checklist-icon { background: linear-gradient(135deg, #F39C12 0%, #D68910 100%); color: white; }
         
-        .category-card h2 {
+        .checklist-card h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 0.75rem;
         }
         
-        .category-card p {
+        .checklist-card p {
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
             flex-grow: 1;
         }
         
-        .category-count {
-            display: inline-block;
-            background: var(--bg-secondary);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+        .checklist-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
         }
         
-        .btn-category {
+        .btn-download {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
             background: var(--accent-primary);
             color: white;
@@ -147,10 +154,21 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             transition: background 0.3s;
+            text-decoration: none;
         }
         
-        .category-card:hover .btn-category {
+        .btn-download:hover {
             background: var(--accent-secondary);
+        }
+        
+        .coming-soon {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            display: inline-block;
         }
         
         footer {
@@ -173,56 +191,64 @@
         .footer-links a:hover { opacity: 1; }
         
         @media (max-width: 968px) {
-            .categories-grid { grid-template-columns: 1fr; }
+            .checklists-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="images/7.jpg" alt="Камила Золотова">
+        <a href="../index.html" class="logo">
+            <img src="../images/7.jpg" alt="Камила Золотова">
             <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
-            <li><a href="about.html">Обо мне</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="articles/">Статьи</a></li>
-            <li><a href="resources.html" class="active">Материалы</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="../about.html">Обо мне</a></li>
+            <li><a href="../services.html">Услуги</a></li>
+            <li><a href="../resources.html">Материалы</a></li>
+            <li><a href="../articles/">Статьи</a></li>
+            <li><a href="../contact.html">Контакты</a></li>
         </ul>
     </nav>
     
     <header class="page-header">
-        <h1>Материалы</h1>
-        <p>Статьи, чек-листы и документы для изучения и скачивания</p>
+        <h1>Чек-листы</h1>
+        <p>Практические материалы для самостоятельной работы</p>
     </header>
     
-    <section class="categories-section">
-        <div class="categories-grid">
-            <a href="articles/" class="category-card articles">
-                <div class="category-icon">📄</div>
-                <h2>Статьи</h2>
-                <p>Полезные материалы о психологии, тревоге, самопознании и финансовой психологии</p>
-                <span class="category-count">4 статьи</span>
-                <span class="btn-category">Смотреть все →</span>
-            </a>
+    <nav class="breadcrumb">
+        <a href="../index.html">Главная</a>
+        <span>/</span>
+        <a href="../resources.html">Материалы</a>
+        <span>/</span>
+        <span>Чек-листы</span>
+    </nav>
+    
+    <section class="checklists-section">
+        <div class="checklists-grid">
+            <div class="checklist-card anxiety">
+                <div class="checklist-icon">🧠</div>
+                <h2>Чек-лист: Тревожные мысли</h2>
+                <p>Как распознать когнитивные искажения и работать с тревожными автоматическими мыслями. 10 шагов для самостоятельной практики.</p>
+                <div class="checklist-meta">
+                    <span>📄 PDF, 2 страницы</span>
+                    <span>⏱️ 15 мин</span>
+                </div>
+                
+                <span class="coming-soon">Скоро</span>
+            </div>
             
-            <a href="resources/checklist.html" class="category-card checklist">
-                <div class="category-icon">✓</div>
-                <h2>Чек-листы</h2>
-                <p>Практические материалы для самостоятельной работы: тревожность, денежные сценарии, самопознание</p>
-                <span class="category-count">2 чек-листа</span>
-                <span class="btn-category">Смотреть все →</span>
-            </a>
-            
-            <a href="documents/" class="category-card documents">
-                <div class="category-icon">📋</div>
-                <h2>Документы</h2>
-                <p>Юридические документы: договоры, соглашения и правила проведения консультаций</p>
-                <span class="category-count">3 документа</span>
-                <span class="btn-category">Смотреть все →</span>
-            </a>
+            <div class="checklist-card money">
+                <div class="checklist-icon">💰</div>
+                <h2>Чек-лист: Денежные сценарии</h2>
+                <p>Выявьте свои убеждения о деньгах, которые мешают финансовому благополучию. 12 вопросов для самоанализа.</p>
+                <div class="checklist-meta">
+                    <span>📄 PDF, 3 страницы</span>
+                    <span>⏱️ 20 мин</span>
+                </div>
+                
+                <span class="coming-soon">Скоро</span>
+            </div>
         </div>
     </section>
     
@@ -230,7 +256,7 @@
         <div class="footer-content">
             <p>© 2026 Камила Золотова. Все права защищены.</p>
             <ul class="footer-links">
-                <li><a href="privacy.html">Правовая информация</a></li>
+                <li><a href="../privacy.html">Правовая информация</a></li>
             </ul>
         </div>
     </footer>
