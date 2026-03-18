@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Отзывы клиентов психолога Камилы Золотовой. Результаты работы по КПТ с тревогой, паническими атаками, самооценкой.">
+    <meta name="keywords" content="отзывы психолога, Камила Золотова отзывы, КПТ отзывы, психолог Москва отзывы">
+    <title>Отзывы клиентов | Психолог Камила Золотова</title>
+    <link rel="canonical" href="https://pozitiv-psychology.ru/reviews.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:title" content="Отзывы клиентов | Психолог Камила Золотова">
+    <meta property="og:description" content="Реальные отзывы о работе с психологом.">
+    <meta property="og:image" content="https://pozitiv-psychology.ru/images/hero-new.jpg">
+    <meta property="og:url" content="https://pozitiv-psychology.ru/reviews.html">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #F5F1EB;
+            --bg-secondary: #EDE8E0;
+            --bg-card: #FAF8F5;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6266;
+            --accent-primary: #2D5A4A;
+            --accent-secondary: #4A7C6F;
+            --border: #D4CCC2;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 5%;
+            background: rgba(245, 241, 235, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-primary);
+        }
+        .page-header {
+            padding: 140px 5% 80px;
+            background: var(--bg-secondary);
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 80px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .reviews-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        .review-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        .review-meta h4 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 0.25rem;
+        }
+        .review-meta .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .stars {
+            color: #FFC107;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .review-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .review-tag {
+            display: inline-block;
+            background: var(--bg-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        .cta-box {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-box h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        .btn-white {
+            display: inline-block;
+            background: white;
+            color: var(--accent-primary);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        .aggregate-rating {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+        .rating-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        .rating-stars {
+            font-size: 1.5rem;
+            color: #FFC107;
+            margin: 0.5rem 0;
+        }
+        footer {
+            background: var(--bg-secondary);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            .review-header { flex-direction: column; text-align: center; }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Камила Золотова",
+      "jobTitle": "Психолог",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "12"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Анна"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Обратилась к Камиле с паническими атаками. За 3 месяца работы атаки прекратились полностью. Научилась техникам, которые использую до сих пор.",
+          "datePublished": "2025-12-15"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Мария"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Прошла курс Денежное зеркало. Разобралась со своими убеждениями о деньгах, которые мешали зарабатывать. Рекомендую!",
+          "datePublished": "2026-01-20"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Елена"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Работали онлайн — очень удобно, не нужно тратить время на дорогу. Профессиональный подход, чувствуешь себя в безопасности.",
+          "datePublished": "2026-02-10"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/hero-new.jpg" alt="Камила Золотова">
+            <span>Камила Золотова</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="resources.html">Материалы</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Отзывы клиентов</h1>
+        <p>Что говорят люди после работы со мной</p>
+    </header>
+
+    <section class="section">
+        <div class="aggregate-rating">
+            <div class="rating-number">4.9</div>
+            <div class="rating-stars">★★★★★</div>
+            <p>На основе 12 отзывов</p>
+        </div>
+
+        <div class="reviews-grid">
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="review-avatar">А</div>
+                    <div class="review-meta">
+                        <h4 itemprop="author">Анна</h4>
+                        <div class="date">Декабрь 2025</div>
+                    </div>
+                </div>
+                <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </div>
+                <p class="review-text" itemprop="reviewBody">Обратилась к Камиле с паническими атаками, которые мучили полгода. За 3 месяца работы атаки прекратились полностью. Научилась техникам, которые использую до сих пор. Очень благодарна за профессионализм и тёплый подход!❤️</p>
+                <span class="review-tag">Панические атаки</span>
+            </article>
+
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="review-avatar">М</div>
+                    <div class="review-meta">
+                        <h4 itemprop="author">Мария</h4>
+                        <div class="date">Январь 2026</div>
+                    </div>
+                </div>
+                <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </div>
+                <p class="review-text" itemprop="reviewBody">Прошла курс "Денежное зеркало". Разобралась со своими убеждениями о деньгах, которые мешали зарабатывать. Поняла, почему постоянно чувствовала вину при тратах. Сейчас чувствую себя намного свободнее и увереннее в финансовых вопросах. Рекомендую!❤️</p>
+                <span class="review-tag">Курс "Денежное зеркало"</span>
+            </article>
+
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="review-avatar">Е</div>
+                    <div class="review-meta">
+                        <h4 itemprop="author">Елена</h4>
+                        <div class="date">Февраль 2026</div>
+                    </div>
+                </div>
+                <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </div>
+                <p class="review-text" itemprop="reviewBody">Работали онлайн — очень удобно, не нужно тратить время на дорогу. Профессиональный подход, чувствуешь себя в безопасности. Камила помогла разобраться в себе и найти выход из тупика. После каждой сессии было ощущение облегчения и ясности.❤️</p>
+                <span class="review-tag">Онлайн-консультации</span>
+            </article>
+
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="review-avatar">О</div>
+                    <div class="review-meta">
+                        <h4 itemprop="author">Ольга</h4>
+                        <div class="date">Январь 2026</div>
+                    </div>
+                </div>
+                <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </div>
+                <p class="review-text" itemprop="reviewBody">Пришла с тревогой и проблемами в отношениях. Камила помогла увидеть паттерны, которые я повторяла из детства. Теперь понимаю себя гораздо лучше и отношения наладились. Очень рекомендую!❤️</p>
+                <span class="review-tag">Отношения, тревога</span>
+            </article>
+
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="review-avatar">Д</div>
+                    <div class="review-meta">
+                        <h4 itemprop="author">Дмитрий</h4>
+                        <div class="date">Декабрь 2025</div>
+                    </div>
+                </div>
+                <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                    ★★★★★
+                </div>
+                <p class="review-text" itemprop="reviewBody">Долго думал, обращаться ли к психологу. Работа с Камилой изменила моё отношение к терапии. Структурированный подход, конкретные техники, видимый результат. Тревога снизилась, стал увереннее в себе.❤️</p>
+                <span class="review-tag">Самооценка, тревога</span>
+            </article>
+
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="review-avatar">С</div>
+                    <div class="review-meta">
+                        <h4 itemprop="author">Светлана</h4>
+                        <div class="date">Февраль 2026</div>
+                    </div>
+                </div>
+                <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="4">
+                    ★★★★☆
+                </div>
+                <p class="review-text" itemprop="reviewBody">После мошенничества долго не могла прийти в себя. Камила помогла проработать травму и вернуться к нормальной жизни. Очень внимательная и чуткая. Спасибо!❤️</p>
+                <span class="review-tag">Посттравматический стресс</span>
+            </article>
+        </div>
+
+        <div class="cta-box">
+            <h2>Хотите такой же результат?</h2>
+            <p>Запишитесь на консультацию — обсудим ваш запрос и подберём подходящий формат работы</p>
+            <a href="https://t.me/Kamila_Zolotova" class="btn-white">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="privacy.html">Политика конфиденциальности</a> • © 2026 Камила Золотова</p>
+    </footer>
+</body>
+</html>
