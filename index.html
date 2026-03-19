@@ -423,6 +423,96 @@
             color: var(--text-muted);
         }
 
+        /* Reviews Section */
+        .reviews-section {
+            background: var(--bg-secondary);
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .review-meta h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .review-meta .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-stars {
+            color: #FFC107;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .review-tag {
+            display: inline-block;
+            background: var(--bg-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .reviews-link {
+            text-align: center;
+        }
+
         .notebook-section {
             background: var(--bg-secondary);
             padding: 6rem 5%;
@@ -838,7 +928,7 @@
                 font-size: 2rem;
             }
 
-            .notebook-grid {
+            .notebook-grid, .reviews-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1003,6 +1093,55 @@
                 <span class="feature">Член АКПП</span>
             </div>
             <a href="about.html" class="btn-secondary">Подробнее обо мне</a>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="section-header">
+            <div class="section-tag">Отзывы</div>
+            <h2 class="section-title">Что говорят клиенты</h2>
+            <p class="section-subtitle">Реальные отзывы с внешних платформ</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Р</div>
+                    <div class="review-meta">
+                        <h4>Рита</h4>
+                        <div class="date">2025 • B17.ru</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">С Камилой мы встречались раз в неделю на протяжении полугода. Она невероятно чуткий специалист. Её вопросы всегда попадают в точку, заставляют задуматься.</p>
+                <span class="review-tag">Отношения с родителями, тревога</span>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Л</div>
+                    <div class="review-meta">
+                        <h4>Лариса</h4>
+                        <div class="date"> • Проект Адриатика</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">После первого же сеанса ДПДГ стало легче. Работаем с детской травмой. Обратившись в проект Адриатика в непростой период своей жизни, я получила высококвалифицированную помощь.</p>
+                <span class="review-tag">EMDR (ДПДГ), детская травма</span>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">А</div>
+                    <div class="review-meta">
+                        <h4>Андрей</h4>
+                        <div class="date">2024 • B17.ru</div>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">За полгода терапии я забыл про многолетнее тревожное расстройство и антидепрессанты. Это просто что-то потрясающее, она совершила невероятное.</p>
+                <span class="review-tag">Тревожное расстройство</span>
+            </div>
+        </div>
+        <div class="reviews-link">
+            <a href="reviews.html" class="btn-secondary">Все отзывы</a>
         </div>
     </section>
 
