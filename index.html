@@ -14,15 +14,15 @@
     
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:title" content="Камила Золотова — Психолог КПТ | EMDR (ДПДГ)">
-    <meta property="og:description" content="🔹 8+ лет опыта
-🔹 КПТ и EMDR (ДПДГ)
-🔹 Работа с тревогой и самопознанием
-🔹 Финансовая психология
-🔹 Онлайн-консультации">
+    <meta property="og:description" content="🔹 8+ лет опыта 🔹 КПТ и EMDR (ДПДГ) 🔹 Работа с тревогой и самопознанием 🔹 Финансовая психология 🔹 Онлайн-консультации">
     <meta property="og:image" content="https://pozitiv-psychology.ru/images/hero-new.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="Камила Золотова - психолог КПТ с 8-летним опытом">
     <meta property="og:url" content="https://pozitiv-psychology.ru/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Камила Золотова — Психолог КПТ">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -54,7 +54,7 @@
             webvisor:true
        });
     </script>
-    <noscript><div><img loading="lazy" src="https://mc.yandex.ru/watch/95862074" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img loading="lazy" src="https://mc.yandex.ru/watch/95862074" style="position:absolute; left:-9999px;" alt="Yandex.Metrika" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     
     <!-- Schema.org markup -->
@@ -67,26 +67,123 @@
           "@id": "https://pozitiv-psychology.ru/#website",
           "url": "https://pozitiv-psychology.ru/",
           "name": "Камила Золотова — Психолог КПТ",
-          "description": "Психолог КПТ. Работа с тревогой, самопознание, финансовая психология"
+          "description": "Психолог КПТ. Работа с тревогой, самопознание, финансовая психология",
+          "inLanguage": "ru-RU"
         },
         {
           "@type": "Person",
           "@id": "https://pozitiv-psychology.ru/#person",
           "name": "Камила Золотова",
           "jobTitle": "Психолог КПТ",
-          "description": "Практикующий психолог с 8-летним стажем, специализация: тревога, самопознание, финансовая психология",
+          "description": "Практикующий психолог с 8-летним стажем, специализация: тревога, самопознание, финансовая психология, EMDR (ДПДГ)",
           "url": "https://pozitiv-psychology.ru/",
-          "image": "https://pozitiv-psychology.ru/images/hero-new.jpg",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://pozitiv-psychology.ru/images/hero-new.jpg",
+            "width": 800,
+            "height": 800
+          },
           "sameAs": [
-            "https://t.me/Kamila_Zolotova"
+            "https://t.me/Kamila_Zolotova",
+            "https://yandex.com/maps/org/psikholog_zolotova_kamila/69068083336/"
+          ],
+          "worksFor": {
+            "@id": "https://pozitiv-psychology.ru/#localbusiness"
+          },
+          "knowsAbout": [
+            "Когнитивно-поведенческая терапия (КПТ)",
+            "EMDR (ДПДГ)",
+            "Тревожные расстройства",
+            "Самопознание и личностный рост",
+            "Финансовая психология"
           ]
         },
         {
+          "@type": "LocalBusiness",
+          "@id": "https://pozitiv-psychology.ru/#localbusiness",
+          "name": "Камила Золотова — Психолог КПТ",
+          "description": "Психологические консультации онлайн. Специализация: КПТ, EMDR, работа с тревогой, самопознание, финансовая психология",
+          "url": "https://pozitiv-psychology.ru/",
+          "telephone": "+7-909-903-00-00",
+          "email": "",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Москва",
+            "addressCountry": "RU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "55.753215",
+            "longitude": "37.622504"
+          },
+          "image": "https://pozitiv-psychology.ru/images/hero-new.jpg",
+          "priceRange": "$$",
+          "currenciesAccepted": "RUB",
+          "paymentAccepted": "Банковский перевод",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Россия"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги психолога",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@id": "https://pozitiv-psychology.ru/#service-consultation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@id": "https://pozitiv-psychology.ru/#service-course"
+                }
+              }
+            ]
+          }
+        },
+        {
           "@type": "Service",
-          "@id": "https://pozitiv-psychology.ru/#service",
-          "name": "Психологическая консультация",
-          "description": "Индивидуальная психологическая поддержка",
-          "areaServed": "Россия"
+          "@id": "https://pozitiv-psychology.ru/#service-consultation",
+          "name": "Индивидуальная психологическая консультация",
+          "description": "Онлайн-консультации с использованием КПТ и EMDR. Работа с тревогой, самопознанием, отношениями",
+          "provider": {
+            "@id": "https://pozitiv-psychology.ru/#person"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Россия"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "5000",
+            "priceCurrency": "RUB",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://pozitiv-psychology.ru/#service-course",
+          "name": "Курс «Денежное зеркало»",
+          "description": "Образовательный курс по финансовой психологии. Работа с денежными сценариями и убеждениями",
+          "provider": {
+            "@id": "https://pozitiv-psychology.ru/#person"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "39000",
+            "priceCurrency": "RUB",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock"
+          }
         }
       ]
     }
@@ -940,7 +1037,7 @@
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <img loading="lazy" src="images/hero-new.jpg" alt="KZ" class="logo-icon-img">
+            <img loading="lazy" src="images/hero-new.jpg" alt="Камила Золотова - психолог КПТ" class="logo-icon-img">
             <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
@@ -971,7 +1068,7 @@
             </div>
             <div class="hero-image">
                 <div class="hero-avatar">
-                    <img loading="lazy" src="images/hero-new.jpg" alt="Камила Золотова - психолог КПТ">
+                    <img loading="lazy" src="images/hero-new.jpg" alt="Камила Золотова - психолог КПТ, специалист по EMDR">
                 </div>
                 <div class="hero-name">Камила Золотова</div>
                 <div class="hero-title">Психолог / КПТ / EMDR</div>
@@ -1040,7 +1137,7 @@
         <div class="path-content-wrapper">
             <div class="path-images-col">
                 <div class="path-image">
-                    <img loading="lazy" src="images/184.jpg" alt="Психологическая консультация">
+                    <img loading="lazy" src="images/184.jpg" alt="Консультация психолога КПТ - работа с тревогой и самопознание">
                 </div>
             </div>
             <div class="path-container">

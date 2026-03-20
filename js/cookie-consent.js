@@ -46,7 +46,7 @@
         `;
         document.body.appendChild(banner);
         
-        // Add styles
+        // Add styles with fallback colors
         const styles = document.createElement('style');
         styles.textContent = `
             #cookie-banner {
@@ -54,11 +54,11 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: var(--bg-tertiary, #F5F1EB);
-                border-top: 2px solid var(--accent, #2D5A4A);
+                background: #FAF8F5;
+                border-top: 2px solid #2D5A4A;
                 padding: 16px 20px;
                 z-index: 9999;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
                 font-size: 14px;
                 line-height: 1.5;
                 box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
@@ -81,23 +81,23 @@
             
             .cookie-text strong {
                 display: block;
-                color: var(--text-primary, #1A1A1A);
+                color: #2D3436;
                 margin-bottom: 4px;
                 font-size: 15px;
             }
             
             .cookie-text p {
                 margin: 0;
-                color: var(--text-secondary, #4A4A4A);
+                color: #5A6266;
             }
             
             .cookie-text a {
-                color: var(--accent, #2D5A4A);
+                color: #2D5A4A;
                 text-decoration: underline;
             }
             
             .cookie-text a:hover {
-                color: var(--accent-hover, #1E3D32);
+                color: #1E3D32;
             }
             
             .cookie-buttons {
@@ -110,7 +110,7 @@
                 padding: 10px 20px;
                 border: none;
                 border-radius: 8px;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
                 font-size: 14px;
                 font-weight: 500;
                 cursor: pointer;
@@ -118,24 +118,24 @@
             }
             
             .cookie-btn-accept {
-                background: var(--accent, #2D5A4A);
+                background: #2D5A4A;
                 color: white;
             }
             
             .cookie-btn-accept:hover {
-                background: var(--accent-hover, #1E3D32);
+                background: #1E3D32;
             }
             
             .cookie-btn-decline {
                 background: transparent;
-                color: var(--text-secondary, #4A4A4A);
-                border: 1px solid var(--border, #E0E0E0);
+                color: #5A6266;
+                border: 1px solid #D4CCC2;
             }
             
             .cookie-btn-decline:hover {
-                background: var(--bg-primary, #FFFFFF);
-                border-color: var(--accent, #2D5A4A);
-                color: var(--accent, #2D5A4A);
+                background: #F5F1EB;
+                border-color: #2D5A4A;
+                color: #2D5A4A;
             }
             
             /* Mobile */
@@ -158,7 +158,7 @@
             
             /* Hidden state */
             #cookie-banner.hidden {
-                display: none;
+                display: none !important;
             }
         `;
         document.head.appendChild(styles);
@@ -179,29 +179,21 @@
     
     // Enable analytics after consent
     function enableAnalytics() {
-        // Analytics are already loaded, but we can trigger any deferred loading here
         console.log('Cookie consent: Analytics enabled');
     }
     
     // Disable analytics if declined
     function disableAnalytics() {
-        // Disable Yandex Metrika
         if (typeof ym !== 'undefined') {
             window.ym = function() { console.log('Analytics disabled by user choice'); };
         }
-        // Disable GA4
         if (typeof gtag !== 'undefined') {
             window.gtag = function() { console.log('Analytics disabled by user choice'); };
-        }
-        // Disable VK Pixel
-        if (typeof VK !== 'undefined' && VK.Retargeting) {
-            VK.Retargeting.Hit = function() { console.log('VK Pixel disabled by user choice'); };
         }
     }
     
     // Initialize
     function init() {
-        // If no consent given yet, show banner
         if (!hasConsent() && !hasDeclined()) {
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', createBanner);
@@ -209,7 +201,6 @@
                 createBanner();
             }
         } else if (hasDeclined()) {
-            // User previously declined
             disableAnalytics();
         }
     }
