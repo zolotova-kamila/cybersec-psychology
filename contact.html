@@ -206,20 +206,45 @@
             z-index: 1;
         }
         
-        .page-header h1 {
+        .page-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .page-header-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 32px rgba(45, 52, 54, 0.15);
+            border: 4px solid white;
+            flex-shrink: 0;
+        }
+        
+        .page-header-text {
+            text-align: left;
+        }
+        
+        .page-header-text h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.8rem;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 1rem;
-            text-align: center;
+            text-align: left;
         }
 
-        .page-header p {
+        .page-header-text p {
             font-size: 1.2rem;
             color: var(--text-secondary);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0;
+            text-align: left;
         }
 
         .contact-section {
@@ -539,6 +564,25 @@
             .page-header h1 {
                 font-size: 2rem;
             }
+            
+            .page-header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .page-header-text {
+                text-align: center;
+            }
+            
+            .page-header-text h1,
+            .page-header-text p {
+                text-align: center;
+            }
+            
+            .page-header-photo {
+                width: 120px;
+                height: 120px;
+            }
 
             .footer-content {
                 flex-direction: column;
@@ -569,8 +613,13 @@
     </nav>
 
     <header class="page-header">
-        <h1>Запись на консультацию к психологу КПТ</h1>
-        <p>Выберите удобный способ связи — я отвечу в течение 24 часов</p>
+        <div class="page-header-content">
+            <img src="images/photo-square.png" alt="Камила Золотова" class="page-header-photo">
+            <div class="page-header-text">
+                <h1>Запись на консультацию к психологу КПТ</h1>
+                <p>Выберите удобный способ связи — я отвечу в течение 24 часов</p>
+            </div>
+        </div>
     </header>
 
     <section class="contact-section">
