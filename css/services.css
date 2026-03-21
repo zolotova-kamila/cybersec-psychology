@@ -1,0 +1,236 @@
+/* === SERVICES PAGE SPECIFIC STYLES === */
+
+.services-section {
+    padding: 3rem 5%;
+    background: var(--bg-primary);
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-light);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-warm));
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card.featured {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+}
+
+.service-card.featured:hover {
+    transform: scale(1.02) translateY(-8px);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(45, 90, 74, 0.1) 0%, rgba(74, 124, 111, 0.1) 100%);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent-primary);
+}
+
+.service-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.service-price span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.service-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--accent-warm);
+    border-radius: 50%;
+}
+
+.btn-service {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    width: 100%;
+    background: var(--accent-primary);
+    color: white;
+    padding: 0.875rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-service:hover {
+    background: var(--accent-secondary);
+}
+
+.pricing-note {
+    text-align: center;
+    max-width: 700px;
+    margin: 3rem auto 0;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-warm);
+}
+
+.pricing-note p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.pricing-note strong {
+    color: var(--accent-primary);
+}
+
+/* ── Psychologist Photo Section ── */
+.psychologist-photo-section {
+    padding: 40px 5% 20px;
+    background: var(--bg-primary);
+}
+
+.psychologist-photo-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.psychologist-photo-horizontal {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: block;
+    margin: 0 auto;
+}
+
+/* ── FAQ Section (services page) ── */
+.faq-section {
+    padding: 3rem 5%;
+    background: var(--bg-secondary);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+}
+
+.faq-answer {
+    padding: 0 2rem 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    display: none;
+}
+
+/* ── Services Responsive ── */
+@media (max-width: 968px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card.featured {
+        transform: none;
+    }
+
+    .service-card.featured:hover {
+        transform: translateY(-8px);
+    }
+}

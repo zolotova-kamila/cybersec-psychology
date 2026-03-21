@@ -14,200 +14,8 @@
     <meta property="og:url" content="https://pozitiv-psychology.ru/reviews.html">
     <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #F5F1EB;
-            --bg-secondary: #EDE8E0;
-            --bg-card: #FAF8F5;
-            --text-primary: #2D3436;
-            --text-secondary: #5A6266;
-            --accent-primary: #2D5A4A;
-            --accent-secondary: #4A7C6F;
-            --border: #D4CCC2;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Source Serif Pro', Georgia, serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem 5%;
-            background: rgba(245, 241, 235, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            color: var(--text-primary);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-primary);
-        }
-        .page-header {
-            padding: 140px 5% 80px;
-            background: var(--bg-secondary);
-            text-align: center;
-        }
-        .page-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .page-header p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .section {
-            padding: 80px 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .reviews-grid {
-            display: grid;
-            gap: 2rem;
-        }
-        .review-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 2rem;
-            border: 1px solid var(--border);
-        }
-        .review-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .review-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--accent-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-        .review-meta h4 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 0.25rem;
-        }
-        .review-meta .date {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        .stars {
-            color: #FFC107;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        .review-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-        .review-tag {
-            display: inline-block;
-            background: var(--bg-secondary);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-        .cta-box {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 16px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        .cta-box h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        .cta-box p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-        }
-        .btn-white {
-            display: inline-block;
-            background: white;
-            color: var(--accent-primary);
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-        }
-        .aggregate-rating {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg-card);
-            border-radius: 12px;
-            margin-bottom: 3rem;
-        }
-        .rating-number {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-        }
-        .rating-stars {
-            font-size: 1.5rem;
-            color: #FFC107;
-            margin: 0.5rem 0;
-        }
-        footer {
-            background: var(--bg-secondary);
-            padding: 40px 5%;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-        @media (max-width: 768px) {
-            .page-header h1 { font-size: 2rem; }
-            .review-header { flex-direction: column; text-align: center; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reviews.css">
     
     <script type="application/ld+json">
     {
@@ -235,6 +43,12 @@
             <li><a href="resources.html">Материалы</a></li>
             <li><a href="contact.html">Контакты</a></li>
         </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
     </nav>
 
     <header class="page-header">
@@ -567,5 +381,6 @@
     <footer>
         <p><a href="privacy.html">Политика конфиденциальности</a> • © 2026 Камила Золотова</p>
     </footer>
+    <script src="js/nav.js"></script>
 </body>
 </html>

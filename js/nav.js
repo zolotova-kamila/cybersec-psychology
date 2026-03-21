@@ -1,0 +1,19 @@
+// Mobile navigation toggle
+(function() {
+    var menuToggle = document.getElementById('menuToggle');
+    var navLinks = document.querySelector('.nav-links');
+
+    if (!menuToggle || !navLinks) return;
+
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('mobile-open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        });
+    });
+})();
