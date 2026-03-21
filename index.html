@@ -268,13 +268,6 @@
             letter-spacing: 0.5px;
         }
 
-        .logo-icon-img {
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-md);
-            object-fit: cover;
-        }
-
         .nav-links {
             display: flex;
             gap: 2.5rem;
@@ -353,7 +346,11 @@
         }
 
         .hero {
-            padding: 120px 5% 6rem;
+            padding: 120px 5% 3rem;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
             background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
             overflow: hidden;
@@ -372,6 +369,7 @@
 
         .hero-content {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.2fr 1fr;
@@ -462,48 +460,45 @@
         .hero-image {
             background: var(--bg-card);
             border-radius: var(--radius-lg);
-            padding: 3rem;
-            text-align: center;
+            overflow: hidden;
             box-shadow: var(--shadow-soft);
             border: 1px solid var(--border-light);
         }
 
-        .hero-avatar {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 4px solid var(--bg-card);
+        .hero-photo {
+            width: 100%;
+            max-height: calc(100vh - 260px);
+            min-height: 250px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
         }
 
-        .hero-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .hero-info {
+            padding: 1.5rem 2rem;
+            text-align: center;
         }
 
         .hero-name {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .hero-title {
             color: var(--accent-primary);
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            padding-top: 1.5rem;
+            gap: 1.5rem;
+            padding-top: 1rem;
             border-top: 1px solid var(--border-light);
         }
 
@@ -1037,7 +1032,7 @@
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <img loading="lazy" src="images/hero-new.jpg" alt="Камила Золотова - психолог КПТ" class="logo-icon-img">
+            <span class="logo-icon">КЗ</span>
             <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
@@ -1067,23 +1062,23 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-avatar">
-                    <img loading="lazy" src="images/hero-new.jpg" alt="Камила Золотова - психолог КПТ, специалист по EMDR">
-                </div>
-                <div class="hero-name">Камила Золотова</div>
-                <div class="hero-title">Психолог / КПТ / EMDR</div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-value">6+</div>
-                        <div class="stat-label">лет опыта</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">7500+</div>
-                        <div class="stat-label">консультаций</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">конфиденциальность</div>
+                <img src="images/hero-new.jpg" alt="Камила Золотова - психолог КПТ, специалист по EMDR" class="hero-photo">
+                <div class="hero-info">
+                    <div class="hero-name">Камила Золотова</div>
+                    <div class="hero-title">Психолог / КПТ / EMDR</div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">6+</div>
+                            <div class="stat-label">лет опыта</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">7500+</div>
+                            <div class="stat-label">консультаций</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">конфиден&shy;циально</div>
+                        </div>
                     </div>
                 </div>
             </div>
