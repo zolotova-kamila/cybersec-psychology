@@ -335,23 +335,43 @@ footer {
     .nav-links {
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(250, 248, 245, 0.98);
+        background: #FAF8F5;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 2.5rem;
         transform: translateX(100%);
-        transition: transform 0.3s ease;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1002;
         display: flex;
-        padding-top: 70px;
+        list-style: none;
     }
 
     .nav-links.mobile-open { transform: translateX(0); }
 
+    .nav-links a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .nav-links a::after { display: none; }
+
+    /* Hide the CTA button inside the overlay — it's already in the nav bar */
+    .nav-links + .nav-cta { display: none; }
+
     .menu-toggle {
         display: flex;
         margin-left: auto;
+        /* Stays on top of the overlay */
+        position: relative;
+        z-index: 1003;
+    }
+
+    /* Keep the nav-cta hidden when menu is open — avoid confusion */
+    nav .nav-cta {
+        position: relative;
+        z-index: 1003;
     }
 
     .page-header h1 { font-size: 2rem; }
