@@ -11,14 +11,14 @@
 .page-header-content {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 1rem;
+    gap: 0.5rem;
     max-width: 1000px;
     margin: 0 auto;
-    align-items: start;
+    align-items: center;
 }
 
 .page-header-photo {
-    width: 200px;
+    width: 380px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(45, 52, 54, 0.1);
@@ -30,11 +30,11 @@
 
 .page-header-text h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: left;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .page-header-text p {
@@ -173,7 +173,7 @@
     .page-header-text p { text-align: center; }
     .page-header-photo { 
         width: 100%; 
-        max-width: 200px;
+        max-width: 380px;
         margin: 0 auto;
     }
     .review-header { flex-direction: column; text-align: center; }
