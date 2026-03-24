@@ -18,7 +18,7 @@
 }
 
 .page-header-photo {
-    width: 400px;
+    width: 200px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(45, 52, 54, 0.1);
@@ -173,7 +173,7 @@
     .page-header-text p { text-align: center; }
     .page-header-photo { 
         width: 100%; 
-        max-width: 300px;
+        max-width: 200px;
         margin: 0 auto;
     }
     .review-header { flex-direction: column; text-align: center; }
