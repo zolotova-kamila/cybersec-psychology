@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:yandex="http://news.yandex.ru"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:turbo="http://turbo.yandex.ru"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Камила Золотова — Психолог КПТ</title>
+    <link>https://pozitiv-psychology.ru</link>
+    <description>Статьи о психологии, КПТ-терапии, тревоге и психологическом здоровье от психолога Камилы Золотовой</description>
+    <language>ru</language>
+    <pubDate>Wed, 26 Mar 2026 12:00:00 +0300</pubDate>
+    <lastBuildDate>Wed, 26 Mar 2026 12:00:00 +0300</lastBuildDate>
+    <image>
+      <url>https://pozitiv-psychology.ru/images/logo-kz-flat.jpg</url>
+      <title>Камила Золотова — Психолог КПТ</title>
+      <link>https://pozitiv-psychology.ru</link>
+    </image>
+    <yandex:logo type="square">https://pozitiv-psychology.ru/images/logo-kz-flat.jpg</yandex:logo>
+
+    <!-- Статья 1: КПТ-терапия -->
+    <item turbo="true">
+      <title>КПТ-терапия: что это такое и как она работает</title>
+      <link>https://pozitiv-psychology.ru/articles/kpt-terapiya-chto-eto.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/kpt-terapiya-chto-eto.html</guid>
+      <pubDate>Thu, 20 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>КПТ</category>
+      <category>Психотерапия</category>
+      <description>Полное руководство по когнитивно-поведенческой терапии: принципы, техники, показания и эффективность метода</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-kpt-preview.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-kpt-preview.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 2: Симптомы тревоги -->
+    <item turbo="true">
+      <title>Симптомы тревожного расстройства — как распознать</title>
+      <link>https://pozitiv-psychology.ru/articles/simptomy-trevozhnogo-rasstroystva.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/simptomy-trevozhnogo-rasstroystva.html</guid>
+      <pubDate>Tue, 18 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Тревога</category>
+      <category>Психическое здоровье</category>
+      <description>Как отличить нормальную тревогу от расстройства, основные физические и психологические симптомы тревожного расстройства</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-trevoga-preview.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-trevoga-preview.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 3: Как выбрать психолога -->
+    <item turbo="true">
+      <title>Как выбрать психолога: полное руководство</title>
+      <link>https://pozitiv-psychology.ru/blog/kak-vybrat-psikhologa.html</link>
+      <guid>https://pozitiv-psychology.ru/blog/kak-vybrat-psikhologa.html</guid>
+      <pubDate>Fri, 14 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Гид</category>
+      <category>Выбор психолога</category>
+      <description>7 ключевых вопросов, которые помогут найти своего специалиста и не пожалеть о выборе</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-vybor-psikhologa-new.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-vybor-psikhologa-new.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 4: Панические атаки -->
+    <item turbo="true">
+      <title>Как справиться с паническими атаками</title>
+      <link>https://pozitiv-psychology.ru/articles/kak-spravitsya-s-panicheskimi-atakami.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/kak-spravitsya-s-panicheskimi-atakami.html</guid>
+      <pubDate>Wed, 19 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Тревога</category>
+      <category>Панические атаки</category>
+      <description>Техники остановки панической атаки: дыхание 4-7-8, заземление 5-4-3-2-1, прогрессивная релаксация</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-panika-preview.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-panika-preview.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 5: Онлайн vs офлайн -->
+    <item turbo="true">
+      <title>Психолог онлайн vs офлайн: что выбрать</title>
+      <link>https://pozitiv-psychology.ru/articles/psikholog-onlayn-vs-oflayn.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/psikholog-onlayn-vs-oflayn.html</guid>
+      <pubDate>Wed, 19 Mar 2026 14:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Гид</category>
+      <category>Консультации</category>
+      <description>Сравнение форматов, плюсы и минусы онлайн-консультаций, какой вариант лучше для вас</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-online-offline-preview.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-online-offline-preview.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 6: Тревожное утомление -->
+    <item turbo="true">
+      <title>Когда работа с тревогой превращается в выгорание</title>
+      <link>https://pozitiv-psychology.ru/articles/trevozhnoye-utomleniye.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/trevozhnoye-utomleniye.html</guid>
+      <pubDate>Mon, 10 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Выгорание</category>
+      <category>Тревога</category>
+      <description>Как распознать тревожное утомление и что с ним делать, чтобы не дойти до полного выгорания</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-alert-fatigue.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-alert-fatigue.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 7: Мошенничество -->
+    <item turbo="true">
+      <title>Почему умные люди попадаются на мошенников</title>
+      <link>https://pozitiv-psychology.ru/articles/pochemu-umnye-lyudi-popadayutsya.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/pochemu-umnye-lyudi-popadayutsya.html</guid>
+      <pubDate>Sat, 08 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Психология</category>
+      <category>Мошенничество</category>
+      <description>Разбираем психологические механизмы, которые заставляют образованных людей терять деньги</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-moshenniki.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-moshenniki.jpg" type="image/jpeg" />
+    </item>
+
+    <!-- Статья 8: Восстановление после мошенничества -->
+    <item turbo="true">
+      <title>Как восстановить доверие к себе после мошенничества</title>
+      <link>https://pozitiv-psychology.ru/articles/vosstanovlenie-posle-moshennichestva.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/vosstanovlenie-posle-moshennichestva.html</guid>
+      <pubDate>Sun, 09 Mar 2026 10:00:00 +0300</pubDate>
+      <author>Камила Золотова</author>
+      <category>Травма</category>
+      <category>Восстановление</category>
+      <description>Пошаговый план восстановления после финансового и психологического шока</description>
+      <media:content url="https://pozitiv-psychology.ru/images/article-vosstanovlenie.jpg" type="image/jpeg" />
+      <enclosure url="https://pozitiv-psychology.ru/images/article-vosstanovlenie.jpg" type="image/jpeg" />
+    </item>
+
+  </channel>
+</rss>
