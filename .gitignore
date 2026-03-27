@@ -1,5 +1,6 @@
 # Documentation and metadata files
 *.md
+HOSTING.md
 AUDIT-REPORT.md
 B17-COURSE-DESCRIPTION.md
 CONTENT-STANDARD.md
