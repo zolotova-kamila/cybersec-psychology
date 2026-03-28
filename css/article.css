@@ -489,6 +489,13 @@
     border: 1px solid var(--border-light, #e5e5e5);
 }
 
+/* Add padding to article content to avoid overlap with share panel */
+@media (min-width: 1200px) {
+    .article-content {
+        padding-left: 80px;
+    }
+}
+
 .share-panel-label {
     font-size: 0.65rem;
     text-transform: uppercase;
@@ -555,7 +562,7 @@
     font-weight: 500;
 }
 
-.tag {
+.article-tags .tag {
     display: inline-block;
     background: var(--bg-secondary, #f5f5f0);
     color: var(--text-primary, #333);
@@ -569,7 +576,7 @@
     border: 1px solid var(--border-light, #e5e5e5);
 }
 
-.tag:hover {
+.article-tags .tag:hover {
     background: var(--accent-primary, #2d5a4a);
     color: white;
     border-color: var(--accent-primary, #2d5a4a);
