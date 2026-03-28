@@ -491,7 +491,8 @@
 
 /* Add padding to article content to avoid overlap with share panel */
 @media (min-width: 1200px) {
-    .article-content {
+    .article-content,
+    .article-container .article-content {
         padding-left: 80px;
     }
 }
