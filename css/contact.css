@@ -18,8 +18,10 @@
 }
 
 .page-header-photo {
-    width: 400px;
+    width: 320px;
     height: auto;
+    max-height: 280px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(45, 52, 54, 0.1);
 }
@@ -296,7 +298,8 @@
 
     .page-header-photo {
         width: 100%;
-        max-width: 400px;
+        max-width: 320px;
+        max-height: 280px;
         margin: 0 auto;
     }
 }
