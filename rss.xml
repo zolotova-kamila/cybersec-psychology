@@ -8,14 +8,26 @@
     <link>https://pozitiv-psychology.ru</link>
     <description>Статьи о психологии, КПТ-терапии, тревоге и психологическом здоровье от психолога Камилы Золотовой</description>
     <language>ru</language>
-    <pubDate>Thu, 26 Mar 2026 12:00:00 +0300</pubDate>
-    <lastBuildDate>Thu, 26 Mar 2026 12:00:00 +0300</lastBuildDate>
+    <pubDate>Mon, 30 Mar 2026 12:00:00 +0300</pubDate>
+    <lastBuildDate>Mon, 30 Mar 2026 12:00:00 +0300</lastBuildDate>
     <atom:link href="https://pozitiv-psychology.ru/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://pozitiv-psychology.ru/images/logo-kz-flat.jpg</url>
       <title>Камила Золотова — Психолог КПТ</title>
       <link>https://pozitiv-psychology.ru</link>
     </image>
+
+    <!-- Статья: ДПДГ -->
+    <item>
+      <title>ДПДГ (EMDR): что это такое и как работает</title>
+      <link>https://pozitiv-psychology.ru/articles/dpdg-emdr-chto-eto.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/dpdg-emdr-chto-eto.html</guid>
+      <pubDate>Mon, 30 Mar 2026 10:00:00 +0300</pubDate>
+      <category>ДПДГ</category>
+      <category>Травма</category>
+      <description>Простое объяснение метода переработки травм движениями глаз: кому подходит, как проходит сессия, мифы и реальность</description>
+      <enclosure url="https://pozitiv-psychology.ru/images/article-emdr-preview.jpg" type="image/jpeg" length="0" />
+    </item>
 
     <!-- Статья 1: КПТ-терапия -->
     <item>
