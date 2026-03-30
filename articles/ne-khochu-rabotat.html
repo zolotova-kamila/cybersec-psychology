@@ -21,6 +21,68 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/article.css">
+<style>
+  /* Lead paragraph with green line */
+  .lead-quote {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--text-dark);
+    border-left: 4px solid #2A7B6F;
+    padding-left: 24px;
+    margin: 32px 0;
+    line-height: 1.7;
+  }
+  
+  /* Styled table */
+  .article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .article-content thead {
+    background: linear-gradient(135deg, #1A5248 0%, #2A7B6F 100%);
+    color: white;
+  }
+  
+  .article-content th {
+    padding: 16px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  
+  .article-content td {
+    padding: 14px;
+    border-bottom: 1px solid #E8F5F2;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  
+  .article-content tr:nth-child(even) {
+    background: #F7FAFA;
+  }
+  
+  .article-content tr:hover {
+    background: #E8F5F2;
+  }
+  
+  .article-content td:first-child {
+    font-weight: 600;
+    color: #1A5248;
+    width: 140px;
+  }
+  
+  .article-content tbody tr:last-child td {
+    border-bottom: none;
+  }
+</style>
 <script type="text/javascript">
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3748347", type: "pageView", start: (new Date()).getTime()});
@@ -64,7 +126,7 @@ _tmr.push({id: "3748347", type: "pageView", start: (new Date()).getTime()});
 
 <article class="article-content">
     
-    <p>Каждое утро — как подъём на гору. Работа, которая когда-то нравилась, теперь вызывает тошноту. Вы функционируете — но не живёте. Прежде чем принимать радикальные решения, важно понять: что именно с вами происходит. Ответ меняет всё.</p>
+    <p class="lead-quote">Каждое утро — как подъём на гору. Работа, которая когда-то нравилась, теперь вызывает тошноту. Вы функционируете — но не живёте. Прежде чем принимать радикальные решения, важно понять: что именно с вами происходит. Ответ меняет всё.</p>
 
     <p>«Может, мне просто нужен отпуск». «Может, я не на своём месте». «Может, вообще всё бросить и начать заново». Эти мысли крутятся по кругу — и не дают ответа, потому что вопрос поставлен неточно.</p>
 
