@@ -8,14 +8,26 @@
     <link>https://pozitiv-psychology.ru</link>
     <description>Статьи о психологии, КПТ-терапии, тревоге и психологическом здоровье от психолога Камилы Золотовой</description>
     <language>ru</language>
-    <pubDate>Mon, 30 Mar 2026 12:00:00 +0300</pubDate>
-    <lastBuildDate>Mon, 30 Mar 2026 12:00:00 +0300</lastBuildDate>
+    <pubDate>Mon, 30 Mar 2026 14:00:00 +0300</pubDate>
+    <lastBuildDate>Mon, 30 Mar 2026 14:00:00 +0300</lastBuildDate>
     <atom:link href="https://pozitiv-psychology.ru/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://pozitiv-psychology.ru/images/logo-kz-flat.jpg</url>
       <title>Камила Золотова — Психолог КПТ</title>
       <link>https://pozitiv-psychology.ru</link>
     </image>
+
+    <!-- Статья: Групповая терапия -->
+    <item>
+      <title>Групповая терапия: что это, как работает и чем отличается от индивидуальной</title>
+      <link>https://pozitiv-psychology.ru/articles/gruppovaya-terapiya-chto-eto.html</link>
+      <guid>https://pozitiv-psychology.ru/articles/gruppovaya-terapiya-chto-eto.html</guid>
+      <pubDate>Mon, 30 Mar 2026 14:00:00 +0300</pubDate>
+      <category>Групповая терапия</category>
+      <category>КПТ</category>
+      <description>Групповая терапия — это не «поговорить с незнакомцами». Объясняем, как устроена группа, кому подходит и почему иногда работает лучше индивидуальной</description>
+      <enclosure url="https://pozitiv-psychology.ru/images/article-group-preview.jpg" type="image/jpeg" length="0" />
+    </item>
 
     <!-- Статья: ДПДГ -->
     <item>

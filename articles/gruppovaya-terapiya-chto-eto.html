@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Групповая терапия: что это, как работает и чем отличается от индивидуальной — Камила Золотова</title>
+<meta name="description" content="Групповая терапия — это не «поговорить с незнакомцами». Объясняем, как устроена группа, кому подходит и почему иногда работает лучше индивидуальной. Психолог Камила Золотова.">
+<meta name="keywords" content="групповая терапия, групповая психотерапия, группа поддержки, КПТ группа, онлайн группа психолог">
+<link rel="canonical" href="https://pozitiv-psychology.ru/articles/gruppovaya-terapiya-chto-eto.html">
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<meta property="og:title" content="Групповая терапия: что это, как работает и чем отличается от индивидуальной">
+<meta property="og:description" content="Групповая терапия — это не «поговорить с незнакомцами». Объясняем, как устроена группа.">
+<meta property="og:image" content="https://pozitiv-psychology.ru/images/article-group-preview.jpg">
+<meta property="og:url" content="https://pozitiv-psychology.ru/articles/gruppovaya-terapiya-chto-eto.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-03-30">
+<meta property="article:author" content="https://pozitiv-psychology.ru/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Групповая терапия: что это, как работает">
+<meta name="twitter:description" content="Групповая терапия — это не «поговорить с незнакомцами».">
+<meta name="twitter:image" content="https://pozitiv-psychology.ru/images/article-group-preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #1C1F2E;
+    --teal:       #2A7B6F;
+    --teal-dark:  #1A5248;
+    --teal-light: #EAF6F3;
+    --teal-mid:   #B8DEDA;
+    --gold:       #C9A84C;
+    --gold-pale:  #FBF5E6;
+    --sage:       #7AAE99;
+    --sage-light: #F0F7F5;
+    --warm:       #F8F5F0;
+    --grey:       #5E6B72;
+    --white:      #FFFFFF;
+    --max:        760px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.78;
+    color: var(--ink);
+    background: var(--white);
+  }
+
+  .nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--teal-mid);
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--teal);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .nav-sep { color: var(--teal-mid); font-size: 13px; }
+  .nav-crumb { font-size: 13px; color: var(--grey); text-decoration: none; }
+  .nav-crumb:hover { color: var(--teal); }
+  .nav-current { font-size: 13px; color: var(--teal); font-weight: 600; }
+
+  .hero {
+    background: var(--warm);
+    border-bottom: 1px solid #E8E2D8;
+    padding: 60px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--white));
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--teal-light);
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--teal-mid);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5.5vw, 52px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.15;
+    max-width: 680px;
+    margin: 0 auto 20px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--teal);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--grey);
+    max-width: 500px;
+    margin: 0 auto 32px;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--grey);
+  }
+  .hero-meta strong { color: var(--teal-dark); font-weight: 600; }
+  .hero-dot { color: var(--teal-mid); }
+
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--teal-dark);
+    line-height: 1.55;
+    margin: 52px 0 36px;
+    padding-left: 22px;
+    border-left: 3px solid var(--gold);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+    margin: 56px 0 16px;
+    letter-spacing: -0.01em;
+  }
+  h2 .accent { color: var(--teal); }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    margin: 28px 0 8px;
+    letter-spacing: 0.01em;
+  }
+  p { margin-bottom: 18px; }
+  strong { font-weight: 600; }
+
+  .section-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sage);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .pullquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-style: italic;
+    color: var(--teal-dark);
+    text-align: center;
+    padding: 28px 24px;
+    margin: 32px 0;
+    position: relative;
+    line-height: 1.5;
+  }
+  .pullquote::before, .pullquote::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--teal-mid), transparent);
+    margin: 14px auto;
+    width: 80%;
+  }
+
+  .infobox {
+    background: var(--teal-light);
+    border-left: 4px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 24px;
+    margin: 28px 0;
+  }
+  .infobox-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .infobox p { margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--ink); }
+
+  .goldbox {
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 28px 0;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+  .goldbox p { margin: 0; }
+
+  .compare {
+    margin: 28px 0 36px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--teal-mid);
+  }
+  .compare-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--teal-dark);
+  }
+  .compare-header div {
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .compare-header div:last-child { border-right: none; }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid var(--teal-mid);
+  }
+  .compare-row:nth-child(even) { background: var(--sage-light); }
+  .compare-row:nth-child(odd)  { background: var(--white); }
+  .compare-cell {
+    padding: 13px 16px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    border-right: 1px solid var(--teal-mid);
+    color: var(--ink);
+  }
+  .compare-cell:first-child { color: var(--grey); font-weight: 500; font-size: 13px; }
+  .compare-cell:last-child  { border-right: none; }
+  @media (max-width: 540px) {
+    .compare-header, .compare-row { grid-template-columns: 1fr; }
+    .compare-cell { border-right: none; border-bottom: 1px solid var(--teal-mid); }
+    .compare-header div { border-right: none; }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0 32px;
+  }
+  @media (max-width: 500px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--sage-light);
+    border: 1px solid var(--teal-mid);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .card-icon { font-size: 24px; margin-bottom: 10px; }
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    margin-bottom: 6px;
+  }
+  .card-desc { font-size: 14px; color: var(--grey); line-height: 1.55; }
+
+  .process {
+    list-style: none;
+    margin: 24px 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .process::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--teal), var(--teal-mid));
+  }
+  .process li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .proc-dot {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--teal);
+    position: relative;
+    z-index: 1;
+  }
+  .proc-body { flex: 1; padding-top: 8px; }
+  .proc-body strong { display: block; font-weight: 600; color: var(--teal-dark); margin-bottom: 3px; }
+  .proc-body span { font-size: 15px; color: var(--grey); line-height: 1.6; }
+
+  .checklist {
+    list-style: none;
+    margin: 14px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .checklist li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+  .ci {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    margin-top: 3px;
+  }
+  .ci.yes { background: var(--teal); color: white; }
+  .ci.no  { background: #CB4B4B; color: white; }
+
+  .faqs { margin: 24px 0; }
+  .faq {
+    border-bottom: 1px solid var(--teal-mid);
+    padding: 18px 0;
+  }
+  .faq:first-child { border-top: 1px solid var(--teal-mid); }
+  .faq-q {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    margin-bottom: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .faq-q::before {
+    content: 'Q';
+    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .faq-a {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.65;
+    padding-left: 24px;
+  }
+
+  .author-block {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 56px 0 36px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    color: white;
+  }
+  .author-ava {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid var(--gold);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .author-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .author-creds { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 12px; line-height: 1.5; }
+  .author-bio   { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; }
+  @media (max-width: 500px) {
+    .author-block { flex-direction: column; }
+  }
+
+  .cta {
+    border: 1.5px solid rgba(201,168,76,0.4);
+    background: var(--gold-pale);
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: center;
+    margin: 36px 0 60px;
+  }
+  .cta-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 14px;
+  }
+  .cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    margin: 0 0 12px;
+  }
+  .cta p {
+    font-size: 16px;
+    color: var(--grey);
+    max-width: 440px;
+    margin: 0 auto 26px;
+    line-height: 1.6;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+  .btn-note { display: block; font-size: 12px; color: var(--grey); margin-top: 10px; }
+
+  .related {
+    border-top: 1px solid var(--teal-mid);
+    padding: 36px 0 60px;
+  }
+  .related-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 18px;
+  }
+  .related-links { display: flex; flex-direction: column; gap: 10px; }
+  .rlink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--teal);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--sage-light);
+    border: 1px solid var(--teal-mid);
+    transition: background 0.15s;
+  }
+  .rlink:hover { background: var(--teal-light); }
+  .rlink-arr { color: var(--gold); font-size: 17px; }
+
+  .article-image {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    border-radius: 12px;
+    margin: 24px 0;
+    display: block;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .footer {
+    background: var(--ink);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+  }
+  .footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  .footer a:hover { color: var(--teal-mid); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero h1   { animation: fadeUp 0.55s ease both 0.05s; }
+  .hero-sub  { animation: fadeUp 0.55s ease both 0.15s; }
+  .hero-meta { animation: fadeUp 0.55s ease both 0.25s; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/index.html" class="nav-logo">КЗ</a>
+  <span class="nav-sep">/</span>
+  <a href="/resources.html" class="nav-crumb">Материалы</a>
+  <span class="nav-sep">/</span>
+  <a href="/articles/" class="nav-crumb">Статьи</a>
+  <span class="nav-sep">/</span>
+  <span class="nav-current">Групповая терапия</span>
+</nav>
+
+<header class="hero">
+  <div class="hero-tag">Групповая работа · Форматы терапии</div>
+  <h1>Групповая терапия:<br>почему <em>вместе</em> иногда<br>работает лучше</h1>
+  <p class="hero-sub">Разбираем, что происходит в группе, кому это подходит — и почему это не «поговорить с незнакомцами»</p>
+  <div class="hero-meta">
+    <strong>Камила Золотова</strong>
+    <span class="hero-dot">·</span>
+    <span>30 марта 2026</span>
+    <span class="hero-dot">·</span>
+    <span>9 мин чтения</span>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+  <p class="lead">«Я не готова делиться своим с чужими людьми». Это самое частое возражение, которое я слышу. Давайте поговорим честно — о том, что такое групповая терапия на самом деле.</p>
+
+  <span class="section-label">Основы</span>
+  <h2>Что такое групповая терапия</h2>
+
+  <p>Групповая терапия — это психологическая работа в малой группе под руководством профессионального терапевта. Обычно 6–12 участников, которые встречаются регулярно, чтобы работать с общими темами: тревога, самооценка, отношения, потери, стресс.</p>
+
+  <p>Важно понять с самого начала: это не кружок по интересам и не группа поддержки, где люди просто делятся переживаниями. Это структурированная терапевтическая работа — с методом, задачами и ведущим, который управляет процессом.</p>
+
+  <div class="infobox">
+    <div class="infobox-label">Как устроена моя групповая работа</div>
+    <p>Я веду группы в формате КПТ: мы работаем с убеждениями, мышлением и поведением. Это даёт конкретные, измеримые результаты — не просто облегчение «выговорился», а реальные изменения в том, как вы думаете и реагируете.</p>
+  </div>
+
+  <span class="section-label">Механизм</span>
+  <h2>Почему группа <span class="accent">работает</span></h2>
+
+  <p>Психиатр Ирвин Ялом описал то, что делает группу терапевтической. Спустя десятилетия его наблюдения остаются точными.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🪞</div>
+      <div class="card-title">Эффект зеркала</div>
+      <div class="card-desc">Вы видите себя в реакциях других. То, что казалось личным изъяном, оказывается общечеловеческим.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <div class="card-title">«Я не один»</div>
+      <div class="card-desc">Чувство изоляции — один из главных усилителей тревоги. Группа его разрушает.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <div class="card-title">Обратная связь от равных</div>
+      <div class="card-desc">Слова человека, который сам через это прошёл, иногда достигают глубже, чем слова терапевта.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🧪</div>
+      <div class="card-title">Живая лаборатория</div>
+      <div class="card-desc">Группа — безопасное место попробовать новое поведение: сказать о границе, попросить о помощи, не согласиться.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌱</div>
+      <div class="card-title">Отдавать — тоже лечит</div>
+      <div class="card-desc">Когда вы поддерживаете другого, ваша собственная самооценка растёт. Это невозможно в индивидуальной работе.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📖</div>
+      <div class="card-title">Опыт других как ресурс</div>
+      <div class="card-desc">Вы узнаёте стратегии совладания, которые работали у других — и берёте себе то, что подходит.</div>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    В индивидуальной терапии вы работаете с тем, кем стали.<br>
+    В групповой — с тем, кем становитесь в присутствии других.
+  </div>
+
+  <span class="section-label">Сравнение</span>
+  <h2>Групповая vs индивидуальная: честное сравнение</h2>
+
+  <p>Нет «лучшего» формата — есть подходящий для конкретного запроса и человека. Вот как они соотносятся.</p>
+
+  <div class="compare">
+    <div class="compare-header">
+      <div>Параметр</div>
+      <div>Индивидуальная</div>
+      <div>Групповая</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Фокус</div>
+      <div class="compare-cell">Только ваш запрос</div>
+      <div class="compare-cell">Общая тема + ваш опыт в контексте группы</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Конфиденциальность</div>
+      <div class="compare-cell">Абсолютная</div>
+      <div class="compare-cell">В рамках группового договора</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Стоимость</div>
+      <div class="compare-cell">Выше за сессию</div>
+      <div class="compare-cell">Значительно ниже за сессию</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Темп работы</div>
+      <div class="compare-cell">Под вас</div>
+      <div class="compare-cell">Единый для группы</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Социальная работа</div>
+      <div class="compare-cell">Только в разговоре</div>
+      <div class="compare-cell">Живая практика в реальном взаимодействии</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Поддержка между сессиями</div>
+      <div class="compare-cell">Только от терапевта</div>
+      <div class="compare-cell">От участников группы тоже</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">Лучше подходит для</div>
+      <div class="compare-cell">Острых состояний, глубокой индивидуальной травмы, ДПДГ</div>
+      <div class="compare-cell">Тревоги, самооценки, паттернов в отношениях, социальных страхов</div>
+    </div>
+  </div>
+
+  <div class="goldbox">
+    <p>Многие клиенты совмещают оба формата: индивидуальная работа даёт глубину и безопасность, групповая — практику и связь с другими. Это особенно эффективно, если вы хотите работать не только с мыслями, но и с тем, как вы существуете среди людей.</p>
+  </div>
+
+  <span class="section-label">Подходит ли вам</span>
+  <h2>Кому подходит групповая терапия</h2>
+
+  <p>Групповая работа особенно эффективна, если вы узнаёте себя хотя бы в нескольких пунктах:</p>
+
+  <ul class="checklist">
+    <li><span class="ci yes">✓</span><span>Чувствуете тревогу, которая мешает жить — но не связана с единственным травматичным событием</span></li>
+    <li><span class="ci yes">✓</span><span>Замечаете, что проблемы повторяются в разных отношениях — на работе, в семье, с друзьями</span></li>
+    <li><span class="ci yes">✓</span><span>Трудно говорить «нет», просить о помощи, выражать недовольство</span></li>
+    <li><span class="ci yes">✓</span><span>Чувствуете себя «не таким как все» или убеждены, что вас не поняли бы</span></li>
+    <li><span class="ci yes">✓</span><span>Хотите работать над собой, но индивидуальная терапия кажется слишком дорогой или вы хотите чего-то большего</span></li>
+    <li><span class="ci yes">✓</span><span>Интересует финансовая психология, денежные убеждения, тема денег в отношениях</span></li>
+  </ul>
+
+  <p>Есть и ситуации, когда групповой формат — не лучший первый шаг:</p>
+
+  <ul class="checklist">
+    <li><span class="ci no">✗</span><span>Острый психоз или тяжёлая депрессия, требующая первоочередной индивидуальной и медицинской помощи</span></li>
+    <li><span class="ci no">✗</span><span>Активная зависимость (алкоголь, вещества) без параллельной специализированной работы</span></li>
+    <li><span class="ci no">✗</span><span>Свежая острая травма — здесь нужна сначала индивидуальная стабилизация</span></li>
+  </ul>
+
+  <p>Если вы не уверены — это как раз повод для предварительной консультации. Вместе мы разберём, какой формат подойдёт именно вам.</p>
+
+  <span class="section-label">Как всё устроено</span>
+  <h2>Как проходит групповая работа</h2>
+
+  <ol class="process">
+    <li>
+      <div class="proc-dot">1</div>
+      <div class="proc-body">
+        <strong>Вводная встреча — знакомство</strong>
+        <span>Перед входом в группу — короткая индивидуальная беседа. Я узнаю ваш запрос, объясняю формат, отвечаю на вопросы. Вы принимаете решение без давления.</span>
+      </div>
+    </li>
+    <li>
+      <div class="proc-dot">2</div>
+      <div class="proc-body">
+        <strong>Групповой договор</strong>
+        <span>На первой общей встрече мы устанавливаем правила: конфиденциальность, уважение, право на паузу. Это создаёт безопасность — никто не обязан говорить больше, чем готов.</span>
+      </div>
+    </li>
+    <li>
+      <div class="proc-dot">3</div>
+      <div class="proc-body">
+        <strong>Регулярные сессии</strong>
+        <span>Встречи раз в неделю, 90 минут. Каждая сессия структурирована: тема, упражнения КПТ, обмен опытом, домашнее задание. Вы можете говорить столько, сколько готовы.</span>
+      </div>
+    </li>
+    <li>
+      <div class="proc-dot">4</div>
+      <div class="proc-body">
+        <strong>Работа между встречами</strong>
+        <span>Небольшие задания для самостоятельной практики — наблюдать за мыслями, пробовать новое поведение, вести дневник. Именно здесь происходит настоящее закрепление.</span>
+      </div>
+    </li>
+    <li>
+      <div class="proc-dot">5</div>
+      <div class="proc-body">
+        <strong>Завершение и интеграция</strong>
+        <span>Группа работает курсом — обычно 8–12 недель. Финальные встречи посвящены осмыслению пройденного и планированию следующих шагов.</span>
+      </div>
+    </li>
+  </ol>
+
+  <span class="section-label">Частые вопросы</span>
+  <h2>Что беспокоит чаще всего</h2>
+
+  <div class="faqs">
+    <div class="faq">
+      <div class="faq-q">Мне придётся рассказывать всё о себе незнакомым людям?</div>
+      <div class="faq-a">Нет. Вы делитесь ровно столько, сколько готовы. Никакого принуждения не существует. Многие участники первое время больше слушают — и это тоже полноценная работа.</div>
+    </div>
+    <div class="faq">
+      <div class="faq-q">А вдруг кто-то из группы знает меня лично?</div>
+      <div class="faq-a">Для онлайн-групп это практически исключено. При наборе я учитываю географию и профессиональные пересечения. Групповой договор о конфиденциальности подписывается всеми участниками.</div>
+    </div>
+    <div class="faq">
+      <div class="faq-q">Это дешевле, чем индивидуальная работа?</div>
+      <div class="faq-a">Да, существенно. Стоимость одной групповой встречи значительно ниже индивидуальной сессии — при том что по продолжительности она длиннее. Это делает регулярную работу доступной для большего числа людей.</div>
+    </div>
+    <div class="faq">
+      <div class="faq-q">Можно ли одновременно ходить в группу и на индивидуальные сессии?</div>
+      <div class="faq-a">Да, и это часто лучший вариант. Индивидуальная работа даёт глубину и приватность, групповая — социальную практику и другую динамику. Они хорошо дополняют друг друга.</div>
+    </div>
+    <div class="faq">
+      <div class="faq-q">Как проходит онлайн-группа — это не неловко?</div>
+      <div class="faq-a">Первые 10–15 минут бывают чуть скованными — как и при любом знакомстве. Потом это уходит. Онлайн-формат хорошо работает: люди из разных городов и стран встречаются в одном пространстве, и это даже обогащает опыт.</div>
+    </div>
+  </div>
+
+  <div class="author-block">
+    <div class="author-ava">КЗ</div>
+    <div>
+      <div class="author-name">Камила Золотова</div>
+      <div class="author-creds">Психолог КПТ · ДПДГ-терапевт · Веду групповую и индивидуальную работу онлайн и в Москве</div>
+      <p class="author-bio">Групповая терапия — одно из направлений, которому я уделяю особое внимание. Вижу, как меняются люди, когда понимают: они не одни. Если вы думаете о группе — давайте поговорим, это ни к чему не обязывает.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="cta-eyebrow">Следующий шаг</div>
+    <h3>Узнайте, подойдёт ли вам группа</h3>
+    <p>Напишите мне — расскажите коротко, что вас беспокоит. Я отвечу и объясню, какой формат работы будет наиболее полезен именно для вашей ситуации.</p>
+    <a href="https://t.me/Kamila_Zolotova" class="btn-primary">Написать в Telegram →</a>
+    <span class="btn-note">Отвечаю в течение нескольких часов · Без обязательств</span>
+  </div>
+
+  <div class="related">
+    <div class="related-label">Читайте также</div>
+    <div class="related-links">
+      <a href="/articles/kpt-terapiya-chto-eto.html" class="rlink">
+        <span class="rlink-arr">→</span> КПТ-терапия: что это такое и как она работает
+      </a>
+      <a href="/articles/dpdg-emdr-chto-eto.html" class="rlink">
+        <span class="rlink-arr">→</span> ДПДГ: что это такое и как работает
+      </a>
+      <a href="/articles/psikholog-onlayn-vs-oflayn.html" class="rlink">
+        <span class="rlink-arr">→</span> Психолог онлайн vs офлайн: что выбрать
+      </a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Камила Золотова · <a href="/privacy.html">Правовая информация</a> · <a href="https://www.b17.ru/zolotova_psychologist/?prt=764511">B17.ru</a> · <a href="https://pozitiv-psychology.ru">pozitiv-psychology.ru</a></p>
+</footer>
+
+</body>
+</html>
