@@ -420,10 +420,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--gold);
+    overflow: hidden;
+  }
+  .author-ava img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .author-name {
     font-family: 'Cormorant Garamond', serif;
@@ -786,7 +788,7 @@
   </div>
 
   <div class="author-block">
-    <div class="author-ava">КЗ</div>
+    <div class="author-ava"><img src="../images/logo-kz-flat.jpg" alt="Камила Золотова"></div>
     <div>
       <div class="author-name">Камила Золотова</div>
       <div class="author-creds">Психолог КПТ · ДПДГ-терапевт · Веду групповую и индивидуальную работу онлайн и в Москве</div>

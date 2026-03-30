@@ -239,10 +239,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: var(--gold);
-    font-weight: 700;
+    overflow: hidden;
+  }
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .author-name {
     font-family: 'Playfair Display', serif;
@@ -482,7 +484,7 @@
 
   <!-- AUTHOR -->
   <div class="author-card">
-    <div class="author-avatar">КЗ</div>
+    <div class="author-avatar"><img src="../images/logo-kz-flat.jpg" alt="Камила Золотова"></div>
     <div>
       <div class="author-name">Камила Золотова</div>
       <div class="author-creds">Психолог КПТ · ДПДГ-терапевт · Консультирую онлайн и в Москве</div>
