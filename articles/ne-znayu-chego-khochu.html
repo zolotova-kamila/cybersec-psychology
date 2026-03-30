@@ -6,607 +6,463 @@
 <meta name="description" content="Почему взрослые теряют себя в ролях и чужих ожиданиях. Диффузия идентичности, роли и маски, практические упражнения. Помощь психолога КПТ.">
 <meta name="keywords" content="не знаю чего хочу, потеря себя, диффузия идентичности, кризис идентичности, роли и маски, психолог КПТ">
 <title>Я не знаю, чего хочу: почему взрослые теряют себя | Камила Золотова</title>
-<link rel="canonical" href="https://pozitiv-psychology.ru/articles/ne-znayu-chego-khochu.html">
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="canonical" href="https://pozitiv-psychology.ru/articles/ne-znayu-chego-khochu.html">
 <meta property="og:title" content="Я не знаю, чего хочу: почему взрослые теряют себя и как это исправить">
 <meta property="og:description" content="Почему взрослые теряют себя в ролях и чужих ожиданиях. Диффузия идентичности и практические упражнения.">
-<meta property="og:image" content="https://pozitiv-psychology.ru/images/article-identity-preview.jpg">
+<meta property="og:image" content="https://pozitiv-psychology.ru/images/016.png">
 <meta property="og:url" content="https://pozitiv-psychology.ru/articles/ne-znayu-chego-khochu.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Я не знаю, чего хочу: почему взрослые теряют себя и как это исправить">
+<meta name="twitter:description" content="Почему взрослые теряют себя в ролях и чужих ожиданиях. Диффузия идентичности и практические упражнения.">
+<meta name="twitter:image" content="https://pozitiv-psychology.ru/images/016.png">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Mulish:wght@300;400;500;600&display=swap');
+
   :root {
-    --teal:       #2A7B6F;
-    --teal-dark:  #1A5248;
-    --teal-light: #E8F5F2;
-    --teal-mid:   #C5E8E2;
-    --gold:       #C9A84C;
-    --gold-light: #FDF6E3;
-    --dark:       #1A2E2B;
-    --grey:       #5A6E6B;
-    --light:      #F7FAFA;
-    --white:      #FFFFFF;
-    --max:        740px;
+    --ink: #1a1a1a;
+    --cream: #f7f4ef;
+    --warm-mid: #e8e2d8;
+    --accent: #b85c38;
+    --accent-light: #f0e8e3;
+    --muted: #6b6560;
+    --border: #d4cec6;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
   body {
+    background: var(--cream);
+    color: var(--ink);
     font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    color: var(--dark);
-    background: var(--white);
-    line-height: 1.75;
+    font-weight: 300;
     font-size: 17px;
+    line-height: 1.8;
   }
 
-  .nav {
-    background: var(--white);
-    border-bottom: 1px solid var(--teal-mid);
-    padding: 14px 24px;
+  .site-header {
+    padding: 20px 40px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--teal);
+  .site-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.02em;
   }
-  .nav-sep { color: var(--teal-mid); margin: 0 4px; }
-  .nav-crumb { font-size: 13px; color: var(--grey); text-decoration: none; }
-  .nav-crumb:hover { color: var(--teal); }
-  .nav-current { font-size: 13px; color: var(--teal); font-weight: 600; }
+  .cta-header {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 2px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .cta-header:hover { background: #9e4a2a; }
 
   .hero {
-    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, #3D9A8A 100%);
-    padding: 64px 24px 52px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 40px 48px;
   }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .hero-tag {
+  .tag {
     display: inline-block;
-    background: rgba(255,255,255,0.15);
-    color: var(--teal-mid);
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    margin-bottom: 22px;
+    color: var(--accent);
+    margin-bottom: 20px;
   }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 46px);
-    color: var(--white);
-    line-height: 1.2;
-    max-width: 680px;
-    margin: 0 auto 18px;
-    font-weight: 700;
-  }
-  .hero-sub {
-    font-size: 17px;
-    color: rgba(255,255,255,0.78);
-    max-width: 520px;
-    margin: 0 auto 32px;
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.18;
+    color: var(--ink);
+    margin-bottom: 24px;
   }
-  .hero-meta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .hero-meta span {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .hero-meta strong { color: rgba(255,255,255,0.9); font-weight: 600; }
-
-  .container {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
+  h1 em { font-style: italic; font-weight: 300; color: var(--accent); }
   .lead {
-    font-size: 19px;
-    font-weight: 300;
-    color: var(--grey);
-    border-left: 3px solid var(--gold);
-    padding: 4px 0 4px 20px;
-    margin: 48px 0 36px;
-    line-height: 1.7;
-    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.75;
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  .meta { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.05em; }
+
+  .article-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+  .article-body p { margin-bottom: 1.4em; }
+
+  /* article images */
+  .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2em 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   }
 
   h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 3.5vw, 28px);
-    color: var(--teal-dark);
-    margin: 52px 0 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
     line-height: 1.25;
-    font-weight: 700;
+    margin: 3em 0 0.8em;
+    color: var(--ink);
   }
   h3 {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--dark);
-    margin: 28px 0 10px;
-    letter-spacing: 0.01em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2em 0 0.6em;
+    color: var(--ink);
   }
-  p { margin-bottom: 18px; }
-  ul, ol { margin: 18px 0; padding-left: 24px; }
-  li { margin-bottom: 10px; line-height: 1.7; }
 
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 8px 0;
+  .pull-quote {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 2.5em 0;
+    padding: 2em 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1.4;
   }
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--teal-mid);
-  }
-  .divider-icon { color: var(--gold); font-size: 16px; }
 
-  .infobox {
-    background: var(--teal-light);
-    border-left: 4px solid var(--teal);
-    border-radius: 0 10px 10px 0;
+  .callout {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
     padding: 20px 24px;
-    margin: 28px 0;
+    margin: 2em 0;
+    border-radius: 0 4px 4px 0;
   }
-  .infobox-title {
-    font-size: 12px;
-    font-weight: 700;
+  .callout strong {
+    display: block;
+    font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--accent);
     margin-bottom: 8px;
+    font-weight: 600;
   }
-  .infobox p { margin: 0; color: var(--dark); font-size: 15.5px; line-height: 1.65; }
+  .callout p { margin: 0; font-size: 0.95rem; }
 
-  .goldbox {
-    background: var(--gold-light);
-    border: 1px solid rgba(201,168,76,0.35);
-    border-radius: 12px;
-    padding: 22px 26px;
-    margin: 28px 0;
+  .check-list { list-style: none; margin: 1em 0 1.5em; padding: 0; }
+  .check-list li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    border-bottom: 1px solid var(--warm-mid);
+    font-size: 0.97rem;
   }
-  .goldbox p { margin: 0; font-size: 15.5px; color: var(--dark); line-height: 1.65; }
-
-  .checklist {
-    list-style: none;
-    margin: 16px 0 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .checklist li {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    font-size: 16px;
-    color: var(--dark);
-    line-height: 1.6;
-  }
-  .check-icon {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--teal);
-    color: white;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-  }
+  .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
 
   .exercise {
-    background: var(--white);
-    border: 1px solid var(--teal-mid);
-    border-radius: 12px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
     padding: 28px 32px;
-    margin: 28px 0;
+    margin: 2.5em 0;
   }
   .exercise-label {
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 0.7rem;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--grey);
+    color: var(--muted);
     margin-bottom: 12px;
   }
-  .exercise h3 { margin-top: 0; font-family: 'Playfair Display', serif; color: var(--teal-dark); }
+  .exercise h3 { margin-top: 0; font-size: 1.15rem; }
+  .exercise ol { padding-left: 20px; margin-top: 12px; }
+  .exercise ol li { margin-bottom: 10px; font-size: 0.96rem; }
 
-  .author-card {
-    background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-    border-radius: 16px;
-    padding: 32px;
-    margin: 56px 0 40px;
-    color: var(--white);
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-  }
-  .author-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    border: 2px solid var(--gold);
-    flex-shrink: 0;
-    display: flex;
+  .divider { width: 48px; height: 1px; background: var(--accent); margin: 3em 0; }
+
+  .cta-block {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 60px 48px;
+    margin: 4em 0 0;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
     align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: var(--gold);
-    font-weight: 700;
   }
-  .author-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    color: var(--white);
-  }
-  .author-creds {
-    font-size: 13px;
-    color: rgba(255,255,255,0.65);
-    margin-bottom: 12px;
-    line-height: 1.5;
-  }
-  .author-bio { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; }
-
-  .cta {
-    background: var(--gold-light);
-    border: 1px solid rgba(201,168,76,0.4);
-    border-radius: 16px;
-    padding: 36px 32px;
-    text-align: center;
-    margin: 40px 0 60px;
-  }
-  .cta h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: var(--teal-dark);
+  .cta-block h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 300;
+    color: var(--cream);
     margin: 0 0 12px;
-    font-weight: 700;
   }
-  .cta p {
-    font-size: 16px;
-    color: var(--grey);
-    max-width: 460px;
-    margin: 0 auto 24px;
-    line-height: 1.6;
-  }
-  .btn {
-    display: inline-block;
-    background: var(--teal);
-    color: var(--white);
+  .cta-block p { color: #b0a89e; font-size: 0.9rem; margin: 0; }
+  .cta-main {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 2px;
     font-family: 'Mulish', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.04em;
-    padding: 14px 34px;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
-  .btn-note {
-    display: block;
-    font-size: 12px;
-    color: var(--grey);
-    margin-top: 10px;
-  }
-
-  .related {
-    border-top: 1px solid var(--teal-mid);
-    padding-top: 36px;
-    margin-bottom: 60px;
-  }
-  .related-title {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 0.82rem;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--grey);
-    margin-bottom: 18px;
-  }
-  .related-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .related-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    cursor: pointer;
+    white-space: nowrap;
     text-decoration: none;
-    color: var(--teal);
-    font-size: 15px;
-    font-weight: 600;
-    padding: 12px 16px;
-    border-radius: 8px;
-    background: var(--light);
-    border: 1px solid var(--teal-mid);
-    transition: background 0.15s;
+    display: inline-block;
+    transition: background 0.2s;
   }
-  .related-link:hover { background: var(--teal-light); }
-  .related-arrow { font-size: 18px; color: var(--gold); }
+  .cta-main:hover { background: #9e4a2a; }
 
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* Article tags */
   .article-tags {
     margin: 3rem 0 2rem;
     padding: 1.5rem 0;
-    border-top: 1px solid var(--teal-mid);
+    border-top: 1px solid var(--border);
   }
-  .article-tags-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+  .article-tags > span {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-right: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
-    color: var(--grey);
-    margin-bottom: 12px;
+    letter-spacing: 0.05em;
   }
-  .tag-link {
+  .tag {
     display: inline-block;
-    background: var(--teal-light);
-    color: var(--teal-dark);
-    padding: 6px 14px;
+    background: var(--warm-mid);
+    color: var(--ink);
+    padding: 0.4rem 0.9rem;
     border-radius: 20px;
-    font-size: 13px;
-    margin: 0 8px 8px 0;
+    font-size: 0.8rem;
     text-decoration: none;
-    transition: all 0.2s;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    transition: all 0.2s ease;
   }
-  .tag-link:hover {
-    background: var(--teal);
-    color: white;
+  .tag:hover {
+    background: var(--accent);
+    color: #fff;
   }
-
-  .footer {
-    background: var(--dark);
-    padding: 28px 24px;
-    text-align: center;
-    font-size: 13px;
-    color: rgba(255,255,255,0.35);
-  }
-  .footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  .footer a:hover { color: var(--teal-mid); }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero h1, .hero-sub, .hero-meta { animation: fadeUp 0.6s ease both; }
-  .hero h1   { animation-delay: 0.05s; }
-  .hero-sub  { animation-delay: 0.15s; }
-  .hero-meta { animation-delay: 0.25s; }
 
   @media (max-width: 640px) {
-    .nav { padding: 12px 16px; }
-    .hero { padding: 48px 16px 40px; }
-    .container { padding: 0 16px; }
+    .site-header { padding: 16px 20px; }
+    .hero, .article-body { padding-left: 20px; padding-right: 20px; }
+    .cta-block { grid-template-columns: 1fr; padding: 36px 24px; }
     .exercise { padding: 20px; }
-    .author-card { flex-direction: column; padding: 24px; }
   }
 </style>
 </head>
 <body>
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3748347", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+    </script>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3748347;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <!-- /Top.Mail.Ru counter -->
 
-<nav class="nav">
-  <a href="/index.html" class="nav-logo">КЗ</a>
-  <span class="nav-sep">/</span>
-  <a href="/resources.html" class="nav-crumb">Материалы</a>
-  <span class="nav-sep">/</span>
-  <a href="/articles/" class="nav-crumb">Статьи</a>
-  <span class="nav-sep">/</span>
-  <span class="nav-current">Потеря себя</span>
-</nav>
-
-<header class="hero">
-  <div class="hero-tag">Самоопределение · 11 мин чтения</div>
-  <h1>Я не знаю, чего хочу:<br>почему взрослые теряют себя<br>— и как вернуться</h1>
-  <p class="hero-sub">Почему взрослые теряют себя в ролях и чужих ожиданиях. Диффузия идентичности и практические упражнения</p>
-  <div class="hero-meta">
-    <span><strong>Камила Золотова</strong></span>
-    <span>·</span>
-    <span>29 марта 2026</span>
-  </div>
+<header class="site-header">
+  <a href="https://pozitiv-psychology.ru" class="site-logo">Камила Золотова · Психолог КПТ</a>
+  <a href="https://t.me/Kamila_Zolotova" class="cta-header">Записаться</a>
 </header>
 
 <main>
-<div class="container">
-
-  <p class="lead">Вам за тридцать, за сорок, может быть, за пятьдесят. У вас есть работа, семья, привычный распорядок. Но внутри — странная пустота. «Чего я хочу на самом деле?» — и ответа нет. Это не лень и не инфантильность. Это конкретный психологический процесс. И из него есть выход.</p>
-
-  <p>«Со мной всё нормально. Просто я не понимаю, чего хочу» — эту фразу я слышу на консультациях очень часто. Человек приходит не в кризисе, не в панике. Просто — в тумане. Всё функционирует. Но нет ощущения, что жизнь его.</p>
-
-  <p>Это состояние имеет название — <strong>диффузия идентичности</strong>. И оно гораздо распространённее, чем принято думать, особенно среди взрослых людей, которые всю жизнь жили «правильно» — то есть так, как ожидали другие.</p>
-
-  <div class="divider"><span class="divider-icon">◆</span></div>
-
-  <h2>Как взрослый человек «теряет себя»</h2>
-
-  <p>Потеря себя не происходит в одночасье. Это медленный, почти незаметный процесс, который начинается, как правило, в детстве.</p>
-
-  <p>Ребёнок, которому важно получить одобрение родителей, учится подстраивать своё поведение, желания и даже эмоции под их ожидания. «Не плачь — это несерьёзно». «Ты должен быть врачом / юристом / успешным». «Не выпендривайся». Постепенно ребёнок перестаёт доверять собственным реакциям и начинает ориентироваться на внешние ориентиры: что одобрят, что похвалят, что будет «правильным».</p>
-
-  <p>Во взрослом возрасте этот механизм продолжает работать. Роль послушного ребёнка сменяется ролью хорошего сотрудника, ответственного родителя, надёжного партнёра. Человек исправно выполняет все роли — но постепенно роли вытесняют личность. Остаётся вопрос: а кто я, когда никто не смотрит?</p>
-
-  <div class="goldbox">
-    <p>«Вы не потеряли себя. Вы просто очень давно не были собой — и забыли, как это ощущается.»</p>
-  </div>
-
-  <h2>Признаки того, что вы живёте «чужой» жизнью</h2>
-
-  <ul class="checklist">
-    <li><span class="check-icon">✓</span><span>Вам трудно ответить на вопрос «что тебе нравится?» без долгой паузы</span></li>
-    <li><span class="check-icon">✓</span><span>Вы легко говорите, чего <em>не</em> хотите — но не знаете, чего хотите</span></li>
-    <li><span class="check-icon">✓</span><span>Ваши решения часто продиктованы тем, «что скажут» или «что правильно»</span></li>
-    <li><span class="check-icon">✓</span><span>Вы выполняете обязательства, но радости от них нет</span></li>
-    <li><span class="check-icon">✓</span><span>Ощущение, что настоящая жизнь «где-то там» — потом, когда всё наладится</span></li>
-    <li><span class="check-icon">✓</span><span>Усталость без очевидной причины — просто от существования в нынешнем режиме</span></li>
-    <li><span class="check-icon">✓</span><span>Зависть к людям, которые «знают, чего хотят» и идут к этому</span></li>
-  </ul>
-
-  <p>Важно: это не депрессия (хотя они могут сопутствовать друг другу). Это кризис идентичности — и он решается не таблетками, а работой с ценностями и смыслами.</p>
-
-  <h2>Роли и маски: в чём разница</h2>
-
-  <p>Психологи разграничивают <strong>роли</strong> и <strong>маски</strong>. Роли — это нормальная часть социальной жизни. Мы все играем разные роли: родителя, коллеги, друга. Здоровый человек гибко переходит из роли в роль, оставаясь при этом собой.</p>
-
-  <p>Маска — другое. Это когда роль «прирастает» к лицу, когда человек перестаёт её снимать даже наедине с собой. Маска «сильного» — и нельзя показать уязвимость. Маска «успешного» — и нельзя признать сомнения. Маска «всё в порядке» — и нельзя сказать «мне плохо».</p>
-
-  <p>Маски изначально защищают — от осуждения, от отвержения, от боли. Но со временем они начинают <em>стоить дороже</em>, чем то, от чего защищают. Истощают. Создают ощущение фальши и пустоты.</p>
-
-  <div class="infobox">
-    <div class="infobox-title">Ключевой вопрос</div>
-    <p>Спросите себя честно: есть ли в вашей жизни место, где вы можете быть собой без последствий? Где не нужно ничего изображать? Если такого места нет — это сигнал.</p>
-  </div>
-
-  <h2>КПТ и работа с ценностями: как найти себя</h2>
-
-  <p>В когнитивно-поведенческой терапии и в подходе ACT (терапия принятия и ответственности) работа с идентичностью строится через прояснение ценностей. Ценности — это не цели. Цель можно достичь и поставить галочку. Ценность — это то, <em>как</em> вы хотите жить, что для вас важно в процессе, а не в результате.</p>
-
-  <p>Когда человек долго жил по чужим сценариям, он часто путает <em>свои</em> ценности с усвоенными от других. «Я ценю стабильность» — или меня так воспитали бояться риска? «Я ценю семью» — или просто боюсь осуждения, если поставлю себя на первое место? Разобраться в этом — важная и непростая работа.</p>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 1</p>
-    <h3>Инвентаризация удовольствий</h3>
-    <p>Простое, но честное упражнение для возвращения контакта с собой.</p>
-    <ol>
-      <li>Возьмите лист бумаги. Напишите 20 вещей, которые вам нравилось делать в детстве и юности — до того, как появились «правильные» занятия.</li>
-      <li>Отметьте, что из этого есть в вашей жизни сейчас. Что исчезло? Почему?</li>
-      <li>Выберите одно исчезнувшее занятие. Сделайте его — хотя бы 20 минут. Не ради продуктивности. Просто потому что хочется.</li>
-      <li>Заметьте, что происходит в теле и в настроении.</li>
-    </ol>
-  </div>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 2</p>
-    <h3>Письмо 80-летнего себя</h3>
-    <p>Упражнение помогает отделить чужие ожидания от подлинных ценностей.</p>
-    <ol>
-      <li>Представьте себя в 80 лет. Вы прожили хорошую жизнь — свою, настоящую.</li>
-      <li>Напишите письмо себе сегодняшнему от этого человека. Что он скажет? О чём предупредит? Что посоветует не откладывать?</li>
-      <li>Перечитайте письмо через день. Что в нём отзывается болью — «да, я не делаю этого»?</li>
-      <li>Это и есть ваши ценности. Они уже есть — просто ждут, когда их заметят.</li>
-    </ol>
-  </div>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 3</p>
-    <h3>Разделение «должен» и «хочу»</h3>
-    <p>Практика для ежедневного использования — помогает замечать, из какого места вы действуете.</p>
-    <ol>
-      <li>В течение недели фиксируйте свои решения и действия. Для каждого задайте вопрос: «Я делаю это потому что <em>должен</em> — или потому что <em>хочу</em>?»</li>
-      <li>Не пытайтесь сразу менять поведение. Просто наблюдайте соотношение.</li>
-      <li>Когда увидите область, где «должен» доминирует полностью — задайте следующий вопрос: «Что случится, если я откажусь или изменю это?»</li>
-      <li>Часто окажется, что страшные последствия — воображаемые. Это точка роста.</li>
-    </ol>
-  </div>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 4</p>
-    <h3>Практика маленьких «нет»</h3>
-    <p>Умение отказывать — это мышца. Её нужно тренировать постепенно.</p>
-    <ol>
-      <li>Выберите одну небольшую просьбу на этой неделе, на которую вы обычно соглашаетесь из вежливости или страха осудить, а не из искреннего желания помочь.</li>
-      <li>Откажитесь. Спокойно, без длинных объяснений: «Сейчас не смогу» / «Мне это не подходит».</li>
-      <li>Заметьте, что произошло. Случилось ли то, чего вы боялись? Как изменилось ваше ощущение себя?</li>
-      <li>Постепенно расширяйте практику.</li>
-    </ol>
-    <p style="margin-top: 14px; font-size: 0.88rem; color: var(--grey);">Каждое «нет», сказанное из своих ценностей — это маленькое возвращение себе.</p>
-  </div>
-
-  <div class="divider"><span class="divider-icon">◆</span></div>
-
-  <h2>Почему это сложно делать в одиночку</h2>
-
-  <p>Самостоятельная работа с идентичностью — возможна, но имеет предел. Дело в том, что многие убеждения о себе («я должен», «мои желания неважны», «я не имею права») сформировались в отношениях — и именно в отношениях наиболее эффективно пересматриваются.</p>
-
-  <p>Терапия — это пространство, где можно быть собой без последствий, возможно впервые за долгое время. Это место, где ваши желания, сомнения и страхи получают место и внимание. Где постепенно восстанавливается доверие к себе.</p>
-
-  <p>В работе я использую методы КПТ для работы с убеждениями («мои потребности несущественны», «хотеть — это эгоизм») и техники ACT для прояснения ценностей. Если за потерей себя стоит травматический опыт — включаем ДПДГ.</p>
-
-  <div class="article-tags">
-    <p class="article-tags-title">Теги:</p>
-    <a href="../resources.html" class="tag-link">диффузия идентичности</a>
-    <a href="../resources.html" class="tag-link">потеря себя</a>
-    <a href="../resources.html" class="tag-link">роли и маски</a>
-    <a href="../resources.html" class="tag-link">самоопределение</a>
-    <a href="../resources.html" class="tag-link">ценности</a>
-  </div>
-
-  <div class="author-card">
-    <div class="author-avatar">КЗ</div>
-    <div>
-      <div class="author-name">Камила Золотова</div>
-      <div class="author-creds">Психолог КПТ · ДПДГ-терапевт · Консультирую онлайн и в Москве</div>
-      <p class="author-bio">Работаю с тревогой, психологическими травмами и последствиями стресса. В практике сочетаю КПТ и ДПДГ — потому что убеждена: устойчивые изменения происходят тогда, когда меняется и мышление, и ощущения в теле.</p>
+  <article>
+    <div class="hero">
+      <span class="tag">Самоопределение · 11 мин чтения</span>
+      <h1>Я не знаю, чего хочу: почему взрослые <em>теряют себя</em> — и как вернуться</h1>
+      <p class="lead">Вам за тридцать, за сорок, может быть, за пятьдесят. У вас есть работа, семья, привычный распорядок. Но внутри — странная пустота. «Чего я хочу на самом деле?» — и ответа нет. Это не лень и не инфантильность. Это конкретный психологический процесс. И из него есть выход.</p>
+      <p class="meta">Камила Золотова &nbsp;·&nbsp; КПТ-психолог &nbsp;·&nbsp; март 2026</p>
     </div>
-  </div>
 
-  <div class="cta">
-    <h3>Чувствуете, что живёте не своей жизнью?</h3>
-    <p>На консультации мы вместе разберёмся, где заканчиваются чужие ожидания и начинаетесь вы — и что с этим делать дальше.</p>
-    <a href="https://t.me/Kamila_Zolotova" class="btn">Записаться на консультацию →</a>
-    <span class="btn-note">Отвечаю в Telegram в течение нескольких часов</span>
-  </div>
+    <div class="article-body">
 
-  <div class="related">
-    <div class="related-title">Читайте также</div>
-    <div class="related-links">
-      <a href="/articles/ne-khochu-rabotat.html" class="related-link">
-        <span class="related-arrow">→</span>
-        Я больше не хочу работать: выгорание, депрессия или пора менять профессию?
-      </a>
-      <a href="/articles/sindrom-samozvantsa.html" class="related-link">
-        <span class="related-arrow">→</span>
-        Синдром самозванца: почему успешные люди боятся разоблачения
-      </a>
-      <a href="/articles/dpdg-emdr-chto-eto.html" class="related-link">
-        <span class="related-arrow">→</span>
-        ДПДГ (EMDR): что это такое и как работает
-      </a>
+      <img src="../images/016.png" alt="Человек в раздумьях о своих желаниях" class="article-image">
+
+      <p>«Со мной всё нормально. Просто я не понимаю, чего хочу» — эту фразу я слышу на консультациях очень часто. Человек приходит не в кризисе, не в панике. Просто — в тумане. Всё функционирует. Но нет ощущения, что жизнь его.</p>
+
+      <p>Это состояние имеет название — <strong>диффузия идентичности</strong>. И оно гораздо распространённее, чем принято думать, особенно среди взрослых людей, которые всю жизнь жили «правильно» — то есть так, как ожидали другие.</p>
+
+      <div class="divider"></div>
+
+      <h2>Как взрослый человек «теряет себя»</h2>
+
+      <p>Потеря себя не происходит в одночасье. Это медленный, почти незаметный процесс, который начинается, как правило, в детстве.</p>
+
+      <p>Ребёнок, которому важно получить одобрение родителей, учится подстраивать своё поведение, желания и даже эмоции под их ожидания. «Не плачь — это несерьёзно». «Ты должен быть врачом / юристом / успешным». «Не выпендривайся». Постепенно ребёнок перестаёт доверять собственным реакциям и начинает ориентироваться на внешние ориентиры: что одобрят, что похвалят, что будет «правильным».</p>
+
+      <p>Во взрослом возрасте этот механизм продолжает работать. Роль послушного ребёнка сменяется ролью хорошего сотрудника, ответственного родителя, надёжного партнёра. Человек исправно выполняет все роли — но постепенно роли вытесняют личность. Остаётся вопрос: а кто я, когда никто не смотрит?</p>
+
+      <div class="pull-quote">
+        «Вы не потеряли себя. Вы просто очень давно не были собой — и забыли, как это ощущается.»
+      </div>
+
+      <h2>Признаки того, что вы живёте «чужой» жизнью</h2>
+
+      <ul class="check-list">
+        <li>Вам трудно ответить на вопрос «что тебе нравится?» без долгой паузы</li>
+        <li>Вы легко говорите, чего <em>не</em> хотите — но не знаете, чего хотите</li>
+        <li>Ваши решения часто продиктованы тем, «что скажут» или «что правильно»</li>
+        <li>Вы выполняете обязательства, но радости от них нет</li>
+        <li>Ощущение, что настоящая жизнь «где-то там» — потом, когда всё наладится</li>
+        <li>Усталость без очевидной причины — просто от существования в нынешнем режиме</li>
+        <li>Зависть к людям, которые «знают, чего хотят» и идут к этому</li>
+      </ul>
+
+      <p>Важно: это не депрессия (хотя они могут сопутствовать друг другу). Это кризис идентичности — и он решается не таблетками, а работой с ценностями и смыслами.</p>
+
+      <img src="../images/017.png" alt="Роли и маски в жизни человека" class="article-image">
+
+      <h2>Роли и маски: в чём разница</h2>
+
+      <p>Психологи разграничивают <strong>роли</strong> и <strong>маски</strong>. Роли — это нормальная часть социальной жизни. Мы все играем разные роли: родителя, коллеги, друга. Здоровый человек гибко переходит из роли в роль, оставаясь при этом собой.</p>
+
+      <p>Маска — другое. Это когда роль «прирастает» к лицу, когда человек перестаёт её снимать даже наедине с собой. Маска «сильного» — и нельзя показать уязвимость. Маска «успешного» — и нельзя признать сомнения. Маска «всё в порядке» — и нельзя сказать «мне плохо».</p>
+
+      <p>Маски изначально защищают — от осуждения, от отвержения, от боли. Но со временем они начинают <em>стоить дороже</em>, чем то, от чего защищают. Истощают. Создают ощущение фальши и пустоты.</p>
+
+      <div class="callout">
+        <strong>Ключевой вопрос</strong>
+        <p>Спросите себя честно: есть ли в вашей жизни место, где вы можете быть собой без последствий? Где не нужно ничего изображать? Если такого места нет — это сигнал.</p>
+      </div>
+
+      <h2>КПТ и работа с ценностями: как найти себя</h2>
+
+      <p>В когнитивно-поведенческой терапии и в подходе ACT (терапия принятия и ответственности) работа с идентичностью строится через прояснение ценностей. Ценности — это не цели. Цель можно достичь и поставить галочку. Ценность — это то, <em>как</em> вы хотите жить, что для вас важно в процессе, а не в результате.</p>
+
+      <p>Когда человек долго жил по чужим сценариям, он часто путает <em>свои</em> ценности с усвоенными от других. «Я ценю стабильность» — или меня так воспитали бояться риска? «Я ценю семью» — или просто боюсь осуждения, если поставлю себя на первое место? Разобраться в этом — важная и непростая работа.</p>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 1</p>
+        <h3>Инвентаризация удовольствий</h3>
+        <p>Простое, но честное упражнение для возвращения контакта с собой.</p>
+        <ol>
+          <li>Возьмите лист бумаги. Напишите 20 вещей, которые вам нравилось делать в детстве и юности — до того, как появились «правильные» занятия.</li>
+          <li>Отметьте, что из этого есть в вашей жизни сейчас. Что исчезло? Почему?</li>
+          <li>Выберите одно исчезнувшее занятие. Сделайте его — хотя бы 20 минут. Не ради продуктивности. Просто потому что хочется.</li>
+          <li>Заметьте, что происходит в теле и в настроении.</li>
+        </ol>
+      </div>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 2</p>
+        <h3>Письмо 80-летнего себя</h3>
+        <p>Упражнение помогает отделить чужие ожидания от подлинных ценностей.</p>
+        <ol>
+          <li>Представьте себя в 80 лет. Вы прожили хорошую жизнь — свою, настоящую.</li>
+          <li>Напишите письмо себе сегодняшнему от этого человека. Что он скажет? О чём предупредит? Что посоветует не откладывать?</li>
+          <li>Перечитайте письмо через день. Что в нём отзывается болью — «да, я не делаю этого»?</li>
+          <li>Это и есть ваши ценности. Они уже есть — просто ждут, когда их заметят.</li>
+        </ol>
+      </div>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 3</p>
+        <h3>Разделение «должен» и «хочу»</h3>
+        <p>Практика для ежедневного использования — помогает замечать, из какого места вы действуете.</p>
+        <ol>
+          <li>В течение недели фиксируйте свои решения и действия. Для каждого задайте вопрос: «Я делаю это потому что <em>должен</em> — или потому что <em>хочу</em>?»</li>
+          <li>Не пытайтесь сразу менять поведение. Просто наблюдайте соотношение.</li>
+          <li>Когда увидите область, где «должен» доминирует полностью — задайте следующий вопрос: «Что случится, если я откажусь или изменю это?»</li>
+          <li>Часто окажется, что страшные последствия — воображаемые. Это точка роста.</li>
+        </ol>
+      </div>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 4</p>
+        <h3>Практика маленьких «нет»</h3>
+        <p>Умение отказывать — это мышца. Её нужно тренировать постепенно.</p>
+        <ol>
+          <li>Выберите одну небольшую просьбу на этой неделе, на которую вы обычно соглашаетесь из вежливости или страха осудить, а не из искреннего желания помочь.</li>
+          <li>Откажитесь. Спокойно, без длинных объяснений: «Сейчас не смогу» / «Мне это не подходит».</li>
+          <li>Заметьте, что произошло. Случилось ли то, чего вы боялись? Как изменилось ваше ощущение себя?</li>
+          <li>Постепенно расширяйте практику.</li>
+        </ol>
+        <p style="margin-top: 14px; font-size: 0.88rem; color: var(--muted);">Каждое «нет», сказанное из своих ценностей — это маленькое возвращение себе.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <img src="../images/018.png" alt="Почему сложно работать с идентичностью в одиночку" class="article-image">
+
+      <h2>Почему это сложно делать в одиночку</h2>
+
+      <p>Самостоятельная работа с идентичностью — возможна, но имеет предел. Дело в том, что многие убеждения о себе («я должен», «мои желания неважны», «я не имею права») сформировались в отношениях — и именно в отношениях наиболее эффективно пересматриваются.</p>
+
+      <p>Терапия — это пространство, где можно быть собой без последствий, возможно впервые за долгое время. Это место, где ваши желания, сомнения и страхи получают место и внимание. Где постепенно восстанавливается доверие к себе.</p>
+
+      <p>В работе я использую методы КПТ для работы с убеждениями («мои потребности несущественны», «хотеть — это эгоизм») и техники ACT для прояснения ценностей. Если за потерей себя стоит травматический опыт — включаем ДПДГ.</p>
+
+      <div class="cta-block">
+        <div>
+          <h2>Чувствуете, что живёте не своей жизнью?</h2>
+          <p>На консультации мы вместе разберёмся, где заканчиваются чужие ожидания и начинаетесь вы — и что с этим делать дальше.</p>
+        </div>
+        <a href="https://t.me/Kamila_Zolotova" class="cta-main">Записаться на консультацию</a>
+      </div>
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <span>Теги:</span>
+        <a href="#" class="tag">диффузия идентичности</a>
+        <a href="#" class="tag">потеря себя</a>
+        <a href="#" class="tag">роли и маски</a>
+        <a href="#" class="tag">самоопределение</a>
+        <a href="#" class="tag">ценности</a>
+      </div>
+
     </div>
-  </div>
-
-</div>
+  </article>
 </main>
 
-<footer class="footer">
-  <p>© 2026 Камила Золотова · <a href="/privacy.html">Правовая информация</a> · <a href="https://www.b17.ru/zolotova_psychologist/?prt=764511">B17.ru</a> · <a href="https://pozitiv-psychology.ru">pozitiv-psychology.ru</a></p>
+<footer>
+  <p>© 2026 Камила Золотова · КПТ-психолог · <a href="https://pozitiv-psychology.ru" style="color: var(--accent); text-decoration: none;">pozitiv-psychology.ru</a></p>
 </footer>
 
+<script src="../js/share.js"></script>
 </body>
 </html>

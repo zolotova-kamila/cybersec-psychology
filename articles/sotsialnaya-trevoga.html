@@ -6,650 +6,530 @@
 <meta name="description" content="Социальная тревога: почему кажется, что все смотрят и осуждают. Механизм самофокуса, внутренний наблюдатель и практические упражнения. Помощь психолога КПТ.">
 <meta name="keywords" content="социальная тревога, социофобия, боюсь людей, страх осуждения, самофокус, психолог КПТ">
 <title>Социальная тревога: почему вам кажется, что все смотрят и осуждают | Камила Золотова</title>
-<link rel="canonical" href="https://pozitiv-psychology.ru/articles/sotsialnaya-trevoga.html">
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="canonical" href="https://pozitiv-psychology.ru/articles/sotsialnaya-trevoga.html">
 <meta property="og:title" content="Социальная тревога: почему вам кажется, что все смотрят и осуждают">
 <meta property="og:description" content="Почему вы чувствуете, что все смотрят и осуждают. Механизм самофокуса и практические упражнения.">
-<meta property="og:image" content="https://pozitiv-psychology.ru/images/article-social-preview.jpg">
+<meta property="og:image" content="https://pozitiv-psychology.ru/images/014.png">
 <meta property="og:url" content="https://pozitiv-psychology.ru/articles/sotsialnaya-trevoga.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Социальная тревога: почему вам кажется, что все смотрят и осуждают">
+<meta name="twitter:description" content="Почему вы чувствуете, что все смотрят и осуждают. Механизм самофокуса и практические упражнения.">
+<meta name="twitter:image" content="https://pozitiv-psychology.ru/images/014.png">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Mulish:wght@300;400;500;600&display=swap');
+
   :root {
-    --teal:       #2A7B6F;
-    --teal-dark:  #1A5248;
-    --teal-light: #E8F5F2;
-    --teal-mid:   #C5E8E2;
-    --gold:       #C9A84C;
-    --gold-light: #FDF6E3;
-    --dark:       #1A2E2B;
-    --grey:       #5A6E6B;
-    --light:      #F7FAFA;
-    --white:      #FFFFFF;
-    --max:        740px;
+    --ink: #1a1a1a;
+    --cream: #f7f4ef;
+    --warm-mid: #e8e2d8;
+    --accent: #b85c38;
+    --accent-light: #f0e8e3;
+    --muted: #6b6560;
+    --border: #d4cec6;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html { scroll-behavior: smooth; }
+
   body {
+    background: var(--cream);
+    color: var(--ink);
     font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    color: var(--dark);
-    background: var(--white);
-    line-height: 1.75;
+    font-weight: 300;
     font-size: 17px;
+    line-height: 1.8;
   }
 
-  .nav {
-    background: var(--white);
-    border-bottom: 1px solid var(--teal-mid);
-    padding: 14px 24px;
+  /* ── HEADER ── */
+  .site-header {
+    padding: 20px 40px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--teal);
+  .site-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.02em;
   }
-  .nav-sep { color: var(--teal-mid); margin: 0 4px; }
-  .nav-crumb { font-size: 13px; color: var(--grey); text-decoration: none; }
-  .nav-crumb:hover { color: var(--teal); }
-  .nav-current { font-size: 13px; color: var(--teal); font-weight: 600; }
+  .cta-header {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 2px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .cta-header:hover { background: #9e4a2a; }
 
+  /* ── HERO ── */
   .hero {
-    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, #3D9A8A 100%);
-    padding: 64px 24px 52px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 40px 48px;
   }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .hero-tag {
+  .tag {
     display: inline-block;
-    background: rgba(255,255,255,0.15);
-    color: var(--teal-mid);
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    margin-bottom: 22px;
+    color: var(--accent);
+    margin-bottom: 20px;
   }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 46px);
-    color: var(--white);
-    line-height: 1.2;
-    max-width: 680px;
-    margin: 0 auto 18px;
-    font-weight: 700;
-  }
-  .hero-sub {
-    font-size: 17px;
-    color: rgba(255,255,255,0.78);
-    max-width: 520px;
-    margin: 0 auto 32px;
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.18;
+    color: var(--ink);
+    margin-bottom: 24px;
   }
-  .hero-meta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .hero-meta span {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .hero-meta strong { color: rgba(255,255,255,0.9); font-weight: 600; }
-
-  .container {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
+  h1 em { font-style: italic; font-weight: 300; color: var(--accent); }
   .lead {
-    font-size: 19px;
-    font-weight: 300;
-    color: var(--grey);
-    border-left: 3px solid var(--gold);
-    padding: 4px 0 4px 20px;
-    margin: 48px 0 36px;
-    line-height: 1.7;
-    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.75;
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  .meta { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.05em; }
+
+  /* ── ARTICLE BODY ── */
+  .article-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+  .article-body p { margin-bottom: 1.4em; }
+
+  /* article images */
+  .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2em 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   }
 
   h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 3.5vw, 28px);
-    color: var(--teal-dark);
-    margin: 52px 0 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
     line-height: 1.25;
-    font-weight: 700;
+    margin: 3em 0 0.8em;
+    color: var(--ink);
   }
   h3 {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--dark);
-    margin: 28px 0 10px;
-    letter-spacing: 0.01em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2em 0 0.6em;
+    color: var(--ink);
   }
-  p { margin-bottom: 18px; }
-  ul, ol { margin: 18px 0; padding-left: 24px; }
-  li { margin-bottom: 10px; line-height: 1.7; }
 
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 8px 0;
+  /* pull quote */
+  .pull-quote {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 2.5em 0;
+    padding: 2em 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1.4;
   }
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--teal-mid);
-  }
-  .divider-icon { color: var(--gold); font-size: 16px; }
 
-  .infobox {
-    background: var(--teal-light);
-    border-left: 4px solid var(--teal);
-    border-radius: 0 10px 10px 0;
+  /* callout box */
+  .callout {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
     padding: 20px 24px;
-    margin: 28px 0;
+    margin: 2em 0;
+    border-radius: 0 4px 4px 0;
   }
-  .infobox-title {
-    font-size: 12px;
-    font-weight: 700;
+  .callout strong {
+    display: block;
+    font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--accent);
     margin-bottom: 8px;
+    font-weight: 600;
   }
-  .infobox p { margin: 0; color: var(--dark); font-size: 15.5px; line-height: 1.65; }
+  .callout p { margin: 0; font-size: 0.95rem; }
 
-  .goldbox {
-    background: var(--gold-light);
-    border: 1px solid rgba(201,168,76,0.35);
-    border-radius: 12px;
-    padding: 22px 26px;
-    margin: 28px 0;
-  }
-  .goldbox p { margin: 0; font-size: 15.5px; color: var(--dark); line-height: 1.65; }
-
-  .checklist {
+  /* checklist */
+  .check-list {
     list-style: none;
-    margin: 16px 0 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin: 1em 0 1.5em;
+    padding: 0;
   }
-  .checklist li {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    font-size: 16px;
-    color: var(--dark);
-    line-height: 1.6;
+  .check-list li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    border-bottom: 1px solid var(--warm-mid);
+    font-size: 0.97rem;
   }
-  .check-icon {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--teal);
-    color: white;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
+  .check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
   }
 
+  /* exercise block */
   .exercise {
-    background: var(--white);
-    border: 1px solid var(--teal-mid);
-    border-radius: 12px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
     padding: 28px 32px;
-    margin: 28px 0;
+    margin: 2.5em 0;
   }
   .exercise-label {
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 0.7rem;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--grey);
+    color: var(--muted);
     margin-bottom: 12px;
   }
-  .exercise h3 { margin-top: 0; font-family: 'Playfair Display', serif; color: var(--teal-dark); }
+  .exercise h3 { margin-top: 0; font-size: 1.15rem; }
+  .exercise ol { padding-left: 20px; margin-top: 12px; }
+  .exercise ol li { margin-bottom: 10px; font-size: 0.96rem; }
 
-  .author-card {
-    background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-    border-radius: 16px;
-    padding: 32px;
-    margin: 56px 0 40px;
-    color: var(--white);
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
+  /* divider */
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--accent);
+    margin: 3em 0;
   }
-  .author-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    border: 2px solid var(--gold);
-    flex-shrink: 0;
-    display: flex;
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 60px 48px;
+    margin: 4em 0 0;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
     align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: var(--gold);
-    font-weight: 700;
   }
-  .author-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    color: var(--white);
-  }
-  .author-creds {
-    font-size: 13px;
-    color: rgba(255,255,255,0.65);
-    margin-bottom: 12px;
-    line-height: 1.5;
-  }
-  .author-bio { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; }
-
-  .cta {
-    background: var(--gold-light);
-    border: 1px solid rgba(201,168,76,0.4);
-    border-radius: 16px;
-    padding: 36px 32px;
-    text-align: center;
-    margin: 40px 0 60px;
-  }
-  .cta h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: var(--teal-dark);
+  .cta-block h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 300;
+    color: var(--cream);
     margin: 0 0 12px;
-    font-weight: 700;
   }
-  .cta p {
-    font-size: 16px;
-    color: var(--grey);
-    max-width: 460px;
-    margin: 0 auto 24px;
-    line-height: 1.6;
-  }
-  .btn {
-    display: inline-block;
-    background: var(--teal);
-    color: var(--white);
+  .cta-block p { color: #b0a89e; font-size: 0.9rem; margin: 0; }
+  .cta-main {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 2px;
     font-family: 'Mulish', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.04em;
-    padding: 14px 34px;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
-  .btn-note {
-    display: block;
-    font-size: 12px;
-    color: var(--grey);
-    margin-top: 10px;
-  }
-
-  .related {
-    border-top: 1px solid var(--teal-mid);
-    padding-top: 36px;
-    margin-bottom: 60px;
-  }
-  .related-title {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 0.82rem;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--grey);
-    margin-bottom: 18px;
-  }
-  .related-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .related-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    cursor: pointer;
+    white-space: nowrap;
     text-decoration: none;
-    color: var(--teal);
-    font-size: 15px;
-    font-weight: 600;
-    padding: 12px 16px;
-    border-radius: 8px;
-    background: var(--light);
-    border: 1px solid var(--teal-mid);
-    transition: background 0.15s;
+    display: inline-block;
+    transition: background 0.2s;
   }
-  .related-link:hover { background: var(--teal-light); }
-  .related-arrow { font-size: 18px; color: var(--gold); }
+  .cta-main:hover { background: #9e4a2a; }
 
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* Article tags */
   .article-tags {
     margin: 3rem 0 2rem;
     padding: 1.5rem 0;
-    border-top: 1px solid var(--teal-mid);
+    border-top: 1px solid var(--border);
   }
-  .article-tags-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+  .article-tags > span {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-right: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
-    color: var(--grey);
-    margin-bottom: 12px;
+    letter-spacing: 0.05em;
   }
-  .tag-link {
+  .tag {
     display: inline-block;
-    background: var(--teal-light);
-    color: var(--teal-dark);
-    padding: 6px 14px;
+    background: var(--warm-mid);
+    color: var(--ink);
+    padding: 0.4rem 0.9rem;
     border-radius: 20px;
-    font-size: 13px;
-    margin: 0 8px 8px 0;
+    font-size: 0.8rem;
     text-decoration: none;
-    transition: all 0.2s;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    transition: all 0.2s ease;
   }
-  .tag-link:hover {
-    background: var(--teal);
-    color: white;
+  .tag:hover {
+    background: var(--accent);
+    color: #fff;
   }
-
-  .footer {
-    background: var(--dark);
-    padding: 28px 24px;
-    text-align: center;
-    font-size: 13px;
-    color: rgba(255,255,255,0.35);
-  }
-  .footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  .footer a:hover { color: var(--teal-mid); }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero h1, .hero-sub, .hero-meta { animation: fadeUp 0.6s ease both; }
-  .hero h1   { animation-delay: 0.05s; }
-  .hero-sub  { animation-delay: 0.15s; }
-  .hero-meta { animation-delay: 0.25s; }
 
   @media (max-width: 640px) {
-    .nav { padding: 12px 16px; }
-    .hero { padding: 48px 16px 40px; }
-    .container { padding: 0 16px; }
+    .site-header { padding: 16px 20px; }
+    .hero, .article-body { padding-left: 20px; padding-right: 20px; }
+    .cta-block { grid-template-columns: 1fr; padding: 36px 24px; }
     .exercise { padding: 20px; }
-    .author-card { flex-direction: column; padding: 24px; }
   }
 </style>
 </head>
 <body>
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3748347", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+    </script>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3748347;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <!-- /Top.Mail.Ru counter -->
 
-<nav class="nav">
-  <a href="/index.html" class="nav-logo">КЗ</a>
-  <span class="nav-sep">/</span>
-  <a href="/resources.html" class="nav-crumb">Материалы</a>
-  <span class="nav-sep">/</span>
-  <a href="/articles/" class="nav-crumb">Статьи</a>
-  <span class="nav-sep">/</span>
-  <span class="nav-current">Социальная тревога</span>
-</nav>
-
-<header class="hero">
-  <div class="hero-tag">Тревога · 12 мин чтения</div>
-  <h1>Социальная тревога:<br>почему вам кажется, что<br>все смотрят и осуждают</h1>
-  <p class="hero-sub">Почему вы чувствуете, что все смотрят и осуждают. Механизм самофокуса и практические упражнения</p>
-  <div class="hero-meta">
-    <span><strong>Камила Золотова</strong></span>
-    <span>·</span>
-    <span>28 марта 2026</span>
-  </div>
+<header class="site-header">
+  <a href="https://pozitiv-psychology.ru" class="site-logo">Камила Золотова · Психолог КПТ</a>
+  <a href="https://t.me/Kamila_Zolotova" class="cta-header">Записаться</a>
 </header>
 
 <main>
-<div class="container">
-
-  <p class="lead">Вы входите в комнату — и чувствуете, как десятки взглядов обращаются к вам. Краснеете, запинаетесь, прокручиваете разговор ещё три часа после. Это не слабость характера. Это работа механизма, у которого есть название и — хорошая новость — лечение.</p>
-
-  <p>Знакомо ли вам ощущение, что вы вышли к доске и все вокруг видят каждую вашу оговорку? Что на вечеринке именно вы выглядите нелепо, и именно вас обсуждают в углу? Что коллеги замечают, как у вас дрожит голос на совещании?</p>
-
-  <p>Если да — вы не одиноки. По данным ВОЗ, социальная тревога (социофобия) входит в тройку самых распространённых тревожных расстройств. Миллионы людей живут с этим ощущением годами, считая его «особенностью характера» или «просто стеснительностью».</p>
-
-  <p>Но за этим переживанием стоит конкретный психологический механизм. И когда вы его понимаете — он теряет над вами власть.</p>
-
-  <div class="divider"><span class="divider-icon">◆</span></div>
-
-  <h2>Что такое социальная тревога — и чем она отличается от обычной застенчивости</h2>
-
-  <p>Застенчивость — это черта темперамента. Она есть у многих, немного смущает в новых ситуациях и не мешает жить полноценно.</p>
-
-  <p>Социальная тревога — другое. Это стойкий страх оказаться в ситуации, где вас могут оценить. Страх, что вы скажете что-то не то, покраснеете, не сможете поддержать разговор — и окружающие посчитают вас глупым, странным, скучным.</p>
-
-  <p>Она проявляется по-разному:</p>
-
-  <ul class="checklist">
-    <li><span class="check-icon">✓</span><span>Тревога перед телефонными звонками незнакомым людям</span></li>
-    <li><span class="check-icon">✓</span><span>Страх есть или писать на виду у других</span></li>
-    <li><span class="check-icon">✓</span><span>Избегание вечеринок, корпоративов, публичных мест</span></li>
-    <li><span class="check-icon">✓</span><span>Многочасовое «прокручивание» разговоров после — что сказал не так, как выглядел</span></li>
-    <li><span class="check-icon">✓</span><span>Краска стыда, сердцебиение, потливость ладоней в социальных ситуациях</span></li>
-    <li><span class="check-icon">✓</span><span>Облегчение, когда можно не идти, — и нарастающая изоляция</span></li>
-  </ul>
-
-  <p>Ключевое отличие от застенчивости — <strong>избегание</strong> и <strong>нарушение качества жизни</strong>. Если тревога заставляет отказываться от карьерных возможностей, близких отношений, простых радостей — это уже не «особенность характера».</p>
-
-  <div class="goldbox">
-    <p>«Проблема не в том, что вы слишком много думаете о себе. Проблема в том, что вы думаете о себе — чужими глазами.»</p>
-  </div>
-
-  <h2>Механизм самофокуса: почему мозг играет с вами в эту игру</h2>
-
-  <p>В основе социальной тревоги лежит феномен, который психологи называют <strong>самофокусом</strong> (self-focused attention). Понять его — значит сделать первый шаг к свободе.</p>
-
-  <p>Когда тревога включается, ваше внимание резко разворачивается внутрь. Вместо того чтобы воспринимать ситуацию снаружи — слышать собеседника, замечать обстановку — вы начинаете <em>наблюдать за собой</em>. Как вы выглядите. Как звучит ваш голос. Не дрожат ли руки. Не кажетесь ли странным.</p>
-
-  <p>Проблема в том, что этот «внутренний наблюдатель» — крайне плохой свидетель. Он не видит вас объективно. Он выстраивает образ, основанный на страхе, а не на реальности.</p>
-
-  <p>Классическое исследование психолога Дэвида Кларка показало: люди с социальной тревогой, описывая, «как они выглядели» во время разговора, давали значительно более негативную оценку себе, чем наблюдатели со стороны. Мозг буквально <em>лжёт</em> — конструирует образ, который гораздо хуже действительности.</p>
-
-  <div class="infobox">
-    <div class="infobox-title">Важно понять</div>
-    <p>Ощущение «все смотрят на меня» — это не восприятие реальности. Это результат того, что ваше внимание направлено на себя, а не на мир. Мозг принимает интенсивность вашего внутреннего переживания за доказательство внешней угрозы.</p>
-  </div>
-
-  <h2>Внутренний наблюдатель: кто этот голос в вашей голове</h2>
-
-  <p>«Внутренний наблюдатель» — это часть нашего сознания, которая смотрит на нас как бы со стороны. В умеренных дозах это полезная функция: она помогает регулировать поведение, соответствовать контексту, быть социально гибкими.</p>
-
-  <p>Но при социальной тревоге наблюдатель становится <strong>тираном</strong>. Он работает постоянно, оценивает каждое слово, каждый жест — и всегда выносит один и тот же приговор: «недостаточно хорошо».</p>
-
-  <p>Откуда он берётся? Чаще всего из детского и подросткового опыта. Насмешки в классе, критикующие родители, унизительные ситуации, когда за ошибку следовало отвержение — всё это формирует убеждение: <em>«Если я недостаточно контролирую своё поведение, меня осудят. Меня отвергнут. Я окажусь один.»</em></p>
-
-  <p>Этот наблюдатель не злобен — он пытается вас защитить. Но его методы давно устарели и причиняют вред.</p>
-
-  <h2>Порочный круг социальной тревоги</h2>
-
-  <p>КПТ описывает механизм тревоги через замкнутый цикл, который сам себя поддерживает:</p>
-
-  <ol>
-    <li style="margin-bottom: 12px;"><strong>Триггер</strong> — социальная ситуация (встреча, звонок, выступление)</li>
-    <li style="margin-bottom: 12px;"><strong>Мысль</strong> — «Я скажу что-то глупое, и все это заметят»</li>
-    <li style="margin-bottom: 12px;"><strong>Самофокус</strong> — внимание разворачивается внутрь, вы начинаете наблюдать за собой</li>
-    <li style="margin-bottom: 12px;"><strong>Физические симптомы</strong> — краснеете, сердце бьётся быстрее, голос дрожит</li>
-    <li style="margin-bottom: 12px;"><strong>Интерпретация</strong> — «Вот! Они видят, что я нервничаю. Это доказательство, что всё плохо»</li>
-    <li style="margin-bottom: 12px;"><strong>Избегание</strong> — уходите, отказываетесь, молчите. Облегчение — но только сейчас</li>
-    <li style="margin-bottom: 12px;"><strong>Подкрепление</strong> — избегание «работает», и мозг запоминает: «эта ситуация опасна»</li>
-  </ol>
-
-  <p>Каждый раз, когда вы избегаете ситуации, которая вас пугает, тревога <em>кратковременно снижается</em> — и это ощущение закрепляет поведение. Избегание не решает проблему. Оно её консервирует.</p>
-
-  <div class="divider"><span class="divider-icon">◆</span></div>
-
-  <h2>Практические упражнения: что реально помогает</h2>
-
-  <p>Хорошая новость: социальная тревога хорошо поддаётся работе. КПТ и ДПДГ показывают высокую эффективность в исследованиях. Но и самостоятельно можно сделать немало — особенно если начать с понимания механизмов.</p>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 1</p>
-    <h3>Разворот внимания наружу</h3>
-    <p>Это базовый навык из протокола Кларка и Уэллса — перевести внимание с себя на внешний мир.</p>
-    <ol>
-      <li>В тревожной ситуации заметьте: «Я сейчас смотрю на себя изнутри»</li>
-      <li>Сознательно переведите внимание: что я <em>вижу</em> перед собой? Что слышу? Что происходит в комнате?</li>
-      <li>Сосредоточьтесь на собеседнике: что именно он говорит? Какое у него выражение лица?</li>
-      <li>Удерживайте внимание снаружи — даже если оно снова тянется внутрь. Мягко возвращайте.</li>
-    </ol>
-    <p style="margin-top: 14px; font-size: 0.88rem; color: var(--grey);">Первое время это требует усилий. Но именно этот навык разрывает цикл самофокуса.</p>
-  </div>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 2</p>
-    <h3>Видеообратная связь (в воображении)</h3>
-    <p>Люди с социальной тревогой убеждены: они выглядят хуже, чем есть на самом деле. Это упражнение мягко проверяет это убеждение.</p>
-    <ol>
-      <li>Вспомните недавнюю тревожную ситуацию. Как вы думаете — как вы выглядели? Запишите.</li>
-      <li>Теперь представьте, что вы смотрите видеозапись той же ситуации. Что <em>объективно</em> увидел бы наблюдатель со стороны?</li>
-      <li>Сравните две версии. Почти всегда «видеозапись» выглядит значительно лучше, чем «внутренний образ».</li>
-      <li>Задайте себе вопрос: «Какие доказательства у меня есть, что другие видели именно то, что я себе представлял?»</li>
-    </ol>
-  </div>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 3</p>
-    <h3>Поведенческий эксперимент против избегания</h3>
-    <p>Избегание — главный поддерживающий фактор тревоги. Это упражнение помогает постепенно расширять зону комфорта.</p>
-    <ol>
-      <li>Составьте список ситуаций, которых вы избегаете из-за тревоги. Оцените каждую по шкале от 1 до 10.</li>
-      <li>Начните с ситуации на 3–4 балла. Зайдите в неё намеренно — с единственной целью: <em>проверить, что произойдёт на самом деле</em>.</li>
-      <li>До: запишите прогноз («люди решат, что я странный»). После: что произошло реально?</li>
-      <li>Постепенно переходите к ситуациям с более высоким баллом.</li>
-    </ol>
-    <p style="margin-top: 14px; font-size: 0.88rem; color: var(--grey);">Важно: цель не «справиться с тревогой», а <em>проверить убеждение</em>. Тревога может быть — это нормально.</p>
-  </div>
-
-  <div class="exercise">
-    <p class="exercise-label">Упражнение 4</p>
-    <h3>Работа с внутренним критиком</h3>
-    <p>Задача — не заглушить критика, а изменить отношение к нему.</p>
-    <ol>
-      <li>После тревожной ситуации запишите мысли внутреннего наблюдателя дословно: «Я говорил слишком быстро, они точно заметили»</li>
-      <li>Спросите себя: «Сказал бы я это другу в такой же ситуации?»</li>
-      <li>Перепишите мысль так, как написали бы другу: «Ты немного нервничал — это нормально. Ты справился»</li>
-      <li>Повторяйте регулярно — это тренировка нового голоса, более справедливого и доброго.</li>
-    </ol>
-  </div>
-
-  <div class="divider"><span class="divider-icon">◆</span></div>
-
-  <h2>Когда упражнений недостаточно</h2>
-
-  <p>Самостоятельная работа — хороший старт. Но социальная тревога средней и высокой степени выраженности требует профессиональной поддержки. И вот почему.</p>
-
-  <p>Многие убеждения, которые питают тревогу, уходят корнями в ранний опыт — в ситуации, когда вас действительно осуждали, отвергали, высмеивали. Просто «думать иначе» не перепишет этот опыт на уровне нервной системы.</p>
-
-  <p>В своей практике я работаю с социальной тревогой методами <strong>КПТ</strong> (когнитивно-поведенческая терапия) и <strong>ДПДГ</strong> (десенсибилизация и переработка движением глаз). ДПДГ особенно эффективен, когда за тревогой стоит конкретный травматический опыт — унижение, буллинг, публичный провал. Метод позволяет переработать эти воспоминания так, что они перестают запускать тревожную реакцию в настоящем.</p>
-
-  <p>КПТ прицельно работает с убеждениями («меня осудят», «я недостаточно интересен») и поведением — учит постепенно возвращаться в ситуации, которых вы избегали, и убеждаться, что они безопасны.</p>
-
-  <div class="infobox">
-    <div class="infobox-title">Признаки того, что стоит обратиться к специалисту</div>
-    <p>Вы регулярно отказываетесь от важных возможностей из-за тревоги · Тревога мешает работе, отношениям, карьере · Вы давно «терпите» это состояние и устали · Самостоятельные упражнения не дают устойчивого результата</p>
-  </div>
-
-  <h2>Главное, что нужно знать</h2>
-
-  <p>Социальная тревога — не черта характера и не приговор. Это выученная реакция нервной системы, которая сформировалась в определённых условиях и которую можно изменить.</p>
-
-  <p>Ощущение «все смотрят и осуждают» — это не правда о мире. Это голос вашего внутреннего наблюдателя, который давно устарел и давно пора обновить.</p>
-
-  <p>Путь не быстрый. Но он есть — и вы не обязаны проходить его в одиночку.</p>
-
-  <div class="article-tags">
-    <p class="article-tags-title">Теги:</p>
-    <a href="../resources.html" class="tag-link">социальная тревога</a>
-    <a href="../resources.html" class="tag-link">социофобия</a>
-    <a href="../resources.html" class="tag-link">самофокус</a>
-    <a href="../resources.html" class="tag-link">страх осуждения</a>
-    <a href="../resources.html" class="tag-link">КПТ</a>
-  </div>
-
-  <div class="author-card">
-    <div class="author-avatar">КЗ</div>
-    <div>
-      <div class="author-name">Камила Золотова</div>
-      <div class="author-creds">Психолог КПТ · ДПДГ-терапевт · Консультирую онлайн и в Москве</div>
-      <p class="author-bio">Работаю с тревогой, психологическими травмами и последствиями стресса. В практике сочетаю КПТ и ДПДГ — потому что убеждена: устойчивые изменения происходят тогда, когда меняется и мышление, и ощущения в теле.</p>
+  <article>
+    <div class="hero">
+      <span class="tag">Тревога · 12 мин чтения</span>
+      <h1>Социальная тревога: почему вам кажется, что <em>все смотрят</em> и осуждают</h1>
+      <p class="lead">Вы входите в комнату — и чувствуете, как десятки взглядов обращаются к вам. Краснеете, запинаетесь, прокручиваете разговор ещё три часа после. Это не слабость характера. Это работа механизма, у которого есть название и — хорошая новость — лечение.</p>
+      <p class="meta">Камила Золотова &nbsp;·&nbsp; КПТ-психолог &nbsp;·&nbsp; март 2026</p>
     </div>
-  </div>
 
-  <div class="cta">
-    <h3>Узнаёте себя в этом описании?</h3>
-    <p>На консультации мы разберём ваши конкретные триггеры, убеждения и выстроим план работы — шаг за шагом, без давления и осуждения.</p>
-    <a href="https://t.me/Kamila_Zolotova" class="btn">Записаться на консультацию →</a>
-    <span class="btn-note">Отвечаю в Telegram в течение нескольких часов</span>
-  </div>
+    <div class="article-body">
 
-  <div class="related">
-    <div class="related-title">Читайте также</div>
-    <div class="related-links">
-      <a href="/articles/simptomy-trevozhnogo-rasstroystva.html" class="related-link">
-        <span class="related-arrow">→</span>
-        Симптомы тревожного расстройства — как распознать
-      </a>
-      <a href="/articles/kak-spravitsya-s-panicheskimi-atakami.html" class="related-link">
-        <span class="related-arrow">→</span>
-        Как справиться с паническими атаками
-      </a>
-      <a href="/articles/dpdg-emdr-chto-eto.html" class="related-link">
-        <span class="related-arrow">→</span>
-        ДПДГ (EMDR): что это такое и как работает
-      </a>
+      <p>Знакомо ли вам ощущение, что вы вышли к доске и все вокруг видят каждую вашу оговорку? Что на вечеринке именно вы выглядите нелепо, и именно вас обсуждают в углу? Что коллеги замечают, как у вас дрожит голос на совещании?</p>
+
+      <p>Если да — вы не одиноки. По данным ВОЗ, социальная тревога (социофобия) входит в тройку самых распространённых тревожных расстройств. Миллионы людей живут с этим ощущением годами, считая его «особенностью характера» или «просто стеснительностью».</p>
+
+      <p>Но за этим переживанием стоит конкретный психологический механизм. И когда вы его понимаете — он теряет над вами власть.</p>
+
+      <div class="divider"></div>
+
+      <img src="../images/014.png" alt="Человек в социальной ситуации" class="article-image">
+
+      <h2>Что такое социальная тревога — и чем она отличается от обычной застенчивости</h2>
+
+      <p>Застенчивость — это черта темперамента. Она есть у многих, немного смущает в новых ситуациях и не мешает жить полноценно.</p>
+
+      <p>Социальная тревога — другое. Это стойкий страх оказаться в ситуации, где вас могут оценить. Страх, что вы скажете что-то не то, покраснеете, не сможете поддержать разговор — и окружающие посчитают вас глупым, странным, скучным.</p>
+
+      <p>Она проявляется по-разному:</p>
+
+      <ul class="check-list">
+        <li>Тревога перед телефонными звонками незнакомым людям</li>
+        <li>Страх есть или писать на виду у других</li>
+        <li>Избегание вечеринок, корпоративов, публичных мест</li>
+        <li>Многочасовое «прокручивание» разговоров после — что сказал не так, как выглядел</li>
+        <li>Краска стыда, сердцебиение, потливость ладоней в социальных ситуациях</li>
+        <li>Облегчение, когда можно не идти, — и нарастающая изоляция</li>
+      </ul>
+
+      <p>Ключевое отличие от застенчивости — <strong>избегание</strong> и <strong>нарушение качества жизни</strong>. Если тревога заставляет отказываться от карьерных возможностей, близких отношений, простых радостей — это уже не «особенность характера».</p>
+
+      <div class="pull-quote">
+        «Проблема не в том, что вы слишком много думаете о себе. Проблема в том, что вы думаете о себе — чужими глазами.»
+      </div>
+
+      <h2>Механизм самофокуса: почему мозг играет с вами в эту игру</h2>
+
+      <p>В основе социальной тревоги лежит феномен, который психологи называют <strong>самофокусом</strong> (self-focused attention). Понять его — значит сделать первый шаг к свободе.</p>
+
+      <p>Когда тревога включается, ваше внимание резко разворачивается внутрь. Вместо того чтобы воспринимать ситуацию снаружи — слышать собеседника, замечать обстановку — вы начинаете <em>наблюдать за собой</em>. Как вы выглядите. Как звучит ваш голос. Не дрожат ли руки. Не кажетесь ли странным.</p>
+
+      <p>Проблема в том, что этот «внутренний наблюдатель» — крайне плохой свидетель. Он не видит вас объективно. Он выстраивает образ, основанный на страхе, а не на реальности.</p>
+
+      <p>Классическое исследование психолога Дэвида Кларка показало: люди с социальной тревогой, описывая, «как они выглядели» во время разговора, давали значительно более негативную оценку себе, чем наблюдатели со стороны. Мозг буквально <em>лжёт</em> — конструирует образ, который гораздо хуже действительности.</p>
+
+      <div class="callout">
+        <strong>Важно понять</strong>
+        <p>Ощущение «все смотрят на меня» — это не восприятие реальности. Это результат того, что ваше внимание направлено на себя, а не на мир. Мозг принимает интенсивность вашего внутреннего переживания за доказательство внешней угрозы.</p>
+      </div>
+
+      <h2>Внутренний наблюдатель: кто этот голос в вашей голове</h2>
+
+      <p>«Внутренний наблюдатель» — это часть нашего сознания, которая смотрит на нас как бы со стороны. В умеренных дозах это полезная функция: она помогает регулировать поведение, соответствовать контексту, быть социально гибкими.</p>
+
+      <p>Но при социальной тревоге наблюдатель становится <strong>тираном</strong>. Он работает постоянно, оценивает каждое слово, каждый жест — и всегда выносит один и тот же приговор: «недостаточно хорошо».</p>
+
+      <p>Откуда он берётся? Чаще всего из детского и подросткового опыта. Насмешки в классе, критикующие родители, унизительные ситуации, когда за ошибку следовало отвержение — всё это формирует убеждение: <em>«Если я недостаточно контролирую своё поведение, меня осудят. Меня отвергнут. Я окажусь один.»</em></p>
+
+      <p>Этот наблюдатель не злобен — он пытается вас защитить. Но его методы давно устарели и причиняют вред.</p>
+
+      <img src="../images/015.png" alt="Порочный круг социальной тревоги" class="article-image">
+
+      <h2>Порочный круг социальной тревоги</h2>
+
+      <p>КПТ описывает механизм тревоги через замкнутый цикл, который сам себя поддерживает:</p>
+
+      <ol style="padding-left: 20px; margin: 1em 0 1.5em;">
+        <li style="margin-bottom: 12px;"><strong>Триггер</strong> — социальная ситуация (встреча, звонок, выступление)</li>
+        <li style="margin-bottom: 12px;"><strong>Мысль</strong> — «Я скажу что-то глупое, и все это заметят»</li>
+        <li style="margin-bottom: 12px;"><strong>Самофокус</strong> — внимание разворачивается внутрь, вы начинаете наблюдать за собой</li>
+        <li style="margin-bottom: 12px;"><strong>Физические симптомы</strong> — краснеете, сердце бьётся быстрее, голос дрожит</li>
+        <li style="margin-bottom: 12px;"><strong>Интерпретация</strong> — «Вот! Они видят, что я нервничаю. Это доказательство, что всё плохо»</li>
+        <li style="margin-bottom: 12px;"><strong>Избегание</strong> — уходите, отказываетесь, молчите. Облегчение — но только сейчас</li>
+        <li style="margin-bottom: 12px;"><strong>Подкрепление</strong> — избегание «работает», и мозг запоминает: «эта ситуация опасна»</li>
+      </ol>
+
+      <p>Каждый раз, когда вы избегаете ситуации, которая вас пугает, тревога <em>кратковременно снижается</em> — и это ощущение закрепляет поведение. Избегание не решает проблему. Оно её консервирует.</p>
+
+      <div class="divider"></div>
+
+      <h2>Практические упражнения: что реально помогает</h2>
+
+      <p>Хорошая новость: социальная тревога хорошо поддаётся работе. КПТ и ДПДГ показывают высокую эффективность в исследованиях. Но и самостоятельно можно сделать немало — особенно если начать с понимания механизмов.</p>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 1</p>
+        <h3>Разворот внимания наружу</h3>
+        <p>Это базовый навык из протокола Кларка и Уэллса — перевести внимание с себя на внешний мир.</p>
+        <ol>
+          <li>В тревожной ситуации заметьте: «Я сейчас смотрю на себя изнутри»</li>
+          <li>Сознательно переведите внимание: что я <em>вижу</em> перед собой? Что слышу? Что происходит в комнате?</li>
+          <li>Сосредоточьтесь на собеседнике: что именно он говорит? Какое у него выражение лица?</li>
+          <li>Удерживайте внимание снаружи — даже если оно снова тянется внутрь. Мягко возвращайте.</li>
+        </ol>
+        <p style="margin-top: 14px; font-size: 0.88rem; color: var(--muted);">Первое время это требует усилий. Но именно этот навык разрывает цикл самофокуса.</p>
+      </div>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 2</p>
+        <h3>Видеообратная связь (в воображении)</h3>
+        <p>Люди с социальной тревогой убеждены: они выглядят хуже, чем есть на самом деле. Это упражнение мягко проверяет это убеждение.</p>
+        <ol>
+          <li>Вспомните недавнюю тревожную ситуацию. Как вы думаете — как вы выглядели? Запишите.</li>
+          <li>Теперь представьте, что вы смотрите видеозапись той же ситуации. Что <em>объективно</em> увидел бы наблюдатель со стороны?</li>
+          <li>Сравните две версии. Почти всегда «видеозапись» выглядит значительно лучше, чем «внутренний образ».</li>
+          <li>Задайте себе вопрос: «Какие доказательства у меня есть, что другие видели именно то, что я себе представлял?»</li>
+        </ol>
+      </div>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 3</p>
+        <h3>Поведенческий эксперимент против избегания</h3>
+        <p>Избегание — главный поддерживающий фактор тревоги. Это упражнение помогает постепенно расширять зону комфорта.</p>
+        <ol>
+          <li>Составьте список ситуаций, которых вы избегаете из-за тревоги. Оцените каждую по шкале от 1 до 10.</li>
+          <li>Начните с ситуации на 3–4 балла. Зайдите в неё намеренно — с единственной целью: <em>проверить, что произойдёт на самом деле</em>.</li>
+          <li>До: запишите прогноз («люди решат, что я странный»). После: что произошло реально?</li>
+          <li>Постепенно переходите к ситуациям с более высоким баллом.</li>
+        </ol>
+        <p style="margin-top: 14px; font-size: 0.88rem; color: var(--muted);">Важно: цель не «справиться с тревогой», а <em>проверить убеждение</em>. Тревога может быть — это нормально.</p>
+      </div>
+
+      <div class="exercise">
+        <p class="exercise-label">Упражнение 4</p>
+        <h3>Работа с внутренним критиком</h3>
+        <p>Задача — не заглушить критика, а изменить отношение к нему.</p>
+        <ol>
+          <li>После тревожной ситуации запишите мысли внутреннего наблюдателя дословно: «Я говорил слишком быстро, они точно заметили»</li>
+          <li>Спросите себя: «Сказал бы я это другу в такой же ситуации?»</li>
+          <li>Перепишите мысль так, как написали бы другу: «Ты немного нервничал — это нормально. Ты справился»</li>
+          <li>Повторяйте регулярно — это тренировка нового голоса, более справедливого и доброго.</li>
+        </ol>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>Когда упражнений недостаточно</h2>
+
+      <p>Самостоятельная работа — хороший старт. Но социальная тревога средней и высокой степени выраженности требует профессиональной поддержки. И вот почему.</p>
+
+      <p>Многие убеждения, которые питают тревогу, уходят корнями в ранний опыт — в ситуации, когда вас действительно осуждали, отвергали, высмеивали. Просто «думать иначе» не перепишет этот опыт на уровне нервной системы.</p>
+
+      <p>В своей практике я работаю с социальной тревогой методами <strong>КПТ</strong> (когнитивно-поведенческая терапия) и <strong>ДПДГ</strong> (десенсибилизация и переработка движением глаз). ДПДГ особенно эффективен, когда за тревогой стоит конкретный травматический опыт — унижение, буллинг, публичный провал. Метод позволяет переработать эти воспоминания так, что они перестают запускать тревожную реакцию в настоящем.</p>
+
+      <p>КПТ прицельно работает с убеждениями («меня осудят», «я недостаточно интересен») и поведением — учит постепенно возвращаться в ситуации, которых вы избегали, и убеждаться, что они безопасны.</p>
+
+      <div class="callout">
+        <strong>Признаки того, что стоит обратиться к специалисту</strong>
+        <p>Вы регулярно отказываетесь от важных возможностей из-за тревоги · Тревога мешает работе, отношениям, карьере · Вы давно «терпите» это состояние и устали · Самостоятельные упражнения не дают устойчивого результата</p>
+      </div>
+
+      <h2>Главное, что нужно знать</h2>
+
+      <p>Социальная тревога — не черта характера и не приговор. Это выученная реакция нервной системы, которая сформировалась в определённых условиях и которую можно изменить.</p>
+
+      <p>Ощущение «все смотрят и осуждают» — это не правда о мире. Это голос вашего внутреннего наблюдателя, который давно устарел и давно пора обновить.</p>
+
+      <p>Путь не быстрый. Но он есть — и вы не обязаны проходить его в одиночку.</p>
+
+      <div class="cta-block">
+        <div>
+          <h2>Узнаёте себя в этом описании?</h2>
+          <p>На консультации мы разберём ваши конкретные триггеры, убеждения и выстроим план работы — шаг за шагом, без давления и осуждения.</p>
+        </div>
+        <a href="https://t.me/Kamila_Zolotova" class="cta-main">Записаться на консультацию</a>
+      </div>
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <span>Теги:</span>
+        <a href="#" class="tag">социальная тревога</a>
+        <a href="#" class="tag">социофобия</a>
+        <a href="#" class="tag">самофокус</a>
+        <a href="#" class="tag">страх осуждения</a>
+        <a href="#" class="tag">КПТ</a>
+      </div>
+
     </div>
-  </div>
-
-</div>
+  </article>
 </main>
 
-<footer class="footer">
-  <p>© 2026 Камила Золотова · <a href="/privacy.html">Правовая информация</a> · <a href="https://www.b17.ru/zolotova_psychologist/?prt=764511">B17.ru</a> · <a href="https://pozitiv-psychology.ru">pozitiv-psychology.ru</a></p>
+<footer>
+  <p>© 2026 Камила Золотова · КПТ-психолог · <a href="https://pozitiv-psychology.ru" style="color: var(--accent); text-decoration: none;">pozitiv-psychology.ru</a></p>
 </footer>
 
+<script src="../js/share.js"></script>
 </body>
 </html>
