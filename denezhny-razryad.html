@@ -413,6 +413,44 @@
   .footer-note { font-size: 13px; color: var(--text-muted); }
 
   /* REVEAL ANIMATION */
+  /* GREEN ACCENT BLOCKS */
+  .bg-accent {
+    background: var(--accent-primary) !important;
+    color: white !important;
+  }
+  .bg-accent .section-tag,
+  .bg-accent .stat-num,
+  .bg-accent .stat-label,
+  .bg-accent .week-label,
+  .bg-accent .week-focus,
+  .bg-accent .ri-icon,
+  .bg-accent .quote-attr {
+    color: white !important;
+  }
+  .bg-accent .week-title,
+  .bg-accent .section-title,
+  .bg-accent blockquote,
+  .bg-accent .result-col-title {
+    color: white !important;
+  }
+  .bg-accent .week-items li,
+  .bg-accent .result-item,
+  .bg-accent .week-hw-title,
+  .bg-accent .week-hw p {
+    color: rgba(255,255,255,0.85) !important;
+  }
+  .bg-accent .week-items li::before,
+  .bg-accent blockquote .gold {
+    color: var(--accent-warm) !important;
+  }
+  .bg-accent .week-hw {
+    background: rgba(255,255,255,0.1) !important;
+    border-left-color: var(--accent-warm) !important;
+  }
+  .bg-accent .quote-section::before {
+    color: rgba(255,255,255,0.15) !important;
+  }
+  
   .reveal {
     opacity: 0; transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
@@ -452,7 +490,7 @@
     <a href="#program" class="btn-primary display">Смотреть программу</a>
     <a href="#pricing" class="btn-secondary">Стоимость и запись</a>
   </div>
-  <div class="hero-stats">
+  <div class="hero-stats bg-accent" style="padding: 40px; margin-top: 64px; border: none;">
     <div>
       <div class="stat-num display">4</div>
       <div class="stat-label">групповых занятия</div>
@@ -503,7 +541,7 @@
 </section>
 
 <!-- QUOTE -->
-<div class="quote-section">
+<div class="quote-section bg-accent">
   <blockquote class="reveal">
     «Каждый раз, когда зарабатываю какую-то сумму, испытываю ощущение, что <span class="gold">присвоил её необоснованно</span> — и должен немедленно избавиться. Иногда начинаю избавляться до того, как получил.»
   </blockquote>
@@ -600,7 +638,7 @@
       <div class="result-item"><span class="ri-icon">◆</span><div>Снижение стыда при назначении цены на свой труд <span class="ri-pct">65%</span></div></div>
       <div class="result-item"><span class="ri-icon">◆</span><div>Новый язык разговора о деньгах с партнёром <span class="ri-pct">60%</span></div></div>
     </div>
-    <div class="result-col no reveal">
+    <div class="result-col no reveal bg-accent">
       <div class="result-col-title">Что требует больше времени</div>
       <div class="result-item"><span class="ri-icon" style="color:var(--text-muted)">◇</span><div style="color:var(--text-muted)">Полное погашение крупных долгов — но создадим стратегию</div></div>
       <div class="result-item"><span class="ri-icon" style="color:var(--text-muted)">◇</span><div style="color:var(--text-muted)">Устранение глубинных детских травм — первый слой</div></div>
