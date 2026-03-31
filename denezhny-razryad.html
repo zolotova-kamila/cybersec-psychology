@@ -212,12 +212,26 @@
     gap: 24px;
   }
   .week-card {
-    background: var(--bg-card);
+    background: var(--accent-primary);
     padding: 40px 32px;
     position: relative;
     box-shadow: var(--shadow);
-    border-top: 3px solid var(--accent-primary);
+    border-top: 3px solid var(--accent-warm);
   }
+  .week-card .week-label { color: var(--accent-warm) !important; }
+  .week-card .week-title { color: white !important; }
+  .week-card .week-focus { color: rgba(255,255,255,0.8) !important; }
+  .week-card .week-items li { 
+    color: rgba(255,255,255,0.9) !important; 
+    border-bottom-color: rgba(255,255,255,0.15);
+  }
+  .week-card .week-items li::before { color: var(--accent-warm) !important; }
+  .week-card .week-hw {
+    background: rgba(255,255,255,0.1) !important;
+    border-left-color: var(--accent-warm) !important;
+  }
+  .week-card .week-hw-title { color: var(--accent-warm) !important; }
+  .week-card .week-hw p { color: rgba(255,255,255,0.85) !important; }
   .week-label {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px; letter-spacing: 0.2em;
