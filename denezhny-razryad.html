@@ -224,6 +224,22 @@
   }
 
   /* PROGRAM */
+  .program-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @media(max-width: 900px) {
+    .program-header { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .program-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
   .weeks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -623,9 +639,16 @@
 
 <!-- PROGRAM -->
 <section id="program">
-  <div class="section-tag">Программа</div>
-  <h2 class="section-title display reveal">4 недели.<br>8 часов работы.</h2>
-  <p class="section-intro reveal">Каждое занятие — 2 часа в формате психологической группы онлайн. Между занятиями — задания, которые встраиваются в жизнь, а не требуют часов.</p>
+  <div class="program-header">
+    <div class="program-text">
+      <div class="section-tag">Программа</div>
+      <h2 class="section-title display reveal">4 недели.<br>8 часов работы.</h2>
+      <p class="section-intro reveal">Каждое занятие — 2 часа в формате психологической группы онлайн. Между занятиями — задания, которые встраиваются в жизнь, а не требуют часов.</p>
+    </div>
+    <div class="program-image reveal">
+      <img src="images/105.png?v=2" alt="Программа интенсива" loading="lazy">
+    </div>
+  </div>
 
   <div class="weeks-grid">
 
