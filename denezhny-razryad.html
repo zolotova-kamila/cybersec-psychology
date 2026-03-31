@@ -293,6 +293,22 @@
   .week-hw p { font-size: 13px; color: var(--text-secondary); }
 
   /* RESULTS */
+  .results-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @media(max-width: 900px) {
+    .results-header { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .results-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
   .results-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -569,7 +585,7 @@
       <p class="section-intro reveal">Это не про «у меня мало денег». Это про то, что деньги есть — но они не остаются. Или их нет, и это стало привычным фоном жизни.</p>
     </div>
     <div class="audience-image reveal">
-      <img src="images/101.png" alt="Денежный разряд - иллюстрация" loading="lazy">
+      <img src="images/101.png?v=2" alt="Денежный разряд - иллюстрация" loading="lazy">
     </div>
   </div>
 
@@ -682,9 +698,16 @@
 
 <!-- RESULTS -->
 <section id="results">
-  <div class="section-tag">Результаты</div>
-  <h2 class="section-title display reveal">Честно<br>о том, что возможно</h2>
-  <p class="section-intro reveal">Мы не обещаем «выйдете в плюс за 4 недели». Но мы даём то, что реально работает за месяц.</p>
+  <div class="results-header">
+    <div class="results-text">
+      <div class="section-tag">Результаты</div>
+      <h2 class="section-title display reveal">Честно<br>о том, что возможно</h2>
+      <p class="section-intro reveal">Мы не обещаем «выйдете в плюс за 4 недели». Но мы даём то, что реально работает за месяц.</p>
+    </div>
+    <div class="results-image reveal">
+      <img src="images/103.png?v=2" alt="Результаты интенсива" loading="lazy">
+    </div>
+  </div>
 
   <div class="results-grid">
     <div class="result-col yes reveal">
