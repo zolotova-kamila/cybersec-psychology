@@ -179,6 +179,24 @@
     max-width: 600px; margin-bottom: 60px;
   }
 
+  /* AUDIENCE HEADER with image */
+  .audience-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @media(max-width: 900px) {
+    .audience-header { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .audience-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
   /* PAIN CARDS */
   .pain-grid {
     display: grid;
@@ -544,9 +562,16 @@
 
 <!-- FOR WHOM -->
 <section id="audience">
-  <div class="section-tag">Для кого</div>
-  <h2 class="section-title display reveal">Узнаёте<br>себя?</h2>
-  <p class="section-intro reveal">Это не про «у меня мало денег». Это про то, что деньги есть — но они не остаются. Или их нет, и это стало привычным фоном жизни.</p>
+  <div class="audience-header">
+    <div class="audience-text">
+      <div class="section-tag">Для кого</div>
+      <h2 class="section-title display reveal">Узнаёте<br>себя?</h2>
+      <p class="section-intro reveal">Это не про «у меня мало денег». Это про то, что деньги есть — но они не остаются. Или их нет, и это стало привычным фоном жизни.</p>
+    </div>
+    <div class="audience-image reveal">
+      <img src="images/101.jpg" alt="Денежный разряд - иллюстрация" loading="lazy">
+    </div>
+  </div>
 
   <div class="pain-grid">
     <div class="pain-card reveal">
