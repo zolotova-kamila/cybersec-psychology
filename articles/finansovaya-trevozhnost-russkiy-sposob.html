@@ -407,17 +407,71 @@
   .progress-fill.green { background: #059669; }
   .progress-fill.blue { background: #2563EB; }
 
-  /* References */
-  .refs {
+  /* References Accordion */
+  .refs-accordion {
+    margin: 48px 0;
+    border: 1px solid var(--teal-mid);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .refs-toggle {
+    width: 100%;
+    background: var(--teal-light);
+    border: none;
+    padding: 18px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s;
+  }
+  .refs-toggle:hover {
+    background: var(--sage-light);
+  }
+  .refs-toggle-icon {
+    font-size: 12px;
+    transition: transform 0.3s;
+  }
+  .refs-toggle.active .refs-toggle-icon {
+    transform: rotate(180deg);
+  }
+  .refs-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: var(--white);
+  }
+  .refs-content.active {
+    max-height: 3000px;
+    transition: max-height 0.5s ease-in;
+  }
+  .refs-inner {
+    padding: 24px;
     font-size: 13px;
     color: var(--grey);
     line-height: 1.8;
   }
-  .refs a {
+  .refs-inner a {
     color: var(--teal);
     text-decoration: none;
+    word-break: break-all;
   }
-  .refs a:hover { text-decoration: underline; }
+  .refs-inner a:hover { text-decoration: underline; }
+  .ref-item {
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+  }
+  .ref-num {
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 600;
+  }
 
   /* Author block */
   .author-block {
@@ -1025,6 +1079,59 @@
     </tbody>
   </table>
 
+  <!-- References Accordion -->
+  <div class="refs-accordion">
+    <button class="refs-toggle" onclick="toggleRefs()">
+      <span>📚 Список источников</span>
+      <span class="refs-toggle-icon">▼</span>
+    </button>
+    <div class="refs-content" id="refsContent">
+      <div class="refs-inner">
+        <div class="ref-item"><span class="ref-num">[91]</span>Коммерсантъ: <a href="https://www.kommersant.ru/doc/8162778" target="_blank">Исследование финансовой тревоги в России</a></div>
+        <div class="ref-item"><span class="ref-num">[139]</span>PlusWorld: <a href="https://plusworld.ru/articles/70503/" target="_blank">Поведение россиян в условиях экономической нестабильности</a></div>
+        <div class="ref-item"><span class="ref-num">[143]</span>Preprints.org: <a href="https://www.preprints.org/manuscript/202008.0012/v1/download" target="_blank">Финансовая тревога и гендерные различия</a></div>
+        <div class="ref-item"><span class="ref-num">[173]</span>IntelliNews: <a href="https://www.intellinews.com/russia-s-budget-deficit-widens-as-analysts-warn-of-potential-banking-crisis-in-2026-416617/" target="_blank">Бюджетный дефицит и прогнозы банковского кризиса</a></div>
+        <div class="ref-item"><span class="ref-num">[201]</span>UBOS.tech: <a href="https://ubos.tech/news/russia-economy-enters-death-zone-in-2026-deepening-crisis-and-bleak-financial-outlook/" target="_blank">Экономический кризис в России 2026</a></div>
+        <div class="ref-item"><span class="ref-num">[215]</span>RB.ru: <a href="https://rb.ru/news/44-rossiyan-stali-silnee-perezhivat-o-finansah-rost-cen-i-strah-poteri-dohoda-glavnye-prichiny-trevogi-v-2026-m/" target="_blank">Причины финансовой тревоги в 2026 году</a></div>
+        <div class="ref-item"><span class="ref-num">[217]</span>Арден Рина: <a href="https://www.litres.ru/book/rina-arden/finansovaya-trevoga-kak-navesti-poryadok-v-dengah-i-perestat-bo-73116273/chitat-onlayn/" target="_blank">Финансовая тревога: как навести порядок в деньгах</a></div>
+        <div class="ref-item"><span class="ref-num">[222]</span>VC.ru: <a href="https://vc.ru/id4600292/2795703-strah-bednosti-u-zhenshchin" target="_blank">Страх бедности у женщин</a></div>
+        <div class="ref-item"><span class="ref-num">[234]</span>MoneyTimes: <a href="https://www.moneytimes.ru/articles/financial-behavior-disorder-5dl/119667/" target="_blank">Финансовое поведение и психологические расстройства</a></div>
+        <div class="ref-item"><span class="ref-num">[236]</span>РСВ: <a href="https://rsv.ru/blog/kak-spravitsya-s-finansovoj-trevozhnostyu/" target="_blank">Как справиться с финансовой тревожностью</a></div>
+        <div class="ref-item"><span class="ref-num">[237]</span>ТОГУ: <a href="https://togudv.ru/media/vestnik/articles/416.pdf" target="_blank">Финансовая культура населения</a></div>
+        <div class="ref-item"><span class="ref-num">[272]</span>РСВ: <a href="https://rsv.ru/blog/kak-spravitsya-s-finansovoj-trevozhnostyu/" target="_blank">Методы преодоления финансовой тревоги</a></div>
+        <div class="ref-item"><span class="ref-num">[274]</span>Газпромбанк: <a href="https://www.gazprombank.ru/pro-finance/lifestyle/kak-perestat-trevozhitsya-iz-za-deneg/" target="_blank">Как перестать тревожиться из-за денег</a></div>
+        <div class="ref-item"><span class="ref-num">[283]</span>Psychodemia: <a href="https://psychodemia.ru/blog/finansovaya-travma-kak-perestat-boyatsya-deneg" target="_blank">Финансовая травма: как перестать бояться денег</a></div>
+        <div class="ref-item"><span class="ref-num">[289]</span>Preprints.org: <a href="https://www.preprints.org/manuscript/202008.0012/v1/download" target="_blank">Финансовая уверенность и страхование</a></div>
+        <div class="ref-item"><span class="ref-num">[292]</span>ВБР: <a href="https://www.vbr.ru/help/novosti/deneg-net-no-vi-lecites-12398/" target="_blank">Денег нет, но вы лечитесь</a></div>
+        <div class="ref-item"><span class="ref-num">[301]</span>Lettmag: <a href="https://lettmag.ru/life/finansovaya-trevozhnost-2026-pochemu-znanie-bolshe-ne-uteshaet/" target="_blank">Финансовая тревожность 2026</a></div>
+        <div class="ref-item"><span class="ref-num">[302]</span>Газета.ru: <a href="https://www.gazeta.ru/social/news/2026/01/19/27658255.shtml" target="_blank">Финансовая тревога и психологическая помощь</a></div>
+        <div class="ref-item"><span class="ref-num">[303]</span>Известия: <a href="https://iz.ru/2027451/2026-01-19/eksperty-nazvali-prichiny-finansovoi-trevogi-i-sposoby-borby-s-nei" target="_blank">Причины финансовой тревоги и способы борьбы</a></div>
+        <div class="ref-item"><span class="ref-num">[311]</span>Клерк: <a href="https://www.klerk.ru/buh/news/683735/" target="_blank">Исследование РАН о финансовой тревоге</a></div>
+        <div class="ref-item"><span class="ref-num">[357]</span>The Moscow Times: <a href="https://www.themoscowtimes.com/2026/03/16/russians-report-worsening-mental-health-amid-rising-economic-worries-ras-survey-a92240/" target="_blank">Ухудшение психического здоровья россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[365]</span>MDPI: <a href="https://www.mdpi.com/2227-9091/12/12/203" target="_blank">Невротизм и панические продажи</a></div>
+        <div class="ref-item"><span class="ref-num">[376]</span>СПбГУ: <a href="https://english.spbu.ru/news-events/news/sociologists-st-petersburg-university-identify-personality-traits-linked" target="_blank">Черты личности и финансовое поведение</a></div>
+        <div class="ref-item"><span class="ref-num">[382]</span>Клерк: <a href="https://www.klerk.ru/buh/news/683735/" target="_blank">Экономические страхи россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[383]</span>Политсовет: <a href="https://politsovet.ru/86891-dve-treti-rossiyan-ispytyvayut-trevogu-iz-za-finansovyh-problem.html" target="_blank">Две трети россиян испытывают тревогу</a></div>
+        <div class="ref-item"><span class="ref-num">[384]</span>Город ВО: <a href="https://gorodvo.ru/news/7396776-u-jiteley-rossii-usilivaetsya-finansovaya-trevoga" target="_blank">Усиление финансовой тревоги у россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[394]</span>The Moscow Times: <a href="https://ru.themoscowtimes.com/2026/03/16/-33-a189844" target="_blank">Экономические прогнозы россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[412]</span>МИР 24: <a href="https://mir24.tv/news/16661875/nazvany-samye-populyarnye-sposoby-borby-so-stressom-u-zhitelej-rossijskih-megapolisov" target="_blank">Способы борьбы со стрессом</a></div>
+        <div class="ref-item"><span class="ref-num">[421]</span>ФОМ: <a href="https://fom.ru/Nastroeniya/15289" target="_blank">Индекс благополучия россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[425]</span>IntelliNews: <a href="https://www.intellinews.com/russians-face-economic-strain-as-inflation-fears-and-tax-hikes-dampen-outlook-for-2026-417922/" target="_blank">Экономическое давление на россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[436]</span>Lettmag: <a href="https://lettmag.ru/life/finansovaya-trevozhnost-2026-pochemu-znanie-bolshe-ne-uteshaet/" target="_blank">Почему знание больше не утешает</a></div>
+        <div class="ref-item"><span class="ref-num">[437]</span>Газета.ru: <a href="https://www.gazeta.ru/social/news/2026/01/19/27658255.shtml" target="_blank">Профессиональная помощь при финансовой тревоге</a></div>
+        <div class="ref-item"><span class="ref-num">[440]</span>Psychologies: <a href="https://www.psychologies.ru/articles/trevoga-o-dengakh-v-2026-godu-pochemu-osvedomlennost-o-rabote-s-finansami-ne-delaet-nas-spokoinee/" target="_blank">Тревога о деньгах в 2026 году</a></div>
+        <div class="ref-item"><span class="ref-num">[441]</span>Finance.Mail.ru: <a href="https://finance.mail.ru/article/rossiyane-nazvali-svoi-glavnye-finansovye-strahi-68949935/" target="_blank">Главные финансовые страхи россиян</a></div>
+        <div class="ref-item"><span class="ref-num">[442]</span>Ингосстрах: <a href="https://www.ingos.ru/company/news/2025/a526f1f2-39c6-4273-ba21-d272057a4213" target="_blank">Исследование финансовой тревожности</a></div>
+        <div class="ref-item"><span class="ref-num">[454]</span>Банки.ru: <a href="https://www.banki.ru/news/daytheme/?id=11013345" target="_blank">Эффект неопределенности в экономике</a></div>
+        <div class="ref-item"><span class="ref-num">[458]</span>RussiaPost: <a href="https://russiapost.info/society/reframing_wartime_hardships" target="_blank">Рефрейминг военных трудностей</a></div>
+        <div class="ref-item"><span class="ref-num">[460]</span>Банки.ru: <a href="https://www.banki.ru/news/daytheme/?id=10998456" target="_blank">Финансовое планирование и тревога</a></div>
+        <div class="ref-item"><span class="ref-num">[465]</span>Psychologies: <a href="https://www.psychologies.ru/articles/trevoga-o-dengakh-v-2026-godu-pochemu-osvedomlennost-o-rabote-s-finansami-ne-delaet-nas-spokoinee/" target="_blank">Разрыв между знанием и действием</a></div>
+        <div class="ref-item"><span class="ref-num">[470]</span>Город ВО: <a href="https://gorodvo.ru/news/7396776-u-jiteley-rossii-usilivaetsya-finansovaya-trevoga" target="_blank">Динамика финансовой тревоги</a></div>
+        <div class="ref-item"><span class="ref-num">[487]</span>НАФИ: <a href="https://nafi.ru/polls/rossiyane-khuzhe-rabotayut-iz-za-problem-s-dengami-i-gotovy-uchitsya-fingramotnosti-na-rabote/" target="_blank">Влияние финансовых проблем на работу</a></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Conclusion -->
   <hr>
 
@@ -1076,6 +1183,15 @@
 <footer class="footer">
   <p>© 2026 Камила Золотова · <a href="/privacy.html">Правовая информация</a> · <a href="https://www.b17.ru/zolotova_psychologist/?prt=764511">B17.ru</a></p>
 </footer>
+
+<script>
+function toggleRefs() {
+  const content = document.getElementById('refsContent');
+  const toggle = document.querySelector('.refs-toggle');
+  content.classList.toggle('active');
+  toggle.classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
