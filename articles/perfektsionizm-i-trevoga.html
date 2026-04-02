@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Почему перфекционизм — это не черта характера, а форма хронической тревоги. Три типа, механизм замкнутого круга и четыре КПТ-техники для работы с ним.">
+<meta name="keywords" content="перфекционизм, тревога, КПТ, психолог, самокритика, синдром самозванца">
+<title>Перфекционизм и тревога: почему «хорошо» никогда не достаточно | Психолог Камила Золотова</title>
+<link rel="canonical" href="https://pozitiv-psychology.ru/articles/perfektsionizm-i-trevoga.html">
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<meta property="og:title" content="Перфекционизм и тревога: почему «хорошо» никогда не достаточно">
+<meta property="og:description" content="Почему перфекционизм — это не черта характера, а форма хронической тревоги. Три типа, механизм замкнутого круга и четыре КПТ-техники.">
+<meta property="og:image" content="https://pozitiv-psychology.ru/images/baner.png">
+<meta property="og:url" content="https://pozitiv-psychology.ru/articles/perfektsionizm-i-trevoga.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-04-02">
+<meta property="article:author" content="https://pozitiv-psychology.ru/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:       #2A7B6F;
+    --teal-dark:  #1A5248;
+    --teal-light: #E8F5F2;
+    --teal-mid:   #C5E8E2;
+    --gold:       #C9A84C;
+    --gold-light: #FDF6E3;
+    --dark:       #1A2E2B;
+    --grey:       #5A6E6B;
+    --light:      #F7FAFA;
+    --white:      #FFFFFF;
+    --max:        740px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.75;
+    font-size: 17px;
+  }
+
+  /* NAV */
+  .nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--teal-mid);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .nav-sep { color: var(--teal-mid); margin: 0 4px; }
+  .nav-crumb { font-size: 13px; color: var(--grey); text-decoration: none; }
+  .nav-crumb:hover { color: var(--teal); }
+  .nav-current { font-size: 13px; color: var(--teal); font-weight: 600; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, #3D9A8A 100%);
+    padding: 64px 24px 52px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -20%;
+    width: 140%; height: 200%;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.9);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    max-width: 640px;
+    margin: 0 auto 16px;
+    position: relative;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.85);
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    position: relative;
+  }
+  .hero-meta strong { color: var(--white); font-weight: 600; }
+
+  /* CONTAINER */
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* LEAD */
+  .lead {
+    font-size: 19px;
+    font-style: italic;
+    color: var(--grey);
+    line-height: 1.65;
+    margin: 48px 0 32px;
+    padding: 24px 28px;
+    background: var(--teal-light);
+    border-radius: 12px;
+    border-left: 4px solid var(--teal);
+  }
+
+  /* HEADINGS */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 700;
+    color: var(--dark);
+    margin: 48px 0 16px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  h2 .teal { color: var(--teal); }
+  h3 { font-size: 17px; font-weight: 700; color: var(--teal-dark); margin: 28px 0 10px; }
+  p { margin-bottom: 18px; }
+
+  /* EYEBROW */
+  .eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 6px;
+    margin-top: 40px;
+  }
+
+  /* BOXES */
+  .box {
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 28px 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .box-icon { font-size: 20px; line-height: 1.55; flex-shrink: 0; }
+  .box-body { flex: 1; }
+  .box-body p:last-child { margin-bottom: 0; }
+  .info { background: var(--teal-light); border-left: 4px solid var(--teal); }
+  .warn { background: #FEF3C7; border-left: 4px solid #FCD34D; }
+  .tip { background: #ECFDF5; border-left: 4px solid #6EE7B7; }
+  .violet { background: #F5F3FF; border-left: 4px solid #C4B5FD; }
+
+  /* TABLE */
+  .tbl-wrap { overflow-x: auto; margin: 28px 0; }
+  table {
+    width: 100%; border-collapse: collapse; font-size: 15px;
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,.07);
+  }
+  th {
+    padding: 13px 18px; text-align: left;
+    font-weight: 600; font-size: 14px; color: #fff;
+  }
+  th:nth-child(1) { background: #374151; width: 22%; }
+  th:nth-child(2) { background: #059669; }
+  th:nth-child(3) { background: #DC2626; }
+  td {
+    padding: 12px 18px; border-bottom: 1px solid var(--teal-mid);
+    vertical-align: top; line-height: 1.6; font-size: 14px;
+  }
+  tr:nth-child(even) td { background: var(--light); }
+  tr:last-child td { border-bottom: none; }
+  .td-param { font-weight: 600; color: var(--dark); }
+  .td-good { color: #065F46; }
+  .td-bad { color: #991B1B; }
+
+  /* TYPE CARDS */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px; margin: 28px 0;
+  }
+  .type-card {
+    border-radius: 12px; padding: 22px 20px;
+    border: 1px solid var(--teal-mid); background: var(--white);
+    transition: box-shadow .2s, border-color .2s;
+  }
+  .type-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,.08); border-color: var(--teal-mid); }
+  .type-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 15px; margin-bottom: 12px;
+  }
+  .type-num.t1 { background: #DBEAFE; color: #1D4ED8; }
+  .type-num.t2 { background: #FCE7F3; color: #9D174D; }
+  .type-num.t3 { background: #FEF3C7; color: #92400E; }
+  .type-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+  .type-voice {
+    font-size: 13px; font-style: italic; color: var(--grey);
+    background: var(--light); padding: 8px 12px; border-radius: 7px;
+    border-left: 3px solid var(--teal-mid); margin-bottom: 10px; line-height: 1.6;
+  }
+  .type-desc { font-size: 13px; color: var(--dark); line-height: 1.65; }
+
+  /* CYCLE */
+  .cycle {
+    background: var(--light); border: 1px solid var(--teal-mid);
+    border-radius: 12px; padding: 32px 28px; margin: 28px 0;
+  }
+  .cycle-title {
+    font-size: 13px; font-weight: 700; color: var(--grey);
+    text-transform: uppercase; letter-spacing: .06em; margin-bottom: 24px;
+  }
+  .cycle-steps {
+    display: flex; align-items: center; flex-wrap: wrap;
+    gap: 0; justify-content: center;
+  }
+  .cycle-step {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; min-width: 110px;
+  }
+  .cycle-bubble {
+    width: 90px; height: 90px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 600; line-height: 1.35;
+    padding: 10px; text-align: center;
+  }
+  .b1 { background: #DBEAFE; color: #1E40AF; border: 2px solid #93C5FD; }
+  .b2 { background: #FEF3C7; color: #92400E; border: 2px solid #FCD34D; }
+  .b3 { background: #FFE4E6; color: #9F1239; border: 2px solid #FECDD3; }
+  .b4 { background: #ECFDF5; color: #065F46; border: 2px solid #6EE7B7; }
+  .b5 { background: #F5F3FF; color: #5B21B6; border: 2px solid #C4B5FD; }
+  .cycle-arrow {
+    font-size: 20px; color: var(--grey); padding: 0 4px;
+    line-height: 90px;
+  }
+  .cycle-note {
+    font-size: 13px; color: var(--grey); margin-top: 20px;
+    text-align: center; line-height: 1.6;
+  }
+  .cycle-note strong { color: #DC2626; }
+
+  /* DISTORTIONS */
+  .distortions { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; }
+  .dist-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--white); border: 1px solid var(--teal-mid);
+    border-radius: 10px; padding: 16px 18px;
+  }
+  .dist-badge {
+    font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 10px;
+    white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+    letter-spacing: .03em;
+  }
+  .db-red { background: #FEE2E2; color: #991B1B; }
+  .db-amber { background: #FEF3C7; color: #92400E; }
+  .db-violet { background: #F5F3FF; color: #5B21B6; }
+  .dist-body { flex: 1; }
+  .dist-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
+  .dist-example { font-size: 14px; color: var(--grey); font-style: italic; }
+
+  /* ROOTS */
+  .roots { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .root-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    border-radius: 10px; padding: 18px 20px;
+    border: 1px solid var(--teal-mid);
+  }
+  .root-icon { font-size: 24px; flex-shrink: 0; }
+  .root-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: var(--dark); }
+  .root-desc { font-size: 14px; color: var(--dark); line-height: 1.65; margin: 0; }
+
+  /* EXERCISE */
+  .exercise {
+    background: var(--light); border: 1px solid var(--teal-mid);
+    border-radius: 12px; padding: 28px 30px;
+    margin: 28px 0; position: relative;
+  }
+  .ex-label {
+    position: absolute; top: -1px; left: 24px;
+    background: var(--teal); color: #fff;
+    font-size: 11px; font-weight: 700;
+    padding: 4px 12px; border-radius: 0 8px 8px 0;
+    letter-spacing: .06em; text-transform: uppercase;
+  }
+  .exercise h3 { margin-top: 18px; margin-bottom: 10px; font-size: 17px; }
+  .ex-meta { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .ex-tag {
+    font-size: 12px; color: var(--grey);
+    background: var(--white); border: 1px solid var(--teal-mid);
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .ex-goal {
+    font-size: 14px; color: var(--grey);
+    margin-bottom: 18px; line-height: 1.6; font-style: italic;
+  }
+
+  /* CHECKLIST */
+  .checklist { margin: 24px 0; }
+  .check-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 13px 0; border-bottom: 1px solid var(--teal-mid);
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-box {
+    width: 22px; height: 22px;
+    border: 2px solid var(--teal-mid); border-radius: 6px;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .check-text { font-size: 15px; color: var(--dark); line-height: 1.6; flex: 1; }
+
+  /* SIGNS */
+  .signs { margin: 24px 0; }
+  .sign-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 14px 0; border-bottom: 1px solid var(--teal-mid);
+  }
+  .sign-item:last-child { border-bottom: none; }
+  .sign-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #DC2626; flex-shrink: 0; margin-top: 7px;
+  }
+  .sign-text { font-size: 15px; color: var(--dark); line-height: 1.65; }
+
+  /* BLOCKQUOTE */
+  blockquote {
+    border-left: 4px solid var(--teal);
+    padding: 18px 26px; margin: 36px 0;
+    background: var(--teal-light);
+    border-radius: 0 12px 12px 0;
+    font-style: italic; color: var(--dark);
+    font-size: 18px; line-height: 1.7;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  blockquote cite {
+    display: block; margin-top: 10px;
+    font-size: 13px; color: var(--grey); font-style: normal;
+  }
+
+  /* HR */
+  hr { border: none; border-top: 1px solid var(--teal-mid); margin: 56px 0; }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+    color: #fff; border-radius: 12px;
+    padding: 48px 44px; text-align: center; margin: 64px 0 52px;
+  }
+  .cta h3 { color: #fff; font-size: 22px; font-weight: 700; margin: 0 0 14px; }
+  .cta p { color: #BFDBFE; font-size: 16px; margin-bottom: 32px; line-height: 1.6; }
+  .btn {
+    display: inline-block; background: #fff; color: var(--teal);
+    font-weight: 700; font-size: 16px;
+    padding: 15px 36px; border-radius: 8px; text-decoration: none;
+    transition: transform .18s, box-shadow .18s;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+
+  /* RELATED */
+  .related { margin-top: 56px; }
+  .related h3 { font-size: 18px; font-weight: 700; margin-bottom: 18px; }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .rel-card {
+    border: 1px solid var(--teal-mid); border-radius: 10px;
+    padding: 16px 18px; text-decoration: none;
+    color: var(--dark); transition: border-color .18s; display: block;
+  }
+  .rel-card:hover { border-color: var(--teal); }
+  .rel-tag { font-size: 11px; color: var(--teal); font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
+  .rel-title { font-size: 14px; font-weight: 600; line-height: 1.4; }
+
+  /* AUTHOR */
+  .author {
+    display: flex; gap: 22px; align-items: flex-start;
+    background: var(--light); border: 1px solid var(--teal-mid);
+    border-radius: 12px; padding: 26px; margin-top: 52px;
+  }
+  .av {
+    width: 68px; height: 68px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), #60A5FA);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 22px; flex-shrink: 0;
+  }
+  .author h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .author p { font-size: 14px; color: var(--grey); margin: 0; line-height: 1.65; }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid var(--teal-mid);
+    padding: 32px 24px; text-align: center;
+    font-size: 13px; color: var(--grey);
+  }
+  .footer a { color: var(--grey); text-decoration: none; }
+  .footer a:hover { color: var(--teal); }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    background: var(--light);
+    border-bottom: 1px solid var(--teal-mid);
+    padding: 12px 24px;
+    font-size: 13px;
+    color: var(--grey);
+  }
+  .breadcrumb a { color: var(--grey); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--teal); }
+  .breadcrumb span { margin: 0 8px; color: var(--teal-mid); }
+
+  @media (max-width: 640px) {
+    .cycle-arrow { display: none; }
+    .type-grid { grid-template-columns: 1fr; }
+    th:nth-child(1), td:nth-child(1) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">Камила Золотова</a>
+  <span class="nav-sep">/</span>
+  <a href="../resources.html" class="nav-crumb">Материалы</a>
+  <span class="nav-sep">/</span>
+  <a href="index.html" class="nav-crumb">Статьи</a>
+  <span class="nav-sep">/</span>
+  <span class="nav-current">Перфекционизм и тревога</span>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../index.html">Главная</a>
+  <span>›</span>
+  <a href="../resources.html">Материалы</a>
+  <span>›</span>
+  <a href="index.html">Статьи</a>
+  <span>›</span>
+  Перфекционизм и тревога
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-tag">Тревога · Самооценка · КПТ</div>
+  <h1>Перфекционизм и тревога:<br>почему <em>«хорошо»</em> никогда не достаточно</h1>
+  <p class="hero-sub">Почему перфекционизм — это не черта характера, а форма хронической тревоги. Три типа, механизм замкнутого круга и четыре КПТ-техники</p>
+  <div class="hero-meta">
+    <strong>Камила Золотова</strong>
+    <span>·</span>
+    <span>2 апреля 2026</span>
+    <span>·</span>
+    <span>12 мин чтения</span>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+  <p class="lead">Антон — руководитель отдела в крупной компании. Блестящий профессионал, которого уважают коллеги. На прошлой неделе он провёл презентацию для совета директоров. Получил аплодисменты и благодарность. В ту же ночь не спал до четырёх утра — прокручивал слайд, который мог быть лучше. Утром он сказал мне: <em>«Я понимаю, что всё прошло хорошо. Но хорошо — это не то, чего я от себя жду».</em></p>
+
+  <span class="eyebrow">Что такое перфекционизм</span>
+  <h2>Перфекционизм vs здоровые стандарты</h2>
+
+  <p>В обыденном языке перфекционизм — синоним высоких стандартов. В психологии — совсем другое. Исследователи Пол Хьюитт и Гордон Флетт определяют его как <strong>сочетание чрезмерно высоких стандартов с критической оценкой себя в случае их недостижения.</strong></p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Параметр</th>
+          <th>✓ Здоровые стандарты</th>
+          <th>✗ Перфекционизм</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-param">Мотивация</td>
+          <td class="td-good">Желание сделать хорошо</td>
+          <td class="td-bad">Страх сделать плохо</td>
+        </tr>
+        <tr>
+          <td class="td-param">После успеха</td>
+          <td class="td-good">Удовлетворение, отдых</td>
+          <td class="td-bad">Облегчение и новая тревога</td>
+        </tr>
+        <tr>
+          <td class="td-param">После ошибки</td>
+          <td class="td-good">Разочарование, движение дальше</td>
+          <td class="td-bad">Жёсткая самокритика, стыд</td>
+        </tr>
+        <tr>
+          <td class="td-param">Гибкость</td>
+          <td class="td-good">«Хорошо» достаточно</td>
+          <td class="td-bad">«Хорошо» никогда не достаточно</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box info">
+    <div class="box-icon">💡</div>
+    <div class="box-body">
+      <p>Многие перфекционисты <strong>не считают себя перфекционистами</strong>. «Я просто хочу делать хорошо» — звучит разумно. Но если «хорошо» никогда не приходит — это уже не стандарт. Это симптом.</p>
+    </div>
+  </div>
+
+  <span class="eyebrow">Три типа</span>
+  <h2>Какой перфекционизм у вас</h2>
+
+  <p>Хьюитт и Флетт выделили три типа — и важно понимать, какой работает в вашем случае, потому что у каждого своя точка входа для терапии.</p>
+
+  <div class="type-grid">
+    <div class="type-card">
+      <div class="type-num t1">Я</div>
+      <div class="type-name">Я-направленный</div>
+      <div class="type-voice">«Я должен делать всё идеально. Мои ошибки — это провал»</div>
+      <div class="type-desc">Жёсткие стандарты к себе. Высокая самокритика. Часто сочетается с синдромом самозванца. Приводит к выгоранию через гиперконтроль.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num t2">→</div>
+      <div class="type-name">Другонаправленный</div>
+      <div class="type-voice">«Они всё делают неправильно. Проще сделать самому»</div>
+      <div class="type-desc">Нетерпимость к ошибкам других. Трудности с делегированием, раздражение в команде. За ним стоит тревога потери контроля.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-num t3">↑</div>
+      <div class="type-name">Социально предписанный</div>
+      <div class="type-voice">«Все ждут от меня совершенства. Я не могу их подвести»</div>
+      <div class="type-desc">Самый токсичный тип: человек несёт стандарты, которые <em>сам же и придумал</em> за других. Высокий риск тревожного расстройства.</div>
+    </div>
+  </div>
+
+  <span class="eyebrow">Механизм</span>
+  <h2>Замкнутый круг перфекциониста</h2>
+
+  <p>Перфекционизм и тревога <strong>взаимно усиливают</strong> друг друга по замкнутому циклу, из которого без осознанной работы почти невозможно выйти.</p>
+
+  <div class="cycle">
+    <div class="cycle-title">Цикл самовозобновления</div>
+    <div class="cycle-steps">
+      <div class="cycle-step">
+        <div class="cycle-bubble b1">Высокий стандарт — «должно быть идеально»</div>
+      </div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-step">
+        <div class="cycle-bubble b2">Страх не соответствовать — тревога</div>
+      </div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-step">
+        <div class="cycle-bubble b3">Гиперконтроль или прокрастинация</div>
+      </div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-step">
+        <div class="cycle-bubble b4">Временное облегчение</div>
+      </div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-step">
+        <div class="cycle-bubble b5">Планка поднимается выше</div>
+      </div>
+    </div>
+    <div class="cycle-note">
+      Облегчение после задачи — <strong>кратковременное</strong>. Оно никогда не «заряжает» ресурс.<br>
+      Именно поэтому перфекционисты хронически истощены, даже при высокой эффективности.
+    </div>
+  </div>
+
+  <h3>Три когнитивных искажения</h3>
+
+  <div class="distortions">
+    <div class="dist-item">
+      <span class="dist-badge db-red">Чёрно-белое</span>
+      <div class="dist-body">
+        <div class="dist-name">«Либо идеально — либо провал»</div>
+        <div class="dist-example">«Я получил 9 из 10 — значит, я недостаточно постарался»</div>
+      </div>
+    </div>
+    <div class="dist-item">
+      <span class="dist-badge db-amber">Катастрофизация</span>
+      <div class="dist-body">
+        <div class="dist-name">«Если я ошибусь — это будет катастрофа»</div>
+        <div class="dist-example">«Если я скажу неточно — меня перестанут уважать»</div>
+      </div>
+    </div>
+    <div class="dist-item">
+      <span class="dist-badge db-violet">Чтение мыслей</span>
+      <div class="dist-body">
+        <div class="dist-name">«Все видят мои недостатки»</div>
+        <div class="dist-example">«Они вежливо говорят, что хорошо — но на самом деле разочарованы»</div>
+      </div>
+    </div>
+  </div>
+
+  <blockquote>
+    <p>Перфекционист не живёт в реальности своих достижений — он живёт в воображаемом пространстве того, что могло бы быть сделано лучше. Это пространство бесконечно.</p>
+    <cite>— из практики работы с тревогой</cite>
+  </blockquote>
+
+  <span class="eyebrow">Корни</span>
+  <h2>Откуда это берётся</h2>
+
+  <p>Перфекционизм не возникает сам по себе. Он всегда имеет историю — и почти всегда она начинается в семье.</p>
+
+  <div class="roots">
+    <div class="root-item">
+      <div class="root-icon">❤️‍🩹</div>
+      <div>
+        <div class="root-title">Условная любовь</div>
+        <p class="root-desc">«Молодец — получил пятёрку», «Ты нас разочаровал» — послания, в которых принятие зависит от результата. Ребёнок делает вывод: меня любят не за то, кто я, а за то, что я делаю.</p>
+      </div>
+    </div>
+    <div class="root-item">
+      <div class="root-icon">👁️</div>
+      <div>
+        <div class="root-title">Критикующий родитель</div>
+        <p class="root-desc">Явный — «это можно было сделать лучше». Или «заботливый» — «я критикую, потому что хочу для тебя лучшего». В обоих случаях ребёнок усваивает: любой результат недостаточен.</p>
+      </div>
+    </div>
+    <div class="root-item">
+      <div class="root-icon">🌪️</div>
+      <div>
+        <div class="root-title">Тревожная семейная система</div>
+        <p class="root-desc">Семья, где ошибка = опасность, «что подумают люди» — главный регулятор. Ребёнок учится: мир небезопасен для несовершенных. Контроль становится стратегией выживания.</p>
+      </div>
+    </div>
+  </div>
+
+  <span class="eyebrow">Техники</span>
+  <h2>Четыре КПТ-упражнения</h2>
+
+  <p>Когнитивно-поведенческая терапия — один из наиболее исследованных методов работы с перфекционистской тревогой.</p>
+
+  <!-- УПРАЖНЕНИЕ 1 -->
+  <div class="exercise">
+    <div class="ex-label">Техника 1</div>
+    <h3>«Пирог ответственности»</h3>
+    <div class="ex-meta">
+      <span class="ex-tag">⏱ 15–20 мин</span>
+      <span class="ex-tag">🎯 Для снижения гиперответственности</span>
+    </div>
+    <p class="ex-goal">Цель: увидеть, что результат зависит от множества факторов — не только от вас.</p>
+    <ol>
+      <li>Возьмите ситуацию, в которой вы чувствуете, что результат целиком зависит от вас.</li>
+      <li>Нарисуйте круг. Это «пирог» всей ответственности — 100%.</li>
+      <li>Запишите <strong>всех остальных участников</strong>: коллеги, обстоятельства, время, решения других. Каждому выделите кусок.</li>
+      <li>В последнюю очередь — только то, что осталось — выделите себе.</li>
+    </ol>
+    <div class="box tip" style="margin-top:18px;margin-bottom:0">
+      <div class="box-icon">💚</div>
+      <div class="box-body">
+        <p style="margin:0">Перфекционисты почти всегда берут себе 80–100% ответственности. Реальная цифра оказывается 20–40%. Это не снятие ответственности — это её точная калибровка.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- УПРАЖНЕНИЕ 2 -->
+  <div class="exercise">
+    <div class="ex-label">Техника 2</div>
+    <h3>«Достаточно хорошо»: эксперимент</h3>
+    <div class="ex-meta">
+      <span class="ex-tag">⏱ 1–2 недели</span>
+      <span class="ex-tag">⚡ Самая мощная техника</span>
+    </div>
+    <p class="ex-goal">Цель: проверить убеждение «если я сделаю не идеально — произойдёт катастрофа».</p>
+    <ol>
+      <li>Выберите задачу, которую вы обычно перфекционируете.</li>
+      <li>Запишите прогноз: «Если я отправлю это на 80%, а не на 100% — что произойдёт?»</li>
+      <li>Намеренно остановитесь на 80% — и отправьте. Не улучшайте.</li>
+      <li>Зафиксируйте: что произошло в реальности? Совпало ли с прогнозом?</li>
+    </ol>
+  </div>
+
+  <!-- УПРАЖНЕНИЕ 3 -->
+  <div class="exercise">
+    <div class="ex-label">Техника 3</div>
+    <h3>«Двойной стандарт»</h3>
+    <div class="ex-meta">
+      <span class="ex-tag">⏱ 10 мин</span>
+      <span class="ex-tag">🫀 Для самокритики</span>
+    </div>
+    <p class="ex-goal">Цель: увидеть несоответствие между тем, как вы относитесь к себе и к другому.</p>
+    <ol>
+      <li>Вспомните ситуацию, в которой вы жёстко себя критиковали.</li>
+      <li>Запишите дословно, что вы говорили себе.</li>
+      <li>Представьте: ваш близкий друг оказался в точно такой же ситуации. Что бы вы ему сказали?</li>
+      <li>Задайте вопрос: <em>«Почему я заслуживаю худшего обращения, чем мой друг?»</em></li>
+    </ol>
+  </div>
+
+  <!-- УПРАЖНЕНИЕ 4 -->
+  <div class="exercise">
+    <div class="ex-label">Техника 4</div>
+    <h3>«Шкала катастроф»</h3>
+    <div class="ex-meta">
+      <span class="ex-tag">⏱ 5 мин</span>
+      <span class="ex-tag">🔄 В моменте</span>
+    </div>
+    <p class="ex-goal">Цель: остановить катастрофизацию в момент нарастающей тревоги.</p>
+    <ol>
+      <li>Когда ошибка кажется катастрофой — остановитесь.</li>
+      <li>Представьте шкалу 1–10, где 10 — угроза жизни, 1–3 — дискомфорт.</li>
+      <li>Честно поместите ситуацию на шкалу. Где она?</li>
+      <li>Задайте вопрос: <em>«Буду ли я помнить об этом через год?»</em></li>
+    </ol>
+  </div>
+
+  <span class="eyebrow">Когда обращаться</span>
+  <h2>Когда нужен психолог</h2>
+
+  <p>Описанные техники — хороший старт. Но перфекционизм, который сформировался как ответ на ранний опыт, часто залегает глубже.</p>
+
+  <div class="signs">
+    <div class="sign-item">
+      <div class="sign-dot"></div>
+      <div class="sign-text">Техники понятны, но <strong>поведение не меняется</strong> — вы всё равно перфекционируете</div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-dot"></div>
+      <div class="sign-text">Тревога <strong>нарастает</strong>, а не снижается — несмотря на хорошие результаты</div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-dot"></div>
+      <div class="sign-text"><strong>Физические симптомы:</strong> хроническое напряжение, бессонница, головные боли</div>
+    </div>
+    <div class="sign-item">
+      <div class="sign-dot"></div>
+      <div class="sign-text"><strong>Выгорание</strong> — ощущение полного истощения</div>
+    </div>
+  </div>
+
+  <div class="box violet">
+    <div class="box-icon">🎯</div>
+    <div class="box-body">
+      <p><strong>Почему «просто расслабься» не работает.</strong> Перфекционизм — это не убеждение, которое можно отменить решением. Это усвоенная стратегия выживания. В работе я сочетаю КПТ-техники с ДПДГ — это позволяет добраться до детского опыта, из которого перфекционизм вырос.</p>
+    </div>
+  </div>
+
+  <p>И последнее: <strong>перфекционизм не нужно «убивать».</strong> Ваши стандарты, внимание к качеству — это ценные качества. Задача терапии не в том, чтобы вы стали безразличны к результату. А в том, чтобы вы перестали жить в страхе и начали жить в выборе.</p>
+
+  <hr />
+
+  <!-- CTA -->
+  <div class="cta">
+    <h3>Узнали себя в этой статье?</h3>
+    <p>Перфекционизм меняется — не через силу воли, а через понимание того, откуда он пришёл. Запишитесь на консультацию — разберёмся вместе.</p>
+    <a class="btn" href="https://t.me/Kamila_Zolotova">Записаться в Telegram</a>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related">
+    <h3>Читайте также</h3>
+    <div class="related-grid">
+      <a class="rel-card" href="sindrom-samozvantsa.html">
+        <div class="rel-tag">Самооценка</div>
+        <div class="rel-title">Синдром самозванца: почему успешные люди боятся разоблачения</div>
+      </a>
+      <a class="rel-card" href="ne-khochu-rabotat.html">
+        <div class="rel-tag">Выгорание</div>
+        <div class="rel-title">Я больше не хочу работать: выгорание или пора менять профессию?</div>
+      </a>
+      <a class="rel-card" href="kpt-terapiya-chto-eto.html">
+        <div class="rel-tag">КПТ</div>
+        <div class="rel-title">КПТ-терапия: что это такое и как она работает</div>
+      </a>
+      <a class="rel-card" href="simptomy-trevozhnogo-rasstroystva.html">
+        <div class="rel-tag">Тревога</div>
+        <div class="rel-title">Симптомы тревожного расстройства — как распознать</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Камила Золотова · <a href="../privacy.html">Правовая информация</a></p>
+</footer>
+
+</body>
+</html>
