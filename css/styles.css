@@ -333,49 +333,41 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     flex-wrap: wrap;
 }
 
 .footer-info {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
 }
 
 .footer-contacts {
     text-align: right;
-    flex: 1;
+    flex: 0 0 auto;
     min-width: 200px;
 }
 
 .footer-info h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     color: var(--color-gold, #C9A84C);
-}
-
-.footer-contacts h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-    color: var(--color-gold, #C9A84C);
-    display: none;
 }
 
 .footer-info p,
 .footer-contacts p {
-    margin: 0.2rem 0;
-    font-size: 0.8rem;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
     opacity: 0.9;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .footer-address {
-    margin-top: 0.4rem !important;
-    line-height: 1.4;
+    margin-top: 0.5rem !important;
+    line-height: 1.5;
 }
 
 .footer-contacts a {
@@ -395,6 +387,12 @@ footer {
     flex-wrap: wrap;
     gap: 1rem;
     padding-top: 0.5rem;
+}
+
+.footer-copy,
+.footer-links a {
+    font-size: 0.85rem;
+    opacity: 0.9;
 }
 
 @media (max-width: 640px) {
