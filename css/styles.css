@@ -319,10 +319,10 @@ footer {
 .footer-links a {
     color: var(--text-light);
     text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
+    opacity: 0.9;
+    transition: opacity 0.3s;
 }
 
 .footer-links a:hover { opacity: 1; }
@@ -358,9 +358,11 @@ footer {
 }
 
 .footer-info p,
-.footer-contacts p {
-    margin: 0.3rem 0;
+.footer-contacts p,
+.footer-copy {
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
+    margin: 0.3rem 0;
     opacity: 0.9;
     line-height: 1.5;
 }
@@ -387,12 +389,6 @@ footer {
     flex-wrap: wrap;
     gap: 1rem;
     padding-top: 0.5rem;
-}
-
-.footer-copy,
-.footer-links a {
-    font-size: 0.85rem;
-    opacity: 0.9;
 }
 
 @media (max-width: 640px) {
