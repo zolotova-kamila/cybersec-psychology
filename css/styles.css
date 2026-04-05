@@ -351,10 +351,11 @@ footer {
 }
 
 .footer-info h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    color: var(--color-gold, #C9A84C);
+    color: var(--text-light);
+    opacity: 0.9;
 }
 
 .footer-credentials {
