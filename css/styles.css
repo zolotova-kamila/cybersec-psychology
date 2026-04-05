@@ -357,6 +357,13 @@ footer {
     color: var(--color-gold, #C9A84C);
 }
 
+.footer-credentials {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
 .footer-info p,
 .footer-contacts p,
 .footer-copy {
