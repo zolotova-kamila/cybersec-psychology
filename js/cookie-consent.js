@@ -1,37 +1,8 @@
-// Cookie Consent Banner for 152-FZ Compliance
-(function() {
-    'use strict';
-    
-    const COOKIE_NAME = 'cookie_consent';
-    const COOKIE_EXPIRY_DAYS = 365;
-    
-    // Check if consent already given
-    function getCookie(name) {
-        const value = '; ' + document.cookie;
-        const parts = value.split('; ' + name + '=');
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    }
-    
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/;Secure;SameSite=Strict';
-    }
-    
-    function hasConsent() {
-        return getCookie(COOKIE_NAME) === 'accepted';
-    }
-    
-    function hasDeclined() {
-        return getCookie(COOKIE_NAME) === 'declined';
-    }
-    
-    // Create banner HTML
-    function createBanner() {
-        const banner = document.createElement('div');
-        banner.id = 'cookie-banner';
-        banner.innerHTML = `
+(function(){'use strict';const COOKIE_NAME='cookie_consent';const COOKIE_EXPIRY_DAYS=365;function getCookie(name){const value='; '+document.cookie;const parts=value.split('; '+name+'=');if(parts.length===2)return parts.pop().split(';').shift();return null;}
+function setCookie(name,value,days){const date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));document.cookie=name+'='+value+';expires='+date.toUTCString()+';path=/;Secure;SameSite=Strict';}
+function hasConsent(){return getCookie(COOKIE_NAME)==='accepted';}
+function hasDeclined(){return getCookie(COOKIE_NAME)==='declined';}
+function createBanner(){const banner=document.createElement('div');banner.id='cookie-banner';banner.innerHTML=`
             <div class="cookie-content">
                 <div class="cookie-text">
                     <strong>Мы используем файлы cookie</strong>
@@ -43,12 +14,7 @@
                     <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Принять</button>
                 </div>
             </div>
-        `;
-        document.body.appendChild(banner);
-        
-        // Add styles with fallback colors
-        const styles = document.createElement('style');
-        styles.textContent = `
+        `;document.body.appendChild(banner);const styles=document.createElement('style');styles.textContent=`
             #cookie-banner {
                 position: fixed;
                 bottom: 0;
@@ -160,50 +126,9 @@
             #cookie-banner.hidden {
                 display: none !important;
             }
-        `;
-        document.head.appendChild(styles);
-        
-        // Event listeners
-        document.getElementById('cookie-accept').addEventListener('click', function() {
-            setCookie(COOKIE_NAME, 'accepted', COOKIE_EXPIRY_DAYS);
-            banner.classList.add('hidden');
-            enableAnalytics();
-        });
-        
-        document.getElementById('cookie-decline').addEventListener('click', function() {
-            setCookie(COOKIE_NAME, 'declined', COOKIE_EXPIRY_DAYS);
-            banner.classList.add('hidden');
-            disableAnalytics();
-        });
-    }
-    
-    // Enable analytics after consent
-    function enableAnalytics() {
-        console.log('Cookie consent: Analytics enabled');
-    }
-    
-    // Disable analytics if declined
-    function disableAnalytics() {
-        if (typeof ym !== 'undefined') {
-            window.ym = function() { console.log('Analytics disabled by user choice'); };
-        }
-        if (typeof gtag !== 'undefined') {
-            window.gtag = function() { console.log('Analytics disabled by user choice'); };
-        }
-    }
-    
-    // Initialize
-    function init() {
-        if (!hasConsent() && !hasDeclined()) {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', createBanner);
-            } else {
-                createBanner();
-            }
-        } else if (hasDeclined()) {
-            disableAnalytics();
-        }
-    }
-    
-    init();
-})();
+        `;document.head.appendChild(styles);document.getElementById('cookie-accept').addEventListener('click',function(){setCookie(COOKIE_NAME,'accepted',COOKIE_EXPIRY_DAYS);banner.classList.add('hidden');enableAnalytics();});document.getElementById('cookie-decline').addEventListener('click',function(){setCookie(COOKIE_NAME,'declined',COOKIE_EXPIRY_DAYS);banner.classList.add('hidden');disableAnalytics();});}
+function enableAnalytics(){console.log('Cookie consent: Analytics enabled');}
+function disableAnalytics(){if(typeof ym!=='undefined'){window.ym=function(){console.log('Analytics disabled by user choice');};}
+if(typeof gtag!=='undefined'){window.gtag=function(){console.log('Analytics disabled by user choice');};}}
+function init(){if(!hasConsent()&&!hasDeclined()){if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',createBanner);}else{createBanner();}}else if(hasDeclined()){disableAnalytics();}}
+init();})();
