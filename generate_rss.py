@@ -75,9 +75,23 @@ class ArticleExtractor(HTMLParser):
                 src = attr_dict.get('src', '')
                 if src:
                     if src.startswith('../images/'):
-                        src = BASE_URL + '/images/' + src.replace('../images/', '')
+                        local = src.replace('../images/', 'images/')
+                        # Dzen accepts only JPEG/GIF/PNG — replace WebP with JPEG/PNG fallback
+                        if local.lower().endswith('.webp'):
+                            for ext in ('.jpg', '.jpeg', '.png'):
+                                candidate = local[:-5] + ext
+                                if Path(candidate).exists():
+                                    local = candidate
+                                    break
+                            else:
+                                local = None  # no fallback found, skip image
+                        if local:
+                            src = BASE_URL + '/' + local
+                        else:
+                            src = ''
                     elif src.startswith('/'):
                         src = BASE_URL + src
+                if src:
                     keep['src'] = src
                 alt = attr_dict.get('alt', '')
                 if alt:
