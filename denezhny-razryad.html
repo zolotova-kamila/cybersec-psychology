@@ -7,6 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/nav.css">
 <style>
   :root {
     --bg-primary: #F5F1EB;
@@ -36,43 +37,12 @@
 
   .display { font-family: 'Montserrat', sans-serif; }
 
-  /* Navigation */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 5%;
-    background: rgba(250, 248, 245, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid var(--border);
-  }
-  .logo { 
-    display: flex; align-items: center; gap: 0.5rem;
-    font-family: 'Montserrat', sans-serif; font-weight: 600;
-    color: var(--text-primary); text-decoration: none;
-  }
-  .logo-icon-img { width: 32px; height: 32px; border-radius: 50%; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { 
-    color: var(--text-secondary); text-decoration: none;
-    font-family: 'Montserrat', sans-serif; font-size: 0.9rem;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover, .nav-links a.active { color: var(--accent-primary); }
-  .nav-cta {
-    background: var(--accent-primary); color: white;
-    padding: 0.6rem 1.2rem; border-radius: 4px;
-    font-family: 'Montserrat', sans-serif; font-size: 0.85rem;
-    text-decoration: none; transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--accent-secondary); }
-
   /* HERO */
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column;
     justify-content: center; align-items: flex-start;
-    padding: 120px 7vw 80px;
+    padding: 50px 7vw 80px;
     background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
     position: relative;
   }
@@ -557,20 +527,24 @@
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav>
-  <a href="index.html" class="logo">
-    <img src="images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
-    <span>Камила Золотова</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="about.html">Обо мне</a></li>
-    <li><a href="services.html">Услуги</a></li>
-    <li><a href="resources.html">Материалы</a></li>
-    <li><a href="contact.html">Контакты</a></li>
-  </ul>
-  <a href="https://t.me/Kamila_Zolotova" target="_blank" class="nav-cta">Записаться</a>
+    <a href="index.html" class="logo">
+        <img loading="lazy" src="images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
+        <span>Камила Золотова</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">Обо мне</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="resources.html">Материалы</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
 </nav>
 
 <!-- HERO -->
@@ -887,5 +861,6 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+    <script src="js/nav.js"></script>
 </body>
 </html>

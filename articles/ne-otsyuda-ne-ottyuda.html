@@ -107,52 +107,6 @@
             color: var(--color-primary-dark);
         }
         
-        /* Navigation */
-        .nav {
-            background: var(--color-white);
-            border-bottom: 1px solid var(--color-primary-mid);
-            padding: 16px 0;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        .nav-logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--color-primary-dark);
-        }
-        
-        .breadcrumbs {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-            font-size: 0.875rem;
-        }
-        
-        .breadcrumbs a {
-            color: var(--color-grey);
-        }
-        
-        .breadcrumbs a:hover {
-            color: var(--color-primary);
-        }
-        
-        .breadcrumbs .current {
-            color: var(--color-text);
-            font-weight: 500;
-        }
-        
-        .breadcrumbs-separator {
-            color: var(--color-grey);
-            opacity: 0.5;
-        }
-        
         /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
@@ -744,22 +698,27 @@
     </style>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nav.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Камила Золотова</a>
-            <div class="breadcrumbs">
-                <a href="../index.html">Главная</a>
-                <span class="breadcrumbs-separator">/</span>
-                <a href="../resources.html">Материалы</a>
-                <span class="breadcrumbs-separator">/</span>
-                <a href="index.html">Статьи</a>
-                <span class="breadcrumbs-separator">/</span>
-                <span class="current">Кризис принадлежности</span>
-            </div>
-        </div>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img loading="lazy" src="../images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
+            <span>Камила Золотова</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../about.html">Обо мне</a></li>
+            <li><a href="../services.html">Услуги</a></li>
+            <li><a href="../resources.html" class="active">Материалы</a></li>
+            <li><a href="../contact.html">Контакты</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
     </nav>
 
     <!-- Hero -->
@@ -1055,5 +1014,6 @@
         </div>
     </div>
 </footer>
+    <script src="../js/nav.js"></script>
 </body>
 </html>

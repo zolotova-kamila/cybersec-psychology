@@ -22,6 +22,7 @@
 <meta name="twitter:image" content="https://pozitiv-psychology.ru/images/67.jpg">
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/nav.css">
 <style>
   :root {
     --ink:        #1C1F2E;
@@ -48,28 +49,6 @@
     color: var(--ink);
     background: var(--white);
   }
-
-  .nav {
-    background: var(--white);
-    border-bottom: 1px solid var(--teal-mid);
-    padding: 13px 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--teal);
-    text-decoration: none;
-    letter-spacing: 0.03em;
-  }
-  .nav-sep { color: var(--teal-mid); font-size: 13px; }
-  .nav-crumb { font-size: 13px; color: var(--grey); text-decoration: none; }
-  .nav-crumb:hover { color: var(--teal); }
-  .nav-current { font-size: 13px; color: var(--teal); font-weight: 600; }
 
   .hero {
     background: var(--warm);
@@ -528,15 +507,25 @@
 </head>
 <body>
 
-<nav class="nav">
-  <a href="/index.html" class="nav-logo">КЗ</a>
-  <span class="nav-sep">/</span>
-  <a href="/resources.html" class="nav-crumb">Материалы</a>
-  <span class="nav-sep">/</span>
-  <a href="/articles/" class="nav-crumb">Статьи</a>
-  <span class="nav-sep">/</span>
-  <span class="nav-current">Упражнения для расслабления</span>
-</nav>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img loading="lazy" src="../images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
+            <span>Камила Золотова</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../about.html">Обо мне</a></li>
+            <li><a href="../services.html">Услуги</a></li>
+            <li><a href="../resources.html" class="active">Материалы</a></li>
+            <li><a href="../contact.html">Контакты</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
+    </nav>
 
 <header class="hero">
   <div class="hero-tag">Телесная терапия · Практика</div>
@@ -880,5 +869,6 @@
     </div>
 </footer>
 
+    <script src="../js/nav.js"></script>
 </body>
 </html>

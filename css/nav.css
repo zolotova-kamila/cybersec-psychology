@@ -1,0 +1,165 @@
+/* ── Unified site navigation ──────────────────────────────────────────────── */
+
+/* Offset for fixed nav on pages that use nav.css without styles.css */
+body { padding-top: 70px !important; }
+
+:root {
+  --nav-bg-primary: #F5F1EB;
+  --nav-bg-card: #FAF8F5;
+  --nav-text-primary: #2D3436;
+  --nav-text-secondary: #5A6266;
+  --nav-accent-primary: #2D5A4A;
+  --nav-accent-secondary: #4A7C6F;
+  --nav-border: #D4CCC2;
+  --nav-border-light: #E8E2DA;
+  --nav-shadow: 0 4px 20px rgba(45,52,54,0.08);
+  --nav-shadow-lg: 0 12px 40px rgba(45,52,54,0.12);
+  --nav-radius-sm: 8px;
+  --nav-radius-md: 16px;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 1rem 5%;
+  height: 70px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--nav-border-light);
+  z-index: 1000;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--nav-text-primary);
+  text-decoration: none;
+}
+
+nav .logo-icon-img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--nav-radius-md);
+  object-fit: cover;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--nav-text-secondary);
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: color .3s ease;
+  position: relative;
+}
+
+nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--nav-accent-primary);
+  transition: width .3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--nav-accent-primary);
+}
+
+nav .nav-links a:hover::after,
+nav .nav-links a.active::after {
+  width: 100%;
+}
+
+nav .nav-cta {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--nav-accent-primary);
+  color: white;
+  padding: .75rem 1.75rem;
+  border-radius: var(--nav-radius-sm);
+  font-weight: 600;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: all .3s ease;
+  box-shadow: var(--nav-shadow);
+  border: none;
+}
+
+nav .nav-cta:hover {
+  background: var(--nav-accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--nav-shadow-lg);
+}
+
+nav .menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: var(--nav-bg-card);
+  border: 2px solid var(--nav-border);
+  border-radius: var(--nav-radius-sm);
+  z-index: 1003;
+}
+
+nav .menu-toggle span {
+  display: block;
+  width: 25px; height: 3px;
+  background: var(--nav-accent-primary);
+  transition: all .3s ease;
+  border-radius: 3px;
+}
+
+nav .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+nav .menu-toggle.active span:nth-child(2) { opacity: 0; }
+nav .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+@media (max-width: 968px) {
+  nav .nav-links {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: #FAF8F5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    transform: translateX(100%);
+    transition: transform .35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1002;
+    display: flex;
+  }
+  nav .nav-links.mobile-open { transform: translateX(0); }
+  nav .nav-links a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--nav-text-primary);
+  }
+  nav .nav-links a::after { display: none; }
+  nav .nav-links + .nav-cta { display: none; }
+  nav .menu-toggle {
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    z-index: 1003;
+  }
+  nav .nav-cta { position: relative; z-index: 1003; }
+}

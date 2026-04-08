@@ -47,6 +47,7 @@
 </script>
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/nav.css">
 <style>
   :root {
     --teal:       #2A7B6F;
@@ -72,27 +73,6 @@
     line-height: 1.75;
     font-size: 17px;
   }
-
-  .nav {
-    background: var(--white);
-    border-bottom: 1px solid var(--teal-mid);
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--teal);
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-  }
-  .nav-sep { color: var(--teal-mid); margin: 0 4px; }
-  .nav-crumb { font-size: 13px; color: var(--grey); text-decoration: none; }
-  .nav-crumb:hover { color: var(--teal); }
-  .nav-current { font-size: 13px; color: var(--teal); font-weight: 600; }
 
   .hero {
     background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, #3D9A8A 100%);
@@ -443,7 +423,6 @@
   .hero-meta { animation-delay: 0.25s; }
 
   @media (max-width: 640px) {
-    .nav { padding: 12px 16px; }
     .hero { padding: 48px 16px 40px; }
     .container { padding: 0 16px; }
     .exercise { padding: 20px; }
@@ -459,15 +438,25 @@
 </head>
 <body>
 
-<nav class="nav">
-  <a href="/index.html" class="nav-logo">КЗ</a>
-  <span class="nav-sep">/</span>
-  <a href="/resources.html" class="nav-crumb">Материалы</a>
-  <span class="nav-sep">/</span>
-  <a href="/articles/" class="nav-crumb">Статьи</a>
-  <span class="nav-sep">/</span>
-  <span class="nav-current">Потеря себя</span>
-</nav>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img loading="lazy" src="../images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
+            <span>Камила Золотова</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../about.html">Обо мне</a></li>
+            <li><a href="../services.html">Услуги</a></li>
+            <li><a href="../resources.html" class="active">Материалы</a></li>
+            <li><a href="../contact.html">Контакты</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="https://t.me/Kamila_Zolotova" target="_blank" rel="noopener noreferrer" class="nav-cta">Записаться</a>
+    </nav>
 
 <header class="hero">
   <div class="hero-tag">Самоопределение · 11 мин чтения</div>
@@ -668,5 +657,6 @@
     </div>
 </footer>
 
+    <script src="../js/nav.js"></script>
 </body>
 </html>
