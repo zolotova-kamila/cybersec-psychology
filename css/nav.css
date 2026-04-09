@@ -59,6 +59,17 @@ nav .nav-links {
   padding: 0;
 }
 
+nav .nav-links li {
+  padding: 0;
+  position: static;
+  background: none;
+}
+
+nav .nav-links li::before {
+  display: none;
+  content: none;
+}
+
 nav .nav-links a {
   font-family: 'Montserrat', sans-serif;
   color: var(--nav-text-secondary);
