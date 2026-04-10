@@ -13,6 +13,9 @@
     <meta property="og:image" content="https://pozitiv-psychology.ru/images/logo-kz-flat.webp">
     <meta property="og:url" content="https://pozitiv-psychology.ru/reviews.html">
     <meta property="og:type" content="website">
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/reviews-hero.webp" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-400.woff2" crossorigin>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reviews.css">
@@ -48,7 +51,7 @@
 <body>
     <nav>
         <a href="index.html" class="logo">
-            <img loading="lazy" src="images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
+            <img src="images/logo-kz-flat.webp" alt="KZ" class="logo-icon-img">
             <span>Камила Золотова</span>
         </a>
         <ul class="nav-links">
@@ -72,7 +75,7 @@
                 <h1>Отзывы<br>клиентов</h1>
                 <p>Что говорят люди после работы со мной</p>
             </div>
-            <img src="images/reviews-hero.webp" alt="Отзывы" class="page-header-photo">
+            <img src="images/reviews-hero.webp" alt="Отзывы" class="page-header-photo" fetchpriority="high">
         </div>
     </header>
 
