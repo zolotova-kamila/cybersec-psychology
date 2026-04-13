@@ -560,12 +560,15 @@ body {
   font-size: 0.94rem;
   color: var(--muted);
   line-height: 1.75;
-  padding-bottom: 16px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  padding-bottom: 0;
+  transition: max-height 0.35s ease, padding-bottom 0.35s ease;
 }
-.faq-item[open] .faq-answer { max-height: 400px; }
+.faq-item[open] .faq-answer {
+  max-height: 500px;
+  padding-bottom: 16px;
+}
 
 /* ═══════ AUTHOR BOX ═══════ */
 .author-box {
@@ -612,14 +615,17 @@ body {
 .cta-block {
   background: var(--accent);
   color: #fff;
-  padding: 52px 44px;
+  padding: 48px 44px;
   margin: 4em 0 0;
   border-radius: 12px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 24px;
+}
+.cta-block-text {
+  width: 100%;
 }
 .cta-block-text h2 {
   font-family: var(--font-sans);
@@ -630,22 +636,24 @@ body {
   line-height: 1.3;
 }
 .cta-block-text p {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.95rem;
-  margin: 0 0 12px;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.96rem;
+  margin: 0 0 14px;
   line-height: 1.65;
 }
 .cta-block-text ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
+  text-align: left;
 }
 .cta-block-text ul li {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.8);
-  padding: 3px 0 3px 16px;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.82);
+  padding: 3px 0 3px 18px;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .cta-block-text ul li::before {
   content: '→';
@@ -658,15 +666,16 @@ body {
   display: inline-block;
   background: #fff;
   color: var(--accent);
-  padding: 14px 32px;
+  padding: 14px 40px;
   border-radius: 8px;
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
 }
 .cta-btn:hover { background: #EAF0ED; color: #1E3D30; }
 
@@ -728,7 +737,7 @@ body {
   .hero { padding: 32px 20px 24px; }
   .toc-wrap { padding: 0 20px 24px; }
   .article-body { padding: 0 20px 60px; }
-  .cta-block { grid-template-columns: 1fr; padding: 32px 24px; }
+  .cta-block { padding: 32px 24px; }
   .related-grid { grid-template-columns: 1fr; }
   .stat-row { grid-template-columns: 1fr; }
   .technique { padding: 22px 20px; }
