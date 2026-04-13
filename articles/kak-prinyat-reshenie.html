@@ -610,27 +610,28 @@ body {
 
 /* ═══════ CTA BLOCK ═══════ */
 .cta-block {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--accent);
+  color: #fff;
   padding: 52px 44px;
   margin: 4em 0 0;
-  border-radius: 3px;
+  border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 32px;
   align-items: center;
+  text-align: center;
 }
 .cta-block-text h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
-  font-weight: 300;
-  color: var(--cream);
-  margin: 0 0 10px;
-  line-height: 1.25;
+  font-family: var(--font-sans);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px;
+  line-height: 1.3;
 }
 .cta-block-text p {
-  color: #b0a89e;
-  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
   margin: 0 0 12px;
   line-height: 1.65;
 }
@@ -640,8 +641,8 @@ body {
   margin: 0;
 }
 .cta-block-text ul li {
-  font-size: 0.83rem;
-  color: #c0b8ae;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
   padding: 3px 0 3px 16px;
   position: relative;
   line-height: 1.5;
@@ -650,25 +651,24 @@ body {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: rgba(255,255,255,0.7);
   font-size: 0.8rem;
 }
 .cta-btn {
   display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  padding: 13px 28px;
-  border-radius: 2px;
+  background: #fff;
+  color: var(--accent);
+  padding: 14px 32px;
+  border-radius: 8px;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
-.cta-btn:hover { background: #1E3D30; }
+.cta-btn:hover { background: #EAF0ED; color: #1E3D30; }
 
 /* ═══════ RELATED ═══════ */
 .related { margin: 3.5em 0 0; }
@@ -778,7 +778,7 @@ body {
 <main id="main-content">
   <article itemscope itemtype="https://schema.org/Article">
 
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <div class="breadcrumbs" aria-label="Хлебные крошки" role="navigation">
       <a href="../index.html">Главная</a>
       <span class="breadcrumbs-sep" aria-hidden="true">›</span>
       <a href="../resources.html">Материалы</a>
@@ -786,7 +786,7 @@ body {
       <a href="index.html">Статьи</a>
       <span class="breadcrumbs-sep" aria-hidden="true">›</span>
       <span aria-current="page">Как принять решение, если боишься ошибиться</span>
-    </nav>
+    </div>
 
     <div class="hero">
       <span class="article-tag" aria-label="Рубрика: Самоопределение">Самоопределение · тревога</span>
@@ -817,7 +817,7 @@ body {
       </div>
     </div>
 
-    <nav class="toc-wrap" aria-label="Содержание статьи">
+    <div class="toc-wrap" aria-label="Содержание статьи" role="navigation">
       <div class="toc">
         <p class="toc-label">Содержание</p>
         <ol>
@@ -830,7 +830,7 @@ body {
           <li><a href="#faq">Частые вопросы</a></li>
         </ol>
       </div>
-    </nav>
+    </div>
 
     <div class="article-body" itemprop="articleBody">
 
@@ -1085,7 +1085,7 @@ body {
         </a>
       </div>
 
-      <nav class="related" aria-label="Похожие статьи">
+      <div class="related" aria-label="Похожие статьи" role="navigation">
         <h2>Читайте также</h2>
         <div class="related-grid">
           <a href="sotsialnaya-trevoga.html" class="related-card">
@@ -1105,7 +1105,7 @@ body {
             <h3>Перфекционизм и тревога: как связаны и что с этим делать</h3>
           </a>
         </div>
-      </nav>
+      </div>
 
     </div><!-- /article-body -->
   </article>
